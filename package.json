@@ -26,5 +26,9 @@
     "gulp-clean-css": "^2.0.3",
     "gulp-htmlmin": "^1.3.0",
     "gulp-imagemin": "^2.4.0"
+  },
+  "scripts": {
+    "install": "git clone https://github.com/MaxRoecker/hexo-theme-brass.git themes/brass/",
+    "start": "hexo serve"
   }
 }
