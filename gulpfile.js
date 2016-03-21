@@ -43,7 +43,7 @@ gulp.task( 'generate', [ 'init', 'clean' ], ( callback ) => {
     });
 });
 
-gulp.task( 'generate:watch', [ 'init' ], ( callback ) => {
+gulp.task( 'generate:watch', [ 'init', 'clean' ], ( callback ) => {
   hexo.call( 'generate', { watch: true })
     .then( () => {
       callback()
@@ -57,12 +57,11 @@ gulp.task( 'generate:watch', [ 'init' ], ( callback ) => {
 gulp.task( 'critical', [ 'generate' ], () => {
   return gulp
     .src( distDirectory +'**/*.html' )
-    .pipe(
-      critical({
+    .pipe( critical({
         base: distDirectory,
         inline: true
-      })
-    );
+      }) )
+    .pipe( gulp.dest( distDirectory ) );
 });
 
 gulp.task( 'html', [ 'critical' ], () => {

@@ -1,6 +1,6 @@
 ---
 title: Hello World
-featured: true
+featured: false
 date: 2015-08-15 12:24:44
 description: Estou online. Ótimo!
 cover:
