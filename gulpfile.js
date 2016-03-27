@@ -54,19 +54,13 @@ gulp.task( 'generate:watch', [ 'init', 'clean' ], ( callback ) => {
     });
 });
 
-gulp.task( 'critical', [ 'generate' ], () => {
+gulp.task( 'html', [ 'generate' ], () => {
   return gulp
     .src( distDirectory +'**/*.html' )
     .pipe( critical({
         base: distDirectory,
         inline: true
       }) )
-    .pipe( gulp.dest( distDirectory ) );
-});
-
-gulp.task( 'html', [ 'critical' ], () => {
-  return gulp
-    .src( distDirectory +'**/*.html' )
     .pipe( htmlmin({
       collapseWhitespace: true,
       removeComments: true,
