@@ -6,7 +6,7 @@ const gulp = require( 'gulp' ),
       critical = require( 'critical' ).stream,
       htmlmin = require( 'gulp-htmlmin' ),
       cleanCSS = require( 'gulp-clean-css' ),
-      imagemin = require('gulp-imagemin'),
+      imagemin = require( 'gulp-imagemin' ),
       Hexo = require( 'hexo' ),
       hexo = new Hexo( process.cwd(), {});
 
@@ -15,9 +15,9 @@ const watchFiles = [
         './source/**/*.*'
       ],
       distDirectory = './public/';
-      
+
 gulp.task( 'clean', () => {
-  return del( [ distDirectory ] );
+  return del([ distDirectory, 'db.json', '.deploy_git' ]);
 });
 
 gulp.task( 'init', ( callback ) => {
@@ -46,7 +46,7 @@ gulp.task( 'generate', [ 'init', 'clean' ], ( callback ) => {
 gulp.task( 'generate:watch', [ 'init', 'clean' ], ( callback ) => {
   hexo.call( 'generate', { watch: true })
     .then( () => {
-      callback()
+      callback();
     })
     .catch( ( error ) => {
       console.error( error );
@@ -56,7 +56,7 @@ gulp.task( 'generate:watch', [ 'init', 'clean' ], ( callback ) => {
 
 gulp.task( 'html', [ 'generate' ], () => {
   return gulp
-    .src( distDirectory +'**/*.html' )
+    .src( distDirectory + '**/*.html' )
     .pipe( critical({
         base: distDirectory,
         inline: true
@@ -75,7 +75,7 @@ gulp.task( 'css', [ 'generate' ], () => {
     .pipe( cleanCSS({
       debug: true
     }) )
-    .pipe( gulp.dest( distDirectory + 'css/' ) )
+    .pipe( gulp.dest( distDirectory + 'css/' ) );
 });
 
 gulp.task( 'images', [ 'generate' ], () => {
@@ -84,14 +84,13 @@ gulp.task( 'images', [ 'generate' ], () => {
     .pipe( imagemin({
       optimizationLevel: 7,
       progressive: true,
-      multipass: true,
-      interlaced: true,
+      interlaced: true
     }) )
     .pipe( gulp.dest( distDirectory ) );
 });
 
 gulp.task( 'build', [ 'html', 'css', 'images' ], ( ) => {
-  console.log( 'Blog successfully built.');
+  console.log( 'Blog successfully built.' );
 });
 
 gulp.task( 'serve', [ 'generate:watch' ], () => {

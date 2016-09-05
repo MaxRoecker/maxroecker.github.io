@@ -168,7 +168,7 @@ console.log(passaro[chave]);    // → Amarelo
 {% endsimplecode %}
 
 
-###Removendo propriedades
+### Removendo propriedades
 O operador `delete` remove a propriedade do objeto. Veja:
 
 {% simplecode js %}
@@ -223,7 +223,7 @@ O Javascript possui uma distinção arbitrária entre os valores.
 A grande diferença entre os valores primitivos e objetos é o modo como eles são comparados e a mutabilidade de seus conteúdos.
 
 
-###Comparação
+### Comparação
 Os valores primitivos são comparados através do seu “conteúdo”, ou seja, se dois valores primitivos tem o mesmo conteúdo, eles são iguais.
 
 {% simplecode js %}

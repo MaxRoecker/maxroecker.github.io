@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript Intermediário #3 - Hoisting'
+title: 'JavaScript Intermediário #3: Hoisting'
 description: 'Conheça o Hoisting, o içamento de variáveis, característica peculiar do JavaScript que normalmente é causa confusão entre os desenvolvedores.'
 cover:
   path: cover.jpg
