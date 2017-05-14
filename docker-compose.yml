@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    volumes:
+     - .:/home/node/blog
+    ports:
+     - '4000-4002:4000-4002'
+    environment:
+     - TZ=America/Sao_Paulo
+    network_mode: 'host'
