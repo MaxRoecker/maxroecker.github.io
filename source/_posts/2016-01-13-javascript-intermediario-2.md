@@ -33,11 +33,11 @@ Ao fim de execução de uma função, seu respectivo quadro é desempilhado e a 
 
 Nesse pequeno exemplo, adaptado de [um artigo do MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop), temos um pequeno código e o estado da pilha em diversos pontos de execução.
 
-* **Estágio 0:** No início, temos uma pilha já iniciada com o quadro do escopo global — executado assim que o código é iniciado — que define as funções `foo` e `bar` e então chama a função `bar`.
-* **Estágio 1:** Nesse momento, um novo quadro é empilhado pois o código principal chama `bar`.
-* **Estágio 2:** A função `bar` também chama outra função, `foo`, logo o seu respectivo quadro também é empilhado.
-* **Estágio 3:** Quando `foo` termina sua execução, a mesma retorna o resultado para `bar`.
-* **Estágio 4:** A função `bar` também termina e retorna para o escopo global.
+* **Estágio 0:** No início, temos uma pilha já iniciada com o quadro do escopo global — executado assim que o código é iniciado — que define as funções {% c "foo" %} e {% c "bar" %} e então chama a função {% c "bar" %}.
+* **Estágio 1:** Nesse momento, um novo quadro é empilhado pois o código principal chama {% c "bar" %}.
+* **Estágio 2:** A função {% c "bar" %} também chama outra função, {% c "foo" %}, logo o seu respectivo quadro também é empilhado.
+* **Estágio 3:** Quando {% c "foo" %} termina sua execução, a mesma retorna o resultado para {% c "bar" %}.
+* **Estágio 4:** A função {% c "bar" %} também termina e retorna para o escopo global.
 * **Estágio 5:** Ao fim da execução do escopo global, seu quadro é removido e a pilha fica vazia.
 
 Na grande maioria das linguagens, incluindo Java e C, quando a pilha está vazia significa que o programa foi finalizado. Mas no JavaScript o comportamento é diferente, devido à fila de trabalhos.
@@ -54,31 +54,31 @@ Assim, quando a pilha fica vazia, um laço verifica a fila de trabalhos e coloca
 {% asset_img eventloop.svg [Ilustração do comportamento da pilha durante a execução do código, com a adição e remoção de escopos e de trabalhos da fila.] %}
 {% endfigure %}
 
-* **Estágio 0:** No início, o escopo global é executado e enfileira um trabalho `T0`.
-* **Estágio 1:** Logo depois, é enfileirado outro trabalho `T1` devido ao lançamento de um evento, por exemplo.
-* **Estágio 2:** O escopo global termina sua execução, então o Laço de Eventos pega o primeiro trabalho da fila, `T0`, e o coloca em execução.
-* **Estágio 3:** Em seguida, `T0` adiciona mais um trabalho, `T2`, na fila.
-* **Estágio 4:** A execução de `T0` é finalizada e o Laço de Eventos coloca agora o trabalho `T1` para executar.
-* **Estágio 5:** O trabalho `T1` termina e `T2` entra em execução. Ao fim, o Laço de Eventos aguarda mais trabalhos serem enfileirados para que possam ser executados.
+* **Estágio 0:** No início, o escopo global é executado e enfileira um trabalho {% c "T0"%}.
+* **Estágio 1:** Logo depois, é enfileirado outro trabalho {% c "T1"%} devido ao lançamento de um evento, por exemplo.
+* **Estágio 2:** O escopo global termina sua execução, então o Laço de Eventos pega o primeiro trabalho da fila, {% c "T0"%}, e o coloca em execução.
+* **Estágio 3:** Em seguida, {% c "T0"%} adiciona mais um trabalho, {% c "T2"%}, na fila.
+* **Estágio 4:** A execução de {% c "T0"%} é finalizada e o Laço de Eventos coloca agora o trabalho {% c "T1"%} para executar.
+* **Estágio 5:** O trabalho {% c "T1"%} termina e {% c "T2"%} entra em execução. Ao fim, o Laço de Eventos aguarda mais trabalhos serem enfileirados para que possam ser executados.
 
 ### Enfileirando trabalhos
-Na grande maioria dos motores JavaScript, incluindo os navegadores, trabalhos são adicionados à fila qualquer momento que um evento (*event*) ocorra, se ele possuir um ouvinte (*listener*). [Promessas (*Promises*)](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects) — objetos especificados na ES6 — também enfileiram trabalhos. Porém, uma outra simples forma de adicionar um trabalho na fila de trabalhos é utilizar a função nativa `setTimeout`.
+Na grande maioria dos motores JavaScript, incluindo os navegadores, trabalhos são adicionados à fila qualquer momento que um evento (*event*) ocorra, se ele possuir um ouvinte (*listener*). [Promessas (*Promises*)](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects) — objetos especificados na ES6 — também enfileiram trabalhos. Porém, uma outra simples forma de adicionar um trabalho na fila de trabalhos é utilizar a função nativa {% c "setTimeout"%}.
 
-A função `setTimeout` possui dois parâmetros: o primeiro, uma função, é o trabalho que será enfileirado; e o segundo, um número, é o tempo (em milissegundos) de espera até que a função seja enfileirada. Veja e teste o exemplo de execução abaixo:
+A função {% c "setTimeout"%} possui dois parâmetros: o primeiro, uma função, é o trabalho que será enfileirado; e o segundo, um número, é o tempo (em milissegundos) de espera até que a função seja enfileirada. Veja e teste o exemplo de execução abaixo:
 
 {% simplecode js %}
 ``` js
-console.log( 'Antes dos timeouts' );
+console.log('Antes dos timeouts')
 
-setTimeout( function () {
-  console.log( 'Primeiro timeout' );
-}, 3000 );
+setTimeout(function () {
+  console.log('Primeiro timeout')
+}, 3000)
 
-setTimeout( function () {
-  console.log( 'Segundo timeout' );
-}, 0 );
+setTimeout(function () {
+  console.log('Segundo timeout')
+}, 0)
 
-console.log( 'Depois dos timeouts' );
+console.log('Depois dos timeouts')
 ```
 {% endsimplecode %}
 
@@ -92,21 +92,21 @@ A saída desse pequeno código será a seguinte:
 → Primeiro timeout
 ```
 {% endsimplecode %}
-    
 
-**Mas porque o "segundo timeout" aparece depois de "depois dos timeouts" mesmo que o tempo de espera seja zero?** Bem, a função do segundo `setTimeout` aguarda *zero milissegundos* e então é enfileirada e só é executada quando o fluxo principal é finalizado. Logo o comportamento segue exatamente o modelo explicado anteriormente.
 
-O fluxo principal não é bloqueado porque colocamos em espera uma função, pois o `setTimeout` simplesmente só enfileirou um trabalho após o tempo de espera. Note que chamar o `setTimeout` irá somente adicionar o trabalho na fila após passar o tempo de espera. Se a fila estiver vazia e a pilha também, o trabalho será processado imediatamente. Porém se houver outra trabalho na frente ou a pilha não estiver vazia, a função do `setTimeout` terá que esperar até que todos os trabalhos a sua frente sejam processados. **Portanto, tenha em mente que o segundo parâmetro garante um tempo mínimo, mas não o tempo exato até o início do processamento.**
+**Mas porque o "segundo timeout" aparece depois de "depois dos timeouts" mesmo que o tempo de espera seja zero?** Bem, a função do segundo {% c "setTimeout"%} aguarda *zero milissegundos* e então é enfileirada e só é executada quando o fluxo principal é finalizado. Logo o comportamento segue exatamente o modelo explicado anteriormente.
+
+O fluxo principal não é bloqueado porque colocamos em espera uma função, pois o {% c "setTimeout"%} simplesmente só enfileirou um trabalho após o tempo de espera. Note que chamar o {% c "setTimeout"%} irá somente adicionar o trabalho na fila após passar o tempo de espera. Se a fila estiver vazia e a pilha também, o trabalho será processado imediatamente. Porém se houver outra trabalho na frente ou a pilha não estiver vazia, a função do {% c "setTimeout"%} terá que esperar até que todos os trabalhos a sua frente sejam processados. **Portanto, tenha em mente que o segundo parâmetro garante um tempo mínimo, mas não o tempo exato até o início do processamento.**
 
 ---
 ## Conclusão
 O modelo de concorrência e assincronismo implementado pelo JavaScript é um dos grandes diferenciais da linguagem. A concorrência de tarefas é realizada sem interrupções ou bloqueios, como é o caso das linguagens C ou Java, e por isso é um modelo de fácil aprendizado.
 
-O mecanismo de assincronismo e concorrência do JavaScript não é só usado com `setTimeout`. Para executar qualquer tipo de função onde um dos seus parâmetros dependa um resultado externo — como é o caso de *callbacks* e promessas — ou no tratamento de eventos — lançados pelo *DOM* ou por um *AJAX*, por exemplo — a utilização da programação assíncrona é obrigatória.
+O mecanismo de assincronismo e concorrência do JavaScript não é só usado com {% c "setTimeout"%}. Para executar qualquer tipo de função onde um dos seus parâmetros dependa um resultado externo — como é o caso de *callbacks* e promessas — ou no tratamento de eventos — lançados pelo *DOM* ou por um *AJAX*, por exemplo — a utilização da programação assíncrona é obrigatória.
 
-{% blockquote Anders Hejlsberg 'https://channel9.msdn.com/blogs/charles/c-40-meet-the-design-team' %}
+{% quote author:"Anders Hejlsberg" url:"https://channel9.msdn.com/blogs/charles/c-40-meet-the-design-team" %}
 É inocência pensar que de alguma forma você irá ser capaz de adicionar concorrência em seu código sem ter que modificar nada em seu aplicativo para que ele execute concorrentemente.
-{% endblockquote %}
+{% endquote %}
 
 
 Entretanto, há um preço a pagar pela simplicidade do modelo: seu código fica muito mais complexo e de difícil leitura, pois é necessário entender as circunstâncias em que um trabalho irá ser executado ou não. Afinal, concorrência é um problema complexo e  resolver um problema complexo força você a escolher uma solução complexa de um jeito ou de outro. Um clássico exemplo da “*Síndrome do Cobertor Curto*”.

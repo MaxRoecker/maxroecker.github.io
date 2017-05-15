@@ -16,52 +16,52 @@ Hoje veremos uma característica bastante peculiar  do JavaScript e que normalme
 
 ---
 ## Hoisting de variáveis
-No momento de execução, as declarações de variáveis em JavaScript passam por um processo de içamento, ou seja, a declaração da variável “sobe” para o topo do escopo atribuído. Esse processo funciona tanto para declarações `var` quanto para declarações `let`. Veja:
+No momento de execução, as declarações de variáveis em JavaScript passam por um processo de içamento, ou seja, a declaração da variável “sobe” para o topo do escopo atribuído. Esse processo funciona tanto para declarações {%c "var"%} quanto para declarações {%c "let"%}. Veja:
 
 {% simplecode js %}
 ``` js
-var x = 1;
+var x = 1
 
-function foo() {
-  console.log( x );
-  var x = 2;
-};
+function foo () {
+  console.log(x)
+  var x = 2
+}
 
-foo();
+foo()
 ```
 {% endsimplecode %}
 
-Qual é o valor impresso pelo `console.log(x)`? Se você chutou `1`, infelizmente você está **errado**. Essa é uma das principais fontes de erros e *bugs* em códigos escritos na linguagem. O *hoisting* permite a utilização virtual de variáveis antes mesmo de sua declaração, mas sua inicialização continua no mesmo lugar de antes. O valor impresso pelo `console.log(x)`, nesse caso, é `undefined`. O código anterior, após o processo de *hoisting*, é interpretado como o código abaixo:
+Qual é o valor impresso pelo {%c "console.log(x)"%}? Se você chutou {%c "1"%}, infelizmente você está **errado**. Essa é uma das principais fontes de erros e *bugs* em códigos escritos na linguagem. O *hoisting* permite a utilização virtual de variáveis antes mesmo de sua declaração, mas sua inicialização continua no mesmo lugar de antes. O valor impresso pelo {%c "console.log(x)"%}, nesse caso, é {%c "undefined"%}. O código anterior, após o processo de *hoisting*, é interpretado como o código abaixo:
 
 {% simplecode js %}
 ``` js
-var x = 1;
+var x = 1
 
-function foo() {
-  var x; // Declaração puxada no topo, valor é undefined.
-  console.log( x );
-  x = 2; // A inicialização ainda se encontra aqui.
-};
+function foo () {
+  var x   // Declaração puxada no topo, valor é undefined.
+  console.log(x)
+  x = 2   // A inicialização ainda se encontra aqui.
+}
 
-foo();
+foo()
 ```
 {% endsimplecode %}
 
 ---
 ## Hoisting de funções
-O processo de *hoisting* também afeta as funções nomeadas — funções declaradas da seguinte forma `function nomeDaFunção ( ... )` —, porém seu comportamento é diferente do de variáveis; a inicialização da variável é imediata, ou seja, quando uma função nomeada é içada, sua inicialização também sofre o mesmo efeito. Dessa forma, o código a seguir é válido.
+O processo de *hoisting* também afeta as funções nomeadas — funções declaradas da seguinte forma {%c "function nomeDaFunção (…)"%} — porém seu comportamento é diferente do de variáveis; a inicialização da variável é imediata, ou seja, quando uma função nomeada é içada, sua inicialização também sofre o mesmo efeito. Dessa forma, o código a seguir é válido.
 
 {% simplecode js %}
 ``` js
-foo( 1 );
+foo(1)
 
-function foo( a ) {
-  return 'Função nomeada #' + a;
-};
+function foo (a) {
+  return 'Função nomeada #' + a
+}
 ```
 {% endsimplecode %}
 
-O resultado do código é `Função nomeada #1`. Perceba que a função é declarada após o momento de chamada da mesma, mas pelo processo de *hoist* essa declaração é levada para o início do escopo — nesse caso, o início do arquivo. Mas lembre-se, esse processo somente funciona para funções nomeadas, funções anônimas atribuídas à variáveis não sofrem *hoisting*, pois a inicialização da variável nunca é içada com a declaração da mesma.
+O resultado do código é {%c "Função nomeada \#1"%}. Perceba que a função é declarada após o momento de chamada da mesma, mas pelo processo de *hoist* essa declaração é levada para o início do escopo — nesse caso, o início do arquivo. Mas lembre-se, esse processo somente funciona para funções nomeadas, funções anônimas atribuídas à variáveis não sofrem *hoisting*, pois a inicialização da variável nunca é içada com a declaração da mesma.
 
 {% asset_img hoist.svg [Analogia ilustrativa da fase de hoist como um guindaste que eleva as declarações de variáveis ao topo do escopo.] %}
 
@@ -75,17 +75,17 @@ Outra prática importante é a inicialização de um valor na variável sempre q
 
 {% simplecode js %}
 ``` js
-function foo() {
-  var number = 1,
-      string = 'Result: ',
-      bar = function( a ) {
-        return 2 * a;
-      },
-      result;
-  result = string + bar( 1 );
-  console.log( result );
-};
+function foo () {
+  var number = 1
+  var string = 'Result: '
+  var bar = function (a) {
+    return 2 * a
+  }
+  var result
+  result = string + bar(number)
+  console.log(result)
+}
 
-foo();
+foo()
 ```
 {% endsimplecode %}

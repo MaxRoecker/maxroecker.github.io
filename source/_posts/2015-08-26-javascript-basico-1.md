@@ -11,16 +11,16 @@ tags:
   - javascript
 ---
 
-{% blockquote %}
+{% quote %}
 Uma **linguagem de script** é uma linguagem de programação desenvolvida para um ambiente de execução específico.
-{% endblockquote %}
+{% endquote %}
 
 O **JavaScript** (abreviado como **JS**) é uma linguagem de programação desenvolvida em 1995 com o objetivo de adicionar aos documentos HTML uma programação dentro do navegador Netscape Navigator e desde então foi adotada pelos maiores navegadores gráficos. O JavaScript é o responsável por podermos utilizar as modernas aplicações web e permitiu com que a web se transformasse no que é hoje.
 
 Em seu núcleo, o JavaScript uma [linguagem de script](https://en.wikipedia.org/wiki/Scripting_language) [dinâmica](https://en.wikipedia.org/wiki/Dynamic_programming_language) com [funções de primeira classe](https://en.wikipedia.org/wiki/First-class_function) e que suporta a criação de [objetos](https://en.wikipedia.org/wiki/Object-oriented_programming) baseados em [protótipos](https://en.wikipedia.org/wiki/Prototype-based_programming). Por essas características, é considerada uma linguagem de multi-paradigma, oferecendo suporte para programação de estilo [imperativo](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_imperativa), [orientado a objetos](https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos) e  [funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional). Mas não se preocupe em entender todos esses conceitos por agora.
 
  Apesar de ter seu nascimento em navegadores e clientes web, atualmente o JavaScript é uma linguagem que habita também o lado do servidor. Por exemplo, a engine [V8](https://developers.google.com/v8/) do Google é utilizada no navegador Google Chrome e nas versões mais recentes do Opera, mas é utilizado também pelo [Node.js](https://nodejs.org/). Outro exemplo é o [MongoDB](https://www.mongodb.org/), banco de dados não relacional, que utiliza o JavaScript como linguagem de busca. É importante observar que o JavaScript **nada** tem a ver com linguagem de programação Java. O nome JavaScript foi dado por questões de marketing e até hoje estamos ainda presos ao nome.
- 
+
 Continuando a história da linguagem, após a adoção por outros navegadores uma especificação foi desenvolvida para padronizar como o JavaScript deve funcionar, denominado como **ECMAScript**. Na prática, ambos os termos ─ JavaScript e ECMAScript ─ podem ser considerados sinônimos. Atualmente, está em processo de finalização da versão 6 da ECMAScript, que trará significativas mudanças na forma com que se programa JavaScript.
 
 ## Série sobre JavaScript
@@ -29,15 +29,15 @@ Pretendo iniciar essa série de artigos sobre JavaScript para compartilhar um po
 
 Nessa série, vou exibir inicialmente aspectos primários da linguagem e aos poucos ir revelando detalhes importantes e complexos conforme avançamos. Vou me esforçar para tratar o assunto da maneira fácil para você compreender, mas é importante que você já tenha algum entendimento de codificação e lógica de programação. Faço sempre uso de uma grande quantidade de exemplos, afinal, ***a melhor forma de aprender a codificar é codificando***.
 
-{% blockquote Linus Torvalds http://lkml.org/lkml/2000/8/25/132 %}
+{% quote author:"Linus Torvalds" url:"http://lkml.org/lkml/2000/8/25/132" %}
 Talk is cheap, show me the code
-{% endblockquote %}
+{% endquote %}
 
 Quer começar já? Pois então vamos lá! Caso você esteja num navegador atualizado ─ como o Google Chrome ou o Mozilla Firefox ─ aperte <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> e você verá uma tela com um cursor. Bem vindo ao **Console JavaScript** do seu navegador! Tente digitar a seguinte expressão abaixo e aperte <kbd>Enter</kbd>:
 
 {% simplecode js %}
 ``` js
-var foo = 'Olá Mundo!';
+var foo = 'Olá Mundo!'
 ```
 {% endsimplecode %}
 
@@ -45,7 +45,7 @@ Em seguida, digite a próxima expressão e novamente aperte <kbd>Enter</kbd>:
 
 {% simplecode js %}
 ``` js
-console.log( foo );
+console.log(foo)
 ```
 {% endsimplecode %}
 
@@ -55,11 +55,11 @@ Tente agora uma coisa um pouco mais complexa, escreva a função abaixo no conso
 
 {% simplecode %}
 ```js
-function fac( n ) {
-  if ( n == 0 )
-    return 1;
+function fac (n) {
+  if (n === 0)
+    return 1
   else
-    return fac( n - 1 ) * n;
+    return fac(n - 1) * n
 }
 ```
 {% endsimplecode %}
@@ -68,10 +68,10 @@ Após isso, execute os seguintes comandos:
 
 {% simplecode %}
 ``` js
-fac( 1 );
-fac( 2 );
-fac( 3 );
-fac( 6 );
+fac(1)
+fac(2)
+fac(3)
+fac(6)
 ```
 {% endsimplecode %}
 

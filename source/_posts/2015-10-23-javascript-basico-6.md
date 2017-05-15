@@ -10,9 +10,9 @@ date: 2015-10-23 09:21:30
 tags:
   - javascript
 ---
-{% blockquote   %}
+{% quote %}
 <b>fun.ção:</b> Grandeza relacionada a outra(s), de tal modo que a cada valor atribuído a esta(s), corresponde um valor daquela.
-{% endblockquote %}
+{% endquote %}
 
 Já vimos em momentos passados o funcionamento de objetos e de estruturas de controle em JavaScript. Ambos os conceitos são essenciais para a aprendizagem da linguagem e para a escrita de algoritmos, e estão presentes na maioria das linguagens de programação. Porém, agora é necessário avançarmos um pouco nosso conhecimento e entrar em áreas que tornam o JavaScript único e tão especial para aplicações modernas: as Funções.
 
@@ -24,64 +24,62 @@ Para começar, vamos definir uma função na forma comumente utilizada em vária
 
 {% simplecode js %}
 ``` js
-function hello(nome){
-  return 'Hello ' + nome + '!';
+function hello (nome) {
+  return 'Hello ' + nome + '!'
 }
 
-console.log(hello('Pedro')); // → Hello Pedro!
+console.log(hello('Pedro')) // → Hello Pedro!
 ```
 {% endsimplecode %}
 
-Quase todas as linguagens de programação possuem uma forma de declaração de função similar a essa. Todo programador conhece e está confortável com tal sintaxe: `hello` é o nome da função, `nome` é um argumento da função. Essa função retorna uma string quando é executada com o uso dos `()`.
+Quase todas as linguagens de programação possuem uma forma de declaração de função similar a essa. Todo programador conhece e está confortável com tal sintaxe: {% c "hello" %} é o nome da função, {% c "nome" %} é um argumento da função. Essa função retorna uma string quando é executada com o uso dos {% c "()" %}
 
 Devido as características do JavaScript ─ mais especificamente o *hoisting*, do qual falaremos em lições avançadas ─, uma função procedural não pode ser declarada condicionalmente. **O código a seguir é inválido na maioria dos motores de execução JavaScript:** ao definirmos um mesmo nome para funções procedurais distintas, o JavaScript, através do hoisting, cria uma referência automática no início do código para a função. Quando temos duas funções com o mesmo nome, há conflito de referência e isso causa o erro.
 
 {% simplecode js %}
 ``` js
-/* Esse código exibirá um erro,
- * pois há conflito de referência
- *
- */
-if( nota < 7 ){
-  function resultado(){
-    return 'Reprovado';
+/* Esse código exibirá um erro, pois há conflito de referência */
+
+if (nota < 7) {
+  function resultado () {
+    return 'Reprovado'
   }
-}else{
-  function resultado(){
-    return 'Aprovado';
+} else {
+  function resultado () {
+    return 'Aprovado'
   }
 }
 
-console.log( 'O resultado é: ' + resultado() );
+console.log('O resultado é: ' + resultado())
 ```
 {% endsimplecode %}
 
 ### Argumentos opcionais
-Supondo a função `hello` do exemplo anterior. Em JavaScript, o código a seguir é válido.
+Supondo a função {% c "hello" %} do exemplo anterior. Em JavaScript, o código a seguir é válido.
 
 {% simplecode js %}
 ``` js
-function hello(nome){
-  return 'Hello ' + nome + '!';
+function hello (nome) {
+  return 'Hello ' + nome + '!'
 }
 
-console.log(hello('Pedro','Matias','Samuel')); // → Hello Pedro!
+console.log(hello('Pedro', 'Matias', 'Samuel')) // → Hello Pedro!
 ```
 {% endsimplecode %}
 
-A função `hello` oficialmente aceita um argumento. Mesmo quando executamos a função passando mais argumentos, a função `hello` simplesmente os ignora. O JavaScript possui uma política bastante flexível com argumentos: se você passa mais argumentos que o declarado pela função, ela os ignora; se você passa menos argumentos que os declarados, os valores faltantes são dados como `undefined`.
+A função {% c "hello" %} oficialmente aceita um argumento. Mesmo quando executamos a função passando mais argumentos, a função {% c "hello" %} simplesmente os ignora. O JavaScript possui uma política bastante flexível com argumentos: se você passa mais argumentos que o declarado pela função, ela os ignora; se você passa menos argumentos que os declarados, os valores faltantes são dados como {% c "undefined" %}.
 
-Apesar de seu comportamento poder permitir que o desenvolvedor passe argumentos errado sem ser avisado, ele também permite a utilização de “parâmetros opcionais”. Dessa forma, você pode estabelecer valores padrão caso eles não sejam passados no momento da execução da função. Veja o exemplo abaixo: temos um parâmetro da função que em seu interior é atribuído condicionalmente a ele mesmo ou à outro valor padrão (nesse caso, o valor `'World'`). Ou seja, se o parametro for definido ele recebe a si mesmo. Caso ele seja indefinido (`undefined`), um valor padrão é associado ao parâmetro.
+Apesar de seu comportamento poder permitir que o desenvolvedor passe argumentos errado sem ser avisado, ele também permite a utilização de “parâmetros opcionais”. Dessa forma, você pode estabelecer valores padrão caso eles não sejam passados no momento da execução da função. Veja o exemplo abaixo: temos um parâmetro da função que em seu interior é atribuído condicionalmente a ele mesmo ou à outro valor padrão (nesse caso, o valor {% c "\'World\'" %}). Ou seja, se o parametro for definido ele recebe a si mesmo. Caso ele seja indefinido ({% c "undefined" %}), um valor padrão é associado ao parâmetro.
 
 {% simplecode js %}
 ``` js
-function hello(nome){
-  nome = nome || 'World';
-  return 'Hello ' + nome + '!';
+function hello (nome) {
+  nome = nome || 'World'
+  return 'Hello ' + nome + '!'
 }
 
-console.log(hello()); // → Hello World!
-console.log(hello('Pedro')); // → Hello Pedro!
+console.log(hello())        // → Hello World!
+console.log(hello('Pedro')) // → Hello Pedro!
 ```
 {% endsimplecode %}
 
@@ -103,11 +101,11 @@ Provavelmente uma sintaxe um tanto incomum para a maioria dos desenvolvedores é
 
 {% simplecode js %}
 ``` js
-var hello = function( nome ){
-  console.log( 'Hello ' + nome + '!' );
+var hello = function (nome) {
+  console.log('Hello ' + nome + '!')
 }
 
-hello( 'Mundo') ; // → Hello Mundo!
+hello('Mundo') // → Hello Mundo!
 ```
 {% endsimplecode %}
 
@@ -119,20 +117,19 @@ Um resultado interessante desse tipo de declaração é que funções declaradas
 ``` js
 /* Esse código não exibirá erro,
  * pois não há conflito de referência
- *
  */
-var resultado;
-if( nota < 7 ){
-  resultado = function() {
-    return 'Reprovado';
-  };
-}else{
-  resultado = function() {
-    return 'Aprovado';
-  };
+var resultado
+if (nota < 7) {
+  resultado = function () {
+    return 'Reprovado'
+  }
+} else {
+  resultado = function () {
+    return 'Aprovado'
+  }
 }
 
-console.log( 'O resultado é: ' + resultado() );
+console.log('O resultado é: ' + resultado());
 ```
 {% endsimplecode %}
 
@@ -145,28 +142,28 @@ Já que funções podem ser declaradas como variáveis, podemos então passá-la
 
 {% simplecode js %}
 ``` js
-var quiz = function( question, response ){
-  var result = function() {
-    console.log( 'Question: ', question() );
-    console.log( 'Response: ', response() );
-  };
-  return result;
+var quiz = function (question, response) {
+  var result = function () {
+    console.log('Question: ', question())
+    console.log('Response: ', response())
+  }
+  return result
 }
 
-var question = function() {
-  return 'What is the largest mammal in the world?';
+var question = function () {
+  return 'Qual o maior mamífero vivo do mundo?'
 }
 
-var response = function() {
-  return 'The blue whale is the largest living mammal.';
+var response = function () {
+  return 'A Baleia Azul é o maior mamífero vivo do mundo.'
 }
 
-var result = quiz( question, response );
-result();
+var result = quiz(question, response)
+result()
 ```
 {% endsimplecode %}
 
-Note que estamos passando a referência, também chamada de ponteiro, das funções em `question` e `response` para a função em `quiz`, e esta por sua vez retorna outra referência para uma função que atribuímos a variável `result`.
+Note que estamos passando a referência, também chamada de ponteiro, das funções em {% c "question" %} e {% c "response" %} para a função em {% c "quiz" %}, e esta por sua vez retorna outra referência para uma função que atribuímos a variável {% c "result" %}.
 
 ### Expressões λ
  Agora que entendemos o conceito de funções como valores, e que podemos atribuir essas funções para variáveis e passá-las como argumento ou como resultado de uma função, você entendeu o conceito de [Expressão λ](https://en.wikipedia.org/wiki/Anonymous_function) (Lambda). Basicamente, **Expressão λ** é o conceito da [programação funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional) utilizado quando uma função é passada para outra como argumento.
@@ -187,23 +184,24 @@ Quando se define uma função, ela ocupa um espaço na memória do computador. N
 
 {% simplecode js %}
 ``` js
-var hello = function(){
-  console.log('Goodbye World!');
-};
-
-var goodbye = hello;
-
-hello = function(){
-  console.log('Hello World!');
+var hello = function () {
+  console.log('Goodbye World!')
 }
 
-goodbye(); // → Goodbye World!
+var goodbye = hello
+
+hello = function () {
+  console.log('Hello World!')
+}
+
+hello()   // → Hello World!
+goodbye() // → Goodbye World!
 ```
 {% endsimplecode %}
 
 ---
 ## Conclusão
-Nesse episódio aprendemos sobre funções, como declará-las e suas principais características. A palavra-chave `function`, quando usada em uma expressão, cria uma função procedural. Quando usada em uma atribuição, cria uma referência para uma função. A chave do entendimento das funções é o seu comportamento como objetos de primeira classe, ou seja, seu funcionamento é igual a qualquer outro valor da linguagem.
+Nesse episódio aprendemos sobre funções, como declará-las e suas principais características. A palavra-chave {% c "function" %}, quando usada em uma expressão, cria uma função procedural. Quando usada em uma atribuição, cria uma referência para uma função. A chave do entendimento das funções é o seu comportamento como objetos de primeira classe, ou seja, seu funcionamento é igual a qualquer outro valor da linguagem.
 
 Separar seu código em funções é importante para modularizar e evitar repetição dentro do seu código. Funções também são importantes para aumentar o vocabulário do seu código como também sua expressividade. Detalhes como o escopo das funções, *closures*, *hoisting* e programação funcional ainda são conceitos que ainda precisam de mais atenção e são importantes dentro da linguagem.
 

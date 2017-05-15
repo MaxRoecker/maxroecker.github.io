@@ -25,27 +25,27 @@ Quando uma função é definida dentro do escopo de outra função, ela possui a
 
 {% simplecode js %}
 ``` js
-function counter( start ) {
-  var value = start || 0;
-  
-  function increment() {
-    return ++value;
+function counter (start) {
+  var value = start || 0
+
+  function increment () {
+    return ++value
   }
 
-  return increment;
+  return increment
 }
 
-var count = counter( 0 );
+var count = counter(0)
 
-console.log(count()); //→ 1
-console.log(count()); //→ 2
-console.log(count()); //→ 3
+console.log(count())  // → 1
+console.log(count())  // → 2
+console.log(count())  // → 3
 ```
 {% endsimplecode %}
 
-Criamos uma função `counter`, que recebe como parâmetro um valor inicial. A função `counter` define a função `increment` e a retorna, onde atribuímos à ela a variável `count`. Quando executamos a função de `count` — que é a função `increment` — ela retorna o valor de `value` anterior incrementado em uma unidade.
+Criamos uma função {%c "counter"%}, que recebe como parâmetro um valor inicial. A função {%c "counter"%} define a função {%c "increment"%} e a retorna, onde atribuímos à ela a variável {%c "count"%}. Quando executamos a função de {%c "count"%} — que é a função {%c "increment"%} — ela retorna o valor de {%c "value"%} anterior incrementado em uma unidade.
 
-Como a função `increment` foi criada dentro do escopo de `counter`, ela possui acesso a todas as variáveis do escopo de `counter`. Mas perceba, a função `counter` já foi executada, seu *frame* já foi empilhado e desempilhado, ou seja, se a variável `value` estava dentro do *frame* então ela já deve ter sido destruída quando executamos a função `count` posteriormente, não é mesmo? Mas não é isso o que acontece quando você executa o código acima. A função `increment` ainda consegue acessar a variável `value` mesmo que o escopo no qual ela foi declarada tenha sido destruído. Porque isso acontece? Bem, estamos diante de um clássico efeito do *closure* em JavaScript. De forma geral, podemos dizer que:
+Como a função {%c "increment"%} foi criada dentro do escopo de {%c "counter"%}, ela possui acesso a todas as variáveis do escopo de {%c "counter"%}. Mas perceba, a função {%c "counter"%} já foi executada, seu *frame* já foi empilhado e desempilhado, ou seja, se a variável {%c "value"%} estava dentro do *frame* então ela já deve ter sido destruída quando executamos a função {%c "count"%} posteriormente, não é mesmo? Mas não é isso o que acontece quando você executa o código acima. A função {%c "increment"%} ainda consegue acessar a variável {%c "value"%} mesmo que o escopo no qual ela foi declarada tenha sido destruído. Porque isso acontece? Bem, estamos diante de um clássico efeito do *closure* em JavaScript. De forma geral, podemos dizer que:
 
 > Em uma linguagem que implementa *closure*, funções são capazes de lembrar o escopo léxico de onde foram declaradas mesmo quando executadas fora dele.
 
@@ -61,18 +61,18 @@ Como resultado, é preciso de cuidado ao utilizar *closures*. Por exemplo, ao an
 
 {% simplecode js %}
 ``` js
-var foo = function( obj, a, b ) {
-  obj.bar = function() {
-    return a + b;
-  };
-  return obj;
-};
+var foo = function (obj, a, b) {
+  obj.bar = function () {
+    return a + b
+  }
+  return obj
+}
 ```
 {% endsimplecode %}
 
-A função `bar` mantém uma referência para `obj`, `a` e `b` mesmo que não utilize `obj`. Uma vez que o próprio `obj` também mantém uma referência para o *closure*, temos um ciclo de referências que impede o coletor de lixo de destruir esses objetos mesmo que não sejam mais acessíveis no código.
+A função {%c "bar"%} mantém uma referência para {%c "obj"%}, {%c "a"%} e {%c "b"%} mesmo que não utilize {%c "obj"%}. Uma vez que o próprio {%c "obj"%} também mantém uma referência para o *closure*, temos um ciclo de referências que impede o coletor de lixo de destruir esses objetos mesmo que não sejam mais acessíveis no código.
 
-Para que isso não ocorra, é necessário primeiro destruir a referência para o *closure* na propriedade `bar` do objeto — atribuindo `null`, por exemplo —, quebrando referência circular possibilitando que o coletor de lixo possa se desfazer de ambos os objetos.
+Para que isso não ocorra, é necessário primeiro destruir a referência para o *closure* na propriedade {%c "bar"%} do objeto — atribuindo {%c "null"%}, por exemplo —, quebrando referência circular possibilitando que o coletor de lixo possa se desfazer de ambos os objetos.
 
 ---
 ## Conclusão
@@ -81,6 +81,6 @@ Para que você utilize o potencial da linguagem ao máximo, é fundamental compr
 
 *Closure* é um daqueles conceitos curiosos que são paradoxalmente difíceis de compreender porque são simples demais. Mas uma vez que o programador se torne apto a utilizar ele a seu favor, soluções simples e mais diretas surgirão.
 
-{% blockquote Guy L. Steele 'https://www.dreamsongs.com/ObjectsHaveNotFailedNarr.html' %}
+{% quote author:"Guy L. Steele" url:"https://www.dreamsongs.com/ObjectsHaveNotFailedNarr.html" %}
 Uma das conclusões que nós chegamos foi que um objeto não precisa ser um primitivo conceito em uma linguagem de programação; um objeto e seu comportamento pode ser construído por meio de um pouco de valores e algumas boas e velhas expressões lambdas.
-{% endblockquote %}
+{% endquote %}

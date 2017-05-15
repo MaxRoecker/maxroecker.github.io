@@ -17,41 +17,41 @@ No último texto da série JavaScript Intermediário, iremos abordar um dos conc
 
 ---
 ## Introdução
-[Em textos anteriores](http://maxroecker.github.io/blog/javascript-basico-5/), estudamos que objetos são estruturas de dados compostas por tuplas de "chave-valor" que muito se assemelham a [tabelas *hash*](https://pt.wikipedia.org/wiki/Vetor_associativo). Objetos possuem propriedades que podem ser acessadas por meio do operador `.key` ou `[ key ]` (onde `key` é o nome da propriedade). Caso tentarmos ler uma propriedade que não exista, teremos `undefined` como resultado. Mas se atribuímos um valor para uma propriedade inexistente no objeto, essa propriedade é criada e agora carrega o valor.
+[Em textos anteriores](http://maxroecker.github.io/blog/javascript-basico-5/), estudamos que objetos são estruturas de dados compostas por tuplas de "chave-valor" que muito se assemelham a [tabelas *hash*](https://pt.wikipedia.org/wiki/Vetor_associativo). Objetos possuem propriedades que podem ser acessadas por meio do operador {%c ".key"%} ou {%c "[key "%} (onde {%c "key"%} é o nome da propriedade). Caso tentarmos ler uma propriedade que não exista, teremos {%c "undefined"%} como resultado. Mas se atribuímos um valor para uma propriedade inexistente no objeto, essa propriedade é criada e agora carrega o valor.
 
 Vamos ver exemplo simples de objeto abaixo:
 
 {% simplecode js %}
 ``` js
 const user = {
-  email: 'pedro@exemplo.com'
+  email: 'pedro@exemplo.com',
   name: 'Pedro',
-  getUsername: function() {
-    return this.email.split( '@' )[ 0 ];
+  getUsername: function () {
+    return this.email.split('@')[0]
   }
 }
 
-console.log( user.email );          // → pedro@exemplo.com
-console.log( user.getUsername() );  // → pedro
-console.log( user.toString() )      // → [object Object]
+console.log(user.email)          // → pedro@exemplo.com
+console.log(user.getUsername())  // → pedro
+console.log(user.toString())      // → [object Object]
 ```
 {% endsimplecode %}
 
-Espere um pouco... onde a propriedade `toString` foi declarada? Nosso objeto `user` não possui essa propriedade. Além disso, ela é uma função e foi executada. Porque isso aconteceu? Bem, acabamos de visualizar os protótipos em ação, que definiremos a seguir.
+Espere um pouco... onde a propriedade {%c "toString"%} foi declarada? Nosso objeto {%c "user"%} não possui essa propriedade. Além disso, ela é uma função e foi executada. Porque isso aconteceu? Bem, acabamos de visualizar os protótipos em ação, que definiremos a seguir.
 
 ---
 ## Definição
 
 **Protótipos** são objetos que servem como "reserva" para outros objetos e são a principal forma para alcançarmos a reutilização de código dentro da linguagem. Para definir um protótipo, suponha dois objetos, *A* e *B*. Dizemos que *A* é protótipo *B* quando *A* fornece um suporte “reserva” para *B*, ou seja, ao procurar-se uma propriedade em *B* e ela não for encontrada, essa propriedade é buscada então em *A*.
 
-No exemplo anterior, o objeto `user` foi criado com os literais `{ }`. Todo objeto criado com o literal `{ }` possui como protótipo o `Object.prototype`, que possui vários métodos, entre eles o `toString`. Dessa forma, quando invocamos o método `toString` em nosso objeto recém-criado, primeiramente a máquina virtual JavaScript irá procurar alguma propriedade com o nome `toString` no próprio objeto `user`.  Como não há, a máquina virtual então vai até o protótipo do `user` — `Object.prototype` — e faz a busca pelo método. Como o método é encontrado, ele é executado.
+No exemplo anterior, o objeto {%c "user"%} foi criado com os literais {%c "{ }"%}. Todo objeto criado com o literal {%c "{ }"%} possui como protótipo o {%c "Object.prototype"%}, que possui vários métodos, entre eles o {%c "toString"%} Dessa forma, quando invocamos o método {%c "toString"%} em nosso objeto recém-criado, primeiramente a máquina virtual JavaScript irá procurar alguma propriedade com o nome {%c "toString"%} no próprio objeto {%c "user"%}.  Como não há, a máquina virtual então vai até o protótipo do {%c "user"%} — {%c "Object.prototype"%} — e faz a busca pelo método. Como o método é encontrado, ele é executado.
 
 O JavaScript não é o único a utilizar protótipos em objetos, outras linguagens que implementam esse estilo de programação incluem as linguagens [Self](http://www.selflanguage.org/), [Logtalk](http://logtalk.org/) e [Lua](http://www.lua.org/).
 
 ---
 ## Descobrindo o protótipo de um objeto
 
-Você pode descobrir o protótipo de um objeto utilizando a função `Object.getPrototypeOf` aplicada em um objeto. Por exemplo, veja a seguir o protótipo de um objeto literal vazio — ou seja, um objeto sem qualquer propriedade declarada em si mesmo:
+Você pode descobrir o protótipo de um objeto utilizando a função {%c "Object.getPrototypeOf"%} aplicada em um objeto. Por exemplo, veja a seguir o protótipo de um objeto literal vazio — ou seja, um objeto sem qualquer propriedade declarada em si mesmo:
 
 {% figure 'Você pode descobrir o protótipo de um objeto aplicando a função Object.getPrototypeOf no objeto.' %}
 {% asset_img object-prototype.png 'Resultado ao executar a função Object.getPrototypeOf em um objeto vazio.' %}
@@ -63,57 +63,62 @@ Quando tentamos acessar uma propriedade em um objeto e ela não é encontrada, a
 {% asset_img prototype-chain.svg 'Representação ilustrativa da cadeia protótipos, onde cada objeto aponta para outro objeto por meio de uma referência' %}
 {% endfigure %}
 
-Já vimos que o protótipo de um objeto literal é o `Object.prototype`, mas qual é o protótipo do `Object.prototype`? O `Object.prototype` é considerado o "último protótipo" em uma cadeia de protótipos e por isso seu protótipo é `null`.
+Já vimos que o protótipo de um objeto literal é o {%c "Object.prototype"%}, mas qual é o protótipo do {%c "Object.prototype"%}? O {%c "Object.prototype"%} é considerado o "último protótipo" em uma cadeia de protótipos e por isso seu protótipo é {%c "null"%}.
 
 ---
 ## Criando objetos com diferentes protótipos
-Você pode alterar o protótipo de um objeto no momento da sua criação utilizando a função `Object.create`, que recebe no primeiro parâmetro um objeto que será o protótipo do objeto criado. Veja no exemplo a seguir onde definimos um protótipo para um objeto que representa um ponto com coordenadas x e y:
+Você pode alterar o protótipo de um objeto no momento da sua criação utilizando a função {%c "Object.create"%}, que recebe no primeiro parâmetro um objeto que será o protótipo do objeto criado. Veja no exemplo a seguir onde definimos um protótipo para um objeto que representa um ponto com coordenadas x e y:
 
 {% simplecode js %}
 ``` js
 var pointPrototype = {
-  getDistanceFromOrigin: function() {
-    var distance = Math.sqrt( this.x * this.x + this.y * this.y );
-    return distance;
+  getDistanceFrom: function (other) {
+    var dx = Math.abs(other.x - this.x)
+    var dy = Math.abs(other.y - this.y)
+    var distance = Math.sqrt(dx * dx + dy * dy)
+    return distance
   }
-};
+}
 
-var point = Object.create( pointPrototype );
-point.x = 3;
-point.y = 4;
+var point = Object.create(pointPrototype)
+var origin = Object.create(pointPrototype)
+origin.x = 0
+origin.y = 0
+point.x = 3
+point.y = 4
 
-console.log( point.getDistanceFromOrigin() ); // → 5
+console.log(point.getDistanceFrom(origin)) // → 5
 ```
 {% endsimplecode %}
 
 ---
 ## Alterando o protótipo de um objeto já criado
 
-Alterar o protótipo de um objeto após ele ser criado é possível com a utilização da propriedade `__proto__`. Vamos ilustrar a utilização dessa porpriedade com o exemplo anterior do ponto com coordenadas x e y:
+Alterar o protótipo de um objeto após ele ser criado é possível com a utilização da propriedade {%c "__proto__"%}. Vamos ilustrar a utilização dessa porpriedade com o exemplo anterior do ponto com coordenadas x e y:
 
 {% simplecode js %}
 ``` js
 var pointPrototype = {
-  getDistanceFromOrigin: function() {
-    var distance = Math.sqrt( this.x * this.x + this.y * this.y );
-    return distance;
+  getDistanceFrom: function (other) {
+    var dx = Math.abs(other.x - this.x)
+    var dy = Math.abs(other.y - this.y)
+    var distance = Math.sqrt(dx * dx + dy * dy)
+    return distance
   }
 }
 
-var point = {
-  x: 3,
-  y: 4
-};
+var origin = {x: 0, y: 0}
+var point = {x: 3, y: 4}
 
-point.__proto__ = pointPrototype;
+point.__proto__ = pointPrototype
 
-console.log( point.getDistanceFromOrigin() ); // → 5
+console.log(point.getDistanceFrom(origin)) // → 5
 ```
 {% endsimplecode %}
 
-No entanto, alterar o protótipo de um objeto é uma operação **muito lenta** em qualquer motor de execução JavaScript e por isso é uma **prática desencorajada**. Além do mais, a propriedade `__proto__` só foi considerada como padrão dentro da linguagem com a especificação ECMAScript 2016, possuindo problemas de compatibilidade com versões antigas.
+No entanto, alterar o protótipo de um objeto é uma operação **muito lenta** em qualquer motor de execução JavaScript e por isso é uma **prática desencorajada**. Além do mais, a propriedade {%c "__proto__"%} só foi considerada como padrão dentro da linguagem com a especificação ECMAScript 2016, possuindo problemas de compatibilidade com versões antigas.
 
-> Lembre-se: Para saber o protótipo de um objeto é recomenda-se a função  `Object.getPrototypeOf`. Para  para criar objetos com diferentes protótipos é recomendada a função `Object.create`. Mudar o protótipo de um objeto já criado é sempre considerado uma má prática.
+> **Lembre-se:** Para saber o protótipo de um objeto é recomenda-se a função  {%c "Object.getPrototypeOf"%}. Para  para criar objetos com diferentes protótipos é recomendada a função {%c "Object.create"%}. Mudar o protótipo de um objeto já criado é sempre considerado uma má prática.
 
 
 ---

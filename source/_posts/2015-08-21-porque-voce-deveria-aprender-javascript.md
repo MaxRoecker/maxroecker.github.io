@@ -18,9 +18,9 @@ Porém, ainda há certa barreira em aprender essa linguagem, pois ela já foi co
 
 Em meados de 2004, o Google lança o Gmail, serviço de e-mail consagrado por garantir espaço quase ilimitado gratuitamente. Porém, algo muito importante também foi feito: sua interface utilizava AJAX para acrescentar dinamismo na interação do usuário com a aplicação. O **AJAX** (do inglês _Asynchronous Javascript And XML_) permitia a troca de informações com o servidor de forma assíncrona com o [XMLHttpRequest](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest) da Microsoft, ou seja, permitia com que conteúdo fosse carregado sem necessidade do recarregamento da página inteira. Desde então, o desenvolvimento de aplicações web não foi mais o mesmo e evoluiu em velocidade espantosa.
 
-{% blockquote Jesse James Garrett http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/ %}
+{% quote author:"Jesse James Garrett" url:"http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/" %}
 AJAX não é uma tecnologia. Na verdade são muitas tecnologias, cada uma florescendo por conta própria, trabalhando juntas de forma poderosa
-{% endblockquote %}
+{% endquote %}
 
 Já em 2009, o lançamento do [Node.js](https://nodejs.org/) permitiu que o JavaScript, aliado a um [I/O não bloqueante](https://en.wikipedia.org/wiki/Asynchronous_I/O) e [orientado a eventos](https://en.wikipedia.org/wiki/Event-driven_programming), ganhasse espaço no lado do servidor das aplicações. Sua adoção foi muito rápida, principalmente para atender a nova demanda de aplicativos web e mobile que exigiam grandes quantidades de respostas em tempo real. Dois anos mais tarde, em 2011, foi lançado o [NPM](https://www.npmjs.com/), gerenciador de pacotes e de bibliotecas para o Node, causando uma explosão em sua popularidade. Veja o gráfico abaixo, que compara a quantidade de módulos entre os principais gerenciadores de pacotes.
 
@@ -56,6 +56,6 @@ Com tudo isso, a produtividade ao escrever um código pode ser elevada ao máxim
 
 Hoje, a **Lei de Atwood** nunca pareceu ser tão verdadeira. O JavaScript tem dominado — e continua crescendo — em todas as áreas e aplicações, desde [aplicativos sociais](https://developers.facebook.com/docs/javascript) ou [suítes office baseadas em nuvem](https://www.google.com/docs/about/) baseadas em nuvem, até mesmo [jogos](http://phaser.io/) com grande processamento gráfico.
 
-{% blockquote Jeff Atwood http://blog.codinghorror.com/the-principle-of-least-power/ %}
+{% quote "Jeff Atwood" "http://blog.codinghorror.com/the-principle-of-least-power/" %}
 Qualquer aplicação que possa ser escrita em JavaScript, eventualmente será escrita em JavaScript
-{% endblockquote %}
+{% endquote %}

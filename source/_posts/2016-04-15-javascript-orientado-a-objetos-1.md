@@ -44,26 +44,26 @@ A grande maioria das linguagens que utilizam Orientação a Objetos se baseiam e
 {% asset_img object-class.svg 'Representação ilustrativa de uma classe como um blueprint de um objeto.' %}
 {% endfigure %}
 
-Em Javascript, os objetos não são instâncias de classes. Como já vimos em [posts anteriores](http://maxroecker.github.io/blog/javascript-basico-5/), um objeto é uma estrutura de dados básica da linguagem que se assemelha a uma [tabela *hash*](https://en.wikipedia.org/wiki/Associative_array). Podemos definir um objeto, seus atributos e seus métodos com o literal `{ }`. Veja:
+Em Javascript, os objetos não são instâncias de classes. Como já vimos em [posts anteriores](http://maxroecker.github.io/blog/javascript-basico-5/), um objeto é uma estrutura de dados básica da linguagem que se assemelha a uma [tabela *hash*](https://en.wikipedia.org/wiki/Associative_array). Podemos definir um objeto, seus atributos e seus métodos com o literal {%c "{ }"%}. Veja:
 
 {% simplecode js %}
 ``` js
 const pessoa = {
   name: 'Pedro',
   email: 'pedro@email.com',
-  getUsername: function() {
-    return this.email.split( '@' )[ 0 ];
+  getUsername: function () {
+    return this.email.split('@')[0]
   }
-};
+}
 
-console.log( pessoa[ 'name' ] );      // → Pedro
-console.log( pessoa.getUsername() );  // → pedro
-pessoa.email = 'joao@exemplo.com';
-console.log( pessoa.getUsername() );  // → joao
+console.log(pessoa[ 'name' ])      // → Pedro
+console.log(pessoa.getUsername())  // → pedro
+pessoa.email = 'joao@exemplo.com'
+console.log(pessoa.getUsername())  // → joao
 ```
 {% endsimplecode %}
 
-Podemos acessar as propriedades de um objeto através do operador `.key` ou através do operador `[ key ]`, onde `key` é o nome da propriedade. A palavra `this`, quando utilizada em um objeto, referencia o próprio objeto, dessa forma podemos utilizar o atributo `email` do objeto criado anteriormente dentro do método `getUsername`.
+Podemos acessar as propriedades de um objeto através do operador {%c "key"%} ou através do operador {%c "[key]"%}, onde {%c "key"%} é o nome da propriedade. A palavra {%c "this"%}, quando utilizada em um objeto, referencia o próprio objeto, dessa forma podemos utilizar o atributo {%c "email"%} do objeto criado anteriormente dentro do método {%c "getUsername"%}.
 
 Entretanto, objetos literais do JavaScript não possuem o conceito de encapsulamento como pregado pela Orientação a Objeto. Todos os atributos são acessíveis e visíveis pelo lado de fora do objeto.
 

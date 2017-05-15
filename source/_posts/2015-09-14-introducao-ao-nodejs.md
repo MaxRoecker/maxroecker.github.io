@@ -75,18 +75,18 @@ Lembra quando disse que o Node considera o acesso a rede como prioridade? Pois e
 
 {% simplecode js %}
 ``` js
-var http = require( 'http' );
+var http = require('http')
 
-http.createServer(function ( req, res ) {
-  res.writeHead( 200, { 'Content-Type': 'text/plain' });
-  res.end( 'Hello World\n' );
-}).listen( 1337, '127.0.0.1' );
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'})
+  res.end('Hello World\n')
+}).listen(1337, '127.0.0.1')
 
-console.log( 'Servidor rodando em http://127.0.0.1:1337/' );
+console.log('Servidor rodando em http://127.0.0.1:1337/')
 ```
 {% endsimplecode %}
 
-Para rodar, salve o arquivo com um nome, por exemplo, `example.js` e excute-o com o Node, no terminal, da seguinte forma:
+Para rodar, salve o arquivo com um nome, por exemplo, {% c "example.js" %} e excute-o com o Node, no terminal, da seguinte forma:
 
 {% simplecode sh %}
 ``` sh
@@ -95,7 +95,7 @@ $ node example.js
 ```
 {% endsimplecode %}
 
-Com o seu navegador, digite na barra de endereços o endereço `http://127.0.0.1:1337/` e veja a sua mensagem! ***:D***
+Com o seu navegador, digite na barra de endereços o endereço {% c "http://127.0.0.1:1337/" %} e veja a sua mensagem!
 
 ## Conclusão
 
