@@ -40,8 +40,8 @@ console.log('Valor de $b: ', $b) // → Valor de $b: 9
 
 Na verdade, variáveis até podem ser declaradas sem a palavra-chave {% c var %}. Por exemplo, a expressão {% c "x = \"foo\"" %} é valida, porém com o efeito de atribuir a variável em escopo global. **Você não deve utilizar esse tipo de declaração**, pois é considerada uma má prática de escrita de código, pois polui o escopo global e aumenta a probabilidade de erros por conflito. Vamos voltar a falar sobre o escopo de variáveis quando falarmos sobre funções.
 
-{% figure 'Uma variável *foo* não guarda o valor *"bar"* atribuído a ela, mas sim o endereço de memória onde o valor está armazenado.' %}
-{% asset_img 'variables-values.svg' [Ilustração de analogia de uma variável e seu respectivo valor através de um cordão] %}
+{% figure alt:"Ilustração de analogia de uma variável e seu respectivo valor através de um cordão" caption:"Uma variável *foo* não guarda o valor *"bar"* atribuído a ela, mas sim o endereço de memória onde o valor está armazenado." width:512 height:302 %}
+{% asset_path "variables-values.svg" %}
 {% endfigure %}
 
 É importante ter em mente que variáveis não devem ser interpretadas como "caixas" que guardam os valores, mas sim como "placas" que apontam para onde os valores estão. Assim como placas, você pode redirecionar uma variável, e por isso você pode reutilizar uma variável para outros valores. Veja o exemplo abaixo:

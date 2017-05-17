@@ -24,7 +24,7 @@ $ node example.js
 ```
 {% endsimplecode %}
 
-## Expressões e Declarações
+## Expressões e Declarações ##
 
 **Expressões** são declarações de código que produzem um valor. Como visto nos artigos passados, nós utilizamos expressões a todo momento no JavaScript: uma atribuição é uma expressão, uma comparação é uma expressão, uma operação aritmética é uma expressão e até mesmo o próprio valor primitivo é uma expressão. Também vimos que expressões podem ser aninhadas umas às outras, para aumentar seu poder de expressividade.
 
@@ -41,7 +41,7 @@ Uma das declarações mais básicas da linguagem é a de definição de bloco, u
   declaração 1;
   declaração 2;
   declaração 3;
-  ...
+  …
 }
 ```
 {% endsimplecode %}
@@ -58,14 +58,14 @@ console.log(a)  // → 0
 ```
 {% endsimplecode %}
 
-## Declarações condicionais
+## Declarações condicionais ##
 
 Uma declaração condicional é uma declaração de controle de fluxo que executa ou não um trecho de código dependendo de uma condição a ser avaliada.
 
-### if ... else
+### if … else ###
 
-{% figure "A declaração *if* cria um desvio condicional no fluxo de execução, representado na figura pelas setas coloridas" %}
-{% asset_img 'statement-if.svg' [Esquema visual representando a declaração if] %}
+{% figure alt:"Esquema visual representando a declaração if" caption:"A declaração *if* cria um desvio condicional no fluxo de execução, representado na figura pelas setas coloridas." width:1024 height:256 %}
+{% asset_path "statement-if.svg" %}
 {% endfigure %}
 
 A declaração {% c "if" %} tem o comportamento de executar a próxima declaração ou bloco de declarações, se a condição avaliada seja {% c "true" %}. Pode também ser utilizada com o {% c "else" %} e assim executar a declaração que o sucede se o valor da condição for {% c "false" %}. A sintaxe do {% c "if" %} pode ser dada:
@@ -103,7 +103,7 @@ if (cond1) {
 {% endsimplecode %}
 
 
-#### Valores Falsy
+#### Valores Falsy ####
 
 Nas declarações condicionais, a condição precisa ser uma expressão que seja avaliada em {% c "true" %} ou {% c "false" %}. Mas não necessariamente precisa ser do tipo booleano que já vimos anteriormente. O JavaScript, em sua conversão de tipos, avalia alguns valores especiais automaticamente para {% c "false" %} quando passados em uma condição. Esses valores são chamados de ***Falsy***. São eles:
 
@@ -125,10 +125,10 @@ if (o)
 ```
 {% endsimplecode %}
 
-### switch ... case
+### switch … case ###
 
-{% figure "A declaração switch cria uma cadeia de desvios condicionais no fluxo de execução, representado na figura novamente pelas setas coloridas" %}
-{% asset_img statement-switch.svg [Representação gráfica da declaração switch ... case] %}
+{% figure alt:"Representação gráfica da declaração switch … case" caption:"A declaração switch cria uma cadeia de desvios condicionais no fluxo de execução, representado na figura novamente pelas setas coloridas" width:1024 height:256 %}
+{% asset_path "statement-switch.svg" %}
 {% endfigure %}
 
 O {% c "switch" %} é uma declaração condicional poderosa e complexa que permite que o desenvolvedor escreva uma expressão de condição e teste o valor do seu resultado com algum valor rotulado. Se houver combinação, o programa executa as declarações associadas a ele. Sua sintaxe pode ser resumida em:
@@ -140,7 +140,7 @@ switch ( condição ) {
     declaração
   case valor:
     declaração
-  ...
+  …
   default:
     declaração
 }
@@ -223,14 +223,14 @@ switch (clima) {
 Por conveção, o rótulo {% c "default" %} é sempre colocado como único ao final do bloco, mas não precisa necessariamente ser assim. ***:)***
 
 ---
-## Declarações de laço
+## Declarações de laço ##
 
-Declarações de laço são utilizadas para executar código repetido. Há três principais declarações de laço em JavaScript: **for**, **while**, e **do ... while**. Também é possível dar rótulos para esses laços e localiza-los através de um nome com as declarações **label**, **break** e **continue**.
+Declarações de laço são utilizadas para executar código repetido. Há três principais declarações de laço em JavaScript: **for**, **while**, e **do … while**. Também é possível dar rótulos para esses laços e localiza-los através de um nome com as declarações **label**, **break** e **continue**.
 
-### while
+### while ###
 
-{% figure "A declaração *while* cria uma repetição condicional não-determinada" %}
-{% asset_img statement-while.svg [] %}
+{% figure alt:"Representação gráfica da declaração while" caption:"A declaração *while* cria uma repetição condicional não-determinada" width:1024 height:256 %}
+{% asset_path "statement-while.svg" %}
 {% endfigure %}
 
 A declaração {% c "while" %}, a mais simples das declarações de laço, executa a próxima declaração enquanto o valor da sua condição for {% c "true" %}. Sua sintaxe é:
@@ -262,7 +262,7 @@ console.log(resultado) // → 1024
 
 Para fazer laços infinitos, ou seja, laços que nunca param, basta colocar a condição como {% c "true" %}.
 
-### do … while
+### do … while ###
 A declaração {% c "do … while" %},  tem um comportamento parecido com o {% c "while" %}: executa a declaração enquanto a condição for verdadeira. Sua sintaxe é:
 
 {% simplecode %}
@@ -293,10 +293,10 @@ console.log(resultado) // → 1024
 
 Laços infinitos também podem ser feitos bastando colocar a condição como {% c "true" %}.
 
-### for
+### for ###
 
-{% figure "A declaração *for* cria uma repetição condicional determinada em passos" %}
-{% asset_img statement-for.svg [Representação gráfica da declaração for] %}
+{% figure alt:"Representação gráfica da declaração for" caption:"A declaração *for* cria uma repetição condicional determinada em passos" width:1024 height:256 %}
+{% asset_path "statement-for.svg" %}
 {% endfigure %}
 
 Um laço {% c "for" %} também repete a próxima declaração até que a condição dada seja {% c "false" %}. Porém, junto com a condição, ela carrega outras duas declarações: a inicialização e o passo. Tem sintaxe parecida com Java e C:
@@ -331,11 +331,11 @@ console.log(resultado) // → 1024
 
 Veja que a variável **expoente** foi declarada na inicialização do laço, e o seu passo é dado de 1 em 1.
 
-### Declarações de rótulo e quebra de laço
+### Declarações de rótulo e quebra de laço ###
 
 Como já dito, o JavaScript permite a criação de rótulos que identificam uma declaração, assim como variáveis identificam valores. Qualquer declaração pode ser rotulada e interrompida, porém esse recurso é mais utilizada em laços aninhados. Dessa forma, você pode interromper a execução de laços aninhados específicos de forma declarativa.
 
-#### label
+#### label ####
 
 Declaração de rotulação que marca uma posição em seu código. O rótulo segue as mesmas regras que nomes dados para variáveis. Dada pela sintaxe:
 
@@ -347,7 +347,8 @@ declaração de laço
 {% endsimplecode %}
 
 
-#### break
+#### break ####
+
 A declaração {% c "break" %} sem um rótulo interrompe a execução de um laço ou {% c "switch" %}, como visto anteriormente, mais interno. Ou seja, se há dois laços aninhados e houver um break, o laço "de dentro" será interrompido.
 
 Quando utilizados com um {% c "label" %}, interrompe a execução da declaração rotulada com o {% c "label" %}. Sua sintaxe é simples:
@@ -359,7 +360,7 @@ break [rótulo];
 ```
 {% endsimplecode %}
 
-#### continue
+#### continue ####
 A declaração {% c "continue" %} tem um comportamento diferente quando acompanhado de um rótulo ou não. Quando sem rótulo, o {% c "continue" %} pula a atual iteração e passa para a próxima do laço mais interno. Quando acompanhado de um rótulo, faz o mesmo processo para o laço rotulado.
 
 Ao contrário do {% c "break" %} que cancela a execução do laço, o {% c "continue" %} somente pula a iteração atual. Caso seja um {% c "while" %} ou  {% c "do … while" %}, o {% c "continue" %} pula para a verificação da condição. Caso seja um {% c "for" %}, ele pula para a declaração de passo. Sua sintaxe é:
@@ -391,7 +392,7 @@ for (var i = 0; i < 100; i += 10) {
 ```
 {% endsimplecode %}
 
-## Declaração vazia
+## Declaração vazia ##
 Uma declaração vazia é somente um {% c ";" %}, indicando que nenhuma outra declaração deve ser executada. Uma declaração vazia pode ser utilizada em algumas declarações de laço. Veja o exemplo abaixo onde zeramos um array com um {% c "for" %} em declaração um vazia:
 
 {% simplecode js %}
@@ -404,7 +405,7 @@ console.log(array) // → [0,0,0]
 ```
 {% endsimplecode %}
 
-## Conclusão
+## Conclusão ##
 
 Declarações são os blocos de construção da linguagem. Utilizar declarações em sequência dá ao seu código novas maneiras de ser executado, permitindo interferir no fluxo com que as instruções são executadas de acordo com as condições que você desejar. Já os valores, que também são declarações, sempre resultam um valor e podem ser utilizados em variáveis e também em outras declarações.
 

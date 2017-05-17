@@ -84,7 +84,8 @@ console.log(hello('Pedro')) // → Hello Pedro!
 {% endsimplecode %}
 
 ---
-## Objetos de Primeira-Classe e Funções de Alta Ordem.
+## Objetos de Primeira-Classe e Funções de Alta Ordem. ##
+
 Já dissemos em episódios anteriores que funções em JavaScript são também consideradas *first-class objects* (objetos de primeira classe) e também são *high-order functions* (funções de alta-ordem). Um elemento de uma linguagem é dito ser um valor de [primeira classe](http://c2.com/cgi/wiki/?FirstClass) se não há restrições em como o valor é criado ou usado; quando a construção pode ser tradada como um valor sem restrições. [Funções de alta ordem](http://c2.com/cgi/wiki?HigherOrderFunction) são funções que podem receber outra função como argumento ou retornar uma função como resultado.
 
 Em JavaScript, funções são somente um tipo especial de objeto e podem fazer todas as coisas que um objeto pode fazer. Em suma:
@@ -96,7 +97,8 @@ Em JavaScript, funções são somente um tipo especial de objeto e podem fazer t
 * Você pode retornar uma função a partir de outra função.
 
 ---
-## Funções como variáveis
+## Funções como variáveis ##
+
 Provavelmente uma sintaxe um tanto incomum para a maioria dos desenvolvedores é a definição de uma função como uma variável.
 
 {% simplecode js %}
@@ -136,7 +138,7 @@ console.log('O resultado é: ' + resultado());
 A grande diferença desse tipo de declaração de função, também chamada de **expressão funcional**, é que não damos um nome para a função. Todas são **Funções Anônimas**. Funções anônimas são usadas freqüentemente em JavaScript.
 
 ---
-## Funções como parâmetros e retorno
+## Funções como parâmetros e retorno ##
 
 Já que funções podem ser declaradas como variáveis, podemos então passá-las como argumentos em outra função. Veja o exemplo:
 
@@ -165,7 +167,9 @@ result()
 
 Note que estamos passando a referência, também chamada de ponteiro, das funções em {% c "question" %} e {% c "response" %} para a função em {% c "quiz" %}, e esta por sua vez retorna outra referência para uma função que atribuímos a variável {% c "result" %}.
 
-### Expressões λ
+
+### Expressões λ ###
+
  Agora que entendemos o conceito de funções como valores, e que podemos atribuir essas funções para variáveis e passá-las como argumento ou como resultado de uma função, você entendeu o conceito de [Expressão λ](https://en.wikipedia.org/wiki/Anonymous_function) (Lambda). Basicamente, **Expressão λ** é o conceito da [programação funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional) utilizado quando uma função é passada para outra como argumento.
 
 > Se uma função é usada como um valor, então essa função é uma Expressão λ
@@ -179,7 +183,8 @@ Em JavaScript, Expressões λ são utilizadas comumente em:
 Expressões  λ são utilizadas juntamente com funções anônimas e *closures*. Conceitos distintos mas intimamente ligados, importantes para o bom entendimento da expressividade que o JavaScript possui. Veremos tais conceitos com mais detalhes futuramente.
 
 ---
-## Referências de funções
+## Referências de funções ##
+
 Quando se define uma função, ela ocupa um espaço na memória do computador. Na verdade, a variável recebe o endereço a referência para o local da memória dentro do [*heap*](http://c2.com/cgi/wiki?TheHeap) do JavaScript. Observe o código:
 
 {% simplecode js %}
@@ -200,7 +205,8 @@ goodbye() // → Goodbye World!
 {% endsimplecode %}
 
 ---
-## Conclusão
+## Conclusão ##
+
 Nesse episódio aprendemos sobre funções, como declará-las e suas principais características. A palavra-chave {% c "function" %}, quando usada em uma expressão, cria uma função procedural. Quando usada em uma atribuição, cria uma referência para uma função. A chave do entendimento das funções é o seu comportamento como objetos de primeira classe, ou seja, seu funcionamento é igual a qualquer outro valor da linguagem.
 
 Separar seu código em funções é importante para modularizar e evitar repetição dentro do seu código. Funções também são importantes para aumentar o vocabulário do seu código como também sua expressividade. Detalhes como o escopo das funções, *closures*, *hoisting* e programação funcional ainda são conceitos que ainda precisam de mais atenção e são importantes dentro da linguagem.

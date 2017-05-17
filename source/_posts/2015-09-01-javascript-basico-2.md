@@ -68,7 +68,7 @@ Outros operadores, como o **incremento** ({% c ++ %}, adiciona 1) e **decremento
 ### Valores numéricos especiais
  Há três valores numéricos em JavaScript que não se comportam como números. Os primeiros são o **∞** e **-∞** ─ representados na linguagem por {% c Infinity %} e {% c -Infinity %} ─ que são os infinitos  positivo e negativo. Nem mesmo nossa matemática compreende todas as suas propriedades, mas são úteis para solucionar alguns problemas.
 
-O terceiro é {% c NaN %}, do inglês <i lang="en">Not a Number</i>; ou seja, apesar do valor ser numérico, ele não pode ser considerado um "número". Por exemplo, quando temos uma operação infinito menos infinito,  infinito multiplicado por zero, entre outros... Sucintamente: qualquer operação matemática que não resulte em um valor numérico definido é denominado {% c NaN %}.
+O terceiro é {% c NaN %}, do inglês <i lang="en">Not a Number</i>; ou seja, apesar do valor ser numérico, ele não pode ser considerado um "número". Por exemplo, quando temos uma operação infinito menos infinito,  infinito multiplicado por zero, entre outros… Sucintamente: qualquer operação matemática que não resulte em um valor numérico definido é denominado {% c NaN %}.
 
 {% simplecode js %}
 ``` js

@@ -17,7 +17,9 @@ tags:
 
 Anteriormente, aprendemos como controlar a execução do fluxo do código JavaScript através de declarações. Também vimos como atribuir valores primitivos a variáveis e como manipulá-los no código. Com isso, é possível codificar qualquer algoritmo em JavaScript. Entretanto, ainda não arranhamos a superfície das funcionalidades que a linguagem oferece.
 
-## Recapitulando e acrescentando
+
+## Recapitulando e acrescentando ##
+
 Vamos recapitular um pouco sobre valores: em JavaScript há os valores primitivos e os objetos. Todo valor em JavaScript possui **propriedades** ─ com exceção dos valores que indicam um não-valor: ({% c "null"%} e {% c "undefined"%}) ─ e que podem ser acessados por uma **chave**. Essas propriedades são também valores e podem ser acessados através do operador {% c "."%} da seguinte forma: {% c "valor.chave"%}.
 
 Os únicos valores que não permitem o acesso através desse operador são os valores numéricos declarados literalmente, pois o ponto indica a parte decimal do número. Porém, se os valores numéricos forem atribuídos à uma variável, você pode acessar com o {% c "."%} tranquilamente. Veja alguns exemplos:
@@ -44,18 +46,19 @@ console.log('javascript'.toUpperCase) // → function toUpperCase()
 Nesse caso o console está exibindo o rótulo da função, mas não está aplicando a função. Vamos compreender mais sobre o comportamento das funções futuramente.
 
 
-## Objetos
+## Objetos ##
 
 Os valores primitivos são os blocos de construção primários onde estruturas de dados são construídas. Mas para desenvolver soluções para problemas complexos, usar apenas esses blocos primários podem tornar esse processo muito difícil. Vamos entender um pouco de uma estrutura de dado essencial para o JavaScript, os **Objetos**.
 
 Os Objetos são valores que permitem o agrupamento de outros valores arbitrários através de uma chave. Ou seja, são basicamente um conjunto de propriedades, onde cada propriedade é um par de chave-valor. Em sua essência, objetos são [arranjos associativos](https://en.wikipedia.org/wiki/Associative_array)  ─ também chamados de mapas, tabelas de símbolos ou dicionários ─,  onde cada chave é única dentro da estrutura e é atribuída a ela somente um valor e implementados como uma [tabela hash](https://en.wikipedia.org/wiki/Hash_table).
 
-{% figure "Um objeto é um conjuntos de vários pares de chave-valor. Cada chave leva a um único valor e é única no objeto. Cada chave é como se fosse um “braço” que aponta para uma região da memória onde o valor está armazenado." %}
-{% asset_img 7-object.svg [Representação metafórica de um objeto como um polvo representando onde cada braço segura um valor] %}
+{% figure alt:"Representação metafórica de um objeto como um polvo representando onde cada braço segura um valor" caption:"Um objeto é um conjuntos de vários pares de chave-valor. Cada chave leva a um único valor e é única no objeto. Cada chave é como se fosse um “braço” que aponta para uma região da memória onde o valor está armazenado." width:1024 height:512 %}
+{% asset_path "7-object.svg" %}
 {% endfigure %}
 
 
-### Declarando objetos
+### Declarando objetos ###
+
 Em JavaScript, os objetos normalmente são declarados através do literal objeto. Sua sintaxe é dada como:
 
 {% simplecode  %}
@@ -63,7 +66,7 @@ Em JavaScript, os objetos normalmente são declarados através do literal objeto
 {
   chave: valor,
   chave: valor,
-  ...
+  …
   chave: valor
 }
 ```
@@ -84,7 +87,9 @@ var passaro = {
 ```
 {% endsimplecode %}
 
-### Acessando as propriedades
+
+### Acessando as propriedades ###
+
 Como qualquer outro valor, você pode acessar as propriedades de um objeto com o operador {% c "." %}. Quando temos uma função como propriedade do objeto, podemos referenciar ao próprio objeto através da declaração {% c "this" %}, assim podendo então acessar suas propriedades com o {% c "." %} normalmente. Veja a função {% c "descrever" %} do exemplo anterior e o seu comportamento quando é executada abaixo:
 
 {% simplecode js %}
@@ -148,7 +153,8 @@ console.log(passaro.descrever()) // → João-de-barro (Furnarius rufus) é um p
 {% endsimplecode %}
 
 
-### Verificando a existência de uma propriedade
+### Verificando a existência de uma propriedade ###
+
 Quando lemos uma propriedade que não existe no objeto, o valor {% c "undefined" %} é retornado. Mas se atribuímos um valor para uma propriedade inexistente, essa propriedade é criada dentro do objeto. Podemos verificar se uma propriedade existe no objeto através do operador {% c "in" %}, que retorna {% c "true" %} ou  {% c "false" %} caso a propriedade exista no objeto ou não.
 
 {% simplecode js %}
@@ -164,7 +170,8 @@ console.log(passaro[chave])    // → Amarelo
 {% endsimplecode %}
 
 
-### Removendo propriedades
+### Removendo propriedades ###
+
 O operador {% c "delete" %} remove a propriedade do objeto. Veja:
 
 {% simplecode js %}
@@ -178,7 +185,8 @@ console.log('descrever' in passaro) // → false
 Nos motores de execução modernos de JavaScript, mudar o número de propriedades de um objeto é muito mais custoso em termos computacionais do que atribuir novos valores para uma propriedade. Muitas vezes atribuir o valor da propriedade para {% c "null" %} pode resolver o problema, a não ser que seja necessário utilizar o operador {% c "in" %}.
 
 
-### Iterando sobre as propriedades
+### Iterando sobre as propriedades ###
+
 É possível também iterar em todas as chaves de um objeto, através da declaração {% c "for … in" %}, que possui a seguinte sintaxe:
 
 {% simplecode %}
@@ -208,7 +216,8 @@ for (var chave in passaro) {
 {% endsimplecode %}
 
 ---
-## Diferenças entre valores primitivos e objetos
+## Diferenças entre valores primitivos e objetos ##
+
 O Javascript possui uma distinção arbitrária entre os valores.
 
 * Valores primitivos são: booleanos, números, strings, símbolos e {% c "null" %} e {% c "undefined" %} declarados literalmente;
@@ -217,7 +226,8 @@ O Javascript possui uma distinção arbitrária entre os valores.
 A grande diferença entre os valores primitivos e objetos é o modo como eles são comparados e a mutabilidade de seus conteúdos.
 
 
-### Comparação
+### Comparação ###
+
 Os valores primitivos são comparados através do seu “conteúdo”, ou seja, se dois valores primitivos tem o mesmo conteúdo, eles são iguais.
 
 {% simplecode js %}
@@ -243,7 +253,8 @@ obj1 == obj2  // → true
 {% endsimplecode %}
 
 
-### Mutabilidade
+### Mutabilidade ###
+
 Valores primitivos são considerados **imutáveis**, ou seja, é impossível mudar uma propriedade ou o seu valor para esses tipos de dados. Toda vez que você os manipula, na verdade você gera novos valores a partir dos antigos, mesmo que sejam idênticos.
 
 {% simplecode js %}
@@ -268,7 +279,8 @@ console.log(passaro.nome)  // → Patativa-do-campo
 {% endsimplecode %}
 
 ---
-## Conclusão
+## Conclusão ##
+
 Objetos fornecem para o desenvolvedor modos de agrupar vários valores em um só conjunto. Conceitualmente, podemos colocar todos os valores que possuem alguma relação em um mesmo conjunto ao invés de deixá-los espalhados pelo código. Objetos são a estrutura de dados básica do JavaScript, quase todo elemento dentro da linguagem é um objeto. Até mesmo valores primitivos possuem seus análogos em objetos, que serão vistos mais em artigos futuros.
 
 Apesar de possuírem o mesmo nome, Objetos não devem ser confundidos com o conceito de objeto em programação orientada a objetos (OO), que é definido como [instância de uma classe](https://pt.wikipedia.org/wiki/Objeto_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)). Como dito anteriormente, Objetos em Javascript são arranjos associativos dinâmicos.

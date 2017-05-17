@@ -15,7 +15,8 @@ tags:
 Hoje veremos uma característica bastante peculiar  do JavaScript e que normalmente é causa de pequenos erros quanto estamos trabalhando com linguagem: o içamento de variáveis, comumente chamado de  *Hoisting*.
 
 ---
-## Hoisting de variáveis
+## Hoisting de variáveis ##
+
 No momento de execução, as declarações de variáveis em JavaScript passam por um processo de içamento, ou seja, a declaração da variável “sobe” para o topo do escopo atribuído. Esse processo funciona tanto para declarações {%c "var"%} quanto para declarações {%c "let"%}. Veja:
 
 {% simplecode js %}
@@ -48,7 +49,8 @@ foo()
 {% endsimplecode %}
 
 ---
-## Hoisting de funções
+## Hoisting de funções ##
+
 O processo de *hoisting* também afeta as funções nomeadas — funções declaradas da seguinte forma {%c "function nomeDaFunção (…)"%} — porém seu comportamento é diferente do de variáveis; a inicialização da variável é imediata, ou seja, quando uma função nomeada é içada, sua inicialização também sofre o mesmo efeito. Dessa forma, o código a seguir é válido.
 
 {% simplecode js %}
@@ -66,7 +68,8 @@ O resultado do código é {%c "Função nomeada \#1"%}. Perceba que a função �
 {% asset_img hoist.svg [Analogia ilustrativa da fase de hoist como um guindaste que eleva as declarações de variáveis ao topo do escopo.] %}
 
 ---
-## Boas práticas
+## Boas práticas ##
+
 Pelos exemplos anteriores, é óbvio que o comportamento de içar ao topo do escopo as declarações de variáveis e funções nomeadas pode levar a resultados confusos e proporcionar um código de difícil leitura. Portanto, é importante que você siga algumas boas práticas no momento de escrita do código.
 
 É importante que você mantenha a leitura do código em acordo com o estado dele. Dessa forma, elevar as declarações de suas variáveis para o topo do seu respectivo escopo evita confusão com o processo de *hoisting*, pois seu código deixa explícito que desde o topo do escopo a variável está declarada.

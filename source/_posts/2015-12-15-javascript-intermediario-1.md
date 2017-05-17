@@ -19,7 +19,8 @@ Primeiramente, o que é escopo léxico de uma variável em uma linguagem de prog
 Na maioria das linguagens descendentes do C, as variáveis possuem uma declaração única de variável e atribuem a ela o **escopo léxico de bloco**, ou seja, o bloco — um conjunto de declarações entre um {% c "{…}" %} — é quem define o local onde uma variável é identificada por um nome. Já o JavaScript, desde a ECMAScript 2015, possui três formas de declarar variáveis: por meio do {% c "let" %}, {% c "const" %} ou por meio do {% c "var" %}, e cada uma delas possui uma forma diferente de tratar o escopo léxico da variável declarada.
 
 ---
-## Declaração de variáveis "var"
+## Declaração de variáveis "var" ##
+
 Para a declarações de variáveis com {% c "var" %} é atribuído o **escopo léxico de função**, ou seja, é a função quem define o local que uma variável é identificada por um nome. E isso é o que causa mais confusão em desenvolvedores iniciantes na linguagem, veja o exemplo abaixo:
 
 {% simplecode js %}
@@ -43,7 +44,7 @@ foo()
 Nota-se que, mesmo apesar da variável {% c "x" %} ser declarada novamente dentro do laço, ela é tradada como a mesma variável declarada fora do laço. O contrário acontece com a variável {% c "x" %} fora da função, nesse caso, o valor é isolado do valor interno à função. Esse comportamento é dado pelo escopo léxico de função — dada por {% c "foo" %} — e não pelo bloco do laço {% c "for" %}.
 
 ---
-## Declarações de variáveis "let"
+## Declarações de variáveis "let" ##
 
 No ECMAScript 2015, a declaração de variável {% c "let" %} foi adicionada ao padrão da linguagem, permitindo a declaração de variáveis sejam atribuídas para um escopo léxico de bloco. Funcionamento semelhante a linguagem C ou Java. Veja o mesmo exemplo anterior com declarações {% c "let" %}:
 
@@ -68,7 +69,7 @@ foo()
 A diferença de resultados se dá principalmente dentro da função, que agora delimitam o escopo léxico pelo bloco e não mais pela função. Apesar de ser uma funcionalidade relativamente nova da linguagem, o {% c "let" %} talvez não seja implementado em todos os navegadores ou motores JavaScript, por isso, é necessário atenção ao utilizar.
 
 ---
-## Declarações de constantes "const"
+## Declarações de constantes "const" ##
 
 A declaração de variáveis {% c "const" %}, que também foi padronizada na ECMAScript 2015, cria uma variável cujo seu valor próprio é fixo, ou seja, a referência é fixa. Isso não significa que o valor seja imutável, apenas não permite que a variável seja reatribuído outro valor. Constantes possuem escopo léxico de bloco, da mesma forma que o {% c "let" %}. É obrigatório que um valor seja atribuído à constante em sua declaração. Veja o exemplo abaixo:
 
@@ -91,7 +92,8 @@ Linguagens não servem somente para expressar pensamentos, mas para possibilitar
 {% endquote %}
 
 ---
-## Conclusão
+## Conclusão ##
+
 Como um bom programador, uma das coisas mais importantes que você pode aprender é **sempre manter a simplicidade**. Dentro do contexto de variáveis, isso significa que uma variável só deve ser usada para representar um único conceito.
 
 Algumas vezes somos tentados a criar uma variável para representar um dado e outra variável como um lugar temporário para armazenar esse valor em uma transição de representação. Essa prática deve ser evitada, pois leva a um código não efetivo e de difícil leitura. Por isso, favoreça a utilização de {% c "const" %} e {% c "let" %} quanto estiver em um código que permita seu uso, ou seja, que utilize o ES6.

@@ -16,7 +16,8 @@ tags:
 No último texto da série JavaScript Intermediário, iremos abordar um dos conceitos que mais causam confusão em desenvolvedores que estão iniciando na linguagem, os Protótipos de Objetos. No entanto, vamos ao fim verificar que é um conceito bem simples e poderoso, utilizado em várias soluções dentro da linguagem.
 
 ---
-## Introdução
+## Introdução ##
+
 [Em textos anteriores](http://maxroecker.github.io/blog/javascript-basico-5/), estudamos que objetos são estruturas de dados compostas por tuplas de "chave-valor" que muito se assemelham a [tabelas *hash*](https://pt.wikipedia.org/wiki/Vetor_associativo). Objetos possuem propriedades que podem ser acessadas por meio do operador {%c ".key"%} ou {%c "[key "%} (onde {%c "key"%} é o nome da propriedade). Caso tentarmos ler uma propriedade que não exista, teremos {%c "undefined"%} como resultado. Mas se atribuímos um valor para uma propriedade inexistente no objeto, essa propriedade é criada e agora carrega o valor.
 
 Vamos ver exemplo simples de objeto abaixo:
@@ -37,10 +38,10 @@ console.log(user.toString())      // → [object Object]
 ```
 {% endsimplecode %}
 
-Espere um pouco... onde a propriedade {%c "toString"%} foi declarada? Nosso objeto {%c "user"%} não possui essa propriedade. Além disso, ela é uma função e foi executada. Porque isso aconteceu? Bem, acabamos de visualizar os protótipos em ação, que definiremos a seguir.
+Espere um pouco… onde a propriedade {%c "toString"%} foi declarada? Nosso objeto {%c "user"%} não possui essa propriedade. Além disso, ela é uma função e foi executada. Porque isso aconteceu? Bem, acabamos de visualizar os protótipos em ação, que definiremos a seguir.
 
 ---
-## Definição
+## Definição ##
 
 **Protótipos** são objetos que servem como "reserva" para outros objetos e são a principal forma para alcançarmos a reutilização de código dentro da linguagem. Para definir um protótipo, suponha dois objetos, *A* e *B*. Dizemos que *A* é protótipo *B* quando *A* fornece um suporte “reserva” para *B*, ou seja, ao procurar-se uma propriedade em *B* e ela não for encontrada, essa propriedade é buscada então em *A*.
 
@@ -49,24 +50,25 @@ No exemplo anterior, o objeto {%c "user"%} foi criado com os literais {%c "{ }"%
 O JavaScript não é o único a utilizar protótipos em objetos, outras linguagens que implementam esse estilo de programação incluem as linguagens [Self](http://www.selflanguage.org/), [Logtalk](http://logtalk.org/) e [Lua](http://www.lua.org/).
 
 ---
-## Descobrindo o protótipo de um objeto
+## Descobrindo o protótipo de um objeto ##
 
 Você pode descobrir o protótipo de um objeto utilizando a função {%c "Object.getPrototypeOf"%} aplicada em um objeto. Por exemplo, veja a seguir o protótipo de um objeto literal vazio — ou seja, um objeto sem qualquer propriedade declarada em si mesmo:
 
-{% figure 'Você pode descobrir o protótipo de um objeto aplicando a função Object.getPrototypeOf no objeto.' %}
-{% asset_img object-prototype.png 'Resultado ao executar a função Object.getPrototypeOf em um objeto vazio.' %}
+{% figure caption:"Você pode descobrir o protótipo de um objeto aplicando a função `Object.getPrototypeOf` no objeto." alt:"Resultado ao executar a função Object.getPrototypeOf em um objeto vazio." width:550 height:253 %}
+{% asset_path "object-prototype.png" %}
 {% endfigure %}
 
 Quando tentamos acessar uma propriedade em um objeto e ela não é encontrada, a máquina virtual irá procurar no protótipo desse objeto. Caso também não fosse encontrada, a busca passa a ser no protótipo do protótipo, e se assim por diante até que último algum objeto não tenha mais um protótipo. Essa referência de protótipos é chamada de **Cadeia de Protótipos**.
 
-{% figure "As referências de objetos para objetos por meio de protótipos formam uma Cadeia de Protótipos" %}
-{% asset_img prototype-chain.svg 'Representação ilustrativa da cadeia protótipos, onde cada objeto aponta para outro objeto por meio de uma referência' %}
+{% figure caption:"As referências de objetos para objetos por meio de protótipos formam uma Cadeia de Protótipos" alt:"Representação ilustrativa da cadeia protótipos, onde cada objeto aponta para outro objeto por meio de uma referência" width:255 height:110 %}
+{% asset_path "prototype-chain.svg" %}
 {% endfigure %}
 
 Já vimos que o protótipo de um objeto literal é o {%c "Object.prototype"%}, mas qual é o protótipo do {%c "Object.prototype"%}? O {%c "Object.prototype"%} é considerado o "último protótipo" em uma cadeia de protótipos e por isso seu protótipo é {%c "null"%}.
 
 ---
-## Criando objetos com diferentes protótipos
+## Criando objetos com diferentes protótipos ##
+
 Você pode alterar o protótipo de um objeto no momento da sua criação utilizando a função {%c "Object.create"%}, que recebe no primeiro parâmetro um objeto que será o protótipo do objeto criado. Veja no exemplo a seguir onde definimos um protótipo para um objeto que representa um ponto com coordenadas x e y:
 
 {% simplecode js %}
@@ -92,7 +94,7 @@ console.log(point.getDistanceFrom(origin)) // → 5
 {% endsimplecode %}
 
 ---
-## Alterando o protótipo de um objeto já criado
+## Alterando o protótipo de um objeto já criado ##
 
 Alterar o protótipo de um objeto após ele ser criado é possível com a utilização da propriedade {%c "__proto__"%}. Vamos ilustrar a utilização dessa porpriedade com o exemplo anterior do ponto com coordenadas x e y:
 
@@ -122,7 +124,7 @@ No entanto, alterar o protótipo de um objeto é uma operação **muito lenta** 
 
 
 ---
-## Conclusões
+## Conclusões ##
 
 Os protótipos são responsáveis por grande parte do poder que a linguagem JavaScript oferece e se torna ainda mais expressiva quando aliada as estruturas funcionais presentes na linguagem, tais como *closures*, funções de alta ordem e etc. Os protótipos são utilizados principalmente para reutilização de código e também são fundamentais em alguns padrões para programar em JavaScript orientado à objetos.
 

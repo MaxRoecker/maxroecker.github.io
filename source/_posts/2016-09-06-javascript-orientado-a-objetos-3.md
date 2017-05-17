@@ -18,7 +18,8 @@ Além disso, para compreender bem o texto, é importante que você também tenha
 
 
 ---
-## Introdução
+## Introdução ##
+
 Como vimos anteriormente, um **Construtor** é um componente especial que é executado para inicializar um objeto recém-criado uma vez que o seu espaço na memória já foi alocado. Vimos  também que um construtor em JavaScript é uma função responsável por receber um objeto vazio  — com a utilização do operador {%c "new"%} — e atribuir-lhe as propriedades desejadas. um construtor de um objeto que representa uma Pessoa pode ser visto a seguir:
 
 {% simplecode js %}
@@ -52,7 +53,7 @@ console.log(pedremildo.getAge())        // → 28
 
 
 ---
-## Construtores com Protótipos
+## Construtores com Protótipos ##
 
 Vimos anteriormente que construtores simples possuem algumas deficiências, principalmente quando estamos falando no desempenho da aplicação quando são criadas muitas instâncias de objetos de um mesmo construtor, uma vez que todo objeto possui cópias idênticas de todos os métodos utilizados. Por exemplo, o método {%c "getAge"%} do código anterior é copiado para todos os objetos construídos por {%c "Person"%}.
 
@@ -118,7 +119,7 @@ O resultado é verdadeiro porque a referência do método de um objeto e do outr
 
 
 ---
-## Herança
+## Herança ##
 
 Com construtores com protótipos, a herança é sempre alcançada em duas etapas: transferência de propriedades e encadeamento de protótipos. A primeira parte, a transferência de propriedades, é feita da mesma forma que os construtores simples, utilizando o método {%c "apply"%} de um construtor no contexto {%c "this"%} atual. Dessa forma, todas as propriedades que o construtor chamado possuir serão atribuídos ao contexto {%c "this"%} do objeto. Caso você queira entender melhor esse processo, veja como funciona herança [no texto anterior dessa série](http://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/#herança).
 
@@ -153,8 +154,8 @@ Observe que há a cópia de todas as propriedades de {%c "parents"%} e {%c "prot
 
 Para exemplificar, vamos utilizar os mesmos exemplos utilizados [em capítulos passados](http://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/#herança). Queremos construir um jogo de simulação de cidades e estamos desenvolvendo os objetos que representam as construções da cidade. Seguiremos o modelo proposto no diagrama a seguir.
 
-{% figure 'Diagrama que representa nosso modelo de construtores de objetos construções do jogo.' %}
-{% asset_img 'building-model-2.svg' 'Diagrama mostrando as relações dos construtores de construções. Ao topo temos o Building e Complex; a partir dele herda-se Redidential e Working Building. A partir de Working Building herda-se Commercial e Industrial. A partir de Redidential e Complex herda-se Condominium.' %}
+{% figure caption:"Diagrama que representa nosso modelo de construtores de objetos construções do jogo." alt:"Diagrama mostrando as relações dos construtores de construções. Ao topo temos o Building; a partir dele herda-se Redidential e Working Building. A partir de Working Building herda-se Commercial e Industrial." width:255 height:150 %}
+{% asset_path "building-model-2.svg" %}
 {% endfigure %}
 
 Primeiramente, vamos ao nosso construtor {%c "Building"%}. Seu código é semelhante ao da figura a seguir:
@@ -210,7 +211,7 @@ chale.addResident(testerson)
 sobrado.addResident(pedremildo)
 
 console.log(chale.getPowerConsumption()) // → 120
-console.log(sobrado.residents[0])      // → {Pedremildo ...}
+console.log(sobrado.residents[0])      // → {Pedremildo …}
 ```
 {% endsimplecode %}
 
@@ -306,7 +307,7 @@ Note que a ordem em que estão os elementos em {%c "parents"%} é importante, um
 
 
 ---
-## Encapsulamento
+## Encapsulamento ##
 
 Construtores com Protótipos não possuem o conceito de encapsulamento, pois, afinal, se um método que esteja referenciado no protótipo de um objeto precisa acessar uma propriedade do objeto, essa propriedade **precisa ser pública**. Para isso, quando utilizando o padrão construtor com protótipos, utiliza-se uma **convenção de nomenclatura**. De forma geral, métodos ou atributos que iniciem com um subtraço (*underscore*, {%c "_"%}) não devem ser chamado fora do contexto da criação do objeto — mesmo que isso seja possível.
 
@@ -338,11 +339,12 @@ Residential.prototype = inherit(Residential, residentialParents, residentialProt
 
 
 ---
-## Polimorfismo
+## Polimorfismo ##
+
 Em JavaScript o polimorfismo pode ser realizado sem muitos problemas, uma vez que funções são objetos, objetos são mutáveis e variáveis não possuem tipos definidos. Não há um contrato pré-definido entre as variáveis — como é o caso das interfaces em Java ou classes abstratas em C++ — e por isso fica a cargo do codificador utilizar a mesma interface nos objetos em que deve-se estabelecer um polimorfismo.
 
-{% figure 'O polimorfismo permite que diferentes objetos que implementem uma mesma interface possam ser tratados de forma indistinguível.' %}
-{% asset_img 'polymorphism.svg' 'Representação ilustrativa do polimorfismo como uma situação onde um objeto ordene os objetos a falarem e todos respondem a sua maneira.' %}
+{% figure caption:"O polimorfismo permite que diferentes objetos que implementem uma mesma interface possam ser tratados de forma indistinguível." alt:"Representação ilustrativa do polimorfismo como uma situação onde um objeto ordene os objetos a falarem e todos respondem a sua maneira." width:255 height:110 %}
+{% asset_path "polymorphism.svg" %}
 {% endfigure %}
 
 O polimorfismo com construtores com protótipos pode ser feito da mesma forma que com construtores simples, porém os métodos estão referenciados no protótipo ao invés do próprio objeto.
@@ -415,7 +417,7 @@ for (var i = 0; i < workingBuildings.length; i++) {
 
 
 ---
-## Resumo
+## Resumo ##
 
 O Padrão Construtor com Protótipos possui várias vantagens, tais como:
 
@@ -424,7 +426,9 @@ O Padrão Construtor com Protótipos possui várias vantagens, tais como:
  - Uso enxuto da memória, pois cada método é somente alocado uma vez e compartilhado entre todos os objetos através do uso de protótipos;
  - Propriedades estáticas podem ser feitas da mesma maneira que Construtores Simples.
 
-{% asset_img 'scale.svg' 'Ilustração de uma balança.' %}
+ {% figure alt:"Ilustração de uma balança" width:255 height:110 %}
+ {% asset_path "scale.svg" %}
+ {% endfigure %}
 
 Porém, alguns pontos devem ser considerados quando trabalhos com Construtores com Protótipos:
 
@@ -433,7 +437,7 @@ Porém, alguns pontos devem ser considerados quando trabalhos com Construtores c
 
 
 ---
-## Conclusões
+## Conclusões ##
 
 Hoje compreendemos sobre Construtores com Protótipos, um padrão muito utilizado no lado cliente de aplicações web, pois oferece as principais características da programação orientada a objetos com um menor custo de uso de memória.
 

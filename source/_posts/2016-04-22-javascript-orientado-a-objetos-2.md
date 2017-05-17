@@ -21,7 +21,7 @@ O texto hoje é um pouco longo, pois achei importante unir os principais tópico
 
 
 ---
-## Introdução
+## Introdução ##
 
 Na orientação a objetos, um **Construtor** é um componente especial utilizado para inicializar um objeto recém-criado, uma vez que a memória utilizada por ele já foi alocada. O conceito de construtores também é utilizado no JavaScript quando estamos trabalhando com programação orientada a objetos. No entanto, diferente de linguagens como o Java e o C++ — onde o construtor é um método da própria classe —, em JavaScript o construtor é uma função que constrói o objeto. Como em JavaScript [quase tudo é um objeto](http://maxroecker.github.io/blog/javascript-basico-5/), [incluindo funções](http://maxroecker.github.io/blog/javascript-basico-6/), podemos utilizá-las de forma análoga à “instanciadores de objetos”.
 
@@ -68,11 +68,12 @@ console.log(testerson.getAge())        // → 28
 
 
 ---
-## Construtores Simples
+## Construtores Simples ##
+
 Como construtores são uma das técnicas mais utilizada para a criação de objetos no JavaScript, a própria linguagem fornece um “açúcar sintático” (*[syntatic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)*) com a utilização do operador {%c "new"%}. Quando adicionado à frente de uma chamada de função, o operador {%c "new"%} muda o escopo de execução da função, atribuindo um novo objeto vazio a ele. Dessa forma, podemos utilizar a palavra {%c "this"%} dentro do contexto da função e estaremos referenciando ao novo objeto que a expressão {%c "new"%} inclui ao escopo.
 
-{% figure 'Um construtor, em JavaScript, é uma função que recebe um objeto e atribui a ele características e um comportamento próprio.' %}
-{% asset_img 'constructor.svg' 'Imagem ilustrativa representando um construtor como um trabalhador da construção civil criando um objeto.' %}
+{% figure caption:"Um construtor, em JavaScript, é uma função que recebe um objeto e atribui a ele características e um comportamento próprio." alt:"Imagem ilustrativa representando um construtor como um trabalhador da construção civil criando um objeto." width:255 height:110 %}
+{% asset_path "constructor.svg" %}
 {% endfigure %}
 
 O operador {%c "new"%} também altera o comportamento de retorno implícito da função. Em uma função, quando não há um {%c "return"%} explícito no código da função, o retorno é {%c "undefined"%}. Porém, se a invocação da função é precedida pelo operador {%c "new"%},  então a função retorna implicitamente o próprio contexto da função, que nesse caso é novo objeto criado anteriormente pelo próprio {%c "new"%}.
@@ -129,12 +130,12 @@ Essa cópia de funções idênticas em vários objetos pode acarretar em um prob
 
 
 ---
-## Herança
+## Herança ##
 
 Com construtores simples, podemos alcançar a herança em nossos objetos ao utilizar uma chamada ao construtor — normalmente chamado de “pai” —, do qual se quer herdar as características com o auxílio do método {%c "apply"%}. O {%c "apply"%} é um método pertencente a todo objeto função, que aplica a função de acordo com o contexto dado e os argumentos passados. Recebe dois parâmetros: o primeiro, um objeto, indica contexto em que a função deve ser aplicada (ou seja, para onde a referência {%c "this"%} dentro do método pai deve ser apontada), e o segundo é um *array* que indica os argumentos que devem ser passados a função para ser executada.
 
-{% figure 'Quando utilizamos herança, as propriedades dos objetos pais são passadas aos seus filhos.' %}
-{% asset_img 'inheritance.svg' 'Representação ilustrativa da herança como uma árvore genealógica entre os objetos.' %}
+{% figure caption:"Quando utilizamos herança, as propriedades dos objetos pais são passadas aos seus filhos." alt:"Representação ilustrativa da herança como uma árvore genealógica entre os objetos." width:255 height:110 %}
+{% asset_path "inheritance.svg" %}
 {% endfigure %}
 
 De forma mais técnica, a herança feita pela utilização do {%c "apply"%} copia todas as propriedades definidas pelo construtor pai e aplica no objeto gerado pelo construtor filho. Quando um filho quer reescrever uma propriedade herdada (seja ela um atributo ou um método), ele simplesmente substitui tal propriedade por um valor próprio.
@@ -143,8 +144,8 @@ Para exemplificar a herança, vamos supor que estamos desenvolvendo um jogo de s
 
 Em nossa modelagem, vamos seguir o diagrama ilustrado a seguir. Temos como pai um construtor genérico de construção, então temos residências. Também temos um construtor que representa um local de trabalho, e com isso suas especializações em instalações comerciais e industriais.
 
-{% figure 'Diagrama que representa nosso modelo de construtores de objetos construções do jogo.' %}
-{% asset_img 'building-model-1.svg' 'Diagrama mostrando as relações dos construtores de construções. Ao topo temos o Building; a partir dele herda-se Redidential e Working Building. A partir de Working Building herda-se Commercial e Industrial.' %}
+{% figure caption:"Diagrama que representa nosso modelo de construtores de objetos construções do jogo." alt:"Diagrama mostrando as relações dos construtores de construções. Ao topo temos o Building; a partir dele herda-se Redidential e Working Building. A partir de Working Building herda-se Commercial e Industrial." width:255 height:110 %}
+{% asset_path "building-model-1.svg" %}
 {% endfigure %}
 
 Utilizando os conceitos e os modelos vistos anteriormente, vamos primeiramente desenvolver nosso construtor de objetos que representa construções:
@@ -250,13 +251,14 @@ console.log(com.name)       // → Lojas Compras & Compras
 {% endsimplecode %}
 
 
-### Herança Múltipla
+### Herança Múltipla ###
+
 A herança múltipla é possível em JavaScript quando utilizamos Construtores Simples. Nada impede que haja dois construtores diferentes sendo invocados com {%c "apply"%} dentro de outro construto,r porém algumas considerações precisam ser levadas em conta.
 
 Para exemplificar, vamos supor que agora criamos um construtor que represente construções que possuem várias residências ou quartos, tais como condomínios, apartamentos ou hotéis. Assim, poderemos criar condomínios residências com o construtor {%c "Residential"%} já criado anteriormente. Nosso modelo então ficará como mostrado na figura a seguir.
 
-{% figure 'Diagrama que representa nosso modelo de construtores de objetos construções do jogo, agora com herança múltipla.' %}
-{% asset_img 'building-model-2.svg' 'Diagrama mostrando as relações dos construtores de construções. Ao topo temos o Building e Complex; a partir dele herda-se Redidential e Working Building. A partir de Working Building herda-se Commercial e Industrial. A partir de Redidential e Complex herda-se Condominium.' %}
+{% figure caption:"Diagrama que representa nosso modelo de construtores de objetos construções do jogo, agora com herança múltipla." alt:"Diagrama mostrando as relações dos construtores de construções. Ao topo temos o Building e Complex; a partir dele herda-se Redidential e Working Building. A partir de Working Building herda-se Commercial e Industrial. A partir de Redidential e Complex herda-se Condominium." width:255 height:110 %}
+{% asset_path "building-model-2.svg" %}
 {% endfigure %}
 
 Primeiramente, desenvolvemos o construtor {%c "Complex"%}, como vemos em seguida:
@@ -311,11 +313,12 @@ No entanto, antes de usar indiscriminadamente a herança múltipla em JavaScript
 
 
 ---
-## Encapsulamento
+## Encapsulamento ##
+
 Como já visto, objetos do JavaScript possuem todos os seus atributos públicos, ou seja, o estado do objeto pode ser alterado pelo mundo externo sem qualquer controle do próprio objeto. Para garantir o encapsulamento dos dados de um objeto utilizamos o nosso querido *closure* das funções.
 
-{% figure 'Objetos encapsulados são opacos ao mundo exterior e não podem ter suas propriedades modificadas se não por meio da interface do objeto.' %}
-{% asset_img 'encapsulation.svg' 'Representação ilustrativa do encapsulamento como um objeto trancado com um cadeado.' %}
+{% figure caption:"Objetos encapsulados são opacos ao mundo exterior e não podem ter suas propriedades modificadas se não por meio da interface do objeto." alt:"Representação ilustrativa do encapsulamento como um objeto trancado com um cadeado." width:255 height:110 %}
+{% asset_path "encapsulation.svg" %}
 {% endfigure %}
 
 Para lembrarmos rapidamente: quando variáveis de um escopo são utilizadas por funções mais internas, essas variáveis são alocadas em uma área específica da memória chamada *closure*. Todas as funções que foram criadas nesse escopo são ligadas a esse *closure* e por isso podem acessar as variáveis mesmo que o escopo tenha deixado de existir no momento que essas funções são executadas. Quando as variáveis estão alocadas em um *closure*, não há forma de acessá-las exceto pelas próprias funções que estão ligadas nesse *closure*. É utilizando esse conceito que adaptamos nossos construtores para conseguirmos o encapsulamento de dados. Caso você queira entender mais profundamente o conceito de *closure*, recomendo dar uma olhada nesse [texto já publicado no blog](http://maxroecker.github.io/blog/javascript-intermediario-4/).
@@ -368,12 +371,12 @@ Em JavaScript não há o conceito de atributos protegidos — como em Java quand
 
 
 ---
-## Polimorfismo
+## Polimorfismo ##
 
 Em JavaScript o polimorfismo pode ser realizado sem muitos problemas, uma vez que funções são objetos, objetos são mutáveis e variáveis não possuem tipos definidos. Não há um contrato pré-definido entre as variáveis — como é o caso das interfaces em Java — e por isso fica a cargo do codificador utilizar a mesma interface nos objetos em que deve-se estabelecer um polimorfismo.
 
-{% figure 'O polimorfismo permite que diferentes objetos que implementem uma mesma interface possam ser tratados de forma indistinguível.' %}
-{% asset_img 'polymorphism.svg' 'Representação ilustrativa do polimorfismo como uma situação onde um objeto ordene os objetos a falarem e todos respondem a sua maneira.' %}
+{% figure caption:"O polimorfismo permite que diferentes objetos que implementem uma mesma interface possam ser tratados de forma indistinguível." alt:"Representação ilustrativa do polimorfismo como uma situação onde um objeto ordene os objetos a falarem e todos respondem a sua maneira." width:255 height:110 %}
+{% asset_path "polymorphism.svg" %}
 {% endfigure %}
 
 Vamos exemplificar modificando nossos construtores {%c "Commercial"%} e {%c "Industrial"%} para que possuam o método {%c "getPowerConsumption"%} que se adeque a realidade de cada um. Em nosso modelo, um edifício comercial possui um consumo que representa 20% de sua capacidade total e o restante (80%) é calculado com base no número de empregados que edifício emprega Dessa forma, nosso construtor {%c "Commercial"%} poderia ter o seguinte código:
@@ -443,9 +446,9 @@ Um problema que podemos ver é que se o programador esquecer de implementar o m�
 
 
 ---
-## Outras características
+## Outras características ##
 
-### Propriedades estáticas
+### Propriedades estáticas ###
 
 Propriedades estáticas são atributos/métodos que pertencem ao construtor e não a cada um dos objetos construídos por ele. Propriedades estáticas dos construtores podem ser criadas atribuindo propriedades aos próprios construtores. Propriedades estáticas também são sempre públicas, por isso, é preciso tomar cuidado com sua utilização.
 
@@ -458,7 +461,7 @@ function Building (value, water, power) {
   this.value = value
   this.water = water
   this.power = power
-  // ...
+  // …
 }
 
 Building.count = 0
@@ -478,7 +481,7 @@ console.log(Building.count) // → 3
 {% endsimplecode %}
 
 
-### Verificar se um objeto é instância de um construtor
+### Verificar se um objeto é instância de um construtor ###
 
 Com construtores simples, há a possibilidade de utilização do operador {%c "instanceof"%}, que testa se um objeto possui em seu protótipo o passado à direita. Veja por exemplo no código a seguir:
 
@@ -496,9 +499,11 @@ Porém, como você não faz herança com a utilização de protótipos, apesar d
 
 
 ---
-## Resumo
+## Resumo ###
 
-{% asset_img 'scale.svg' 'Ilustração de uma balança.' %}
+{% figure alt:"Ilustração de uma balança" width:255 height:110 %}
+{% asset_path "scale.svg" %}
+{% endfigure %}
 
 O Padrão Construtor Simples possui várias vantagens, tais como:
 
@@ -516,7 +521,7 @@ Porém, alguns pontos devem ser considerados quando trabalhos com Construtores S
 
 
 ---
-## Conclusões
+## Conclusões ##
 
 Hoje compreendemos sobre Construtores Simples, um padrão muito utilizado no lado cliente de aplicações web, pois oferece as principais características da programação orientada a objetos — uma vez que no *front-end* o número de instanciação de objetos não costuma ser grande e por isso o problema de desempenho não provoca grandes estragos. Porém, se o número de objetos começa a crescer, esse padrão pode se tornar proibitivo.
 

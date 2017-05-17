@@ -24,8 +24,8 @@ Nos servidores convencionais, que mais comumente usam linguagens como Java e PHP
 
 O Node trata conexões de forma diferente, uma única thread recebe todas as conexões, ou seja, não há concorrência de recursos. Essa única *thread*, chamada de **Event Loop** (que podemos traduzir para laço de eventos), controla todos os outros fluxos assíncronos. Assim, o Node elimina o gargalo de um máximo de requisições que os servidores convencionais sofrem.
 
-{% figure "Esquemático simplificado de como o <i>Event Loop</i> coordena as várias requisições através do registro e retorno de *callbacks* de funções para realizar o trabalho pesado: como manipular sistemas de arquivos, acessar banco de dados e executar processamento computacional pesado." %}
-{% asset_img 'node-eventloop.svg' 'Esquemático visual explicando o funcionamento do Laço de Eventos do Node.js' %}
+{% figure alt:"Esquemático visual explicando o funcionamento do Laço de Eventos do Node.js" caption:"Esquemático simplificado de como o <i>Event Loop</i> coordena as várias requisições através do registro e retorno de *callbacks* de funções para realizar o trabalho pesado: como manipular sistemas de arquivos, acessar banco de dados e executar processamento computacional pesado." width:512 height:300 %}
+{% asset_path "node-eventloop.svg" %}
 {% endfigure %}
 
 Essas características podem parecer inicialmente estranhas para desenvolvedores que estão acostumados com ambientes servidores que fazem I/O bloqueante, entretanto o ganho de desempenho atingido por ciclos de conexão não-bloqueante compensa o custo de aprender.

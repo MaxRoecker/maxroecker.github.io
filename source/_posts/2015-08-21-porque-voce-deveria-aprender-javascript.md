@@ -24,8 +24,8 @@ AJAX não é uma tecnologia. Na verdade são muitas tecnologias, cada uma flores
 
 Já em 2009, o lançamento do [Node.js](https://nodejs.org/) permitiu que o JavaScript, aliado a um [I/O não bloqueante](https://en.wikipedia.org/wiki/Asynchronous_I/O) e [orientado a eventos](https://en.wikipedia.org/wiki/Event-driven_programming), ganhasse espaço no lado do servidor das aplicações. Sua adoção foi muito rápida, principalmente para atender a nova demanda de aplicativos web e mobile que exigiam grandes quantidades de respostas em tempo real. Dois anos mais tarde, em 2011, foi lançado o [NPM](https://www.npmjs.com/), gerenciador de pacotes e de bibliotecas para o Node, causando uma explosão em sua popularidade. Veja o gráfico abaixo, que compara a quantidade de módulos entre os principais gerenciadores de pacotes.
 
-{% figure "O npm já superou a quantidade de módulos. Fonte: [Module Counts](http://www.modulecounts.com/)" %}
-{% asset_img 'npm.jpg' "Gráfico de quantidade de módulos entre diversas linguagens" %}
+{% figure alt:"Gráfico da quantidade de módulos presentes em diversos repositórios." caption:"O npm já superou a quantidade de módulos. Fonte: [Module Counts](http://www.modulecounts.com/)" width:569 height:372 %}
+{% asset_path "npm.jpg" %}
 {% endfigure %}
 
 ## Vantagens

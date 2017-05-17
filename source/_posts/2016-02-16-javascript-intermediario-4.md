@@ -19,7 +19,7 @@ Se você já acompanha a série de textos e compreende as características de es
 Mesmo que você programe há muito tempo em JavaScript e nunca tenha ouvido nunca falar em *closure*, aqui vai uma revelação: **ele está presente em todo lugar**. *Closure* não é um tipo de opção especial da linguagem nem um conjunto de declarações ou de padrões de desenvolvimento. Devido a isso, *closures* são criados e usados em todo o seu código escrito em JavaScript. Você nem precisa tentar criá-los intencionalmente, eles já estarão lá. Mas é preciso entendê-lo para que se possa compreender todas as consequências da sua presença.
 
 ---
-## Definição
+## Definição ##
 
 Quando uma função é definida dentro do escopo de outra função, ela possui acesso a todas as variáveis locais que a função encapsulante possui, como vimos anteriormente na definição do escopos em JavaScript. Porém, quando juntamos o conceito de escopo léxico em uma linguagem que suporta funções de alta ordem e as trata como objetos de primeira classe, um poderoso conceito é definido: o *Closure*. Vamos começar com um exemplo simples. Observe o código abaixo.
 
@@ -53,7 +53,9 @@ Formalmente, *Closure* é uma técnica de implementação para realizar a ligaç
 
 É importante observar que o *closure* é completamente imune a interferências externas que não sejam as próprias funções anteriormente declaradas dentro do escopo. Nada consegue acessá-lo se não através das funções que foram declaradas nele.
 
-{% asset_img closure.svg [Analogia ilustrativa do Closure] %}
+{% figure alt:"Analogia ilustrativa do Closure" width:1024 height:510 %}
+{% asset_path "closure.svg" %}
+{% endfigure %}
 
 O JavaScript utiliza uma coleta de lixo de memória automática. A especificação ECMAScript não define detalhes de implementação e do funcionamento dessa coleta de lixo, deixando a responsabilidade para os implementadores. De forma geral, se um objeto torna irreferenciável, por não haver mais nenhuma referência à ele ativa no código, este se torna disponível para que o coletor de lixo o destrua em algum ponto no futuro; deixando seu espaço e recurso disponível para o sistema reutilizar.
 
