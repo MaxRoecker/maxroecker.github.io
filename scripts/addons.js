@@ -77,11 +77,27 @@ hexo.extend.tag.register(
 hexo.extend.tag.register(
   'figure',
   (args, content) => {
-    let caption = ''
-    if (args.length > 0) {
-      caption = `<figcaption>${md.render(args[0])}</figcaption>`
-    }
-    return `<figure>${md.render(content)}${caption}</figure>`
+    const argsMap = new Map(args.map(i => i.split(':')))
+    const alt = argsMap.has('alt')
+      ? md.utils.escapeHtml(argsMap.get('alt')) : ''
+    const caption = argsMap.has('caption')
+      ? `<figcaption>${md.render(argsMap.get('caption'))}</figcaption>` : ''
+    const width = argsMap.has('width')
+      ? argsMap.get('width') : '100'
+    const height = argsMap.has('height')
+      ? argsMap.get('height') : '100'
+    console.log(content)
+    const img = `
+    <amp-img src="${content}"
+        alt="${alt}"
+        width="${width}"
+        height="${height}"
+        layout="responsive">
+      <noscript>
+        <img src="${content}" alt="${alt}" width="${width}" height="${height}">
+      </noscript>
+    </amp-img>`
+    return `<figure>${img}${caption}</figure>`
   }, {
     ends: true
   })
