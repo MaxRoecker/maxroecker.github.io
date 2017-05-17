@@ -2,7 +2,7 @@
 const gulp = require('gulp')
 const del = require('del')
 const browserSync = require('browser-sync').create()
-const htmlmin = require('gulp-htmlmin')
+const htmlmin = require('gulp-html-minifier')
 const cleanCSS = require('gulp-clean-css')
 const imagemin = require('gulp-imagemin')
 const Hexo = require('hexo')
@@ -82,7 +82,7 @@ gulp.task('images', ['generate'], () => {
     .pipe(gulp.dest(distDirectory))
 })
 
-gulp.task('build', ['html', 'css', 'images'], () => {
+gulp.task('build', ['images', 'css', 'html'], () => {
   console.log('Blog successfully built.')
 })
 
