@@ -69,7 +69,7 @@ hexo.extend.tag.register(
   'c',
   (args) => {
     const content = args[0]
-    return `<code>${content}</code>`
+    return `<code>${md.utils.escapeHtml(content)}</code>`
   }, {
     ends: false
   })
