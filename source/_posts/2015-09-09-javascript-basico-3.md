@@ -10,7 +10,7 @@ date: 2015-09-09 15:34:36
 tags:
  - javascript
 ---
-{% quote   %}
+{% quote %}
 **va.ri.á.vel:** 1. Sujeito a variação; 2. Que pode ser variado ou mudado; 3. Inconstante.
 {% endquote %}
 
