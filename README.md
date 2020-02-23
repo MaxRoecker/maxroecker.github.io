@@ -1,6 +1,6 @@
 # maxroecker.github.io
 
-This is the source code of [Max Roecker's Blog](http://maxroecker.github.io). It's build with [Hexo](http://hexo.io).
+This is the source code of [Max Roecker's Blog](http://maxroecker.github.io).
 
 ---
 ## License
@@ -13,5 +13,18 @@ Otherwise explicited, all the content of this repository — blog posts, pages a
 To setup this repository, after cloning the repository, run:
 
 ```bash
-$ npm install
+npm install
 ```
+
+To run in development mode
+
+```bash
+npm run dev
+```
+
+To run in production mode
+
+```
+npm run build
+```
+
