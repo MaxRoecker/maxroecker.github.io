@@ -1,3 +1,4 @@
+os: linux
 language: node_js
 node_js:
   - 12
@@ -5,10 +6,11 @@ before_script:
   - npm install
 script: npm run build
 deploy:
-  local-dir: dist
+  local_dir: dist
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
+  skip_cleanup: true
+  keep_history: true
+  token: $GITHUB_TOKEN
+  target_branch: master
   on:
-    branch: master
+    branch: source
