@@ -28,6 +28,7 @@ body {
 
 main {
   flex-grow: 1;
+  text-align: justify;
   font-size: 18px;
 
   h1,
@@ -303,6 +304,7 @@ samp {
 }
 .personal__bio {
   font-size: 1.125em;
+  text-align: center;
   text-indent: 0;
 
   &.personal__bio--small {
@@ -394,7 +396,6 @@ samp {
 }
 .blog-content {
   line-height: 1.5em;
-  text-align: justify;
 }
 .blog-footnote {
   padding: 2em 1em;
