@@ -75,8 +75,6 @@ Números binários são escritos com um `0b` à frente do número com digitos `0
 
 Como esperado, a multiplicação e a divisão tem prioridade, seguindo a [ordem de precedência](https://pt.wikipedia.org/wiki/Ordem_de_opera%C3%A7%C3%B5es). Caso você precise da ordem explicita, você deve utilizar os parênteses.
 
-Outros operadores, como o **incremento** (`++`) e **decremento** (`--`) só funcionam para números inteiros e tem comportamento diferenciado dependendo da sintaxe. Quando precedem o valor, eles operam antes da avaliação da expressão; caso eles sucedam, eles operam após a avaliação da expessão. Os operadores de incremento e decremento são muito utilizados no controle de execução do código.
-
 
 ### Valores numéricos especiais
 
