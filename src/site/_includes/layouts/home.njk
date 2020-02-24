@@ -4,8 +4,8 @@
   <main class="home">
     <div class="personal">
       <div class="avatar"></div>
-      <h2 class="personal__name">{{ title }}</h2>
-      <p class="personal__bio">{{ heading }}</p>
+      <h2 class="personal__name">{{ site.author.name }}</h2>
+      <p class="personal__bio">{{ site.author.description }}</p>
       <ul class="personal__links">
         {% if site.github %}
           <li>

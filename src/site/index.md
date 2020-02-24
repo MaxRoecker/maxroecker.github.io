@@ -1,6 +1,6 @@
 ---
-title: Max Naegeler Roecker
+title:
 subtitle:
-heading: Mestre em Ciência da Computação & Desenvolvedor de Software
+heading:
 layout: layouts/home.njk
 ---

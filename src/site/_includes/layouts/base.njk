@@ -20,8 +20,12 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/css/styles.css">
     <meta name="referrer" content="origin">
-    <meta name="generator" content="11ty 0.10.0"/>
     {% block meta %}
+      {# Basic #}
+      <meta name="robots" content="index, follow">
+      <meta name="description" content="{{ site.description }}">
+      <meta name="author" content="{{ site.author.name }}">
+      <meta name="generator" content="11ty 0.10.0"/>
       {# Facebook Open Graph #}
       <meta property="og:type" content="website"/>
       <meta property="og:image" content="{{site.rootURI}}/images/meta-og.jpg"/>
@@ -44,33 +48,39 @@
           "@context": "http://schema.org",
           "@type": "Website",
           "url": "{{ site.rootURI }}{{ page.url }}",
+          "mainEntityOfPage": "{{ site.rootURI }}{{ page.url }}",
           "name": "{{ completetitle }}",
-          "title": "{{ completetitle }}",
           "description": "{{ heading }}",
           "headline": "{{ heading }}",
           "dateModified": "{{ site.buildTime | formatDate }}",
           "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
           "author": {
             "@type": "Person",
-            "name": "{{ site.name }}",
+            "name": "{{ site.author.name }}",
             "url": "{{ site.rootURI }}",
-            "description": "{{ site.description }}"
-          },
-          "publisher": {
-            "@type": "Person",
-            "name": "{{ site.name }}",
-            "url": "{{ site.rootURI }}",
-            "description": "{{ site.description }}"
+            "description": "{{ site.author.description }}"
           },
           "maintainer": {
             "@type": "Person",
+            "name": "{{ site.author.name }}",
+            "url": "{{ site.rootURI }}",
+            "description": "{{ site.author.description }}"
+          },
+          "publisher": {
+            "@type": "Organization",
             "name": "{{ site.name }}",
             "url": "{{ site.rootURI }}",
-            "description": "{{ site.description }}"
+            "description": "{{ site.description }}",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "{{site.rootURI}}/images/meta-logo.png",
+              "width": "700 px",
+              "height": "95 px"
+            }
           },
           "image": {
             "@type": "ImageObject",
-            "url": "{{site.rootURI}}/images/meta-image.png}}",
+            "url": "{{site.rootURI}}/images/meta-image.png",
             "width": "800 px",
             "height": "400 px"
           }
