@@ -8,7 +8,11 @@
       <li class="entry">
         <div class="entry__date">
           <time class="entry-date" datetime="{{ post.date | formatDate('yyyy-MM-dd') }}">
+            {% if post.date.getDay() == 0 or post.date.getDay() == 6 %}
+            <span class="entry-date__weekday">{{ post.date | formatDate("cccc") }}</span>
+            {% else %}
             <span class="entry-date__weekday">{{ post.date | formatDate("cccc'-feira'") }}</span>
+            {% endif %}
             <span class="entry-date__date">
               <span class="hdate__monthday">{{ post.date | formatDate("d") }}</span>
               de
