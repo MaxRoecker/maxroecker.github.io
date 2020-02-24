@@ -1,7 +1,7 @@
 ---
-title: Hello World
-subtitle:
-heading: Estou online. Ótimo!
+title: 'Hello World'
+subtitle: ''
+heading: 'Estou online. Ótimo!'
 date: 2015-08-15 10:25:33
 tags:
   - post

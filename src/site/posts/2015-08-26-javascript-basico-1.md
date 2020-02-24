@@ -1,8 +1,8 @@
 ---
-title: JavaScript Básico
-subtitle: Introdução
-heading: O que é JavaScript? Uma pequena introdução sobre a linguagem que nasceu na web e para a web.
-date: 2015-08-15 09:15:25
+title: 'JavaScript Básico #1'
+subtitle: 'Introdução'
+heading: 'O que é JavaScript? Uma pequena introdução sobre a linguagem que nasceu na web e para a web.'
+date: 2015-08-25 09:15:25
 tags:
   - javascript
   - post

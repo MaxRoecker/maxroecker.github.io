@@ -1,7 +1,7 @@
 ---
-title: Por que você deve aprender JavaScript
-subtitle:
-heading: Já considerada sem importância, hoje o JavaScript assume um papel líder no mercado.z
+title: 'Porque você deveria aprender JavaScript'
+subtitle: ''
+heading: 'Já considerada sem importância, hoje o JavaScript assume um papel líder no mercado.'
 date: 2015-08-21 00:50:01
 tags:
   - javascript

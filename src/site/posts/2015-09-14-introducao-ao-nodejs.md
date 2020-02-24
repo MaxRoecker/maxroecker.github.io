@@ -1,7 +1,7 @@
 ---
-title: Introdução ao Node.js
-subtitle: 
-heading: Uma breve introdução ao interpretador de código JavaScript que não precisa de um navegador.
+title: 'Introdução ao Node.js'
+subtitle: ''
+heading: 'Uma breve introdução ao interpretador de código JavaScript que não precisa de um navegador.'
 date: 2015-09-14 15:45:25
 tags:
   - javascript
