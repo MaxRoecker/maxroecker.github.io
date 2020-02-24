@@ -134,12 +134,12 @@ a:focus {
 }
 
 code {
-  font-size: 0.7em;
-  padding: 0.25em 0.375em 0.25em 0.375em;
   border-radius: 0.25em;
+  padding: 0.25em 0.375em 0.25em 0.375em;
   background-color: $color-accent;
-  color: $text-primary;
   white-space: nowrap;
+  font-size: 0.7em;
+  color: $text-primary;
 }
 
 pre {
@@ -167,6 +167,12 @@ kbd.key {
   font-family: "Courier New", Courier, monospace;
   color: $text-secondary;
   white-space: nowrap;
+}
+
+samp {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  color: $text-secondary;
 }
 
 .header {
