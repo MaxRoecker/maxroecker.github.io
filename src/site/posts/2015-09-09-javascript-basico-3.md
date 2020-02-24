@@ -2,7 +2,7 @@
 title: JavaScript Básico
 subtitle: Variáveis e atribuições
 heading: Entenda como utilizar de variáveis e atribuir valores no JavaScript.
-date: 2015-09-09
+date: 2015-09-09 17:00:03
 tags:
   - javascript
   - post

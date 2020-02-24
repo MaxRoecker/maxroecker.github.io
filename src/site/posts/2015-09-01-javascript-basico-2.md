@@ -2,7 +2,7 @@
 title: JavaScript Básico
 subtitle: Valores primitivos
 heading: Veja como o JavaScript representa, armazena, nomina e opera os dados primitivos da linguagem.
-date: 2015-09-01
+date: 2015-09-01 22:29:00
 tags:
   - javascript
   - post
