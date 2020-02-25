@@ -17,6 +17,7 @@ module.exports = function (config) {
   // minify the html output
   config.addTransform('htmlmin', require('./src/utils/minify-html.js'))
 
+
   // compress and combine js files
   config.addFilter('jsmin', code => {
     const UglifyJS = require('uglify-js')
@@ -31,7 +32,7 @@ module.exports = function (config) {
   // pass some assets right through
   config.addPassthroughCopy('./src/site/images')
   config.addPassthroughCopy('./src/site/robots.txt')
-  config.addPassthroughCopy({ './src/site/font': 'css/font' })
+  config.addPassthroughCopy({ './src/site/fonts': 'css/fonts' })
 
   // make the seed target act like prod
   env = env == 'seed' ? 'prod' : env
