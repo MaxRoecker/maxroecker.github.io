@@ -19,6 +19,7 @@
     "date-fns": "^2.9.0",
     "dotenv": "^8.0.0",
     "html-minifier": "^4.0.0",
+    "katex": "^0.11.1",
     "postcss": "^7.0.27",
     "postcss-color-mix": "^1.1.0",
     "postcss-comment": "^2.0.0",

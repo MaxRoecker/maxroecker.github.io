@@ -11,6 +11,9 @@ module.exports = function (config) {
   config.addFilter('squash', require('./src/utils/filters/squash.js'))
   config.addFilter('formatDate', require('./src/utils/filters/date.js'))
 
+  // Add shortcodes
+  config.addShortcode('math', require('./src/utils/math'));
+
   // add support for syntax highlighting
   config.addPlugin(syntaxHighlight)
 
