@@ -30,8 +30,8 @@ Para definirmos uma variável, utilizamos a palavra `var` seguida pelo nome que 
 ```js
 var a = 3
 var $b = a * a
-console.log('Valor de a: ', a)    // → Valor de a: 3
-console.log('Valor de $b: ', $b)  // → Valor de $b: 9
+console.log('Valor de a: ', a) // → Valor de a: 3
+console.log('Valor de $b: ', $b) // → Valor de $b: 9
 ```
 
 É importante ter em mente que variáveis não devem ser interpretadas como "caixas" que guardam os valores, mas sim como "placas" que apontam para onde os valores estão. Assim como placas, você pode redirecionar uma variável, e por isso você pode reutilizar uma variável para outros valores. Veja o exemplo abaixo:
@@ -86,8 +86,8 @@ var t2 = 11
 console.log('Temperatura 1: %d°', t1++) // → Temperatura 1: 22°
 console.log('Temperatura 2: %d°', t2--) // → Temperatura 2: 11°
 
-console.log('Temperatura 1: %d°', t1)   // → Temperatura 1: 23°
-console.log('Temperatura 2: %d°', t2)   // → Temperatura 2: 10°
+console.log('Temperatura 1: %d°', t1) // → Temperatura 1: 23°
+console.log('Temperatura 2: %d°', t2) // → Temperatura 2: 10°
 ```
 
 No entanto, atribuições `++` e `--` tem comportamento diferente dependendo da posição em que são colocados. Quando precedem o valor, eles retornam o valor após o incremento/decremento; caso eles sucedam, eles retornam o valor antes do incremento/decremento. Assim:
@@ -99,8 +99,8 @@ var t2 = 11
 console.log('Temperatura 1: %d°', ++t1) // → Temperatura 1: 23°
 console.log('Temperatura 2: %d°', --t2) // → Temperatura 2: 10°
 
-console.log('Temperatura 1: %d°', t1)   // → Temperatura 1: 23°
-console.log('Temperatura 2: %d°', t2)   // → Temperatura 2: 10°
+console.log('Temperatura 1: %d°', t1) // → Temperatura 1: 23°
+console.log('Temperatura 2: %d°', t2) // → Temperatura 2: 10°
 ```
 
 ## Atribuição condicional

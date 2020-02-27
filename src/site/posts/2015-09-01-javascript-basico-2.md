@@ -40,9 +40,9 @@ Abra o console JavaScript do seu navegador — <kbd><kbd class="key">Ctrl</kbd> 
 Para representar números inteiros em base decimal, como já visto, basta escrevê-los **sem usar zero esquerda**. Números fracionais são escritos com ponto, então o número 1,5 em JavaScript é escrito como `1.5`. Você também pode omitir a parte inteira quando ela é nula, assim, **0,78** pode ser escrito como `0.78` ou `.78`; No entando, é sempre recomendado que você adicione o zero. Você também pode escrever números muito grandes ou muito pequenos através de [notação científica](https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_cient%C3%ADfica), usando o `e` para indicar o expoente da base 10. Veja abaixo as diferentes formas de escrever o número o mesmo número:
 
 ```js
-0.1   // → 0.1
-0.1   // → 0.1
-1e-1  // → 0.1
+0.1 // → 0.1
+0.1 // → 0.1
+1e-1 // → 0.1
 ```
 
 Há a possibilidade de escrever também números inteiros em bases [hexadecimal](https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal) (16), [octal](https://pt.wikipedia.org/wiki/Sistema_octal) (8) ou [binária](https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_bin%C3%A1rio) (2). Para escrever em base hexadecimal, basta adicionar um `0x` à frente de um número com dígitos `01234567890ABCDF`. Já para escrever o número em octal, precede-se o número com um `0` e em seguida qualquer dígito `01234567`, por isso, escrever `014` é diferente de `14` em JavaScript, o primeiro indica um número em base octal e o segundo um número em base decimal.
@@ -50,22 +50,27 @@ Há a possibilidade de escrever também números inteiros em bases [hexadecimal]
 Números binários são escritos com um `0b` à frente do número com digitos `01`. Para mostrar a diferença na escrita, o número 42 nas diferentes bases é escrito como:
 
 ```js
-42        // → 42
-0b101010  // → 42
-052       // → 42
-0x2a      // → 42
+42 // → 42
+0b101010 // → 42
+052 // → 42
+0x2a // → 42
 ```
 
 ### Operações matemáticas
 
 As quatro operações aritméticas básicas: **adição**, **subtração**, **multiplicação** e **divisão**; são dadas no JavaScript pelos símbolos `+`, `-`, `*` e `/`, respectivamente. Esses símbolos são chamados de operadores, e sempre utilizam dos números a sua direita e a sua esquerda para realizar a operação. Outro operador importante é o operador de **módulo** ou **resto da divisão**, escrito com `%`. Experimente executar as seguintes expressões no console.
 
-``` js
-1 + 4        // → 5
-9 / 10       // → 0.9
-3 - 3 * 15   // → -42
-(20 + 5) / 4 // → 6.25
-10 % 9       // → 1
+```js
+1 + 4 // → 5
+9 / 10 // → 0.9
+3 -
+  (3 *
+    15(
+      // → -42
+      20 + 5
+    )) /
+    4 // → 6.25
+10 % 9 // → 1
 ```
 
 Como esperado, a multiplicação e a divisão tem prioridade, seguindo a [ordem de precedência](https://pt.wikipedia.org/wiki/Ordem_de_opera%C3%A7%C3%B5es). Caso você precise da ordem explicita, você deve utilizar os parênteses.
@@ -77,10 +82,10 @@ Há três valores numéricos em JavaScript que não se comportam como números c
 O terceiro é `NaN`, do inglês <i lang="en">Not a Number</i>, ou seja, um valor do tipo número mas que representa um "não-número". Operações aritméticas indefinidas ou mal-formadas resultam em `NaN`, veja alguns exemplos:
 
 ```js
-Infinity - Infinity   // → NaN
-0 * Infinity          // → NaN
-Infinity / -Infinity  // → NaN
-'a' / 2               // → NaN
+Infinity - Infinity // → NaN
+0 * Infinity // → NaN
+Infinity / -Infinity // → NaN
+'a' / 2 // → NaN
 ```
 
 ## Strings
@@ -117,12 +122,12 @@ Muitas vezes precisamos de dados tão simples que indiquem somente uma decisão:
 Valores booleanos podem ser operados através dos operadores lógicos [e](https://pt.wikipedia.org/wiki/Conjun%C3%A7%C3%A3o_l%C3%B3gica), [ou](https://pt.wikipedia.org/wiki/Disjun%C3%A7%C3%A3o_l%C3%B3gica) e [negação](https://pt.wikipedia.org/wiki/Nega%C3%A7%C3%A3o), escritos respectivamente como `&&`, `||` e `!`. Note que o operador de negação `!` é unário, ou seja, ele inverte o próximo valor booleano informado. Exemplos:
 
 ```js
-true && true    // → true
-true && false   // → false
-true || false   // → true
-false || false  // → false
-!true           // → false
-!false          // → true
+true && true // → true
+true && false // → false
+true || false // → true
+false || false // → false
+!true // → false
+!false // → true
 ```
 
 ### Comparações
@@ -138,14 +143,17 @@ A maior parte dos valores primitivos em JavaScript possui uma [ordenação total
 
 Alguns exemplos:
 
-``` js
-1 <= 2              // → true
-1 < 2 - 1           // → false
-3 === 2 + 1         // → true
--4 !== 12 / -3      // → false
-"Alvar" < "Zoink";  // → true
-"Jaiko" >= "Jaik";  // → true
-true > false        // → true
+```js
+1 <= 2 // → true
+1 < 2 - 1 // → false
+;(3 ===
+  2 +
+  1 - // → true
+    4) !==
+  12 / -3 // → false
+'Alvar' < 'Zoink' // → true
+'Jaiko' >= 'Jaik' // → true
+true > false // → true
 ```
 
 Números são comparados de acordo com o valor real. Strings são comparadas pela [ordem lexicográfica](https://en.wikipedia.org/wiki/Lexicographical_order), para os valores booleanos, `true` sempre sucede `false` e ambos nunca são iguais.
@@ -161,11 +169,11 @@ Alguns autores chegam a afirmar que esse é um acidente dentro do projeto da lin
 Podemos notar uma diferença entre os dois valores quando utilizamos o operador `typeof` da linguagem, que fornece que fornece uma string nomeando o tipo do próximo valor dado à ela. Por exemplo:
 
 ```js
-typeof 3.2            // → "number"
-typeof 'a'            // → "string"
+typeof 3.2 // → "number"
+typeof 'a' // → "string"
 typeof (true && true) // → "boolean"
-typeof null           // → "object"
-typeof undefined      // → "undefined"
+typeof null // → "object"
+typeof undefined // → "undefined"
 ```
 
 ## Conclusão

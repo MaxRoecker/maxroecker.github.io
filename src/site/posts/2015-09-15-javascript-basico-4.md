@@ -46,11 +46,11 @@ Uma das declarações mais básicas da linguagem é a de definição de bloco, u
 ```js
 var a = 0
 {
-  console.log(a)  // → 0
+  console.log(a) // → 0
   var a = 1
-  console.log(a)  // → 1
+  console.log(a) // → 1
 }
-console.log(a)    // → 1
+console.log(a) // → 1
 ```
 
 ## Declarações condicionais
@@ -230,7 +230,7 @@ A declaração `do…while` tem um comportamento parecido com o `while`: executa
 ```
 do
   [declaração]
-while ([condição]);
+while ([condição])
 ```
 
 A diferença entre o `while` e o `do…while` é que a condição é avaliada antes ou depois da execução da declaração. Enquanto no `while`, se a condição for `false`, a declaração não chega nem a ser executada, para o `do…while`, a declaração é sempre executada ao menos uma vez.
@@ -299,8 +299,8 @@ Declaração de rotulação que marca uma posição em seu código. O rótulo se
 Como já vimos no exemplo do `switch`, a declaração `break` sem um rótulo interrompe a execução da declaração atual. Em caso de laços, a declaração `break` faz que o laço atual pare de ser executado imediatamente e continue a execução a partir da próxima declaração após o laço. Podemos utilizar o `break` acompanhado de um `label`, assim quando execução é interrompida, ela inicia a partir da primeira declaração após o rótulo. Sua sintaxe é simples:
 
 ```
-break;
-break [rótulo];
+break
+break [rótulo]
 ```
 
 #### Quebra de fluxo com `continue`
@@ -308,8 +308,8 @@ break [rótulo];
 A declaração `continue` também quebra o fluxo de execução, mas só pode ser utilizado em laços. Enquanto o `break` para a execução do laço, o `continue` quebra a atual iteração do laço e inicia uma nova. Ou seja, faz com que a condição seja testada novamente e, no caso do `for`, o passo seja executado. Quando acompanhado de um rótulo, o `continue` tem o mesmo comportamento, mas para o laço rotulado. A sintaxe é
 
 ```
-continue;
-continue [rótulo];
+continue
+continue [rótulo]
 ```
 
 O exemplo abaixo é um modo ruim e pouco eficiente de exibir os naturais menores que 100 — mas auxilia a compreensão do `continue` e `break` junto a um rótulo mostrados.

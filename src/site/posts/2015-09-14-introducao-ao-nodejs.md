@@ -28,7 +28,7 @@ O Node não é o único a adotar essa estratégia. Outras plataformas que compar
 Vamos instalar o Node através do [NVM](https://github.com/creationix/nvm). No terminal, digite:
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh |
 ```
 
 Rodando o comando acima irá fazer o download do _script_ que instala o NVM e executá-lo. Esse _script_ clona o repositório do NVM em uma pasta temporária `~/.nvm` e coloca as variáveis de ambiente em algum arquivo de perfil do terminal (`~/._profile`, `~/.zshrc`, `~/.profile`, ou `~/.rc`).
