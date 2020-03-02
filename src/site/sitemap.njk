@@ -6,7 +6,7 @@ permalink: sitemap.xml
   {%- for page in collections.all %}
   {%- if page.data.layout %}
   <url>
-    <loc>{{ site.rootUrl }}{{ page.url }}</loc>
+    <loc>{{ site.rootURI }}{{ page.url }}</loc>
     <lastmod>{{ site.buildTime | formatDate }}</lastmod>
   </url>
   {%- endif %}
