@@ -45,7 +45,7 @@ main {
   }
   p {
     margin: 2em 0;
-    line-height: 1.5em;
+    line-height: 1.5;
     text-indent: 2em;
     word-spacing: normal;
     hyphens: auto;
@@ -59,12 +59,16 @@ main {
   }
   aside {
     margin: 1em 0 1em 2.2222222em;
-    padding: 1em 0 1em 2.2222222em;
+    padding: 0.125em 0 0.125em 2.2222222em;
     border-left-style: solid;
     border-left-color: $color-accent;
     border-left-width: 0.25em;
     font-size: 0.9em;
-    line-height: 1.5em;
+    line-height: 1.5;
+    > p {
+      margin: 0.5em 0;
+      text-indent: 0;
+    }
   }
 
   @media (min-width: $mid) {
@@ -107,7 +111,7 @@ blockquote {
     text-indent: 0;
   }
   > footer {
-    line-height: 1em;
+    line-height: 1;
     font-size: 0.8em;
     &::before {
       content: "— ";
@@ -178,7 +182,7 @@ pre {
   word-spacing: normal;
   word-break: normal;
   hyphens: none;
-  > code, > samp {
+  > code, > samp, > kbd {
     font-size: 14px;
     border-style: none;
     background-color: transparent;
@@ -231,7 +235,7 @@ samp {
   justify-content: stretch;
   padding: 0;
   margin: 0.5em 0;
-  line-height: 1em;
+  line-height: 1;
   font-size: 2.25em;
   font-weight: normal;
   color: $text-primary;
@@ -438,12 +442,12 @@ samp {
   margin: 1.5em 0.5em;
   padding: 0;
   text-indent: 0;
-  line-height: 1.25em;
+  line-height: 1.25;
   font-style: normal;
   hyphens: none;
 }
 .blog-content {
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 .blog-footnote {
   padding: 2em 1em;
@@ -455,7 +459,7 @@ samp {
   align-items: center;
   justify-content: stretch;
   font-size: 0.6em;
-  line-height: 1.5em;
+  line-height: 1.5;
 
   @media (min-width: $mid) {
     font-size: 0.5em;
