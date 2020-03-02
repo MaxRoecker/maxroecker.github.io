@@ -9,5 +9,6 @@ module.exports = {
   twitter: 'maxrkr',
   github: 'MaxRoecker',
   linkedin: 'maxroecker',
-  buildTime: new Date()
+  googleOwnership: ['qeXakFxXkrYMWIZ5aZDPGtPPQTyJieYgEUW1MiQTS00'],
+  buildTime: new Date(),
 }

@@ -20,6 +20,11 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/css/styles.css">
     <meta name="referrer" content="origin">
+    {% if site.googleOwnership %}
+      {% for ownership in site.googleOwnership %}
+        <meta name="google-site-verification" content="{{ ownership }}" />
+      {% endfor %}
+    {% endif %}
     {% block meta %}
       {# Basic #}
       <meta name="robots" content="index, follow">
