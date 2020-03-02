@@ -11,7 +11,9 @@ tags:
 **Valores** são os elementos mais simples dentro de uma linguagem: são expressões que não podem ser reduzidas a nenhuma outra — ou seja, estão em sua forma normal. Por exemplo: 2 é um valor, ele é auto-contido e não há como simplificar. Já (1+2) é uma expressão que não representa um valor, pois pode ser derivado e reduzido como 3.
 
 <aside>
+<p>
 Em lógica matemática, um objeto encontra-se em sua <strong>forma normal</strong> se este não pode ser reescrito de forma mais simples.
+</p>
 </aside>
 
 Todo valor deve ser armazenado em um local na memória do computador e ocupa algum espaço em bits. O JavaScript possui duas categorias de valores: **primitivos** e **objetos**. Nesse artigo vamos focar nos valores do tipo primitivo. Valores primitivos representam os dados simples e podem ter os tipos:

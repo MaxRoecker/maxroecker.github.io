@@ -12,9 +12,9 @@ O **JavaScript** é uma linguagem de programação criada em 1995 com o objetivo
 
 O JavaScript uma [linguagem de script](https://en.wikipedia.org/wiki/Scripting_language) [dinâmica](https://en.wikipedia.org/wiki/Dynamic_programming_language) com [funções de primeira classe](https://en.wikipedia.org/wiki/First-class_function) e que suporta a criação de [objetos](https://en.wikipedia.org/wiki/Object-oriented_programming) baseados em [protótipos](https://en.wikipedia.org/wiki/Prototype-based_programming). Por essas características, é considerada uma linguagem de multi-paradigma, oferecendo suporte para programação de estilo [imperativo](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_imperativa), [orientado a objetos](https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos) e [funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional). Mas não se preocupe em entender todos esses conceitos por agora.
 
-<aside>
-  Uma <strong>linguagem de script</strong> é uma linguagem de programação desenvolvida para um ambiente de execução específico.
-</aside>
+<aside><p>
+Uma <strong>linguagem de script</strong> é uma linguagem de programação desenvolvida para um ambiente de execução específico.
+</p></aside>
 
 Apesar de ter seu nascimento em navegadores, atualmente o JavaScript é uma linguagem que habita também o lado do servidor. Por exemplo, a engine [V8](https://developers.google.com/v8/) é utilizada no navegador Google Chrome, mas é utilizado também pelo [Node.js](https://nodejs.org/).
 

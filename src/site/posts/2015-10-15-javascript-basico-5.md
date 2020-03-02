@@ -1,18 +1,18 @@
 ---
 title: 'JavaScript Básico #5'
 subtitle: 'Objetos'
-heading: 'Aprenda as principais características dos objetos, estruturas essenciais da linguagem JavaScript.'
+heading: 'Aprenda as principais características dos objetos, estruturas fundamentais da linguagem JavaScript.'
 date: 2015-10-15 17:03:34
 tags:
   - javascript
   - post
 ---
 
-Anteriormente, [aprendemos como controlar a execução do fluxo do código JavaScript através de declarações](https://maxroecker.github.io/blog/javascript-basico-4/). Também vimos [como atribuir valores primitivos a variáveis e como manipulá-los no código](https://maxroecker.github.io/blog/javascript-basico-3/). Com isso, é possível codificar qualquer algoritmo em JavaScript. Entretanto, ainda não arranhamos a superfície das funcionalidades que a linguagem oferece.
+Anteriormente, [aprendemos como controlar a execução do fluxo do código JavaScript através de declarações](https://maxroecker.github.io/blog/javascript-basico-4/). Também vimos [como atribuir valores primitivos a variáveis e como manipulá-los no código](https://maxroecker.github.io/blog/javascript-basico-3/). Entretanto, somente arranhamos a superfície das funcionalidades que a linguagem oferece. Nessa publicação, vamos entender melhor sobre os objetos.
 
 ## Propriedades
 
-Todo valor em JavaScript — exceto o `null` e o `undefined` — possui propriedades que podem ser acessados por uma chave. Essas propriedades são valores e podem ser acessados através do operador `.`. Veja o exemplo abaixo:
+Todo valor em JavaScript — exceto o `null` e o `undefined` — possui propriedades que podem ser acessadas por uma chave por meio do operador `.`. Propriedades são valores que recebem um nome no objeto. Veja o exemplo abaixo:
 
 ```js
 var str = 'javascript'
@@ -22,7 +22,7 @@ var num = 3
 num.toFixed // → function toFixed
 ```
 
-A propriedade `lenght` armazena um número que representa a quantidade de caracteres que essa string possui, ou seja, o comprimento da cadeia. Já a propriedade `toFixed` é uma referência de uma função. Em JavaScript, função são tratadas como valores e, por isso, podem ser atribuídas em proprieades. É comum chamar funções atribuídas em propriedades como **métodos**.
+A propriedade `lenght` armazena um número que representa a quantidade de caracteres que essa string possui, ou seja, o comprimento da cadeia. Já a propriedade `toFixed` é uma referência de uma função. Em JavaScript, funções são tratadas como valores e, por isso, podem ser atribuídas em proprieades. É comum chamar funções atribuídas em propriedades como **métodos**.
 
 ## Objetos
 
@@ -34,23 +34,13 @@ Além de valores do tipo primitivo, o JavaScript possui também valores do tipo 
     alt="Um objeto com propriedades apontando para seus respectivos valores."
   />
   <figcaption>
-    Um objeto é um conjunto de vários pares de chave-valor. Cada chave é única no objeto e direciona para um valor.
+    Em JavaScript, um objeto é um conjunto de vários pares de chave-valor. Cada chave é única no objeto e aponta para somente um valor.
   </figcaption>
 </figure>
 
 ### Declarando objetos
 
-Em JavaScript, os objetos normalmente são declarados através do literal objeto `{…}`. Sua sintaxe é dada como:
-
-```
-{
-  [chave1]: [valor1],
-  [chave2]: [valor2],
-  …
-}
-```
-
-Pode-se perceber que os pares de chave-valor do objeto são separadas por vírgulas. Desde o ECMAScript 2015, [a última propriedade do objeto pode ser sucedida uma vírgula](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Objects).
+Em JavaScript, os objetos normalmente são declarados através do literal objeto `{…}`, que contém os pares de chave-valor do objeto são separadas por vírgulas. Desde o ECMAScript 2015, [a última propriedade do objeto pode também ser sucedida de uma vírgula](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Objects). As chaves do objeto podem ter qualquer valor, mas seguem as mesmas regras de nomes para variáveis.
 
 ```js
 var passaro = {
@@ -107,7 +97,7 @@ console.log(passaro['nome cientifico']) // → Saltator similis
 Por serem arranjos associativos, os objetos permite a inserção de propriedades após a declaração. Assim, podemos reescrever o exemplo anterior da seguinte forma:
 
 ```js
-var passaro = {} // Objeto vazio
+var passaro = {} // Objeto sem propriedades declaradas
 passaro.nome = 'Sabiá-laranjeira'
 passaro['nome cientifico'] = 'Turdus rufiventris'
 
@@ -117,7 +107,9 @@ console.log(passaro['nome cientifico']) // → Turdus rufiventris
 
 ### Verificando a existência de uma propriedade
 
-Quando lemos uma propriedade que não existe no objeto, acessá-la resulta em `undefined`. Agora, se uma propriedade existe seu valor é `undefined`, acessá-la também resulta em `undefined`. Utilizamos o operador `in` para verificar se uma propriedade existe em um objeto, que retorna `true` caso a chave a esquerda exista no objeto ou `false` caso contrário.
+Quando acessamos uma propriedade que não existe no objeto, recebemos como resultado `undefined`. Agora, se uma propriedade existe seu valor é `undefined`, acessá-la também resulta em `undefined`. Verificar se o valor de uma propriedade é `undefined` não é garantia que a propriedade não exista no objeto.
+
+Para verificar se uma propriedade existe em um objeto, utilizamos o operador `in`, que retorna `true` caso a chave a esquerda exista no objeto ou `false` caso contrário.
 
 ```js
 var chave = 'cor'
@@ -145,14 +137,7 @@ console.log('cor' in passaro) // → false
 
 ### Iterando sobre as propriedades com `for…in`
 
-É possível também iterar em todas as chaves de um objeto por meio da declaração `for…in`. Possui a seguinte sintaxe:
-
-```
-for ([chave] in [objeto])
-  [declaração]
-```
-
-A cada iteração, uma das chaves é visitada pelo laço. A declaração `for…in` itera sobre as propriedades enumeráveis de um objeto em uma ordem arbitrária. Assim:
+É possível também iterar em todas as chaves de um objeto por meio da declaração `for…in`. A cada iteração, uma das chaves é visitada pelo laço. A declaração `for…in` itera sobre as propriedades enumeráveis de um objeto em uma ordem arbitrária. Veja:
 
 ```js
 var passaro = {
@@ -167,7 +152,7 @@ for (var chave in passaro) {
 }
 ```
 
-O resultado do código acima pode ser como escrito abaixo ou em uma ordem difernete.
+O resultado do código acima pode ser igual ao resultado escrito abaixo, ou ter uma ordem diferente.
 
 <pre>
 <samp>
@@ -180,7 +165,7 @@ O resultado do código acima pode ser como escrito abaixo ou em uma ordem difern
 
 ## Diferenças entre valores primitivos e objetos
 
-Objetos e valores se diferem em JavaScript em alguns pontos:
+No JavaScript, objetos e valores primitivos são categorizados da seguinte forma:
 
 - Valores primitivos são valores do tipo booleano, número, string ou os valores `null` e `undefined`;
 - Qualquer outro valor é um objeto.
@@ -245,7 +230,7 @@ console.log(passaro.nome) // → Patativa-do-campo
 
 ## Conclusão
 
-Objetos fornecem modos de agrupar vários valores em um só conjunto. Conceitualmente, podemos colocar todos os valores que possuem alguma relação em um mesmo conjunto ao invés de deixá-los espalhados pelo código. Objeto é uma das estrutura de dados mais básicas do JavaScript. Quase todo elemento dentro da linguagem é um objeto.
+Objetos fornecem modos de agrupar vários valores em um só "conjunto". É uma das estruturas de dados mais básicas do JavaScript. Quase todo elemento dentro da linguagem é um objeto.
 
 Apesar de possuírem o mesmo nome, objetos não devem ser confundidos com o conceito de objeto em programação orientada a objetos, definido como [instância de uma classe](<https://pt.wikipedia.org/wiki/Objeto_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)>). Como dito anteriormente, objetos em Javascript são arranjos associativos dinâmicos.
 

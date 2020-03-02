@@ -8,15 +8,17 @@ tags:
   - post
 ---
 
-Já vimos o funcionamento de [objetos](https://maxroecker.github.io/blog/javascript-basico-5/) e de [estruturas de controle](https://maxroecker.github.io/blog/javascript-basico-4/) em JavaScript, ambos conceitos essenciais para a aprendizagem da linguagem e para a escrita de algoritmos. Agora, vamos aprofundar nosso entendimento sobre a unidade de computação da linguagem JavaScript: Funções.
+Já vimos o funcionamento de [objetos](https://maxroecker.github.io/blog/javascript-basico-5/) e de [estruturas de controle](https://maxroecker.github.io/blog/javascript-basico-4/) em JavaScript, ambos conceitos essenciais para a aprendizagem da linguagem e para a escrita de algoritmos. Agora, vamos aprofundar nosso entendimento sobre a unidade de computação da linguagem JavaScript: as funções.
 
-Uma função é um trecho de código que pode ser chamado por um fluxo de execução — incluindo por si mesma — ou por uma variável que referencia a função. Quando uma função é chamada, argumentos são passados para a função como entrada, e a função pode retornar opcionalmente um valor qualquer.
+Uma função é um trecho de código que pode ser chamado por um fluxo de execução — incluindo por si mesma — ou por uma variável que a referencia. Quando uma função é chamada, argumentos são passados para a função como entrada, e a função pode retornar opcionalmente um valor qualquer.
 
 <aside>
+<p>
 <strong>fun.ção:</strong> Grandeza relacionada a outra(s), de tal modo que a cada valor atribuído a esta(s), corresponde um valor daquela.
+</p>
 </aside>
 
-Funções são extremamente úteis e podem ser utilizadas para reutilização de código, encapsulamento e composição de dados em diversas linguagens de programação. No entanto, o modo como funções são tratadas em JavaScript pode ser estranha para a maioria dos desenvolvedores. Por isso, é importante ter um bom entendimento de como funções trabalham em JavaScript, para que você possa utilizar o máximo delas em sua aplicação.
+Funções são extremamente úteis e podem ser utilizadas para reutilização de código, encapsulamento e composição de dados em diversas linguagens de programação. No entanto, o modo como funções são tratadas em JavaScript pode ser estranha para a maioria dos desenvolvedores. Por isso, é importante ter um bom entendimento de como funções trabalham em JavaScript, para que você possa extrair o máximo da linguagem.
 
 ## Declarando e executando uma função
 
@@ -34,7 +36,7 @@ function quadrado (numero) {
 }
 ```
 
-A função `quadrado` tem um único parâmetro — chamado `numero` — e é definida por uma única declaração, que consiste em retornar o valor do parâmetro multiplicado por ele mesmo. No entanto definir uma função não a executa. Definir uma função significa dar um nome a um trecho de código que será chamado quando for requisitado.
+A função `quadrado` tem um único parâmetro — chamado `numero` — e é definida por uma única declaração, que consiste em retornar o valor do parâmetro multiplicado por ele mesmo. Entretanto, definir uma função não significa executar o código declarado. Definir uma função significa dar um nome a um trecho de código que será chamado quando for requisitado.
 
 **Chamar uma função** significa realmente executar o trecho de código. Para chamar uma função em JavaScript, você utiliza o nome da função seguido dos argumentos de entrada entre um par de parênteses. No exemplo anterior, podemos chamar a função `quadrado` como segue:
 
@@ -49,7 +51,7 @@ var resultado = quadrado(3)
 console.log(resultado) // → 9
 ```
 
-Valores primitivos, como é o caso de valores do tipo número, são passados para funções "por valor". Ou seja, uma cópia de número é passada para a função quando ela é chamada, o valor original do argumento não é alterado. Veja o exemplo abaixo:
+Valores primitivos, como é o caso de valores do tipo número, são passados para funções "por valor". Ou seja, uma cópia co valor é passada para a função quando ela é chamada. O valor original do argumento não é alterado. Veja o exemplo abaixo:
 
 ```js
 function somaUm (numero) {
@@ -86,10 +88,9 @@ console.log('cupom %s - ativo: %s', cupom.codigo, cupom.ativo)
 A saída desse código será:
 
 <pre><samp>cupom 000X - ativo: false
-cupom 000X - ativo: true
-</samp></pre>
+cupom 000X - ativo: true</samp></pre>
 
-Devido as características do JavaScript — mais especificamente o <i lang="en">hoisting</i> — uma função não pode ser declarada condicionalmente. Quando temos duas funções com o mesmo nome, há conflito de referência e isso causa o erro. Ou seja, **não é possível escrever um código como o abaixo**:
+Devido as características do JavaScript — mais especificamente o <i lang="en">hoisting</i> — uma função não pode ser declarada condicionalmente. Quando temos duas funções com o mesmo nome, há conflito de referência e isso causa um erro. Ou seja, **não é possível escrever um código como o abaixo**:
 
 ```js
 if (nota < 7) {
@@ -107,8 +108,6 @@ console.log('O resultado é: ' + resultado())
 
 ### Aridade de funções e passagem de argumentos
 
-A [**aridade**](https://pt.wikipedia.org/wiki/Aridade) de uma função é o número de parâmetros que a função recebe. Uma função de um parâmetro é denominada unária; de dois parâmetros, binária; com três parâmetros, ternária; e assim por diante. Caso uma função não receba parâmetros, a função é denominada nulária.
-
 Diferente de muitas linguagens, o JavaScript não restringe a quantidade de argumentos que a chamada da função pode receber dada a aridade da função. Supondo o mesmo exemplo da função `quadrado` acima, as chamadas abaixo são completamente válidas em JavaScript:
 
 ```js
@@ -123,9 +122,17 @@ console.log(quadrado()) // → NaN
 
 A função `quadrado` oficialmente aceita um argumento. Quando executamos a função passando mais argumentos que a aridade da função, a função os ignora; Se passamos menos argumentos que aridade da função, o JavaScript atribui `undefined` para os argumentos faltantes.
 
+<aside>
+<p>
+A <a href="https://pt.wikipedia.org/wiki/Aridade"><strong>aridade</strong></a> de uma função é o número de parâmetros que a função recebe. Uma função de um parâmetro é denominada unária; de dois parâmetros, binária; com três parâmetros, ternária; e assim por diante. Caso uma função não receba parâmetros, a função é denominada nulária.
+</p>
+</aside>
+
 ## Funções como valores de primeira-classe
 
-Funções, em JavaScript, são [valores de primeira classe](ttp://c2.com/cgi/wiki/?FirstClass) e, por isso, são tratadas como qualquer outro valor na linguagem. Ou seja, funções podem ser passadas como parâmetros ou retornadas como resultado de uma função. Funções podem também serem atribuídas em variáveis. Além disso, toda função em JavaScript é também um objeto e tem propriedades e métodos associados. Apesar do `typeof` de uma função ser `"function"`, uma função é sempre instância de um objeto. Veja abaixo:
+Funções, em JavaScript, são [valores de primeira classe](ttp://c2.com/cgi/wiki/?FirstClass) e, por isso, são tratadas como qualquer outro valor na linguagem. Assim, funções podem ser passadas como parâmetros ou retornadas como resultado de uma função. Funções podem também serem atribuídas em variáveis.
+
+Além disso, toda função em JavaScript é também um objeto e tem propriedades e métodos associados. Apesar do `typeof` de uma função ser `"function"`, uma função é sempre instância de um objeto. Veja abaixo:
 
 ```js
 function quadrado (numero) {
@@ -153,7 +160,7 @@ quadrado</samp></pre>
 
 ## Expressões funcionais
 
-Em JavaScript, a declaração de uma função pode ser retornada como um valor, ou seja, como uma expressão funcional. Podemos atribuir a função `quadrado` para uma variável `potencia2` como:
+Em JavaScript, a declaração de uma função pode ser retornada como um valor, ou seja, como uma expressão funcional. Podemos atribuir a função `quadrado` para uma variável `potencia2` da seguinte forma:
 
 ```js
 var potencia2 = function quadrado (numero) {
@@ -175,7 +182,7 @@ var quadrado = function (numero) {
 console.log(quadrado(6)) // → 36
 ```
 
-Apesar de ter um resultado muito semelhante, utilizar uma expressão funcional anônima tem um significado diferente de uma declaração de função. Um resultado interessante é que expressões funcionais podem ser "atribuídas condicionamente", diferente das funções declaradas. Ou seja, o código abaixo é válido em JavaScript:
+Apesar de ter um resultado muito semelhante, utilizar uma expressão funcional anônima tem um significado diferente de uma declaração de função. Um resultado interessante é que expressões funcionais podem ser "atribuídas condicionamente", diferente das funções declaradas. Ou seja, agora, o código abaixo é válido em JavaScript:
 
 ```js
 var resultado
@@ -213,9 +220,10 @@ var triplo = multipliquePor(3)
 console.log(dobro(6)) // → 12
 console.log(dobro(9)) // → 18
 console.log(triplo(3)) // → 9
+console.log(triplo(4)) // → 12
 ```
 
-Note que a função `multipliquePor` pega um parâmetro `n` e retorna uma nova função que pega um parâmetro `x` e então multiplica `x` por `n`. Dessa forma, podemos criar duas funções, uma que multiplica por dois, que chamamos de `dobro`; e uma que multiplica por três, que chamamos de `triplo`. Ao final, temos as chamadas da funções `dobro` e `triplo` para alguns diferentes argumentos.
+Note que a função `multipliquePor` pega um parâmetro `n` e retorna uma nova função que pega um parâmetro `x` e que então, quando for chamada, multiplica `x` por `n`. Dessa forma, podemos criar duas funções, uma que multiplica por dois, que chamamos de `dobro`; e uma que multiplica por três, que chamamos de `triplo`. Ao final, temos as chamadas da funções `dobro` e `triplo` para alguns diferentes argumentos.
 
 Funções de alta ordem são extremamente úteis e muito utilizadas em JavaScript, principalmente quando desejamos codificar em um estilo mais próximo do paradigma funcional. Entender funções de alta ordem permite entender um dos conceitos mais fundamentais do JavaScript: <i lang="en">closures</i>.
 
@@ -223,6 +231,6 @@ Funções de alta ordem são extremamente úteis e muito utilizadas em JavaScrip
 
 Nesse episódio aprendemos sobre funções, como declará-las e suas principais características. A palavra-chave `function` pode ser utilizada tanto em uma declaração de função quanto em uma expressão funcional. É fundamental compreender que funções, em JavaScript, são valores de primeira classe.
 
-Chegamos ao fim da série JavaScrip Básico, mas não no fim do conteúdo da linguagem e de suas funcionalidades. Com o conteúdo visto até aqui, você já pode criar de programas simples e codificar algoritmos em JavaScript. Gostaria de agradecer ao meu amigo Guilherme e em especial para minha amiga Mariana pela revisão dos textos e que permitiram uma melhor leitura desse blog.
+Chegamos ao fim da série JavaScript Básico, mas não no fim do conteúdo da linguagem e de suas funcionalidades. Com o conteúdo visto até aqui, você já pode criar de programas simples e codificar algoritmos em JavaScript. Gostaria de agradecer ao meu amigo Guilherme e minha amiga Mariana pela revisão dos textos e que permitiram uma melhor leitura desse blog.
 
 Pretendo lançar outros textos falando sobre aspectos mais profundos mas incrivelmente úteis do JavaScript, em termos mais técnicos tais como o processo de <i lang="en">hoisting</i>, <i lang="en">closures</i>, operações binárias, entre outros. Também quero escrever mais sobre a programação em paradigma orientado a objetos e funcional.
