@@ -77,11 +77,11 @@
   <main class="blog-entry">
     <header class="blog-header">
       <h1 class="blog-title">
-        {{ title }}
+        {{ title | safe }}
         {% if subtitle %}
           <br/>
           <small class="blog-title__subtitle">
-            {{ subtitle }}
+            {{ subtitle | safe }}
           </small>
         {% endif %}
       </h1>
