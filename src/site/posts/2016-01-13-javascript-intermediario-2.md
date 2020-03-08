@@ -102,11 +102,11 @@ Uma <i lang="en">closure</i> acontece quando uma função é declarada dentro do
 
 <aside>
 <p>
-<i lang="en">Closures</i> funções são capazes de ”lembrar“ de variáveis pertencente ao escopo léxico de onde foram declaradas mesmo quando executadas fora dele.
+<i lang="en">Closures</i> são funções são capazes de “lembrar” de variáveis pertencente ao escopo léxico de onde foram declaradas mesmo quando executadas fora dele.
 </p>
 </aside>
 
-Normalmente, <i lang="en">closures</i> armazenam essas informações na área de [memória dinâmica](https://en.wikipedia.org/wiki/Memory_management#Dynamic_memory_allocation) do computador, comumente chamada de <i lang="en">heap</i>. Dessa forma, vamos redesenhar o nosso esquema simplificado do estado da pilha de execução contemplando também o <i lang="en">heap</i>:
+Dessa forma, vamos redesenhar o nosso esquema simplificado do estado da pilha de execução contemplando também o <i lang="en">heap</i>:
 
 <figure>
   <img
@@ -122,7 +122,7 @@ Normalmente, <i lang="en">closures</i> armazenam essas informações na área de
 
 ## Teoria e propriedades das <i lang="en">closures</i>
 
-Uma linguagem de programação não consegue implementar <i lang="en">closures</i> se o seu modelo de memória apenas utiliza apenas a pilha para gerenciar a memória. Em tais linguagens, as variáveis locais são automaticamente desalocadas quando a função termina sua execução. Entretanto, uma <i lang="en">closure</i> requer que as variáveis capturadas sobrevivam além da execução da função original. Por isso, essas variáveis precisam ser alocadas até que não sejam mais necessárias, normalmente utilizando a área de memória dinâmica <i lang="en">heap</i> ao invés da pilha. O tempo de vida dessas variáveis é controlado para que permançam acessíveis enquanto houver alguma <i lang="en">closure</i> que a referencie.
+Uma linguagem de programação não consegue implementar <i lang="en">closures</i> se o seu modelo de memória apenas utiliza apenas a pilha para gerenciar a memória. Em tais linguagens, as variáveis locais são automaticamente desalocadas quando a função termina sua execução. Entretanto, uma <i lang="en">closure</i> requer que as variáveis capturadas sobrevivam além da execução da função original. Por isso, essas variáveis precisam ser alocadas até que não sejam mais necessárias, normalmente utilizando a [memória dinâmica](https://en.wikipedia.org/wiki/Memory_management#Dynamic_memory_allocation) — comumente chamada de <i lang="en">heap</i> — ao invés da pilha. O tempo de vida dessas variáveis é controlado para que permançam acessíveis enquanto houver alguma <i lang="en">closure</i> que a referencie.
 
 Isso explica por a grande maioria das linguagens de programação que suportam <i lang="en">closures</i> normalmente acompanham um [coletor de lixo](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>). Alternativas ao uso de coletor de lixo para o gerenciamento de memória seria o controle manual ou continuar usando um espaço especial da pilha para armazenar a <i lang="en">closure</i>, mas, ambas as estratégias podem ter um [comportamento indefinido](https://en.wikipedia.org/wiki/Undefined_behavior) uma vez podem acontecer “[referências selvagens](https://pt.wikipedia.org/wiki/Apontador_pendente)”.
 
