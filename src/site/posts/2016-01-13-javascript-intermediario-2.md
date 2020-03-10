@@ -75,7 +75,7 @@ function mul (x) {
 
 var double = mul(2)
 
-console.log(double(4)) // → 8
+console.log(double(2)) // → 4
 ```
 
 A execução desse código terá, de forma simplificada, os seguintes estados da pilha:
