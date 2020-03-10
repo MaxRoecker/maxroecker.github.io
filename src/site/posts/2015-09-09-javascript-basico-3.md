@@ -12,7 +12,7 @@ No [artigo anterior](https://maxroecker.github.io/posts/2015-09-01-javascript-ba
 
 <aside>
 <p>
-<strong>va.ri.á.vel:</strong> 1. Sujeito a variação; 2. Que pode ser variado ou mudado; 3. Inconstante.
+<strong>va·ri·á·vel:</strong> Espaço reservado na memória de um computador, capaz de armazenar um determinado tipo de dado que pode variar durante a execução do programa.
 </p>
 </aside>
 
