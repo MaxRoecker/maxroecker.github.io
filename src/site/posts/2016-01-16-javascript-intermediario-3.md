@@ -12,7 +12,7 @@ Nesse texto, vamos compreender um pouco mais sobre um paradigma importante quand
 
 <aside>
 <p>
-<strong>as.sin.cro.nis.mo</strong>: 1. Qualidade ou estado de assíncrono; 2. Ausência de concorrência no tempo.
+<strong>as·sin·cro·nis·mo</strong>: 1. Qualidade ou estado de assíncrono; 2. Ausência de concorrência no tempo.
 </p>
 </aside>
 
