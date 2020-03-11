@@ -48,7 +48,36 @@ you are not
 fully dressed
 without one.</samp></pre>
 
-Apesar dos <i lang="en">logs</i> serem colocados fora de ordem, alguns foram colocados em funções que foram passadas para o `setTimeout` e que serão executadas somente após o tempo de espera for esgotado. No entanto, você percebeu que mesmo quando o tempo de espera for zero, a função não é executada imediatamente? Bem, aqui estamos de frente com um dos efeitos do modelo de concorrência do JavaScript e que vamos entrar em detalhes a partir de agora.
+Apesar dos <i lang="en">logs</i> serem colocados fora de ordem, alguns foram colocados em funções que foram passadas para o `setTimeout` e que serão executadas somente após o tempo de espera for esgotado. Vamos ver outro exemplo um pouco mais complexo. Considere o código abaixo:
+
+```js
+function asyncCountTo(x) {
+  for (var i = 0; i < x; i++) {
+    setTimeout(function () {
+      console.log(i);
+    }, (x - i) * 1000);
+  }
+}
+
+asyncCountTo(4);
+```
+
+Qual é a saída do código acima? Temos um laço que dispara várias funções por meio do `setTimeout` e que imprimem a variável `i`. Por maior que seja a surpresa, o código acima exibe como saída:
+
+<pre><samp>4
+4
+4
+4</samp></pre>
+
+Por quê? A razão desse comportamento se deve à <i lang="en">closure</i> associada a função passada para o `setTimeout`. A variável `i` é compartilhada por todas as `closures` e, por isso, tem esse comportamento. O laço continua sendo executado e a variável `i` continua sendo incrementada até chegue ao valor quatro, que é quando a condição do laço falha. Só então os <i lang="en">callbacks</i> do `setTimeout` são executados.
+
+<aside>
+<p>
+Caso você não tenha familiaridade com <i lang="en">closures</i>, <a href="https://maxroecker.github.io/blog/javascript-intermediario-2/">essa publicação do blog</a> pode lhe ajudar.
+</p>
+</aside>
+
+No entanto, você percebeu que mesmo quando o tempo de espera for zero, a função não é executada imediatamente? Bem, aqui estamos de frente com um dos efeitos do modelo de concorrência do JavaScript e que vamos entrar em detalhes a partir de agora.
 
 
 ## Programação Orientada a Eventos
