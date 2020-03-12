@@ -50,7 +50,7 @@ Além disso, possibilidade de executar o mesmo código tanto no cliente quanto e
 
 ## Conclusão
 
-Hoje, a **Lei de Atwood** nunca pareceu ser tão verdadeira. O JavaScript tem dominado todas as áreas de desenvolvimento de aplicações, desde [aplicativos sociais](https://developers.facebook.com/docs/javascript) ou [suítes office baseadas em nuvem](https://www.google.com/docs/about/) baseadas em nuvem, até mesmo [jogos](http://phaser.io/) com grande processamento gráfico.
+Hoje, a **Lei de Atwood** nunca pareceu ser tão verdadeira. O JavaScript tem dominado todas as áreas de desenvolvimento de aplicações, desde [aplicativos sociais](https://developers.facebook.com/docs/javascript), [suítes de programas de escritório](https://www.google.com/docs/about/) ou [jogos](http://phaser.io/) com grande processamento gráfico.
 
 <blockquote cite="http://blog.codinghorror.com/the-principle-of-least-power/">
   <p>

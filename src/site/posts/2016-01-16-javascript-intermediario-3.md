@@ -51,15 +51,15 @@ without one.</samp></pre>
 Apesar dos <i lang="en">logs</i> serem colocados fora de ordem, alguns foram colocados em funções que foram passadas para o `setTimeout` e que serão executadas somente após o tempo de espera for esgotado. Vamos ver outro exemplo um pouco mais complexo. Considere o código abaixo:
 
 ```js
-function asyncCountTo(x) {
+function asyncCountTo (x) {
   for (var i = 0; i < x; i++) {
     setTimeout(function () {
-      console.log(i);
-    }, (x - i) * 1000);
+      console.log(i)
+    }, (x - i) * 1000)
   }
 }
 
-asyncCountTo(4);
+asyncCountTo(4)
 ```
 
 Qual é a saída do código acima? Temos um laço que dispara várias funções por meio do `setTimeout` e que imprimem a variável `i`. Por maior que seja a surpresa, o código acima exibe como saída:
@@ -78,7 +78,6 @@ Caso você não tenha familiaridade com <i lang="en">closures</i>, <a href="http
 </aside>
 
 No entanto, você percebeu que mesmo quando o tempo de espera for zero, a função não é executada imediatamente? Bem, aqui estamos de frente com um dos efeitos do modelo de concorrência do JavaScript e que vamos entrar em detalhes a partir de agora.
-
 
 ## Programação Orientada a Eventos
 
@@ -110,7 +109,7 @@ Na verdade, a função `setTimeout` que vimos anteriormente não “executa uma 
 - Utilizando [`setInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) ou [`postMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage);
 - Respostas de requisições HTTP utilizando as APIs [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) ou [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) dos navegadores.
 
-O  <i lang="en">event loop</i> é um modelo de concorrência não preemptivo. Não é possível interromper a execução da função corrente e retornar posteriormente. Somente uma função é executada por vez. Uma vez que a computação de uma função é iniciada, ela não é mais interrompida. Assim, não há paralelismo de execução das funções no <i lang="en">event loop</i>.
+O <i lang="en">event loop</i> é um modelo de concorrência não preemptivo. Não é possível interromper a execução da função corrente e retornar posteriormente. Somente uma função é executada por vez. Uma vez que a computação de uma função é iniciada, ela não é mais interrompida. Assim, não há paralelismo de execução das funções no <i lang="en">event loop</i>.
 
 <aside>
 <p>
@@ -136,15 +135,6 @@ Diferentes máquinas virtuais JavaScript implementam algumas funcionalidades em 
 
 Essa publicação apresentou uma versão bastante simplificada de como o <i lang="en">event loop</i> do JavaScript funciona. Ainda há vários pontos que foram deixados de lado para o bem da sanidade da explicação. No entanto, acredito que você tenha conseguido entender o funcionamento das máquinas virtuais JavaScript e compreendido o modelo de concorrência da linguagem e as consequências que surgem a partir do seu uso. Caso você tenha interesse em uma visão mais completa, recomendo ler mais sobre:
 
-* A fila de microtarefas e as <i lang="en"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a></i>
-* A instanciação de <i lang="en">event loops</i> paralelos com [<i lang="en">Workers</i>](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API).
-* As [etapas de apresentação](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) nos navegadores.
-
-
-
-
-
-
-
-
-
+- A fila de microtarefas e as <i lang="en"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a></i>;
+- A instanciação de <i lang="en">event loops</i> paralelos com [<i lang="en">Workers</i>](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API);
+- As [etapas de apresentação](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) nos navegadores.
