@@ -12,7 +12,7 @@ No [artigo anterior](https://maxroecker.github.io/posts/2015-09-01-javascript-ba
 
 <aside>
 <p>
-<strong>va·ri·á·vel:</strong> Espaço reservado na memória de um computador, capaz de armazenar um determinado tipo de dado que pode variar durante a execução do programa.
+<strong>va·ri·á·vel:</strong> (1) Em matemática, algo que pode assumir um valor de um conjunto de valores; (2) Em computação, espaço reservado na memória de um computador, capaz de armazenar um determinado tipo de dado que pode alterar-se durante a execução do programa.
 </p>
 </aside>
 

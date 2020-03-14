@@ -12,7 +12,7 @@ No [artigo anterior](http://maxroecker.github.io/blog/javascript-basico-3/) vimo
 
 <aside>
 <p>
-<strong>de·cla·ra·ção:</strong> 1. Ação ou efeito de declarar; 2. Afirmação formal; 3. Asserção explícita.
+<strong>de·cla·ra·ção:</strong> (1) Ação ou efeito de declarar; (2) Afirmação formal; (3) Asserção explícita;
 </p>
 </aside>
 

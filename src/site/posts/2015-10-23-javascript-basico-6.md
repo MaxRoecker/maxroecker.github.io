@@ -14,7 +14,7 @@ Uma função é um trecho de código que pode ser chamado por um fluxo de execu�
 
 <aside>
 <p>
-<strong>fun.ção:</strong> Grandeza relacionada a outra(s), de tal modo que a cada valor atribuído a esta(s), corresponde um valor daquela.
+<strong>fun.ção:</strong> (1) O que alguma coisa faz ou é usada para; (2) Em matemática, uma relação o qual um elemento de um conjunto é associado a exatamente um outro elemento de outro conjunto. (3) Em computação, uma rotina que pode retornar um resultado.
 </p>
 </aside>
 

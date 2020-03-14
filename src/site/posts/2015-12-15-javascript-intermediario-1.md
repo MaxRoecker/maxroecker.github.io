@@ -14,7 +14,7 @@ Uma variável definida em um código recebe um identificador único — um nome 
 
 <aside>
 <p>
-<b>lé·xi·co</b>: 1. os vocábulos de uma língua; 2. vocábulos usados num domínio especializado.
+<b>lé·xi·co</b>: (1) Os vocábulos de uma língua; (2) Vocábulos usados num domínio especializado.
 </p>
 </aside>
 
