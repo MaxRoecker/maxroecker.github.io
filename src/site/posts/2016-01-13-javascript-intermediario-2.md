@@ -54,6 +54,8 @@ A execução do código acima fará com que a pilha de execução tenha, de form
   <img
     src="/images/2016-01-13-javascript-intermediario-2/stack1.svg"
     alt="Sequência do empilhamento dos quadros da execução do código acima."
+    decoding="async"
+    loading="lazy"
   />
 </figure>
 
@@ -84,6 +86,8 @@ A execução desse código terá, de forma simplificada, os seguintes estados da
   <img
     src="/images/2016-01-13-javascript-intermediario-2/stack2.svg"
     alt="Sequência do empilhamento dos quadros da execução do código acima."
+    decoding="async"
+    loading="lazy"
   />
 </figure>
 
@@ -112,6 +116,8 @@ Dessa forma, vamos redesenhar o nosso esquema simplificado do estado da pilha de
   <img
     src="/images/2016-01-13-javascript-intermediario-2/stack3.svg"
     alt="Sequência do empilhamento dos quadros da execução do código acima."
+    decoding="async"
+    loading="lazy"
   />
 </figure>
 

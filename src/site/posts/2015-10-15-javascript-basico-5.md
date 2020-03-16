@@ -32,6 +32,8 @@ Além de valores do tipo primitivo, o JavaScript possui também valores do tipo 
   <img
     src="/images/2015-10-15-javascript-basico-5/object.svg"
     alt="Um objeto com propriedades apontando para seus respectivos valores."
+    decoding="async"
+    loading="lazy"
   />
   <figcaption>
     Em JavaScript, um objeto é um conjunto de vários pares de chave-valor. Cada chave é única no objeto e aponta para somente um valor.
