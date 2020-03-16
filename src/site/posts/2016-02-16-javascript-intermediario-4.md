@@ -18,7 +18,7 @@ Hoje veremos uma característica bastante peculiar do JavaScript e que normalmen
 
 ## Hasteamento de variáveis
 
-No momento de execução de um código JavaScript, toda declaração de variável passam por um processo de hasteamento, isto é, a declaração da variável é elevada para o topo do escopo atribuído de forma automática. Esse processo é chamado de comumente de <i lang="en">hoisting</i>. O conceito pode ser um pouco confuso a princípio, então, vamos para um exemplo prático. Em JavaScript, é possível declarar uma função e chamá-la logo em seguida, como no exemplo abaixo:
+No momento de execução de um código JavaScript, toda declaração de variável passam por um processo de hasteamento, isto é, a declaração da variável é elevada para o topo do escopo atribuído de forma automática. Esse processo é comumente chamado de <i lang="en">hoisting</i>. O conceito pode ser um pouco confuso a princípio, então, vamos para um exemplo prático. Em JavaScript, é possível declarar uma função e chamá-la logo em seguida, como no exemplo abaixo:
 
 ```js
 function hello (name) {
