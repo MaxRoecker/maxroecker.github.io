@@ -159,9 +159,10 @@ figure {
   > figcaption {
     display: block;
     padding: 1em 2.5em;
-    text-align: left;
-    line-height: 1.125;
-    font-size: 0.8em;
+    text-align: justify;
+    line-height: 1.25;
+    hyphens: auto;
+    font-size: 16px;
   }
 }
 
