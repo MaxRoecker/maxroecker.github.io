@@ -13,7 +13,7 @@ Tenho grande interesse por tecnologia, principalmente nas áreas de computação
 
 <figure>
   <img
-    src="/images/symbol.svg"
+    src="/images/symbol-1.svg"
     alt="Águia Coroada"
     title="Si vis pacem, para bellum"
     decoding="async"
