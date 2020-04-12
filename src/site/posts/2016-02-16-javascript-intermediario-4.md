@@ -85,6 +85,15 @@ No entanto, o <i lang="en">hoisting</i> somente é aplicado em declarações que
 
 Podemos resumir essa publicação como: o hasteamento de variáveis com `var` eleva para o topo do código somente a declaração, mas não a definição; enquanto o hasteamento de funções eleva para o topo do código tanto a declaração quando a definição.
 
+<figure>
+  <img
+    src="/images/2016-02-16-javascript-intermediario-4/hoisting.svg"
+    alt="Mecanismo para elevar água."
+    decoding="async"
+    loading="lazy"
+  />
+</figure>
+
 Ainda assim, pelos exemplos anteriores, o comportamento de hastear as declarações de variáveis e funções podem levar a resultados confusos e proporcionar um código de difícil leitura. É importante que você siga algumas boas práticas no momento de escrita do código. Elevar as declarações de suas variáveis para o topo do seu respectivo escopo evita confusão com o mecanismo de <i lang="en">hoisting</i>, pois seu código deixa-o explícito.
 
 Outra prática importante é a inicialização de um valor na variável sempre que possível. Dessa forma, evita-se valores indefinidos durante a execução e surpresas indesejadas.

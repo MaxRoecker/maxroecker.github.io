@@ -126,9 +126,19 @@ Dessa forma, vamos redesenhar o nosso esquema simplificado do estado da pilha de
 3. O contexto global chama então `double`, que por sua vez empilha o seu quadro de contexto, contendo o parâmetro `y = 2`;
 4. Ao executar, a <i lang="en">closure</i> apontada por `double` pega o valor do parâmetro `x = 2` do contexto salvo e multiplica pelo parâmetro `y = 2`. O valor da multiplicação é retornado e exibido pelo console.
 
+<figure>
+  <img
+    src="/images/2016-01-13-javascript-intermediario-2/lock.svg"
+    alt="Um símbolo enclausurado."
+    decoding="async"
+    loading="lazy"
+  />
+</figure>
+
 ## Teoria e propriedades das <i lang="en">closures</i>
 
 Uma linguagem de programação não consegue implementar <i lang="en">closures</i> se o seu modelo de memória apenas utiliza apenas a pilha para gerenciar a memória. Em tais linguagens, as variáveis locais são automaticamente desalocadas quando a função termina sua execução. Entretanto, uma <i lang="en">closure</i> requer que as variáveis capturadas sobrevivam além da execução da função original. Por isso, essas variáveis precisam ser alocadas até que não sejam mais necessárias, normalmente utilizando a [memória dinâmica](https://en.wikipedia.org/wiki/Memory_management#Dynamic_memory_allocation) — comumente chamada de <i lang="en">heap</i> — ao invés da pilha. O tempo de vida dessas variáveis é controlado para que permançam acessíveis enquanto houver alguma <i lang="en">closure</i> que a referencie.
+
 
 Isso explica por a grande maioria das linguagens de programação que suportam <i lang="en">closures</i> normalmente acompanham um [coletor de lixo](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>). Alternativas ao uso de coletor de lixo para o gerenciamento de memória seria o controle manual ou continuar usando um espaço especial da pilha para armazenar a <i lang="en">closure</i>, mas, ambas as estratégias podem ter um [comportamento indefinido](https://en.wikipedia.org/wiki/Undefined_behavior) uma vez podem acontecer “[referências selvagens](https://pt.wikipedia.org/wiki/Apontador_pendente)”.
 

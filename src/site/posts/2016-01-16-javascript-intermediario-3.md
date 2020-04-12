@@ -93,6 +93,15 @@ A programação orientada a eventos ajusta o fluxo do programa de acordo com eve
 
 Em uma aplicação orientada a eventos, normalmente temos um [Laço de Eventos](https://en.wikipedia.org/wiki/Event_loop) — comumente chamado de <i lang="en">event loop</i> — que aguarda os eventos acontecerem para chamar funções que foram designadas à responder um evento específico. E é o comportamento desse laço o qual vamos detalhar daqui em diante.
 
+<figure>
+  <img
+    src="/images/2016-01-16-javascript-intermediario-3/steam-engine.svg"
+    alt="Máquina de ciclos a vapor"
+    decoding="async"
+    loading="lazy"
+  />
+</figure>
+
 ## O <i lang="en">Event Loop</i> do JavaScript
 
 Toda máquina de execução JavaScript possui um <i lang="en">event loop</i> único que captura os eventos disparados pelo usuário ou pelo ambiente onde a máquina está alocada. Se um evento capturado pelo <i lang="en">event loop</i> possuir algum <i lang="en">callback</i> associado — uma função que deve ser executada quando o evento ocorrer — então uma **tarefa** será enfileirada na fila de tarefas que irá iniciar a execução do <i lang="en">callback</i> pelo motor de execução JavaScript.

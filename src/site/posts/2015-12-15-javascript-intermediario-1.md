@@ -100,13 +100,15 @@ y = { name: 'foobar' } // Erro!
 
 Caso você deseje construir um objeto imutável, é necessário utilizar o [`Object.freeze`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 
+<figure>
+  <img
+    src="/images/2015-12-15-javascript-intermediario-1/turtle.svg"
+    alt="Uma tartaruga."
+    decoding="async"
+    loading="lazy"
+  />
+</figure>
 
-<blockquote>
-<p>
-Linguagens não servem somente para expressar pensamentos, mas para possibilitar pensamentos os quais não existiriam se não fossem elas.
-</p>
-<footer>Bertrand Russel</footer>
-</blockquote>
 
 
 ## Conclusão
@@ -116,3 +118,10 @@ Como um bom programador, uma das coisas mais importantes que você pode aprender
 Algumas vezes podemos ser tentados "reutilizar" uma variável para representar dois conceitos diferentes. Essa prática deve ser evitada, pois leva a um código não efetivo e de difícil leitura. Por isso, sempre recomendo a utilização de `const` e `let` quanto estiver em um código que permita seu uso, ou seja, que utilize o ES6. Caso você tenha uma variável que não precise que seu valor seja reatribuído, faça de `const` a sua escolha padrão. Seu código fica mais limpo e declarativo. Caso a reatribuíção seja necessária, como é o caso de contadores, acumuladores e outros mecanismos de _loops_, utilize `let`. Também vai indicar que a variável somente é utilizada no bloco onde ela foi declarada, e não na função inteira.
 
 Siga o princípio de que uma variável deve representar um único conceito e torne seu código mais legível e declarativo.
+
+<blockquote>
+<p>
+Linguagens não servem somente para expressar pensamentos, mas para possibilitar pensamentos os quais não existiriam se não fossem elas.
+</p>
+<footer>Bertrand Russel</footer>
+</blockquote>
