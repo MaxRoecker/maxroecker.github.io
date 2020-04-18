@@ -121,7 +121,7 @@ Como nós definimos um método `toString` em `person`, ao acessarmos o JavaScrip
 
 <figure>
   <img
-    src="/images/2016-04-09-javascript-intermediario-6/prototype.svg"
+    src="/images/2016-04-09-javascript-intermediario-6/prototype-1.svg"
     alt="Ilustração do objeto person e do protótipo Object.prototype"
     decoding="async"
     loading="lazy"
@@ -167,13 +167,24 @@ console.log(point.getDistanceFrom(point)) // → 0
 console.log(point.getDistanceFrom(origin)) // → 5
 ```
 
-Veja que o protótipo possui a função `getDistanceFrom`, que recebe outro ponto com parâmetro em `other` e calcula a distância entre o `this`. Por causa da delegação de propriedades, o `this` de um método chamado pelo objeto primário inicia a busca pelo objeto primário. Por isso que o `this.x` referência o valor de `origin.x` ou `point.x` mas não de `pointPrototype.x`. Por causa da busca na cadeia de protótipos, eu não preciso definir a função `getDistanceFrom` duas vezes. Ou seja, uma função definida apenas uma vez pode ser utilizada por qualquer objeto que tenha `pointPrototype` como protótipo. Isso permite uma reutilização de código bastante poderosa.
+Veja que o protótipo possui a função `getDistanceFrom`, que recebe outro ponto com parâmetro em `other` e calcula a distância entre o `this`. Por causa da delegação de propriedades, o `this` de um método chamado pelo objeto primário inicia a busca pelo objeto primário. Por isso que o `this.x` referência o valor de `origin.x` ou `point.x` mas não de `pointPrototype.x`.
 
 <aside>
 <p>
   <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs"><code>Math.abs</code></a> e <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a> são funções padrão do JavaScript que retornam, respectivamente, o valor absoluto e a raiz quadrada de um número.
 </p>
 </aside>
+
+Devido a busca na cadeia de protótipos, não é preciso definir a função `getDistanceFrom` duas vezes. Ou seja, uma função definida apenas uma vez pode ser utilizada por qualquer objeto que tenha `pointPrototype` como protótipo. Isso permite uma reutilização de código bastante poderosa. A figura abaixo apresenta uma ilustração do protótipo compartilhado:
+
+<figure>
+  <img
+    src="/images/2016-04-09-javascript-intermediario-6/prototype-2.svg"
+    alt="Ilustração de objetos compartilhando um mesmo protótipo."
+    decoding="async"
+    loading="lazy"
+  />
+</figure>
 
 Você também pode criar objetos que não tenham protótipos passando `null` para o primeiro parâmetro do `Object.create`. No entanto, algumas funcionalidades básicas não estarão disponíveis, como é o caso da função `toString`:
 
