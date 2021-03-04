@@ -1,9 +1,9 @@
-@import "_variables.css";
-@import "_syntax.css";
-@import "_font.css";
-@import "_fa.css";
-@import "_katex.css";
-@import "_normalize.css";
+@import '_variables.css';
+@import '_syntax.css';
+@import '_font.css';
+@import '_fa.css';
+@import '_katex.css';
+@import '_normalize.css';
 
 :root,
 body {
@@ -12,7 +12,7 @@ body {
   background-color: $background-primary;
   color: mix($text-primary, $background-primary, 90%);
   font-size: 16px;
-  font-family: "Computer Modern Serif", serif;
+  font-family: 'Computer Modern Serif', serif;
   font-weight: normal;
   background: $background-primary;
   text-rendering: geometricPrecision;
@@ -128,7 +128,7 @@ blockquote {
     line-height: 1;
     font-size: 0.85714285714em;
     &::before {
-      content: "— ";
+      content: '— ';
     }
   }
   &::before {
@@ -140,7 +140,7 @@ blockquote {
     font-size: 4em;
     font-weight: bold;
     color: $color-accent;
-    content: "“";
+    content: '“';
   }
 }
 
@@ -217,7 +217,7 @@ pre {
 }
 
 kbd {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 kbd.key {
   font-size: 0.7em;
@@ -226,15 +226,29 @@ kbd.key {
   border-width: 1px;
   border-style: solid;
   border-radius: 0.25em;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: $text-secondary;
   white-space: nowrap;
 }
 
 samp {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 0.8em;
   color: $text-secondary;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table thead {
+  border-bottom: solid 1px currentColor;
+}
+
+table td,
+table th {
+  padding: 0.125em 0.5em;
 }
 
 .header {
@@ -397,7 +411,7 @@ samp {
   display: block;
   position: relative;
   height: 200px;
-  background-image: url("/images/ornament-1.svg");
+  background-image: url('/images/ornament-1.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -415,7 +429,7 @@ samp {
     right: 0;
     bottom: 0;
     background-color: transparent;
-    background-image: url("/images/author.png");
+    background-image: url('/images/author.png');
     background-repeat: no-repeat;
     background-position: calc(50%) calc(50% - 1px);
     background-size: 82px;
@@ -431,7 +445,7 @@ samp {
       right: 0;
       bottom: 0;
       background-color: transparent;
-      background-image: url("/images/author.png");
+      background-image: url('/images/author.png');
       background-repeat: no-repeat;
       background-position: calc(50%) calc(50% - 2px);
       background-size: 124px;
@@ -509,10 +523,10 @@ samp {
   }
 }
 .blog-details__tags__tag::before {
-  content: "#";
+  content: '#';
 }
 .blog-details__tags__tag::after {
-  content: ", ";
+  content: ', ';
   padding-right: 0.1em;
 }
 .blog-details__tags__tag:last-child::after {
@@ -593,7 +607,7 @@ samp {
   display: block;
   text-transform: capitalize;
   &::after {
-    content: ", ";
+    content: ', ';
     padding-right: 0.25em;
     @media (min-width: $mid) {
       content: none;
@@ -668,16 +682,16 @@ samp {
   }
 }
 .nav-icon.nav-icon--first::after {
-  content: "❮❮";
+  content: '❮❮';
 }
 .nav-icon.nav-icon--previous::after {
-  content: "❮";
+  content: '❮';
 }
 .nav-icon.nav-icon--next::after {
-  content: "❯";
+  content: '❯';
 }
 .nav-icon.nav-icon--last::after {
-  content: "❯❯";
+  content: '❯❯';
 }
 
 .hdate {
