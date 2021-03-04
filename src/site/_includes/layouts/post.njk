@@ -93,11 +93,7 @@
       <div class="blog-details">
         <div class="blog-details__date">
           <time class="hdate" datetime="{{ date | formatDate('yyyy-MM-dd') }}">
-            {% if date.getDay() == 0 or date.getDay() == 6 %}
-              <span class="hdate__weekday">{{ date | formatDate("cccc") }}</span>,
-            {% else %}
-              <span class="hdate__weekday">{{ date | formatDate("cccc'-feira'") }}</span>,
-            {% endif %}
+            <span class="hdate__weekday">{{ date | formatDate("cccc") }}</span>,
             <span class="hdate__monthday">{{ date | formatDate("d") }}</span>
             de
             <span class="hdate__month">{{ date | formatDate("MMMM") }}</span>
