@@ -26,8 +26,8 @@ e a alternativa à ele, as
 
 Já vimos que construtores são feitos por meio de funções que recebem um contexto
 especial em `this` e que são chamadas junto ao operador `new`. Vimos também que
-construtores adicionam métodos ao protótipo dos objetos criados e, por isso,
-são capazes compartilhar o mesmo método para qualquer instância. Relembrando o
+construtores adicionam métodos ao protótipo dos objetos criados e, por isso, são
+capazes de compartilhar o mesmo método para qualquer instância. Relembrando o
 exemplo das publicações anteriores, temos, abaixo, o construtor `Person`:
 
 ```js
@@ -54,7 +54,7 @@ console.log(a.getFullName()); // → 'Pedremildo Escavadeira'
 No entanto, essa notação para escrever construtores é bastante diferente de
 outras linguagens de programação, o que sempre causou um pouco de receio em
 desenvolvedores. Com o advento do ECMA2015, o JavaScript adicionou outra forma
-de escrever construtores, muito similar à outras linguagens de programação, com
+de escrever construtores, muito similar a outras linguagens de programação, com
 a utilização de **classes**. Podemos reescrever o construtor `Person` anterior
 da seguinte forma:
 
@@ -75,8 +75,8 @@ Essa notação é bastante similar ao Java, C++ ou Python e utiliza a palavra-ch
 `class`. No entanto, não confunda a classe do JavaScript com a classe de outras
 linguagens. A palavra-chave `class` nada mais é que um
 “[açúcar sintático](https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico)”
-para os construtores feitos com funções e que já estamos acostumados. Sua
-utilização continua idêntica aos construtores:
+para os construtores feitos com funções. Sua utilização é, também, idêntica aos
+construtores:
 
 ```js
 const a = new Person('Pedremildo', 'Escavadeira');
@@ -92,16 +92,16 @@ De forma resumida, o código que antes ficava no construtor agora é colocado
 dentro do `constructor`, e os métodos que antes eram adicionados no `prototype`
 do construtor agora são definidos no corpo da classe. Essa mudança sintática
 aproxima o JavaScript de outras linguagens e torna mais fácil para pessoas com
-outras experiências animem-se com o ele.
+outras experiências animem-se com ele.
 
 ## Herança
 
 A herança, com as classes, possuem as mesmas vantagens e desvantagens da herança
 com construtores, mas possuem uma sintaxe mais simples utilizando a
 palavra-chave `extends`. Vamos relembrar o exemplo da publicação anterior e
-criar a classe `Employee`, que estende `Person` e adiciona uma propriedade e um
-método: `salary` e `getTax`, respectivamente. Veja, abaixo, como essa herança é
-implementada com classes:
+criar a classe `Employee`, que estende `Person` e adiciona a propriedade
+`salary` e o método `getTax`. Veja, abaixo, como essa herança é implementada com
+classes:
 
 ```js
 class Employee extends Person {
@@ -116,11 +116,10 @@ class Employee extends Person {
 }
 ```
 
-De forma geral, o que o método `apply` que utilizamos quando trabalhamos com
-construtores foi substituído pela chamada `super`. Note que, ao utilizarmos
-`extends`, também não precisamos adequar a cadeia de protótipos. Toda essa parte
-já é feita pelo JavaScript automaticamente. A instanciação de objetos continua
-idêntica aos construtores.
+Veja que o método `apply`, utilizado nos construtores, foi substituído pela
+chamada `super`. Além disso, ao utilizarmos `extends`, não precisamos adequar a
+cadeia de protótipos. Toda essa parte já é feita pelo JavaScript
+automaticamente. A instanciação de objetos continua idêntica.
 
 ```js
 const a = new Employee('Pedremildo', 'Escavadeira', 100);
@@ -225,10 +224,10 @@ const b = new Person('Testerson', 'Trunk'); // → sucesso
 ## Conclusões
 
 Utilizar construtores traz várias vantagens que os construtores já possuem, como
-a herança e polimorfismo simplificada e o uso eficiente de memória por meio do
-compartilhamento de código via protótipos. As utilização de classes mitiga o
-cuidado que temos que ter com operadores `new` nos construtores. No entanto, é
-alguns pontos ainda permanecem:
+a herança e polimorfismo simplificados e o uso eficiente de memória por meio do
+compartilhamento de código via protótipos. Além disso, a utilização de classes
+já mitiga o cuidado que temos que ter com operadores `new` nos construtores. No
+entanto, é alguns pontos ainda permanecem no ES2015:
 
 - Não permite um verdadeiro encapsulamento, todas as propriedades são
   acessíveis;
@@ -237,13 +236,13 @@ alguns pontos ainda permanecem:
   para evitar
   [problemas com o `this`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
-Podemos dizer que as classes são “construtores melhorados” e que, se for
-possível, é prudente favorecer o uso de classes ao invés de construtores. No
+Podemos dizer que as classes são “construtores melhorados” e que é prudente
+favorecer o uso de classes ao invés de construtores na medida do possível. No
 entanto, mesmo com classes disponíveis, grande parte de código escrito em
 JavaScript ainda contém construtores e, por isso, é importante saber como
 funcionam caso você precise lidar com eles em algum momento.
 
-Essa publicação encerra, por enquanto, a série de introdução à JavaScript
+Essa publicação encerra, por enquanto, a série de introdução ao JavaScript
 orientado a objetos. Esse não é um final definitivo. Podem existir mais
 publicações futuras com novas funcionalidades que podem ser adicionadas à
 linguagem ou evoluções nas técnicas de desenvolvimento OO.

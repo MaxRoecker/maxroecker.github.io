@@ -9,11 +9,12 @@ tags:
 date: 2016-04-15 08:49:56
 ---
 
-Hoje vamos iniciar uma nova série de posts sobre a linguagem JavaScript com foco
-na programação orientada a objetos. Nessa série, espero que você compreenda
-conceitos importantes como o encapsulamento de dados, herança e polimorfismo em
-seu código. Vamos também entender mais a fundo a estrutura dos objetos e
-compreender o estilo de programação baseado em protótipos do JavaScript.
+Hoje vamos iniciar uma nova série de publicações sobre a linguagem JavaScript
+com foco na programação orientada a objetos. Nessa série, espero que você
+compreenda conceitos importantes como o encapsulamento de dados, herança e
+polimorfismo em seu código. Vamos também entender mais a fundo a estrutura dos
+objetos e compreender o estilo de programação baseado em protótipos do
+JavaScript.
 
 ## Introdução rápida à Programação Orientada a Objetos
 
@@ -32,37 +33,34 @@ exterior pelo qual o objeto pode fornecer informações.
   </p>
 </aside>
 
-O grande triunfo da Orientação á Objetos é que os dados e as funções que
+O grande triunfo da Orientação a Objetos é que os dados e as funções que
 manipulam esses dados estão agregados em uma mesma estrutura e podem proteger-se
 do acesso e da manipulação direta do “mundo externo”. Os dados ficam em um
 escopo interno do objeto e são chamados de **atributos**. Os atributos armazenam
 o **estado** do objeto, ou seja, o conjunto de valores que o objeto contém. Toda
 vez que o valor de algum atributo é alterado, o objeto muda de estado. Por sua
-vez, para que o um objeto possa ser usado pelo mundo externo, ele deve fornecer
-um protocolo. Protocolos de acesso à objetos são, em sua maioria, composta por
+vez, para que um objeto possa ser usado pelo mundo externo, ele deve fornecer
+um protocolo. Protocolos de acesso à objetos são, em sua maioria, compostos por
 **métodos**. Métodos são propriedades funcionais dos objetos e que podem ser
 executadas para alterar ou retornar algum valor no estado de um objeto.
 
 Construir aplicações com objetos permite que os desenvolvedores adotem algumas
 técnicas valiosas:
 
-- **Herança**: A Herança é a capacidade de objetos poderem “copiar”
+- **Herança**: A herança é a capacidade de objetos poderem “copiar”
   características de outros objetos, ou seja, seus métodos os métodos e
   propriedades. É um recurso bastante poderoso e que permite um grande reuso de
   código.
-- **Encasulamento**: o Encasulamento de dados acontece quando os objetos
-  “escondem” suas propriedades do mundo externo ao restringir o acesso a eles.
-  Em um primeiro momento, podemos achar que a falta de encapsulamento não faz
-  falta quando um “programador sabe o que está fazendo”, mas o problema começa a
-  aparecer quando ao alterarmos um atributo e não estamos cientes de como esse
-  atributo pode afetar o comportamento do objeto em outros momentos, fazendo que
-  com <em lang="en">bugs</em> com difícil localização apareçam.
-- **Polimorfismo**: O Polimorfismo pode ser definido rapidamente como a
-  habilidade de chamar um mesmo método em diferentes objetos e cada um deles
-  responder “em seu próprio modo”. Quando dizemos que um conjunto de objetos é
-  polimórfico, queremos dizer que os objetos desse conjunto possuem interfaces
-  idênticas — ou seja, aceitam as mesmas entradas e proporcionam a mesma saída —
-  mas sua implementação interna pode ser drasticamente diferente.
+- **Encasulamento**: o encasulamento é a capacidade de objetos “esconderem” suas
+  propriedades do mundo externo ou restringir o acesso a eles, permitindo que
+  ninguém que não saiba os efeitos colaterais de uma alteração num objeto possa
+  interferir em seu funcionamento.
+- **Polimorfismo**: O polimorfismo pode ser definido como a habilidade de chamar
+  métodos de diferentes objetos de forma idêntica. Quando dizemos que um
+  conjunto de objetos é polimórfico, significa que os objetos desse conjunto
+  possuem protocolos idênticos, ou seja, aceitam as mesmas entradas e
+  proporcionam a mesma saída. No entanto, sua implementação interna pode ser
+  drasticamente diferente.
 
 A Programação Orientada a Objetos é destinada a promover uma maior flexibilidade
 e facilidade na manutenção de código e é muito popular em aplicações de grande
@@ -117,7 +115,7 @@ console.log(pessoa.getUsername()); // → joao
 Podemos acessar as propriedades de um objeto através do operador `.` seguido da
 propriedade ou através do operador `[]` passando a chave como uma <em
 lang="en">string</em>. A palavra `this`, quando utilizada em um objeto,
-referencia o próprio objeto, dessa forma podemos utilizar o atributo `email` do
+refere-se ao próprio objeto, dessa forma podemos utilizar o atributo `email` do
 objeto criado anteriormente dentro do método `getUsername`.
 
 Entretanto, objetos literais do JavaScript não possuem o conceito de
@@ -138,7 +136,7 @@ propriedade. Caso o resultado seja negativo novamente, busca-se no protótipo do
 protótipo e assim por diante até que um objeto não tenha prototótipo ou a
 propriedade seja encontrada.
 
-Compreender como protótipos funcionam é essencial para compreender como
+Compreender como os protótipos funcionam é essencial para compreender como
 programar em JavaScript orientado a objetos. Caso você queira se saber mais
 sobre o que são protótipos de objetos, recomendo a leitura
 [desse texto](http://maxroecker.github.io/blog/javascript-intermediario-6/) onde
@@ -154,12 +152,13 @@ isso não é diferente. Há múltiplas maneiras e padrões para se programar
 orientado a objetos dentro da linguagem.
 
 Cada técnica possui sua vantagem e sua desvantagem característica, e essa
-flexibilidade permite que o desenvolvedor escolha a qual é a solução mais
-adequada ao seu problema. Essa série de publicações pretende passar à você
-alguns conceitos e técnicas utilizadas em JavaScript para os programas garantam
-as principais características da Programação Orientada a Objetos: herança,
-encapsulamento e polimorfismo. E justamente por isso iremos nos focar em dois
-padrões utilizados quando queremos desenvolver aplicações em JavaScript
-orientado a objetos: os **construtores** e as **fábricas**.
+flexibilidade permite que o desenvolvedor escolha qual é a solução mais adequada
+ao seu problema. Essa série de publicações pretende passar a você alguns
+conceitos e técnicas utilizadas em JavaScript para que os programas garantam as
+principais características da programação orientada a objetos. E justamente por
+isso iremos nos focar em dois padrões utilizados quando queremos desenvolver
+aplicações em JavaScript orientado a objetos: os **construtores** e as
+**fábricas**. Ao final, também veremos as novidades do ES2015 para esse
+paradigma.
 
-Por hoje é só, pessoal. Até lá!
+Até mais!

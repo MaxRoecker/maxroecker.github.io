@@ -9,7 +9,7 @@ tags:
   - post
 ---
 
-Hoje iremos compreender um pouco sobre Fábricas no contexto do JavaScript
+Hoje iremos compreender um pouco sobre as Fábricas no contexto do JavaScript
 Orientado a Objetos, um padrão de projeto alternativos aos construtores para a
 criação de objetos que possui muita similaridade com programação funcional.
 
@@ -34,7 +34,7 @@ principais tópicos de cada padrão em uma só publicação.
 
 ## Introdução
 
-Já vimos, nas publicação anterior, que construtores, em JavaScript, são funções
+Já vimos, na publicação anterior, que construtores, em JavaScript, são funções
 que inicializam um objeto o qual a memória já foi alocada. Revisitando nosso
 exemplo do construtor `Person`, visto abaixo, vemos que todas as propriedades
 são acessíveis e que os métodos são compartilhados entre todos os objetos por
@@ -73,11 +73,13 @@ person.print(); // → 'Person [name: Pedremildo]'
 setTimeout(person.print, 5000); // → 'Person [name: undefined]'
 ```
 
-O que aconteceu com a método? Porque, após 5 segundos, o resultado foi
-diferente? O que aconteceu foi que o método perdeu o contexto de onde deveria
-ser chamada, o `this`, que automaticamente é colocando como o próprio objeto
-quando utilizamos o operador `.`, não é mais a variável `person`, mas o contexto
-de onde o `setTimeout` executou a função.
+O que aconteceu com o método? Porque, após 5 segundos, o resultado foi
+diferente? Na realidade, o método perdeu o contexto de onde deveria ser
+executado, ou seja, que objeto `this` se refere. Quando chamamos um método
+diretamente no objeto com `objeto.método()`, o JavaScript automaticamente define
+o `this` do método como o próprio objeto. Como repassamos o método para outro
+objeto eventualmente executá-lo, o `this` do método não referencia mais `person`
+e, por isso, temos problemas.
 
 A função `print` não está amarrada ao objeto `person`, ela é compartilhada por
 todos os objetos construídos por `Person`. E, justamente porque os métodos são
@@ -85,8 +87,8 @@ compartilhados é que, em certos casos, podemos ter problemas com a utilização
 desses métodos me outros contextos, como vimos acima. Há vários problemas
 
 Uma forma de resolver esse problema é explicitamente pedir para seja criada uma
-nova função, idêntica a anterior, mas que esteja amarrada à `person` por meio do
-método
+nova função, idêntica a anterior, mas que esteja amarrada à variável `person`
+por meio do método
 [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
 Veja:
 
@@ -107,7 +109,7 @@ Este exemplo mostra bem as desvantagens que construtores possuem. O uso
 incorreto do `this` é um dos
 [erros mais comuns](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)
 entre desenvolvedores JavaScript em qualquer nível de experiência e é fonte de
-muitos _bugs_. No entanto, há uma alternativa, as **fábricas**.
+muitos _bugs_. No entanto, há uma alternativa: as **fábricas**.
 
 ## Fábricas
 
@@ -153,9 +155,9 @@ setTimeout(b.print, 5000); // → 'Person [name: Testerson]'
 Note que, como criamos o objeto, não precisamos mais utilizar `this`. Sempre
 temos a referência do objeto criado. Isso acontece porque os métodos
 `getFullName` e `print` são _closures_ e, assim, mantém a referência do escopo
-da fábrica e podem acessa-lo a qualquer momento.
+da fábrica e podem acessá-lo a qualquer momento.
 
-No entanto temos um preço a pagar: todos os métodos dos objetos criados são
+Entretanto, temos um preço a pagar: todos os métodos dos objetos criados são
 cópias e não são compartilhados. A cada vez que a fábrica `Person` é chamada, ela
 cria um objeto e cópias dos métodos amarrados a esse objeto. Veja:
 
@@ -165,10 +167,9 @@ console.log(a.getFullName === b.getFullName); // → false
 
 ## Herança
 
-Fábricas também podem utilizar a herança mas de uma forma diferente dos
-construtores. Vamos relembrar o exemplo da publicação anterior, criando uma
-fábrica `Employee`, que estende `Person` e adiciona uma propriedade e um método:
-`salary` e `getTax`.
+Fábricas também podem utilizar a herança. Vamos relembrar o exemplo da
+publicação anterior, criando uma fábrica `Employee`, que estende `Person` e
+adiciona a propriedade `salary` e o método `getTax`.
 
 ```js
 function Employee(name, surname, salary) {
@@ -226,11 +227,11 @@ function Employee(name, surname, salary) {
 
 Veja que `rate` é uma variável que está no `closure` de `getTax`. Não há outra
 forma de acessar `rate` senão pelo método `getTax`. Ou seja, `rate` está
-encapsulado de qualquer efeito externo que não seja gerado pelo próprio objeto.
+encapsulada de qualquer efeito externo que não seja gerado pelo próprio objeto.
 
 ## Polimorfismo
 
-Assim como em construtores, devido as características do JavaScript, o
+Assim como em construtores, devido às características do JavaScript, o
 polimorfismo pode ser realizado sem muitos problemas, uma vez que funções são
 objetos, objetos são mutáveis e variáveis não possuem tipos definidos.
 Normalmente o polimorfismo se dá por meio do <a
@@ -266,7 +267,7 @@ polimorfismo.
 ## Propriedades e métodos estáticos
 
 De forma similar aos construtores, propriedades e métodos estáticos podem ser
-criados atribuindo-os diretamente à Fabrica. Relembrando o exemplo da publicação
+criados atribuindo-os diretamente à fábrica. Relembrando o exemplo da publicação
 anterior, vamos criar uma propriedade estática na fábrica `Person` para
 armazenar a quantidade de objetos já criados por ele ou qualquer descendente.
 
@@ -304,7 +305,7 @@ console.log(Person.count); // → 2
 
 ## Garantias de instanciação
 
-Como fábricas não utilizam a cadeia de protótipos, não há como determinar se um
+Como as fábricas não utilizam a cadeia de protótipos, não há como determinar se um
 objeto foi criado ou não por uma fábrica por meio do operador `instanceof`.
 
 No entanto, também não temos a necessidade de verificar se uma função foi
@@ -330,10 +331,8 @@ Porém, há um preço a se pagar:
 - Uso ineficiente da memória: cada método é alocado para cada objeto criado. Não
   há compartilhamento entre todos os objetos através do uso de protótipos e, por
   isso, fábricas tendem a consumir muito mais memória do que construtores;
-- Não é possível estabelecer a tipagem de um objeto por meio do `instanceof`.
-  Existem alternativas para mitigar esse problema e que programadas pelo próprio
-  desenvolvedor, mas podem aumentar a complexidade do código de forma
-  considerável.
+- Não é possível estabelecer se um objeto foi criado por uma fábrica por meio do
+  `instanceof`.
 
 A tabela abaixo resume bem as características dos construtores e fábricas:
 
@@ -342,7 +341,7 @@ A tabela abaixo resume bem as características dos construtores e fábricas:
 | Herança                   |      ✓       |    ✓     |
 | Encapsulamento            |      ✗       |    ✓     |
 | Verificação de instâncias |      ✓       |    ✗     |
-| Problemas com o `this`    |      ✗       |    ✓     |
+| Consistência do `this`    |      ✗       |    ✓     |
 | Uso eficiente de memória  |      ✓       |    ✗     |
 | Propriedades estáticas    |      ✓       |    ✓     |
 
@@ -351,7 +350,7 @@ impactam a sua escolha.
 
 Num geral, os desenvolvedores JavaScript preferem utilizar construtores ao invés
 de fábricas porque os próprios ambientes de execução preferem utilizar esse
-padrão. Mas, mesmo sendo menos populares, é importante entender fábricas pois
+padrão. Mas, mesmo sendo menos populares, é importante entender as fábricas pois
 elas permitem compreender as limitações que os construtores possuem e
 vice-versa.
 

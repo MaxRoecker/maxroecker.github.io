@@ -1,7 +1,7 @@
 ---
 title: 'JavaScript Orientado a Objetos #2'
 subtitle: 'Construtores'
-heading: 'Se aprofunde em uma das principais técnicas utilizadas para a criação de objetos em JavaScript OO.'
+heading: 'Aprofunde-se em uma das principais técnicas utilizadas para a criação de objetos em JavaScript OO.'
 date: 2016-04-22 21:05:36
 tags:
   - javascript
@@ -13,8 +13,12 @@ Hoje iremos compreender um pouco sobre Construtores no contexto do JavaScript
 Orientado a Objetos, um padrão de projeto para a criação de objetos que possui
 muita similaridade com a orientação a objetos com classes.
 
-<aside> <p> <strong>cons.tru.tor:</strong> (1) que ou aquele que constrói;
-construidor. (2) o que domina o saber de construir. </p> </aside>
+<aside>
+  <p>
+    <strong>cons.tru.tor:</strong> (1) que ou aquele que constrói; (2) o que
+    domina o saber de construir.
+  </p>
+</aside>
 
 Para que você aproveite melhor o texto é recomendado que você tenha conhecimento
 dos conceitos básicos de orientação a objetos. Você pode ler uma pequena
@@ -35,7 +39,7 @@ construtor é definido na própria classe e é invocado toda vez que uma instân
 dessa classe é criada.
 
 O JavaScript não possui classes, mas o conceito de construtores é feito por meio
-de funções que inicializam objetos. Por exemplo, veja a função abaixo `Person`,
+de funções que inicializam objetos. Por exemplo, veja a função `Person` abaixo,
 que recebe um objeto `target`, além de um nome junto e um sobrenome em `name` e
 `surname`.
 
@@ -66,7 +70,7 @@ lang="en">hoist</em></a>.
 </aside>
 
 Veja que podemos utilizá-la como um construtor, uma vez que ela inicializa um
-objeto e permite a interação por meio de métodos e acesso as propriedades.
+objeto e permite a interação por meio de métodos e acesso às propriedades.
 
 ```js
 const a = Person({}, 'Pedremildo', 'Escavadeira');
@@ -119,7 +123,7 @@ criar um objeto com protótipo igual a `Person.prototype`, onde nossos métodos
 são definidos.
 
 O operador `new` garante que um objeto “novo” é fornecido, então, precisamos
-instanciar nossos objetos utilizando ele. Veja que podemos fazer exatamente os
+instânciar nossos objetos utilizando ele. Veja que podemos fazer exatamente os
 mesmos testes que o exemplo anterior.
 
 ```js
@@ -143,9 +147,9 @@ herdar as características com o auxílio do método
 [`apply`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
 O `apply` é um método de funções (lembre-se que funções, no JavaScript, também
 são objetos), que recebe dois parâmetros: o primeiro, um objeto, indica contexto
-em que a função deve ser aplicada, ou seja, que `this` referencia; e o
-segundo, um arranjo, que recebe os argumentos que devem ser passados a função
-a ser executada.
+em que a função deve ser aplicada, ou seja, que `this` se refere; e o segundo,
+um arranjo, que recebe os argumentos que devem ser passados a função a ser
+executada.
 
 Vamos criar um novo construtor, `Employee`, que estende `Person` e adiciona uma
 propriedade e um método: `salary` e `getTax`, respectivamente. Veja como essa
@@ -168,8 +172,9 @@ De forma geral, o que o método `apply` está fazendo é executar a função `Pe
 no objeto `this` da função `Employee`, algo muito similar à chamada `super` em
 linguagens com orientação a objetos baseada em classes. Além disso, precisamos
 adequar o protótipo de `Employee` para estender o protótipo de `Person` e,
-assim, herdar os métodos pela cadeia de protótipos. Para fazer isso, utilizamos
-a função `Object.create`, que cria um objeto com um protótipo definido.
+assim, herdar os métodos por meio da cadeia de protótipos. Para fazer isso,
+utilizamos a função `Object.create`, que cria um objeto com um protótipo
+definido.
 
 Veja que a utilização é exatamente igual à `Person`, no entanto, mais propriedades
 e métodos estão disponíveis.
