@@ -5,7 +5,7 @@ heading: 'Entenda mais sobre essa alternativa para a criação de objetos em Jav
 date: 2016-04-27 05:16:01
 tags:
   - javascript
-  - object-oriented programming
+  - object oriented programming
   - post
 ---
 

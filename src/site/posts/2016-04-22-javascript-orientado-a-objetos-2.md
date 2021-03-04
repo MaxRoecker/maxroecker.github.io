@@ -5,7 +5,7 @@ heading: 'Se aprofunde em uma das principais técnicas utilizadas para a criaç�
 date: 2016-04-22 21:05:36
 tags:
   - javascript
-  - object-oriented programming
+  - object oriented programming
   - post
 ---
 

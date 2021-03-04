@@ -5,7 +5,7 @@ heading: 'Veja as principais adições do ES2015 relacionadas ao JavaScript OO.'
 date: 2016-04-30 17:23:39
 tags:
   - javascript
-  - object-oriented programming
+  - object oriented programming
   - post
 ---
 

@@ -4,7 +4,7 @@ subtitle: 'Introdução'
 heading: 'Compreenda os principais conceitos da Orientação a Objetos no JavaScript'
 tags:
   - javascript
-  - object-oriented-programming
+  - object oriented programming
   - post
 date: 2016-04-15 08:49:56
 ---
