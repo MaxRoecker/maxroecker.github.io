@@ -191,8 +191,8 @@ Veja que a utilização é exatamente igual à `Person`, no entanto, mais propri
 e métodos estão disponíveis.
 
 ```js
-const a = new Employee('Pedremildo', 'Escavadeira', 100);
-const b = new Person('Testerson', 'Trunk');
+const a = Employee('Pedremildo', 'Escavadeira', 100);
+const b = Person('Testerson', 'Trunk');
 
 console.log(a.name); // → Pedremildo
 console.log(b.surname); // → Trunk
