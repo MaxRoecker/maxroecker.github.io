@@ -5,6 +5,7 @@ heading: 'Uma breve introdução sobre o que são web components e seus principa
 date: 2018-01-30 01:00:55
 tags:
   - javascript
+  - dom
   - webcomponents
   - post
 ---
