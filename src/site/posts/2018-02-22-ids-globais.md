@@ -18,7 +18,7 @@ tiver uma marcação assim:
 ```
 
 No console do navegador você pode digitar `foo` e terá acesso ao elemento DOM.
-**Mas, porque?** É um comportamento padrão dos navegadores para
+**Mas, por quê?** É um comportamento padrão dos navegadores para
 facilitar o _debug_ ou isso é o padrão esperado?
 
 Na verdade, o comportamento acima é previsto pelo próprio HTML. A
