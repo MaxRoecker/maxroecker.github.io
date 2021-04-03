@@ -44,7 +44,7 @@ variável global é acessar uma propriedade do `window`:
 <button id="btn">Clique aqui!</button>
 
 <script>
-  btn.addEventListener(function () {
+  btn.addEventListener('click', function () {
     btn.textContent = 'Você clicou!';
   });
 </script>
