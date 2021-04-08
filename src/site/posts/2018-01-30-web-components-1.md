@@ -20,7 +20,7 @@ Os _web components_ se fundamentam em duas principais especificações:
 
 - [**Elementos personalizados**](https://html.spec.whatwg.org/#custom-elements):
   fundamenta a criação de elementos e registra as novas _tags_ HTML.
-- [**_Shadow DOM_**](https://dom.spec.whatwg.org/#shadow-trees): define como
+- [**_Shadow_ DOM**](https://dom.spec.whatwg.org/#shadow-trees): define como
   encapsular estilos e marcação.
 
 Antes de detalhar cada uma dessas especificações, vamos fazer um apanhado geral
@@ -147,13 +147,13 @@ window.customElements.define('hello-world', HelloWorld);
 No entanto você vai perceber que outros elementos `h1` foram estilizados também.
 Isso acontece porque o comportamento padrão do CSS é global. Uma folha de
 estilos afeta todos os elementos de um documento. No entanto, para solucionar
-este problema, temos em mãos a API **_Shadow DOM_**.
+este problema, temos em mãos a API **_Shadow_ DOM**.
 
 ## Encapsulando o _web component_
 
-A _Shadow DOM_ é uma API que permite criar subárvores DOM encapsuladas da árvore
+A _Shadow_ DOM é uma API que permite criar subárvores DOM encapsuladas da árvore
 DOM principal. Assim, qualquer marcação, estilo ou _script_ que seja definido no
-_shadow DOM_ só afeta o própriop _shadow DOM_.
+_shadow_ DOM só afeta o própriop _shadow_ DOM.
 
 Nós podemos fazer isso por meio do método `attachShadow`. Veja:
 
@@ -161,11 +161,11 @@ Nós podemos fazer isso por meio do método `attachShadow`. Veja:
 class HelloWorld extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this._shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <style>
         h1 { color: red; }
       </style>
@@ -176,7 +176,7 @@ class HelloWorld extends HTMLElement {
 ```
 
 Se você ver o resultado, agora somente o `h1` do _web component_ está estilizado
-e, graças ao _shadow DOM_, não temos efeitos colaterais em outros elementos da
+e, graças ao _shadow_ DOM, não temos efeitos colaterais em outros elementos da
 árvore DOM.
 
 ## Conclusão
@@ -187,11 +187,11 @@ podem ser reutilizados em uma aplicação sem a necessidade de convenção,
 biblioteca ou _framework_.
 
 Existem outras especificações abrangidas pelo termo _web components_ e que não
-vimos nesta introdução; como o elemento `template` ou os módulos de CSS. Meu
-objetivo é criar uma série de publicações abordando os detalhes de cada uma
-dessas especificações. Além disso, pretendo vamos ver algumas boas práticas
-quando estamos trabalhando com componentes e como podemos utilizá-los para
-solucionar problemas durante o desenvolvimento de aplicações para a _web_.
+vimos nesta introdução; como o elemento `template`, o elemento slot ou os
+módulos de CSS. Meu objetivo é criar uma série de publicações abordando os
+detalhes de cada uma dessas especificações. Além disso, vamos ver algumas boas
+práticas quando estamos trabalhando com componentes e como podemos utilizá-los
+para solucionar problemas durante o desenvolvimento de aplicações para a _web_.
 
 Conforme o desenvolvimento _web_ se torna mais complexo, desenvolvedores irão
 “repassar” mais responsabilidades para a plataforma, que amadurece e evolui.
