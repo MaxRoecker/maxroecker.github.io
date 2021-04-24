@@ -1,5 +1,4 @@
 {% extends './page.njk' %}
-
 {% block pagecontent %}
   <ol class="entry-list">
     {%- for post in pagination.items -%}
@@ -16,11 +15,11 @@
             </span>
           </time>
         </div>
-        <a href="{{post.url}}" class="entry__header" title="Clique para ir para a publicação">
+        <a href="{{ post.url }}" class="entry__header" title="Clique para ir para a publicação">
           <h2 class="entry-title">
             {% if post.data.title and post.data.subtitle %}
               {{ post.data.title | safe }}:
-              {{post.data.subtitle | safe }}
+              {{ post.data.subtitle | safe }}
             {% else %}
               {{ post.data.title | safe }}
             {% endif %}
@@ -32,7 +31,6 @@
       </li>
     {%- endfor -%}
   </ol>
-
   <nav>
     <ul class="page-nav">
       {% if pagination.pageNumber == 0 %}
@@ -44,18 +42,16 @@
         </li>
       {% else %}
         <li class="page-nav-item">
-          <a class="nav-icon nav-icon--first" href="{{pagination.href.first}}" rel="first" title="Primeira Página"></a>
+          <a class="nav-icon nav-icon--first" href="{{ pagination.href.first }}" rel="first" title="Primeira Página"></a>
         </li>
         <li class="page-nav-item">
-          <a class="nav-icon nav-icon--previous" href="{{pagination.href.previous}}" rel="prev" title="Página Anterior"></a>
+          <a class="nav-icon nav-icon--previous" href="{{ pagination.href.previous }}" rel="prev" title="Página Anterior"></a>
         </li>
       {% endif %}
-
       <li class="page-nav-item page-nav-item--current">
         Página
-        {{pagination.pageNumber + 1}}
+        {{ pagination.pageNumber + 1 }}
       </li>
-
       {% if (pagination.pageNumber + 1) == pagination.hrefs.length %}
         <li class="page-nav-item">
           <a class="nav-icon nav-icon--next nav-icon--disabled"></a>
@@ -65,13 +61,12 @@
         </li>
       {% else %}
         <li class="page-nav-item">
-          <a class="nav-icon nav-icon--next" href="{{pagination.href.next}}" rel="next" title="Próxima Página"></a>
+          <a class="nav-icon nav-icon--next" href="{{ pagination.href.next }}" rel="next" title="Próxima Página"></a>
         </li>
         <li class="page-nav-item">
-          <a class="nav-icon nav-icon--last" href="{{pagination.href.last}}" rel="last" title="Última Página"></a>
+          <a class="nav-icon nav-icon--last" href="{{ pagination.href.last }}" rel="last" title="Última Página"></a>
         </li>
       {% endif %}
-
     </ul>
   </nav>
 {% endblock pagecontent %}

@@ -1,7 +1,5 @@
 {% extends './page.njk' %}
-
 {% set subtitle = tag %}
-
 {% block pagecontent %}
   <ol class="entry-list">
     {%- for post in collections[tag] -%}
@@ -18,11 +16,11 @@
             </span>
           </time>
         </div>
-        <a href="{{post.url}}" class="entry__header" title="Clique para ir para a publicação">
+        <a href="{{ post.url }}" class="entry__header" title="Clique para ir para a publicação">
           <h2 class="entry-title">
             {% if post.data.title and post.data.subtitle %}
               {{ post.data.title | safe }}:
-              {{post.data.subtitle | safe }}
+              {{ post.data.subtitle | safe }}
             {% else %}
               {{ post.data.title | safe }}
             {% endif %}

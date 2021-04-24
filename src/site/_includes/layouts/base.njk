@@ -5,7 +5,6 @@
 {% else %}
   {% set completetitle = site.name %}
 {% endif %}
-
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -22,7 +21,7 @@
     <meta name="referrer" content="origin">
     {% if site.googleOwnership %}
       {% for ownership in site.googleOwnership %}
-        <meta name="google-site-verification" content="{{ ownership }}" />
+        <meta name="google-site-verification" content="{{ ownership }}"/>
       {% endfor %}
     {% endif %}
     {% block meta %}
@@ -30,23 +29,26 @@
       <meta name="robots" content="index, follow">
       <meta name="description" content="{{ site.description }}">
       <meta name="author" content="{{ site.author.name }}">
-      <meta name="generator" content="11ty 0.10.0"/>
+      <meta
+      name="generator" content="11ty 0.10.0"/>
       {# Facebook Open Graph #}
       <meta property="og:type" content="website"/>
-      <meta property="og:image" content="{{site.rootURI}}/images/meta-og.jpg"/>
-      <meta property="og:site_name" content="{{site.name}}"/>
+      <meta property="og:image" content="{{ site.rootURI }}/images/meta-og.jpg"/>
+      <meta property="og:site_name" content="{{ site.name }}"/>
       <meta property="og:title" content="{{ completetitle }}"/>
       <meta property="og:description" content="{{ heading }}"/>
-      <meta property="og:url" content="{{ site.rootURI }}{{ page.url }}"/>
+      <meta
+      property="og:url" content="{{ site.rootURI }}{{ page.url }}"/>
       {# Twitter Card #}
       <meta name="twitter:card" content="summary_large_image"/>
       {% if site.twitter %}
-        <meta name="twitter:creator" content="@{{site.twitter}}"/>
+        <meta name="twitter:creator" content="@{{ site.twitter }}"/>
       {% endif %}
-      <meta name="twitter:image:src" content="{{site.rootURI}}/images/meta-image.png"/>
+      <meta name="twitter:image:src" content="{{ site.rootURI }}/images/meta-image.png"/>
       <meta name="twitter:title" content="{{ completetitle }}"/>
       <meta name="twitter:description" content="{{ heading }}"/>
-      <meta name="twitter:url" content="{{ site.rootURI }}{{ page.url }}"/>
+      <meta
+      name="twitter:url" content="{{ site.rootURI }}{{ page.url }}"/>
       {# Schema.org JSON #}
       <script type="application/ld+json">
         {
@@ -78,14 +80,14 @@
             "description": "{{ site.description }}",
             "logo": {
               "@type": "ImageObject",
-              "url": "{{site.rootURI}}/images/meta-logo.png",
+              "url": "{{ site.rootURI }}/images/meta-logo.png",
               "width": "700 px",
               "height": "95 px"
             }
           },
           "image": {
             "@type": "ImageObject",
-            "url": "{{site.rootURI}}/images/meta-image.png",
+            "url": "{{ site.rootURI }}/images/meta-image.png",
             "width": "800 px",
             "height": "400 px"
           }
@@ -94,7 +96,6 @@
     {% endblock meta %}
   </head>
   <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
-
     <div class="container">
       <header class="header">
         <h1 class="header__sitename">
@@ -112,13 +113,11 @@
           </ul>
         </nav>
       </header>
-
       {% block main %}
         <main>
           {{ content | safe }}
         </main>
       {% endblock main %}
-
       <footer class="footer">
         <p class="footer__disclaimer">
           Exceto explicíto, todo o conteúdo deste site está licenciado sob
@@ -140,12 +139,9 @@
         </p>
       </footer>
     </div>
-
     {% set js %}
     {% endset %}
-
     <script>
-      {{ js | jsmin | safe }}
-    </script>
+      {{ js | jsmin | safe }}</script>
   </body>
 </html>
