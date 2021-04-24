@@ -1,5 +1,5 @@
-const datefns = require('date-fns')
-const locales = require('date-fns/locale')
+const datefns = require('date-fns');
+const locales = require('date-fns/locale');
 
 /**
  * Format a date in a pt-br language.
@@ -8,10 +8,10 @@ const locales = require('date-fns/locale')
  * @param {string} [format='']
  * @returns {string}
  */
-function formatDate (date, format = '') {
+function formatDate(date, format = '') {
   return format === ''
     ? datefns.formatISO(date)
-    : datefns.format(date, format, { locale: locales.ptBR })
+    : datefns.format(date, format, { locale: locales.ptBR });
 }
 
-module.exports = formatDate
+module.exports = formatDate;

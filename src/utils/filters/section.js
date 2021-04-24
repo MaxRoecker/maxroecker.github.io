@@ -9,15 +9,15 @@
  *
  */
 
-function section (str, section, delimiter = '\n<!--more-->\n') {
-  var content = new String(str)
-  var parts = content.split(delimiter)
-  var which = section == 'remainder' ? 1 : 0
+function section(str, section, delimiter = '\n<!--more-->\n') {
+  var content = new String(str);
+  var parts = content.split(delimiter);
+  var which = section == 'remainder' ? 1 : 0;
   if (parts.length) {
-    return parts[which]
+    return parts[which];
   } else {
-    return str
+    return str;
   }
 }
 
-module.exports = section
+module.exports = section;

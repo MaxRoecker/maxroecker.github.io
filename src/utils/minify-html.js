@@ -1,21 +1,21 @@
-const htmlmin = require('html-minifier')
+const htmlmin = require('html-minifier');
 
 /**
  * @param {string} content
  * @param {string} outputPath
  * @returns {string}
  */
-function minifyHTML (content, outputPath) {
+function minifyHTML(content, outputPath) {
   if (outputPath.endsWith('.html')) {
     let minified = htmlmin.minify(content, {
       useShortDoctype: true,
       removeComments: true,
-      collapseWhitespace: true
-    })
-    return minified
+      collapseWhitespace: true,
+    });
+    return minified;
   } else {
-    return content
+    return content;
   }
 }
 
-module.exports = minifyHTML
+module.exports = minifyHTML;
