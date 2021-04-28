@@ -3,6 +3,7 @@
 
 # build artefacts
 /dist
+/rollupout
 /src/site/_includes/css
 
 # secrets and errors

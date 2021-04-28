@@ -11,4 +11,7 @@ module.exports = {
   linkedin: 'maxroecker',
   googleOwnership: ['qeXakFxXkrYMWIZ5aZDPGtPPQTyJieYgEUW1MiQTS00'],
   buildTime: new Date(),
+  theme: {
+    color: '#333333',
+  },
 };

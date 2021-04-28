@@ -1,5 +1,3 @@
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-
 module.exports = function (config) {
   // A useful way to reference the context we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
@@ -15,7 +13,7 @@ module.exports = function (config) {
   config.addShortcode('math', require('./src/utils/math'));
 
   // add support for syntax highlighting
-  config.addPlugin(syntaxHighlight);
+  config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
 
   // minify the html output
   config.addTransform('htmlmin', require('./src/utils/minify-html.js'));
@@ -35,6 +33,20 @@ module.exports = function (config) {
   config.addPassthroughCopy('./src/site/images');
   config.addPassthroughCopy('./src/site/robots.txt');
   config.addPassthroughCopy({ './src/site/fonts': 'css/fonts' });
+  config.addPassthroughCopy({ './src/site/projects': 'projects' });
+  config.addPassthroughCopy({ './rollupout': 'js' });
+  config.addPassthroughCopy({
+    'node_modules/playground-elements/playground-typescript-worker.js':
+      'js/playground-typescript-worker.js',
+  });
+  config.addPassthroughCopy({
+    'node_modules/playground-elements/playground-service-worker.js':
+      'js/playground-service-worker.js',
+  });
+  config.addPassthroughCopy({
+    'node_modules/playground-elements/playground-service-worker-proxy.html':
+      'js/playground-service-worker-proxy.html',
+  });
 
   // make the seed target act like prod
   env = env == 'seed' ? 'prod' : env;

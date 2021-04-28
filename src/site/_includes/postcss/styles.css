@@ -187,17 +187,17 @@ code {
   white-space: nowrap;
   font-family: 'JetBrains Mono', 'Fira Code', 'Droid Sans Mono', 'Courier New',
     Courier, monospace;
-  font-size: 0.7em;
+  font-size: 0.875rem;
   color: $text-primary;
 }
 
 pre {
-  padding: 16px;
-  border-radius: 6px;
+  padding: 1rem;
+  border-radius: 0rem;
   overflow: auto;
   background-color: $color-accent;
-  font-size: 20px;
-  line-height: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -205,12 +205,12 @@ pre {
   > code,
   > samp,
   > kbd {
-    font-size: 16px;
+    font-size: 0.875rem;
     border-style: none;
     background-color: transparent;
     padding: 0;
     color: $text-secondary;
-    line-height: 1;
+    line-height: 1.5;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
