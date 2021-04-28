@@ -8,6 +8,8 @@ tags:
   - dom
   - webcomponents
   - post
+libs:
+  - playground
 ---
 
 _Web components_ são um conjunto de APIs disponibilizadas na plataforma _web_
@@ -42,31 +44,17 @@ window.customElements.define('hello-world', HelloWorld);
 ```
 
 A partir de agora, utilizar o elemento `hello-world` não é diferente de utilizar
-um `div`. Você pode utilizar a tag de forma declarativa no HTML:
+um `div`. Você pode utilizar a tag de forma declarativa no HTML. Ou criar um
+elemento de forma imperativa por meio do DOM. Você também pode utilizar as APIs
+do DOM para selecionar e manipular seu elemento personalizado como qualquer
+outro. Veja abaixo:
 
-```html
-<hello-world></hello-world>
-```
-
-Ou criar um elemento de forma imperativa por meio do DOM:
-
-```html
-<script>
-  const element = document.createElement('hello-world');
-  document.body.appendChild(element);
-</script>
-```
-
-Você também pode utilizar as APIs de seleção fornecidas pelo DOM para encontrar
-e manipular seu elemento personalizado.
-
-```html
-<hello-world id="hello"></hello-world>
-<script>
-  const element = document.getElementById('hello');
-  counter.title = 'Este é um web component!';
-</script>
-```
+<playground-ide
+  project-src="/projects/2018-01-30/1/project.json"
+  editable-filesystem
+  line-numbers
+  resizable>
+</playground-ide>
 
 Você pode ver que, como com seu elemento personalizado presente na árvore DOM,
 nada é exibido no navegador. Isso acontece porque ainda não adicionamos conteúdo
@@ -80,22 +68,12 @@ precisamos defini-lo na classe `HelloWorld`. Como o próprio nome do componente
 sugere, vamos exibir a frase “Hello, World!” em um `h1` no nosso componente.
 Para fazer isso, sobreescrevemos o método `connectedCallback`. Veja:
 
-```html
-<script>
-  class HelloWorld extends HTMLElement {
-    connectedCallback() {
-      this.innerHTML = '<h1>Hello, World!</h1>';
-    }
-  }
-
-  window.customElements.define('hello-world', HelloWorld);
-</script>
-
-<hello-world></hello-world>
-```
-
-Veja só! Agora temos um `h1` como descendente direto do `hello-world` junto ao
-texto “Hello, World!”.
+<playground-ide
+  project-src="/projects/2018-01-30/2/project.json"
+  editable-filesystem
+  line-numbers
+  resizable>
+</playground-ide>
 
 <aside>
   <p>
@@ -106,43 +84,18 @@ texto “Hello, World!”.
   </p>
 </aside>
 
-Podemos mesclar essa marcação acima com outros elementos HTML.
-
-```html
-<hello-world></hello-world>
-
-<p>
-  Um <strong>programa “Hello, World!“</strong> é um programa de computador que
-  exibe a mensagem “Hello, World!” na saída principal.
-</p>
-
-<h1>Utilização</h1>
-
-<p>
-  Programas “Hello, World!“ são simples de implementar na grande maioria das
-  linguagens de programação e, por isso, normalmente são utilizados para
-  ilustrar a sintaxe básica de uma linguagem.
-</p>
-```
-
 ## Adicionando estilos ao _web component_
 
 Bom, agora que temos nosso componente, vamos estilizá-lo para que o `h1` tenha
 uma cor azul. Podemos fazer isso com CSS utilizando o elemento `style` e
 atribuímos ao `head` do documento. Veja:
 
-```js
-class HelloWorld extends HTMLElement {
-  connectedCallback() {
-    const style = document.createElement('style');
-    style.textContent = 'h1 { color: red; }';
-    document.head.appendChild(style);
-    this.innerHTML = '<h1>Hello, World!</h1>';
-  }
-}
-
-window.customElements.define('hello-world', HelloWorld);
-```
+<playground-ide
+  project-src="/projects/2018-01-30/3/project.json"
+  editable-filesystem
+  line-numbers
+  resizable>
+</playground-ide>
 
 No entanto você vai perceber que outros elementos `h1` foram estilizados também.
 Isso acontece porque o comportamento padrão do CSS é global. Uma folha de
@@ -153,27 +106,15 @@ este problema, temos em mãos a API **_Shadow_ DOM**.
 
 A _Shadow_ DOM é uma API que permite criar subárvores DOM encapsuladas da árvore
 DOM principal. Assim, qualquer marcação, estilo ou _script_ que seja definido no
-_shadow_ DOM só afeta o própriop _shadow_ DOM.
+_shadow_ DOM só afeta o próprio _shadow_ DOM. Nós podemos fazer isso por meio
+do método `attachShadow`. Veja:
 
-Nós podemos fazer isso por meio do método `attachShadow`. Veja:
-
-```js
-class HelloWorld extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
-    this.shadowRoot.innerHTML = `
-      <style>
-        h1 { color: red; }
-      </style>
-      <h1>Hello, World!</h1>
-    `;
-  }
-}
-```
+<playground-ide
+  project-src="/projects/2018-01-30/4/project.json"
+  editable-filesystem
+  line-numbers
+  resizable>
+</playground-ide>
 
 Se você ver o resultado, agora somente o `h1` do _web component_ está estilizado
 e, graças ao _shadow_ DOM, não temos efeitos colaterais em outros elementos da
