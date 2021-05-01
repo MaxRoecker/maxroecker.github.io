@@ -33,6 +33,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('./src/site/images');
   config.addPassthroughCopy('./src/site/robots.txt');
   config.addPassthroughCopy({ './src/site/fonts': 'css/fonts' });
+  config.addPassthroughCopy({ './src/site/cv': 'cv' });
   config.addPassthroughCopy({ './src/site/projects': 'projects' });
   config.addPassthroughCopy({ './rollupout': 'js' });
   config.addPassthroughCopy({

@@ -16,6 +16,8 @@ da Web. Desenhista por hobby, sou apaixonado por um bom pedaço de carne.
 Acredito na liberdade, na individualidade e na razão como principais meios para
 alcançar a felicidade.
 
+Para mais informações profissionais, veja meu currículo [aqui](/cv).
+
 <figure>
   <img
     src="/images/symbol-1.svg"
