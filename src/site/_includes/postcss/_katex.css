@@ -13,7 +13,7 @@
   -ms-high-contrast-adjust: none !important;
 }
 .katex .katex-version::after {
-  content: "0.11.1";
+  content: '0.11.1';
 }
 .katex .katex-mathml {
   position: absolute;
@@ -804,7 +804,7 @@
 }
 .katex .stretchy::before,
 .katex .stretchy::after {
-  content: "";
+  content: '';
 }
 .katex .hide-tail {
   width: 100%;
