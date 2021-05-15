@@ -2,11 +2,11 @@
 title: 'JavaScript Orientado a Objetos #1'
 subtitle: 'Introdução'
 heading: 'Compreenda os principais conceitos da Orientação a Objetos no JavaScript'
+created: 2016-04-15 08:49:56
 tags:
   - javascript
   - object oriented programming
   - post
-date: 2016-04-15 08:49:56
 ---
 
 Hoje vamos iniciar uma nova série de publicações sobre a linguagem JavaScript

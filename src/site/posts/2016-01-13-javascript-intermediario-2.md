@@ -2,7 +2,7 @@
 title: 'JavaScript Intermediário #2'
 subtitle: 'Closures'
 heading: 'Entenda de uma vez essa mitológica característica da linguagem JavaScript'
-date: 2016-01-13 18:42:06
+created: 2016-01-13 18:42:06
 tags:
   - javascript
   - post

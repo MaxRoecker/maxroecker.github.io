@@ -2,7 +2,8 @@
 title: 'Web Components #1'
 subtitle: 'Introdução'
 heading: 'Uma breve introdução sobre o que são web components e seus principais casos de uso'
-date: 2018-01-30 01:00:55
+created: 2018-01-30 01:00:55
+updated: 2021-05-04 23:25:21
 tags:
   - javascript
   - dom
@@ -30,7 +31,7 @@ de como _web components_ trabalham e como você pode utilizá-los.
 
 ## Como definir e instanciar um _web component_
 
-Para criar um _webcomponent_ basta você estender a classe
+Para criar um _web component_ basta você estender a classe
 [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) e
 registrar uma tag associada a essa classe por meio do método `define` do objeto
 global `customElements`. Simples assim! Veja um exemplo no código abaixo que

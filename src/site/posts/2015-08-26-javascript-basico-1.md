@@ -2,7 +2,8 @@
 title: "JavaScript Básico #1"
 subtitle: "Introdução"
 heading: "O que é JavaScript? Uma pequena introdução sobre a linguagem que nasceu na web e para a web."
-date: 2015-08-25 09:15:25
+created: 2015-08-25 09:15:25
+updated: 2021-05-10 22:00:18
 tags:
   - javascript
   - post
@@ -47,11 +48,14 @@ _script_ com tipagem fraca seria ideal para o ambiente e para o público alvo da
 funcionalidades em páginas web sem a necessidade de compilar código em
 _bytecode_ ou ter conhecimento avançado de orientação a objetos.
 
-Essa nova linguagem criada por Brendan Eich foi chamada de "LiveScript", mas foi
-rapidamente rebatizada JavaScript, um erro levado pelo time de _marketing_ que
-assombraria os _webdesigners_ por muitos anos. Em 4 de Dezembro de 1995, a
-NetScape junto a Sun anunciam a nova linguagem como um "complemento" para o HTML
-e para o Java.
+Essa primeira versão da linguagem criada por Brendan Eich foi chamada de
+“Mocha”. No entanto, para o lançamento oficial, ela foi chamada de “LiveScript”.
+Posteriormente, foi rebatizada JavaScript por iniciativa do setor de
+_marketing_, e dar tração junto à outra linguagem que estava começando a ganhar
+os holofotes. Um erro levado pelo time de _marketing_ que assombraria os
+_webdesigners_ por muitos anos. No entanto, em 4 de Dezembro de 1995, a NetScape
+junto a Sun anunciam o JavaScript, uma nova linguagem, que tinha um objetivo:
+ser um complemento para o HTML e para o Java.
 
 O JavaScript rapidamente ganhou vida própria, sendo cada vez mais utilizado para
 adicionar funcionalidades à documentos HTML do que para controlar _applets_
@@ -199,3 +203,8 @@ faz? 😄
 
 - [Desvendando a linguagem JavaScript](https://www.youtube.com/playlist?list=PLQCmSnNFVYnT1-oeDOSBnt164802rkegc)
 - [Code School: JavaScript Road Trip Part 1](https://www.codeschool.com/courses/javascript-road-trip-part-1)
+
+## Agradecimentos
+
+Agradeço a [Suzani Cristina](https://www.linkedin.com/in/suzanicristina/) pela
+revisão do texto e de algumas informações da história da linguagem. Obrigado!

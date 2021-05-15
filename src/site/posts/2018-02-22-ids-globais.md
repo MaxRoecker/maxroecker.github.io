@@ -2,7 +2,7 @@
 title: 'IDs são globais'
 subtitle:
 heading: 'Qualquer elemento marcado com um ID é uma variável global no documento'
-date: 2018-02-22 10:34:01
+created: 2018-02-22 10:34:01
 tags:
   - javascript
   - dom

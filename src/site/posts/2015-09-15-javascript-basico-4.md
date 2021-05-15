@@ -2,7 +2,7 @@
 title: 'JavaScript Básico #4'
 subtitle: 'Declarações de controle'
 heading: 'Entenda o conjunto de declarações de controle do JavaScript e como utilizar em seus códigos.'
-date: 2015-09-15 16:25:51
+created: 2015-09-15 16:25:51
 tags:
   - javascript
   - post

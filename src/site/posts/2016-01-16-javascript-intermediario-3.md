@@ -2,7 +2,7 @@
 title: 'JavaScript Intermediário #3'
 subtitle: 'Event Loop'
 heading: 'Entenda, com uma visão ampla, o modelo de concorrência da linguagem JavaScript'
-date: 2016-01-16 17:47:20
+created: 2016-01-16 17:47:20
 tags:
   - javascript
   - post

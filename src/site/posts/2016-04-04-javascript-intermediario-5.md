@@ -2,7 +2,7 @@
 title: 'JavaScript Intermediário #5'
 subtitle: 'IIFE'
 heading: 'Compreenda o que são funções auto-executantes e quais as vantagens de utilizá-las em seu código'
-date: 2016-04-04 14:22:21
+created: 2016-04-04 14:22:21
 tags:
   - javascript
   - post

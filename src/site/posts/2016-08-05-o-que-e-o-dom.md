@@ -2,7 +2,7 @@
 title: 'O que é o DOM?'
 subtitle:
 heading: 'Entenda que é o DOM e o que ele representa para a Web'
-date: 2016-08-05 22:15:22
+created: 2016-08-05 22:15:22
 tags:
   - javascript
   - dom

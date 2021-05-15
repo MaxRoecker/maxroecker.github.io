@@ -3,7 +3,7 @@
   <meta name="description" content="{{ heading }}"/>
   <meta name="author" content="{{ site.author.name }}"/>
   <meta name="generator" content="11ty 0.10.0"/>
-  <meta property="article:published_time" content="{{ date | formatDate }}"/>
+  <meta property="article:published_time" content="{{ created | formatDate }}"/>
   {% for tag in tags %}
     <meta property="article:tag" content="{{ tag }}"/>
   {% endfor %}
@@ -32,7 +32,7 @@
       "name": "{{ completetitle }}",
       "description": "{{ heading }}",
       "headline": "{{ heading }}",
-      "datePublished": "{{ date | formatDate }}",
+      "datePublished": "{{ created | formatDate }}",
       "dateModified": "{{ site.buildTime | formatDate }}",
       "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
       "author": {
@@ -86,16 +86,41 @@
         </p>
       {% endif %}
       <div class="blog-details">
-        <div class="blog-details__date">
-          <time class="hdate" datetime="{{ date | formatDate('yyyy-MM-dd') }}">
-            <span class="hdate__weekday">{{ date | formatDate("cccc") }}</span>,
-            <span class="hdate__monthday">{{ date | formatDate("d") }}</span>
-            de
-            <span class="hdate__month">{{ date | formatDate("MMMM") }}</span>
-            de
-            <span class="hdate__year">{{ date | formatDate("yyyy") }}</span>
-          </time>
-        </div>
+        {% if updated %}
+          <div class="blog-details__date">
+            Publicado:
+            <time class="hdate" datetime="{{ created | formatDate('yyyy-MM-dd') }}">
+              <span class="hdate__weekday">{{ created | formatDate("cccc") }}</span>,
+              <span class="hdate__monthday">{{ created | formatDate("d") }}</span>
+              de
+              <span class="hdate__month">{{ created | formatDate("MMMM") }}</span>
+              de
+              <span class="hdate__year">{{ created | formatDate("yyyy") }}</span>
+            </time>
+          </div>
+          <div class="blog-details__date">
+            Atualizado:
+            <time class="hdate" datetime="{{ updated | formatDate('yyyy-MM-dd') }}">
+              <span class="hdate__weekday">{{ updated | formatDate("cccc") }}</span>,
+              <span class="hdate__monthday">{{ updated | formatDate("d") }}</span>
+              de
+              <span class="hdate__month">{{ updated | formatDate("MMMM") }}</span>
+              de
+              <span class="hdate__year">{{ updated | formatDate("yyyy") }}</span>
+            </time>
+          </div>
+        {% else %}
+          <div class="blog-details__date">
+            <time class="hdate" datetime="{{ created | formatDate('yyyy-MM-dd') }}">
+              <span class="hdate__weekday">{{ created | formatDate("cccc") }}</span>,
+              <span class="hdate__monthday">{{ created | formatDate("d") }}</span>
+              de
+              <span class="hdate__month">{{ created | formatDate("MMMM") }}</span>
+              de
+              <span class="hdate__year">{{ created | formatDate("yyyy") }}</span>
+            </time>
+          </div>
+        {% endif %}
         <ul class="blog-details__tags">
           {% for tag in tags %}
             <li class="blog-details__tags__tag">

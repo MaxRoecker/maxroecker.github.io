@@ -2,7 +2,7 @@
 title: 'JavaScript Intermediário #1'
 subtitle: 'Escopos léxicos'
 heading: 'Compreenda os vários modos de declaração de variáveis e as principais características do escopo léxico no JavaScript.'
-date: 2015-12-15 17:37:54
+created: 2015-12-15 17:37:54
 tags:
   - javascript
   - post
