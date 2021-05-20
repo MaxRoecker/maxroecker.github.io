@@ -42,20 +42,19 @@ mas é utilizado também pelo [Node.js](https://nodejs.org/).
 
 A Netscape contrata Brendan Eich para liderar o desenvolvimento de uma nova
 linguagem de programação que permitiria que o novíssimo suporte do Navegador à
-linguagem Java se tornasse mais acessível. Eich decide que uma liguagem de
+linguagem Java se tornasse mais acessível. Eich decide que uma linguagem de
 _script_ com tipagem fraca seria ideal para o ambiente e para o público alvo da
-época. No caso, alguns _webdesigners_ que desejavam adicionar algumas
-funcionalidades em páginas web sem a necessidade de compilar código em
-_bytecode_ ou ter conhecimento avançado de orientação a objetos.
+época: _web designers_ que desejavam adicionar algumas funcionalidades em páginas
+web sem a necessidade de compilar código em _bytecode_ ou ter conhecimento
+avançado de orientação a objetos.
 
 Essa primeira versão da linguagem criada por Brendan Eich foi chamada de
-“Mocha”. No entanto, para o lançamento oficial, ela foi chamada de “LiveScript”.
+“Mocha”. No entanto, para o lançamento oficial, ela foi nomeada de “LiveScript”.
 Posteriormente, foi rebatizada JavaScript por iniciativa do setor de
-_marketing_, e dar tração junto à outra linguagem que estava começando a ganhar
-os holofotes. Um erro levado pelo time de _marketing_ que assombraria os
-_webdesigners_ por muitos anos. No entanto, em 4 de Dezembro de 1995, a NetScape
-junto a Sun anunciam o JavaScript, uma nova linguagem, que tinha um objetivo:
-ser um complemento para o HTML e para o Java.
+_marketing_. No entanto, isso se revelaria um erro que assombraria os
+_web designers_ por muitos anos… Em 4 de Dezembro de 1995, a NetScape junto a Sun
+anunciam o JavaScript, uma nova linguagem que tinha um único objetivo: ser um
+complemento para o HTML e para o Java.
 
 O JavaScript rapidamente ganhou vida própria, sendo cada vez mais utilizado para
 adicionar funcionalidades à documentos HTML do que para controlar _applets_
@@ -69,11 +68,12 @@ Mas o sucesso do JavaScript não passou despercebido pela Microsoft, empresa por
 trás do Internet Explorer. A Microsoft respondeu ao JavaScript da Netscape
 lançando a VBScript, que permitia a interação de componentes das páginas HTML
 junto ao sistema operacional Windows. Além disso, em 16 de Julho de 1996, a
-Microsoft lança uma "versão" do JavaScript para o Internet Explorer 3.0, e a
+Microsoft lança uma “versão do JavaScript” para o Internet Explorer 3.0, e a
 batiza de JScript.
 
-No entanto o JScript não era totalmente compatível com o JavaScript, e isso
-acirrou ainda mais a disputa entre ambos os navegadores. Era comum que alguns os
+O JScript não era totalmente compatível com o JavaScript. Códigos feitos para
+uma linguagem não funcionavam na outra em grande parte das vezes. Isso acirrou
+ainda mais a disputa entre ambos os navegadores. Era comum que alguns os
 desenvolvedores abandonassem os usuários de um navegador ou outro ao invés de
 escrever um código compatível para ambos.
 
@@ -87,32 +87,31 @@ Nos anos seguintes, o Java perdeu força com os _applets_, o VBScript foi
 descontinuado pela Microsoft e o Internet Explorer ganhou a batalha contra o
 Netscape Navigator. O domínio de 95% do mercado pelo Internet Explorer no início
 dos anos 2000 fez com que o JScript se torna-se o padrão _de facto_ de uma
-linguagem que permitia "documentos HTML dinâmicos". Assim, a Microsoft, que
-inicialmente participava ativamente do processo de padronização, eventualmente
-parou de contribuir e o projeto da ECMAScript 4 foi arquivado por período
-indefinido.
+linguagem que permitia “documentos HTML dinâmicos”. Eventualmente, a Microsoft,
+que inicialmente participava ativamente do processo de padronização, parou de
+contribuir e o projeto da ECMAScript 4 foi arquivado por período indefinido.
 
 A história começou a mudar em 2004, quando a Mozilla, sucessora da Netscape,
 lança o Firefox e abocanha uma pequena mas significativa parte do mercado do
 Internet Explorer. Em 2005, a Mozilla junta-se a ECMA International, e começa a
 trabalhar junto com a Macromedia — que desejava padronizar a linguagem
-ActionScript utilizada pelo Flash — para "reviver" a padronização do ECMAScript 4.
+ActionScript utilizada pelo Flash — para reviver a padronização do ECMAScript 4.
 
-Nos próximos anos, o Google lança o navegador Chrome com a _engine_ V8, a
-primeira a utilizar tradução dinâmica. Além disso, o desenvolvimento _web_
-popularizou-se ainda mais e diversas bibliotecas e ferramentas começaram a ser
-disponibilizadas com código livre e que prometiam acabar com a incompatibilidade
-do JavaScript nos diversos navegadores, tais como o
-[JQuery](https://jquery.com/) e o [MooTools](https://mootools.net/).
-Eventualmente chagou-se ao consenso de que era necessário padronizar de vez a
-linguagem. Assim, em Dezembro de 2009, a quinta e "definitiva" versão da
-ECMAScript é finalmente lançada.
+Nos próximos anos, o Google lança o navegador Chrome com a máquina virtual de
+JavaScript própria — a [V8](https://v8.dev/) — e a primeira a utilizar tradução
+dinâmica. Além disso, o desenvolvimento _web_ popularizou-se ainda mais e
+diversas bibliotecas e ferramentas começaram a ser disponibilizadas com código
+livre e que prometiam acabar com a incompatibilidade do JavaScript nos diversos
+navegadores, tais como o [JQuery](https://jquery.com/) e o
+[MooTools](https://mootools.net/). Eventualmente chegou-se ao consenso de que
+era necessário padronizar de vez a linguagem. Assim, em Dezembro de 2009, a
+quinta e "definitiva" versão da ECMAScript é finalmente lançada.
 
+A partir de 2009, vários esforços foram tomados para melhorar e aumentar a
+capacidade do ECMAScript. E, em 2015, a sexta versão da linguagem é lançada com
+muitas novas funcionalidades, tornando-se definitivamente uma linguagem madura.
 Atualmente o JavaScript é considerado uma implementação da ECMAScript, assim
-como o ActionScript e o JScript. Entre 2009 e 2016 vários esforços foram tomados
-para melhorar e aumentar a capacidade do ECMAScript. Em 2015, a sexta versão da
-linguagem é lançada, com muitas novas funcionalidades, tornando-se
-definitivamente uma linguagem madura.
+como o ActionScript e o JScript.
 
 ## Série sobre JavaScript
 
