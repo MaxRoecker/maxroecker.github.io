@@ -41,6 +41,6 @@
     "xml2js": "^0.4.23"
   },
   "dependencies": {
-    "playground-elements": "^0.9.1"
+    "playground-elements": "^0.14.1"
   }
 }

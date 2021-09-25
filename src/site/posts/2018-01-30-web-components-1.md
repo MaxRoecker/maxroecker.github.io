@@ -13,18 +13,47 @@ libs:
   - playground
 ---
 
-_Web components_ são um conjunto de APIs disponibilizadas na plataforma _web_
-que permitem a criação de elementos personalizados e que podem ser instanciados
-por meio declarativo com uma _tag_ HTML. Esses componentes também podem ser
-reutilizados e funcionam em qualquer navegador que implemente as APIs, sem a
-necessidade de uma biblioteca ou _framework_.
+Você já deve conhecer o HTML, certo? Uma ótima ferramenta para construir
+aplicações na _web_. O HTML é declarativo, portável, bem suportado e fácil de
+trabalhar. Quando você está construindo um documento ou uma aplicação com HTML
+você tem algumas opções disponíveis. Você quer criar uma âncora? Utilize a _tag_
+[`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). Quer criar
+um parágrafo? Utilize a _tag_
+[`<p>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p). Um botão?
+Você pode utilizar a _tag_
+[`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+ou a
+[`<input type="button">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button).
 
-Os _web components_ se fundamentam em duas principais especificações:
+Mas e se, por exemplo, você quiser criar uma
+[aba](https://en.wikipedia.org/wiki/Tab_(interface))? Que _tag_ do HTML você vai
+usar? E se for um [_tooltip_](https://en.wikipedia.org/wiki/Tooltip) ou um
+[_accordion_](https://en.wikipedia.org/wiki/Accordion_(GUI))? O vocabulário do
+HTML é limitado e não existe uma _tag_ que descreva completamente cada um dos
+elementos de interface anteriores. Normalmente, tais componentes envolvem
+utilizar mais de uma _tag_ HTML associado à um pouco de comportamento dado em um
+_script_. Isso não é uma tarefa simples. E fica cada vez mais complexa quanto
+mais elementos em tela você precisar controlar. Não seria mais fácil uma forma
+de você poder "extender" o HTML e poder criar elementos personalizados para a
+sua necessidade, encapsulando estilo, comportamento e marcação em uma só
+“entidade”?
 
-- [**Elementos personalizados**](https://html.spec.whatwg.org/#custom-elements):
-  fundamenta a criação de elementos e registra as novas _tags_ HTML.
-- [**_Shadow_ DOM**](https://dom.spec.whatwg.org/#shadow-trees): define como
-  encapsular estilos e marcação.
+Os [_web components_](https://en.wikipedia.org/wiki/Web_Components) são a
+resposta da plataforma _web_ para este problema. Com eles, você pode criar
+elementos personalizados e fazer uma extensão do HTML, preenchendo as lacunas e
+ligando a estrutura declarativa com o comportamento via código. Se você está com
+um problema que o HTML não pode resolver, talvez a criação de um elemento
+personalizado pode. Elementos personalizados permitem que os navegadores
+adicionem comportamento ao HTML e preservando os benefícios que já possui.
+
+Os _web components_ são, na verdade, um termo “guarda-chuva” para um conjunto de
+APIs e tecnologias disponibilizadas nos navegadores que, quando utilizadas em
+conjunto, permitem a criação de componentes completos. Se fundamentam em três
+principais especificações:
+
+- [Elementos personalizados](https://html.spec.whatwg.org/#custom-elements);
+- [_Shadow_ DOM](https://dom.spec.whatwg.org/#shadow-trees);
+- [O elemento _template_](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element).
 
 Antes de detalhar cada uma dessas especificações, vamos fazer um apanhado geral
 de como _web components_ trabalham e como você pode utilizá-los.
