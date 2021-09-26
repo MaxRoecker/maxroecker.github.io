@@ -109,7 +109,7 @@ definição.
 
 <figure>
   <img
-    src="/images/2016-02-16-javascript-intermediario-4/hoisting.svg"
+    src="/images/illustrations/hoisting.svg"
     alt="Mecanismo para elevar água."
     decoding="async"
     loading="lazy"

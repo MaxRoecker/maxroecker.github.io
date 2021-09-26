@@ -178,7 +178,7 @@ execução contemplando também o <i lang="en">heap</i>:
 
 <figure>
   <img
-    src="/images/2016-01-13-javascript-intermediario-2/lock.svg"
+    src="/images/illustrations/lock.svg"
     alt="Um símbolo enclausurado."
     decoding="async"
     loading="lazy"

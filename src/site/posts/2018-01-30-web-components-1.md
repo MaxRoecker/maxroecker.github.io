@@ -34,9 +34,19 @@ elementos de interface anteriores. Normalmente, tais componentes envolvem
 utilizar mais de uma _tag_ HTML associado à um pouco de comportamento dado em um
 _script_. Isso não é uma tarefa simples. E fica cada vez mais complexa quanto
 mais elementos em tela você precisar controlar. Não seria mais fácil uma forma
-de você poder "extender" o HTML e poder criar elementos personalizados para a
+de você poder “extender” o HTML e poder criar elementos personalizados para a
 sua necessidade, encapsulando estilo, comportamento e marcação em uma só
 “entidade”?
+
+<figure>
+  <img
+    src="/images/illustrations/lock.svg"
+    alt="Um leão heráldico."
+    decoding="async"
+    loading="lazy"
+  />
+</figure>
+
 
 Os [_web components_](https://en.wikipedia.org/wiki/Web_Components) são a
 resposta da plataforma _web_ para este problema. Com eles, você pode criar

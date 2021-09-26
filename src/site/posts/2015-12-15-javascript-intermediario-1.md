@@ -130,7 +130,7 @@ Caso você deseje construir um objeto imutável, é necessário utilizar o
 
 <figure>
   <img
-    src="/images/2015-12-15-javascript-intermediario-1/turtle.svg"
+    src="/images/illustrations/turtle.svg"
     alt="Uma tartaruga."
     decoding="async"
     loading="lazy"

@@ -130,7 +130,7 @@ para o `toString` acima… Chega de mistérios! O que temos aqui é um efeito do
 
 <figure>
   <img
-    src="/images/2016-04-09-javascript-intermediario-6/airship.svg"
+    src="/images/illustrations/airship.svg"
     alt="Protótipo de aeronave contendo balões preenchidos com vácuo."
     title="Aeronave imaginada pelo italiano Francesco Lana de Terzi (1631–1687)"
     decoding="async"

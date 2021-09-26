@@ -131,7 +131,7 @@ comportamento desse laço o qual vamos detalhar daqui em diante.
 
 <figure>
   <img
-    src="/images/2016-01-16-javascript-intermediario-3/steam-engine.svg"
+    src="/images/illustrations/steam-engine.svg"
     alt="Máquina de ciclos a vapor"
     decoding="async"
     loading="lazy"
