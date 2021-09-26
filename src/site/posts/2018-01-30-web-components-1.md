@@ -34,7 +34,7 @@ elementos de interface anteriores. Normalmente, tais componentes envolvem
 utilizar mais de uma _tag_ HTML associado à um pouco de comportamento dado em um
 _script_. Isso não é uma tarefa simples. E fica cada vez mais complexa quanto
 mais elementos em tela você precisar controlar. Não seria mais fácil uma forma
-de você poder “extender” o HTML e poder criar elementos personalizados para a
+de você poder “estender” o HTML e poder criar elementos personalizados para a
 sua necessidade, encapsulando estilo, comportamento e marcação em uma só
 “entidade”?
 
