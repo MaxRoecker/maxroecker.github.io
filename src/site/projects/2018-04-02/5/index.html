@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      wc-counter {
+        background-color: rebeccapurple;
+        color: white;
+      }
+      wc-counter[disabled] {
+        background-color: violet;
+        color: whitesmoke;
+      }
+      wc-counter:not(:defined) {
+        display: block;
+        height: 1.45rem;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <wc-counter value="8"></wc-counter>
+    <wc-counter value="3" disabled></wc-counter>
+    <script type="module">
+      setTimeout(() => import('./wc-counter.js'), 2000);
+    </script>
+  </body>
+</html>

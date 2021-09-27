@@ -1,0 +1,11 @@
+{
+  "extends": "/projects/base.json",
+  "files": {
+    "wc-counter.js": {
+      "contentType": "text/javascript"
+    },
+    "index.html": {
+      "contentType": "text/html"
+    }
+  }
+}

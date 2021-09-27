@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <wc-counter id="counter"></wc-counter>
+    <script type="module">
+      import './wc-counter.js';
+
+      const counter = document.getElementById('counter');
+
+      const a = counter.value;
+      counter.value = 2;
+      counter.increment();
+      const b = counter.value;
+
+      const text = document.createTextNode(`${a} / ${b}`);
+      document.body.appendChild(text);
+    </script>
+  </body>
+</html>
