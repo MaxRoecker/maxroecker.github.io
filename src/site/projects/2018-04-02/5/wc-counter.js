@@ -7,6 +7,7 @@ export class WCCounter extends HTMLElement {
       <style>
         :host {
           display: block;
+          text-align: center;
         }
       
         :host([disabled]) {

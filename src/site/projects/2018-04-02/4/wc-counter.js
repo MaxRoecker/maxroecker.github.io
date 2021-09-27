@@ -7,6 +7,7 @@ export class WCCounter extends HTMLElement {
       <style>
         :host {
           display: block;
+          text-align: center;
         }
       
         :host([disabled]) {
@@ -76,7 +77,6 @@ export class WCCounter extends HTMLElement {
     return ['value', 'disabled'];
   }
   /* playground-fold-end */
-
 }
 
 window.customElements.define('wc-counter', WCCounter);
