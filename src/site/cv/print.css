@@ -28,6 +28,6 @@ table {
   width: calc(50% - 1.5rem);
 }
 
-.print-button {
+.fixed-button {
   display: none;
 }
