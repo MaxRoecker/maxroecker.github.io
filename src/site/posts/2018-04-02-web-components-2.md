@@ -23,7 +23,7 @@ Com a API de
 os desenvolvedores são capazes de criar novas _tags_ HTML. É a API fundamental
 para os _web components_ e traz uma forma padronizada de criar componentes
 reutilizáveis com nada mais que HTML, CSS e JavaScript. Sem a necessidade de
-utilizar uma bibliotecas ou _framework_s. Dessa forma, temos menos código, mais
+utilizar uma bibliotecas ou _frameworks_. Dessa forma, temos menos código, mais
 compatibilidade e mais reutilização.
 
 ## Introdução
