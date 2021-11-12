@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <button-icon></button-icon>
+
+    <script>
+      class ButtonIconElement extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({ mode: 'open' });
+          this.shadowRoot.innerHTML = `
+            <style>
+            </style>
+
+            <button>
+              
+            </button>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>
