@@ -4,7 +4,7 @@ subtitle: 'Introdução'
 heading: 'O que é JavaScript? Uma pequena introdução sobre a linguagem que nasceu na web e para a web.'
 created: 2015-08-25 09:15:25
 updated: 2021-05-10 22:00:18
-permalink: 'blog/javascript-basico-1'
+permalink: 'blog/javascript-basico-1/index.html'
 tags:
   - javascript
 ---

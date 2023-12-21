@@ -3,7 +3,7 @@ title: 'JavaScript Orientado a Objetos #4'
 subtitle: 'Classes'
 heading: 'Veja as principais adições do ES2015 relacionadas ao JavaScript OO.'
 created: 2016-04-30 17:23:39
-permalink: 'blog/javascript-orientado-a-objetos-4'
+permalink: 'blog/javascript-orientado-a-objetos-4/index.html'
 tags:
   - javascript
   - object oriented programming

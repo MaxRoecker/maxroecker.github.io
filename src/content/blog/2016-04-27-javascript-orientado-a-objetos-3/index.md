@@ -3,7 +3,7 @@ title: 'JavaScript Orientado a Objetos #3'
 subtitle: 'Fábricas'
 heading: 'Entenda mais sobre essa alternativa para a criação de objetos em JavaScript OO.'
 created: 2016-04-27 05:16:01
-permalink: 'blog/javascript-orientado-a-objetos-3'
+permalink: 'blog/javascript-orientado-a-objetos-3/index.html'
 tags:
   - javascript
   - object oriented programming

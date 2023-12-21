@@ -5,7 +5,7 @@ heading: 'Uma breve introdução sobre o que são web components e seus principa
 created: 2018-01-30 01:00:55
 updated: 2021-05-04 23:25:21
 layout: 'layouts/post-playground.njk'
-permalink: 'blog/web-components-1'
+permalink: 'blog/web-components-1/index.html'
 tags:
   - javascript
   - dom

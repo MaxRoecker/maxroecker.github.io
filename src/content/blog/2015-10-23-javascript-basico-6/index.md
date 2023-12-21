@@ -3,7 +3,7 @@ title: 'JavaScript Básico #6'
 subtitle: 'Funções'
 heading: 'Entenda como funcionam as pouco compreendidas funções em JavaScript'
 created: 2015-10-23 09:21:30
-permalink: 'blog/javascript-basico-6'
+permalink: 'blog/javascript-basico-6/index.html'
 tags:
   - javascript
 ---

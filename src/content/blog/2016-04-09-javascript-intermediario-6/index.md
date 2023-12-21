@@ -3,7 +3,7 @@ title: 'JavaScript Intermediário #6'
 subtitle: 'Protótipos'
 heading: 'Entenda o que, na linguagem JavaScript, são protótipos de objetos.'
 created: 2016-04-06 15:54:33
-permalink: 'blog/javascript-intermediario-6'
+permalink: 'blog/javascript-intermediario-6/index.html'
 tags:
   - javascript
 ---

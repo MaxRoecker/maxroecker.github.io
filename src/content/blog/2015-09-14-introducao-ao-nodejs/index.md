@@ -3,7 +3,7 @@ title: 'Introdução ao Node.js'
 subtitle: ''
 heading: 'Uma breve introdução ao interpretador de código JavaScript que não precisa de um navegador.'
 created: 2015-09-14 15:45:25
-permalink: 'blog/introducao-ao-nodejs'
+permalink: 'blog/introducao-ao-nodejs/index.html'
 tags:
   - javascript
   - nodejs

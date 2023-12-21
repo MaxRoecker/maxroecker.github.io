@@ -3,7 +3,7 @@ title: 'Hello World'
 subtitle: ''
 heading: 'Estou online. Ótimo!'
 created: 2015-08-15 10:25:33
-permalink: 'blog/hello-world'
+permalink: 'blog/hello-world/index.html'
 tags:
   - personal
 ---

@@ -3,7 +3,7 @@ title: 'JavaScript Básico #5'
 subtitle: 'Objetos'
 heading: 'Aprenda as principais características dos objetos, estruturas fundamentais da linguagem JavaScript.'
 created: 2015-10-15 17:03:34
-permalink: 'blog/javascript-basico-5'
+permalink: 'blog/javascript-basico-5/index.html'
 tags:
   - javascript
 ---

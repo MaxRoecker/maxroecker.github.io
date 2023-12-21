@@ -3,7 +3,7 @@ title: 'JavaScript Orientado a Objetos #2'
 subtitle: 'Construtores'
 heading: 'Aprofunde-se em uma das principais técnicas utilizadas para a criação de objetos em JavaScript OO.'
 created: 2016-04-22 21:05:36
-permalink: 'blog/javascript-orientado-a-objetos-2'
+permalink: 'blog/javascript-orientado-a-objetos-2/index.html'
 tags:
   - javascript
   - object oriented programming

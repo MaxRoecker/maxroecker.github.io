@@ -5,7 +5,7 @@ heading: 'Vamos nos aprofundar sobre a API de elementos personalizados e ver tod
 created: 2018-04-02 19:49:13
 updated: 2021-09-26 21:06:51
 layout: 'layouts/post-playground.njk'
-permalink: 'blog/web-components-2'
+permalink: 'blog/web-components-2/index.html'
 tags:
   - javascript
   - dom

@@ -3,7 +3,7 @@ title: 'JavaScript Básico #2'
 subtitle: 'Valores primitivos'
 heading: 'Veja como o JavaScript representa, armazena, nomina e opera os dados primitivos da linguagem.'
 created: 2015-09-01 22:29:00
-permalink: 'blog/javascript-basico-2'
+permalink: 'blog/javascript-basico-2/index.html'
 tags:
   - javascript
 ---

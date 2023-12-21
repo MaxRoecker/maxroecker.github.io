@@ -3,7 +3,7 @@ title: 'Apresentando: CRUXHash'
 subtitle:
 heading: 'Uma biblioteca de funções hash cruciais para o JavaScript'
 created: 2021-05-14 23:33:49
-permalink: 'blog/cruxhash'
+permalink: 'blog/cruxhash/index.html'
 tags:
   - javascript
 ---

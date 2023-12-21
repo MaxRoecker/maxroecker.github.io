@@ -3,7 +3,7 @@ title: 'Captura e borbulhamento de eventos'
 subtitle:
 heading: 'Entenda o que são os estágios de propagação de eventos do DOM'
 created: 2018-01-14 02:02:00
-permalink: 'blog/captura-e-borbulhamento-de-eventos'
+permalink: 'blog/captura-e-borbulhamento-de-eventos/index.html'
 tags:
   - javascript
   - dom

@@ -3,7 +3,7 @@ title: 'JavaScript Intermediário #4'
 subtitle: 'Hoisting'
 heading: 'Nessa curta publicação, conheça o mecanismo de hoisting, uma característica peculiar da linguagem JavaScript.'
 created: 2016-01-16 18:34:26
-permalink: 'blog/javascript-intermediario-4'
+permalink: 'blog/javascript-intermediario-4/index.html'
 tags:
   - javascript
 ---
