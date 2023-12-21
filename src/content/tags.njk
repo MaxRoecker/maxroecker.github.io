@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+layout: layouts/base.njk
+eleventyComputed:
+  title: Publicações marcadas em “{{ tag }}”
+permalink: /tags/{{ tag | slugify }}/
+---
+
+{% block pagecontent %}
+  <ol class="entry-list">
+    {% set postlist = collections[tag] | reverse %}
+    {% include "postslist.njk" %}
+  </ol>
+{% endblock pagecontent %}

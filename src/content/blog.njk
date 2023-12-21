@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: Últimas publicações
+subtitle:
+eleventyNavigation:
+  key: Blog
+  order: 2
+---
+
+{% block pagecontent %}
+  <ol class="entry-list">
+    {% set postlist = collections.posts | reverse %}
+    {% include "postslist.njk" %}
+  </ol>
+{% endblock pagecontent %}

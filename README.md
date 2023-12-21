@@ -23,15 +23,15 @@ To setup this repository, after cloning the repository, run:
 npm install
 ```
 
-To run in development mode
-
-```bash
-npm run dev
-```
-
-To run in production mode
+To run in development mode, you'll need to first build:
 
 ```bash
 npm run build
+```
+
+Then, run the development server and watch for changes:
+
+```bash
+npm run dev
 ```
 

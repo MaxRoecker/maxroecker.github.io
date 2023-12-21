@@ -1,0 +1,31 @@
+
+{%- for post in postlist -%}
+	<li class="entry">
+		<div class="entry__date">
+			<time class="entry-date" datetime="{{ post.date | formatDate }}">
+				{{ post.date | formatDate(metadata.language, { dateStyle: "full" }) }}
+			</time>
+		</div>
+		<div class="entry__header">
+			<h2 class="entry-title">
+				<a href="{{ post.url }}" title="Clique para ir para a publicação">
+				{% if post.data.title and post.data.subtitle %}
+					{{ post.data.title | safe }}:
+					{{ post.data.subtitle | safe }}
+				{% else %}
+					{{ post.data.title | safe }}
+				{% endif %}
+				</a>
+			</h2>
+			{% if post.data.heading %}
+				<p class="entry-heading">{{ post.data.heading | safe }}</p>
+			{% endif %}
+			
+			<ul class="blog-details__tags">
+				{% for tag in post.data.tags | filterTagList%}
+					<li class="blog-details__tags__tag"><a href="/tags/{{ tag | slugify }}" rel="tag">{{ tag }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</li>
+{%- endfor -%}

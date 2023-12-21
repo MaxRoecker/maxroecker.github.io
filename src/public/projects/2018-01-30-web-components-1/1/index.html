@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="module" src="./hello-world.js"></script>
+  </head>
+  <body>
+    <hello-world id="hello"></hello-world>
+    <script>
+      const hello1 = document.getElementById('hello');
+      hello1.title = 'Este é um web component';
+
+      const hello2 = document.createElement('hello-world');
+      hello1.title = 'Este é outro web component';
+      document.body.appendChild(hello2);
+    </script>
+  </body>
+</html>

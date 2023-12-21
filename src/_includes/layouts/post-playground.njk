@@ -1,0 +1,10 @@
+{% extends './post.njk' %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/{{ styles['src/assets/styles/highlight.css'] }}">
+  <link rel="stylesheet" href="/{{ styles['src/assets/styles/playground.css'] }}">
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="/{{ scripts['src/assets/scripts/playground.js'] }}"></script>
+{% endblock %}

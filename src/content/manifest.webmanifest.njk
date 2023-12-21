@@ -1,0 +1,26 @@
+---
+permalink: /manifest.webmanifest
+---
+{
+  "name": "{{ metadata.name }}",
+  "short_name": "{{ metadata.name }}",
+  "description": "{{ metadata.description }}",
+  "display": "standalone",
+  "start_url": ".",
+  "theme_color": "{{ metadata.theme.color }}",
+  "background_color": "{{ metadata.theme.background }}",
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ],
+  "icons": [
+  {%- for icon in metadata.icons.android %}
+    {
+      "src": "{{ icon.src }}",
+      "sizes": "{{ icon.sizes }}",
+      "type": "{{ icon.type }}"
+    }{% if not loop.last %},{% endif %}
+  {%- endfor %}
+  ]
+}
