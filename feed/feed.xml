@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="pt-br">
-	<title>Max N. Roecker</title>
-	<subtitle>Página e Blog de Max Naegeler Roecker</subtitle>
-	<link href="https://maxroecker.github.io/feed/feed.xml" rel="self"/>
-	<link href="https://maxroecker.github.io/"/>
-	<updated>2023-12-21T20:30:48Z</updated>
-	<id>https://maxroecker.github.io</id>
-	<author>
-		<name>Max Naegeler Roecker</name>
-		<email>max.roecker@gmail.com</email>
-	</author>
-	
-	<entry>
-		<title>Apresentando: CRUXHash</title>
-		<link href="https://maxroecker.github.io/blog/cruxhash/"/>
-		<updated>2021-05-14T23:33:49Z</updated>
-		<id>https://maxroecker.github.io/blog/cruxhash/</id>
-		<content type="html">&lt;p&gt;&lt;em&gt;Hash&lt;/em&gt; é, provavelmente, um dos conceitos mais importantes que um programador
+  <title>Max N. Roecker</title>
+  <subtitle>Página e Blog de Max Naegeler Roecker</subtitle>
+  <link href="https://maxroecker.github.io/feed/feed.xml" rel="self"/>
+  <link href="https://maxroecker.github.io/"/>
+  <updated>2023-12-21T21:30:09Z</updated>
+  <id>https://maxroecker.github.io</id>
+  <author>
+    <name>Max Naegeler Roecker</name>
+    <email>max.roecker@gmail.com</email>
+  </author>
+  
+  <entry>
+    <title>Apresentando: CRUXHash</title>
+    <link href="https://maxroecker.github.io/blog/cruxhash/"/>
+    <updated>2021-05-14T23:33:49Z</updated>
+    <id>https://maxroecker.github.io/blog/cruxhash/</id>
+    <content type="html">&lt;p&gt;&lt;em&gt;Hash&lt;/em&gt; é, provavelmente, um dos conceitos mais importantes que um programador
 deve conhecer. É por meio de &lt;em&gt;hashes&lt;/em&gt; que conseguimos criar as
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Hash_table&quot;&gt;tabelas &lt;em&gt;hash&lt;/em&gt;&lt;/a&gt;, &lt;a href=&quot;https://auth0.com/blog/hashing-passwords-one-way-road-to-security/&quot;&gt;armazenar senhas de
 forma
@@ -364,14 +364,14 @@ comigo. PRs são sempre bem vindos!&lt;/p&gt;
 &lt;a href=&quot;https://www.linkedin.com/in/henrique-neves-da-silva-5a93a660/&quot;&gt;Henrique Neves&lt;/a&gt;
 pela revisão e pelas considerações importantes no texto!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>Web Components #2</title>
-		<link href="https://maxroecker.github.io/blog/web-components-2/"/>
-		<updated>2018-04-02T19:49:13Z</updated>
-		<id>https://maxroecker.github.io/blog/web-components-2/</id>
-		<content type="html">&lt;p&gt;Como vimos &lt;a href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;na publicação anterior&lt;/a&gt;, o termo &lt;em&gt;web
+  </entry>
+  
+  <entry>
+    <title>Web Components #2</title>
+    <link href="https://maxroecker.github.io/blog/web-components-2/"/>
+    <updated>2018-04-02T19:49:13Z</updated>
+    <id>https://maxroecker.github.io/blog/web-components-2/</id>
+    <content type="html">&lt;p&gt;Como vimos &lt;a href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;na publicação anterior&lt;/a&gt;, o termo &lt;em&gt;web
 components&lt;/em&gt; se refere ao conjunto de APIs disponibilizadas na plataforma &lt;em&gt;web&lt;/em&gt;
 que permitem a criação de elementos personalizados que podem ser instanciados de
 forma declarativa como qualquer &lt;em&gt;tag&lt;/em&gt; HTML.&lt;/p&gt;
@@ -566,14 +566,14 @@ JavaScript.&lt;/li&gt;
 outras especificações que pertencem ao “ecossistema” de &lt;em&gt;web components&lt;/em&gt;. Até a
 próxima!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>IDs são globais</title>
-		<link href="https://maxroecker.github.io/blog/ids-globais/"/>
-		<updated>2018-02-22T10:34:01Z</updated>
-		<id>https://maxroecker.github.io/blog/ids-globais/</id>
-		<content type="html">&lt;p&gt;Você sabia que se você precisar acessar um elemento de um documento HTML marcado
+  </entry>
+  
+  <entry>
+    <title>IDs são globais</title>
+    <link href="https://maxroecker.github.io/blog/ids-globais/"/>
+    <updated>2018-02-22T10:34:01Z</updated>
+    <id>https://maxroecker.github.io/blog/ids-globais/</id>
+    <content type="html">&lt;p&gt;Você sabia que se você precisar acessar um elemento de um documento HTML marcado
 com um &lt;code&gt;id&lt;/code&gt;, basta você acessar a variável com o mesmo nome? Ou seja, se você
 tiver uma marcação assim:&lt;/p&gt;
 &lt;pre class=&quot;language-html&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;foo&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -620,14 +620,14 @@ DOM, utilize as funções
 ou
 &lt;a href=&quot;https://developer.mozilla.org/pt-BR/docs/Web/API/Document/querySelector&quot;&gt;&lt;code&gt;document.querySelector&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>Web Components #1</title>
-		<link href="https://maxroecker.github.io/blog/web-components-1/"/>
-		<updated>2018-01-30T01:00:55Z</updated>
-		<id>https://maxroecker.github.io/blog/web-components-1/</id>
-		<content type="html">&lt;p&gt;Você já deve conhecer o HTML, certo? Uma ótima ferramenta para construir
+  </entry>
+  
+  <entry>
+    <title>Web Components #1</title>
+    <link href="https://maxroecker.github.io/blog/web-components-1/"/>
+    <updated>2018-01-30T01:00:55Z</updated>
+    <id>https://maxroecker.github.io/blog/web-components-1/</id>
+    <content type="html">&lt;p&gt;Você já deve conhecer o HTML, certo? Uma ótima ferramenta para construir
 aplicações na &lt;em&gt;web&lt;/em&gt;. O HTML é declarativo, portável, bem suportado e fácil de
 trabalhar. Quando você está construindo um documento ou uma aplicação com HTML
 você tem algumas opções disponíveis. Você quer criar uma âncora? Utilize a &lt;em&gt;tag&lt;/em&gt;
@@ -746,14 +746,14 @@ maioria dos grandes navegadores.&lt;/p&gt;
 especificações ainda estão em fase inicial ou com suporte bastante limitado, mas
 que ilustram um futuro promissor para a tecnologia.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>Captura e borbulhamento de eventos</title>
-		<link href="https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/"/>
-		<updated>2018-01-14T02:02:00Z</updated>
-		<id>https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/</id>
-		<content type="html">&lt;p&gt;Um dos aspectos mais confusos quando estamos trabalhando com eventos são os
+  </entry>
+  
+  <entry>
+    <title>Captura e borbulhamento de eventos</title>
+    <link href="https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/"/>
+    <updated>2018-01-14T02:02:00Z</updated>
+    <id>https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/</id>
+    <content type="html">&lt;p&gt;Um dos aspectos mais confusos quando estamos trabalhando com eventos são os
 estágios que um evento passa enquanto é propagado pela árvore DOM: a &lt;strong&gt;captura&lt;/strong&gt;
 e o &lt;strong&gt;borbulhamento&lt;/strong&gt;. Não é sempre que temos problemas, mas você pode ter uma
 baita dor de cabeça se você não entender o que cada um dessas etapas faz e como
@@ -904,14 +904,14 @@ que você saiba resolver problemas quando eles surgirem.&lt;/p&gt;
 &lt;p&gt;Um bom desenvolvedor de &lt;em&gt;software&lt;/em&gt; deve conhecer as ferramentas com que
 trabalha, e se você trabalha com &lt;em&gt;web&lt;/em&gt;, deve conhecer o DOM.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>O que é o DOM?</title>
-		<link href="https://maxroecker.github.io/blog/o-que-e-o-dom/"/>
-		<updated>2016-08-05T22:15:22Z</updated>
-		<id>https://maxroecker.github.io/blog/o-que-e-o-dom/</id>
-		<content type="html">&lt;p&gt;O &lt;strong&gt;Modelo Objeto de Documento&lt;/strong&gt; (DOM, do inglês &lt;em lang=&quot;en&quot;&gt;Document Object
+  </entry>
+  
+  <entry>
+    <title>O que é o DOM?</title>
+    <link href="https://maxroecker.github.io/blog/o-que-e-o-dom/"/>
+    <updated>2016-08-05T22:15:22Z</updated>
+    <id>https://maxroecker.github.io/blog/o-que-e-o-dom/</id>
+    <content type="html">&lt;p&gt;O &lt;strong&gt;Modelo Objeto de Documento&lt;/strong&gt; (DOM, do inglês &lt;em lang=&quot;en&quot;&gt;Document Object
 Model&lt;/em&gt;) é uma estrutura de dados que representa a estrutura e o conteúdo de
 um documento &lt;em&gt;web&lt;/em&gt;. Técnicamente, o DOM é uma representação orientada a objetos
 de documentos HTML e XML, e fornece funções e métodos para que um programa possa
@@ -1024,14 +1024,14 @@ funciona. Eu acredito que, conforme você adquire experiência, você deve enten
 o funcionamento dessa API para que você seja um bom desenvolvedor de &lt;em&gt;software&lt;/em&gt;
 para a &lt;em&gt;web&lt;/em&gt;.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Orientado a Objetos #4</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/"/>
-		<updated>2016-04-30T17:23:39Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/</id>
-		<content type="html">&lt;p&gt;Hoje iremos voltar a ver sobre Construtores no contexto do JavaScript
+  </entry>
+  
+  <entry>
+    <title>JavaScript Orientado a Objetos #4</title>
+    <link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/"/>
+    <updated>2016-04-30T17:23:39Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/</id>
+    <content type="html">&lt;p&gt;Hoje iremos voltar a ver sobre Construtores no contexto do JavaScript
 Orientado a Objetos, e as principais funcionalidades que a versão 2015 adicionou
 à linguagem.&lt;/p&gt;
 &lt;p&gt;Para que você aproveite melhor o texto é recomendado que você tenha conhecimento
@@ -1213,14 +1213,14 @@ publicações futuras com novas funcionalidades que podem ser adicionadas à
 linguagem ou evoluções nas técnicas de desenvolvimento OO.&lt;/p&gt;
 &lt;p&gt;Até mais!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Orientado a Objetos #3</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/"/>
-		<updated>2016-04-27T05:16:01Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/</id>
-		<content type="html">&lt;p&gt;Hoje iremos compreender um pouco sobre as Fábricas no contexto do JavaScript
+  </entry>
+  
+  <entry>
+    <title>JavaScript Orientado a Objetos #3</title>
+    <link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/"/>
+    <updated>2016-04-27T05:16:01Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/</id>
+    <content type="html">&lt;p&gt;Hoje iremos compreender um pouco sobre as Fábricas no contexto do JavaScript
 Orientado a Objetos, um padrão de projeto alternativos aos construtores para a
 criação de objetos que possui muita similaridade com programação funcional.&lt;/p&gt;
 &lt;aside&gt;
@@ -1518,14 +1518,14 @@ facilitam ainda mais seu uso, como é o caso da estrutura &lt;code&gt;class&lt;/
 isso é um assunto para a próxima publicação!&lt;/p&gt;
 &lt;p&gt;Até mais!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Orientado a Objetos #2</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/"/>
-		<updated>2016-04-22T21:05:36Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/</id>
-		<content type="html">&lt;p&gt;Hoje iremos compreender um pouco sobre Construtores no contexto do JavaScript
+  </entry>
+  
+  <entry>
+    <title>JavaScript Orientado a Objetos #2</title>
+    <link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/"/>
+    <updated>2016-04-22T21:05:36Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/</id>
+    <content type="html">&lt;p&gt;Hoje iremos compreender um pouco sobre Construtores no contexto do JavaScript
 Orientado a Objetos, um padrão de projeto para a criação de objetos que possui
 muita similaridade com a orientação a objetos com classes.&lt;/p&gt;
 &lt;aside&gt;
@@ -1810,14 +1810,14 @@ ao custo de alguns dos positivos. Mas, esse assunto fica para a próxima
 publicação.&lt;/p&gt;
 &lt;p&gt;Até a próxima!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Orientado a Objetos #1</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/"/>
-		<updated>2016-04-15T08:49:56Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/</id>
-		<content type="html">&lt;p&gt;Hoje vamos iniciar uma nova série de publicações sobre a linguagem JavaScript
+  </entry>
+  
+  <entry>
+    <title>JavaScript Orientado a Objetos #1</title>
+    <link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/"/>
+    <updated>2016-04-15T08:49:56Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/</id>
+    <content type="html">&lt;p&gt;Hoje vamos iniciar uma nova série de publicações sobre a linguagem JavaScript
 com foco na programação orientada a objetos. Nessa série, espero que você
 compreenda conceitos importantes como o encapsulamento de dados, herança e
 polimorfismo em seu código. Vamos também entender mais a fundo a estrutura dos
@@ -1940,14 +1940,14 @@ aplicações em JavaScript orientado a objetos: os &lt;strong&gt;construtores&lt
 paradigma.&lt;/p&gt;
 &lt;p&gt;Até mais!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Intermediário #6</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-6/"/>
-		<updated>2016-04-06T15:54:33Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-6/</id>
-		<content type="html">&lt;p&gt;No último texto da série, iremos abordar um dos conceitos que mais causam
+  </entry>
+  
+  <entry>
+    <title>JavaScript Intermediário #6</title>
+    <link href="https://maxroecker.github.io/blog/javascript-intermediario-6/"/>
+    <updated>2016-04-06T15:54:33Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-intermediario-6/</id>
+    <content type="html">&lt;p&gt;No último texto da série, iremos abordar um dos conceitos que mais causam
 confusão em desenvolvedores que estão iniciando na linguagem, os &lt;strong&gt;protótipos&lt;/strong&gt;.
 No entanto, espero que ao fim dessa publicação, você compreenda que o mecanismo
 de protótipos é simples, mas muito poderoso.&lt;/p&gt;
@@ -2159,14 +2159,14 @@ significativa quando aliada a outras funcionalidades presentes na linguagem,
 como funções de alta ordem, as &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt; e a programação
 orientada a eventos.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Intermediário #5</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-5/"/>
-		<updated>2016-04-04T14:22:21Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-5/</id>
-		<content type="html">&lt;p&gt;Hoje iremos abordar a IIFE, uma prática muito utilizada no JavaScript quando
+  </entry>
+  
+  <entry>
+    <title>JavaScript Intermediário #5</title>
+    <link href="https://maxroecker.github.io/blog/javascript-intermediario-5/"/>
+    <updated>2016-04-04T14:22:21Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-intermediario-5/</id>
+    <content type="html">&lt;p&gt;Hoje iremos abordar a IIFE, uma prática muito utilizada no JavaScript quando
 estamos desenvolvendo aplicações ou módulos na linguagem já que ela garante um
 código que não cause ou seja afetado por efeitos colaterais externos.&lt;/p&gt;
 &lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -2283,14 +2283,14 @@ essas funções possuem acesso a elas, como vimos no exemplo.&lt;/p&gt;
 alternativas para a simulação de módulos em JavaScript em uma época anterior ao
 ES2015. É sempre bom ter esse conhecimento no seu inventário.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Intermediário #4</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-4/"/>
-		<updated>2016-01-16T18:34:26Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-4/</id>
-		<content type="html">&lt;p&gt;Hoje veremos uma característica bastante peculiar do JavaScript e que
+  </entry>
+  
+  <entry>
+    <title>JavaScript Intermediário #4</title>
+    <link href="https://maxroecker.github.io/blog/javascript-intermediario-4/"/>
+    <updated>2016-01-16T18:34:26Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-intermediario-4/</id>
+    <content type="html">&lt;p&gt;Hoje veremos uma característica bastante peculiar do JavaScript e que
 normalmente é causa de pequenos erros quanto estamos trabalhando com a
 linguagem: o hasteamento de variáveis, comumente chamado de &lt;i lang=&quot;en&quot;&gt;hoisting&lt;/i&gt;.&lt;/p&gt;
 &lt;aside&gt; &lt;p&gt; &lt;strong&gt;has·te·ar&lt;/strong&gt;: (1) Elevar ou prender ao topo de uma
@@ -2373,14 +2373,14 @@ variáveis para o topo do seu respectivo escopo evita confusão com o mecanismo 
 possível. Dessa forma, evita-se valores indefinidos durante a execução e
 surpresas indesejadas.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Intermediário #3</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-3/"/>
-		<updated>2016-01-16T17:47:20Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-3/</id>
-		<content type="html">&lt;p&gt;Nesse texto, vamos compreender um pouco mais sobre um paradigma importante
+  </entry>
+  
+  <entry>
+    <title>JavaScript Intermediário #3</title>
+    <link href="https://maxroecker.github.io/blog/javascript-intermediario-3/"/>
+    <updated>2016-01-16T17:47:20Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-intermediario-3/</id>
+    <content type="html">&lt;p&gt;Nesse texto, vamos compreender um pouco mais sobre um paradigma importante
 quando estamos programando em JavaScript e, além disso, entender uma das
 principais características que levaram ao sucesso da linguagem: o seu modelo de
 concorrência.&lt;/p&gt;
@@ -2567,14 +2567,14 @@ visão mais completa, recomendo ler mais sobre:&lt;/p&gt;
 nos navegadores.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Intermediário #2</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-2/"/>
-		<updated>2016-01-13T18:42:06Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-2/</id>
-		<content type="html">&lt;p&gt;A série &lt;strong&gt;JavaScript Intermediário&lt;/strong&gt; busca passar, de maneira sólida e gradual,
+  </entry>
+  
+  <entry>
+    <title>JavaScript Intermediário #2</title>
+    <link href="https://maxroecker.github.io/blog/javascript-intermediario-2/"/>
+    <updated>2016-01-13T18:42:06Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-intermediario-2/</id>
+    <content type="html">&lt;p&gt;A série &lt;strong&gt;JavaScript Intermediário&lt;/strong&gt; busca passar, de maneira sólida e gradual,
 características fundamentais da linguagem. Neste capítulo, vamos voltar nossa
 atenção para um importante, esquecido e quase mitológico aspecto da linguagem:
 as &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;, também conhecidas como fechos léxicos ou
@@ -2762,14 +2762,14 @@ comportamento pode ser construído por meio de um pouco de valores e algumas boa
 e velhas expressões lambdas. &lt;/p&gt; &lt;footer&gt; &lt;a href=&quot;https://www.dreamsongs.com/ObjectsHaveNotFailedNarr.html&quot;&gt;Guy L.
 Steele&lt;/a&gt; &lt;/footer&gt; &lt;/blockquote&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Intermediário #1</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-1/"/>
-		<updated>2015-12-15T17:37:54Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-1/</id>
-		<content type="html">&lt;p&gt;Nessa publicação, vamos focar em um dos aspectos que mais geram confusão entre
+  </entry>
+  
+  <entry>
+    <title>JavaScript Intermediário #1</title>
+    <link href="https://maxroecker.github.io/blog/javascript-intermediario-1/"/>
+    <updated>2015-12-15T17:37:54Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-intermediario-1/</id>
+    <content type="html">&lt;p&gt;Nessa publicação, vamos focar em um dos aspectos que mais geram confusão entre
 os desenvolvedores que estão iniciando o aprendizado em JavaScript: o escopo
 léxico de variáveis. Mas, o que é escopo léxico de uma variável?&lt;/p&gt;
 &lt;p&gt;Uma variável definida em um código recebe um identificador único — um nome — que
@@ -2885,14 +2885,14 @@ seu código mais legível e declarativo.&lt;/p&gt;
 para possibilitar pensamentos os quais não existiriam se não fossem elas. &lt;/p&gt;
 &lt;footer&gt;Bertrand Russel&lt;/footer&gt; &lt;/blockquote&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Básico #6</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-6/"/>
-		<updated>2015-10-23T09:21:30Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-6/</id>
-		<content type="html">&lt;p&gt;Já vimos o funcionamento de
+  </entry>
+  
+  <entry>
+    <title>JavaScript Básico #6</title>
+    <link href="https://maxroecker.github.io/blog/javascript-basico-6/"/>
+    <updated>2015-10-23T09:21:30Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-basico-6/</id>
+    <content type="html">&lt;p&gt;Já vimos o funcionamento de
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;objetos&lt;/a&gt; e de
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;estruturas de controle&lt;/a&gt;
 em JavaScript, ambos conceitos essenciais para a aprendizagem da linguagem e
@@ -3119,14 +3119,14 @@ de &lt;i lang=&quot;en&quot;&gt;hoisting&lt;/i&gt;, &lt;i lang=&quot;en&quot;&gt
 entre outros. Também quero escrever mais sobre a programação em paradigma
 orientado a objetos e funcional.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Básico #5</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-5/"/>
-		<updated>2015-10-15T17:03:34Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-5/</id>
-		<content type="html">&lt;p&gt;Anteriormente, aprendemos como
+  </entry>
+  
+  <entry>
+    <title>JavaScript Básico #5</title>
+    <link href="https://maxroecker.github.io/blog/javascript-basico-5/"/>
+    <updated>2015-10-15T17:03:34Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-basico-5/</id>
+    <content type="html">&lt;p&gt;Anteriormente, aprendemos como
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;controlar a execução do fluxo do código JavaScript através de declarações&lt;/a&gt;.
 Também vimos
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;como atribuir valores primitivos a variáveis e como manipulá-los no código&lt;/a&gt;.
@@ -3337,14 +3337,14 @@ uma arte para gênios. Na realidade é o oposto. São somente muitas pessoas
 desenvolvendo coisas umas sobre as outras, como um muro de pequenas pedras. &lt;/p&gt;
 &lt;footer&gt; Donald Knuth &lt;/footer&gt; &lt;/blockquote&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Básico #4</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-4/"/>
-		<updated>2015-09-15T16:25:51Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-4/</id>
-		<content type="html">&lt;p&gt;No &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;artigo anterior&lt;/a&gt;
+  </entry>
+  
+  <entry>
+    <title>JavaScript Básico #4</title>
+    <link href="https://maxroecker.github.io/blog/javascript-basico-4/"/>
+    <updated>2015-09-15T16:25:51Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-basico-4/</id>
+    <content type="html">&lt;p&gt;No &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;artigo anterior&lt;/a&gt;
 vimos como criar variáveis e atribuir valores à elas. Também foi mostrado alguns
 atalhos de atribuição e formas de modificar os valores das variáveis. Nesse
 texto vamos aumentar nossa compreensão de códigos em JavaScript e entender as
@@ -3651,14 +3651,14 @@ condições que você desejar. Já os valores, que também são declarações, s
 resultam um valor e podem ser utilizados em variáveis e também em outras
 declarações.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>Introdução ao Node.js</title>
-		<link href="https://maxroecker.github.io/blog/introducao-ao-nodejs/"/>
-		<updated>2015-09-14T15:45:25Z</updated>
-		<id>https://maxroecker.github.io/blog/introducao-ao-nodejs/</id>
-		<content type="html">&lt;p&gt;O &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;, popularmente conhecido apenas como Node, é um
+  </entry>
+  
+  <entry>
+    <title>Introdução ao Node.js</title>
+    <link href="https://maxroecker.github.io/blog/introducao-ao-nodejs/"/>
+    <updated>2015-09-14T15:45:25Z</updated>
+    <id>https://maxroecker.github.io/blog/introducao-ao-nodejs/</id>
+    <content type="html">&lt;p&gt;O &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;, popularmente conhecido apenas como Node, é um
 ambiente de execução JavaScript que não acompanha um navegador. O Node utiliza o
 &lt;a href=&quot;https://developers.google.com/v8/&quot;&gt;V8&lt;/a&gt; como motor de execução, o mesmo
 utilizado pelo navegador Google Chrome. O Node também possui um sistema
@@ -3744,14 +3744,14 @@ demandavam, mas não é uma bala de prata que serve para qualquer aplicação.
 Certos problemas requerem soluções difernetes e o Node pode não funcionar muito
 bem. Ainda assim, é uma ótima ferramenta para ter em seu inventário.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Básico #3</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-3/"/>
-		<updated>2015-09-09T17:00:03Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-3/</id>
-		<content type="html">&lt;p&gt;No
+  </entry>
+  
+  <entry>
+    <title>JavaScript Básico #3</title>
+    <link href="https://maxroecker.github.io/blog/javascript-basico-3/"/>
+    <updated>2015-09-09T17:00:03Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-basico-3/</id>
+    <content type="html">&lt;p&gt;No
 &lt;a href=&quot;https://maxroecker.github.io/posts/2015-09-01-javascript-basico-2/&quot;&gt;artigo anterior&lt;/a&gt;
 vemos como manipular basicamente os valores de tipo primitivo da linguagem,
 entre eles: números, strings, booleanos e valores indefinidos. Também vimos como
@@ -3881,14 +3881,14 @@ declarações de controle de fluxo de execução, como condicionais ou de
 repetições, para evoluirmos ainda mais a nossa capacidade de desenvolver códigos
 em JavaScript.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Básico #2</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-2/"/>
-		<updated>2015-09-01T22:29:00Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-2/</id>
-		<content type="html">&lt;p&gt;&lt;strong&gt;Valores&lt;/strong&gt; são os elementos mais simples dentro de uma linguagem: são
+  </entry>
+  
+  <entry>
+    <title>JavaScript Básico #2</title>
+    <link href="https://maxroecker.github.io/blog/javascript-basico-2/"/>
+    <updated>2015-09-01T22:29:00Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-basico-2/</id>
+    <content type="html">&lt;p&gt;&lt;strong&gt;Valores&lt;/strong&gt; são os elementos mais simples dentro de uma linguagem: são
 expressões que não podem ser reduzidas a nenhuma outra — ou seja, estão em sua
 forma normal. Por exemplo: 2 é um valor, ele é auto-contido e não há como
 simplificar. Já (1+2) é uma expressão que não representa um valor, pois pode ser
@@ -4086,14 +4086,14 @@ inicial de valores e operações básicas para compreensão do JavaScript. Para 
 próximos artigos, trataremos de assuntos como variáveis, atribuições e de suas
 especialidades.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>JavaScript Básico #1</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-1/"/>
-		<updated>2015-08-25T09:15:25Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-1/</id>
-		<content type="html">&lt;p&gt;O &lt;strong&gt;JavaScript&lt;/strong&gt; é uma linguagem de programação criada em 1995 com o objetivo de
+  </entry>
+  
+  <entry>
+    <title>JavaScript Básico #1</title>
+    <link href="https://maxroecker.github.io/blog/javascript-basico-1/"/>
+    <updated>2015-08-25T09:15:25Z</updated>
+    <id>https://maxroecker.github.io/blog/javascript-basico-1/</id>
+    <content type="html">&lt;p&gt;O &lt;strong&gt;JavaScript&lt;/strong&gt; é uma linguagem de programação criada em 1995 com o objetivo de
 adicionar dinamicidade aos documentos HTML no navegador Netscape. O JavaScript,
 junto com o HTML e o CSS, constituem os três pilares tecnológicos da &lt;em&gt;web&lt;/em&gt;. O
 JavaScript permite que código seja executado nos navegadores dos usuários que
@@ -4251,14 +4251,14 @@ faz? 😄&lt;/p&gt;
 &lt;p&gt;Agradeço a &lt;a href=&quot;https://www.linkedin.com/in/suzanicristina/&quot;&gt;Suzani Cristina&lt;/a&gt; pela
 revisão do texto e de algumas informações da história da linguagem. Obrigado!&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>Porque você deveria aprender JavaScript</title>
-		<link href="https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/"/>
-		<updated>2015-08-21T00:50:01Z</updated>
-		<id>https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/</id>
-		<content type="html">&lt;p&gt;A web se tornou a plataforma padrão de desenvolvimento nos últimos anos. Isso é
+  </entry>
+  
+  <entry>
+    <title>Porque você deveria aprender JavaScript</title>
+    <link href="https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/"/>
+    <updated>2015-08-21T00:50:01Z</updated>
+    <id>https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/</id>
+    <content type="html">&lt;p&gt;A web se tornou a plataforma padrão de desenvolvimento nos últimos anos. Isso é
 evidenciado pelo tanto de &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;ferramentas&lt;/a&gt;,
 &lt;a href=&quot;http://www.i-programmer.info/news/167-javascript/5418-javascript-to-be-the-default-langauge-for-gnome.html&quot;&gt;ambientes gráficos&lt;/a&gt;,
 &lt;a href=&quot;http://electron.atom.io/&quot;&gt;plataformas de desenvolvimento&lt;/a&gt; e
@@ -4344,14 +4344,14 @@ escrita em JavaScript. &lt;/p&gt; &lt;footer&gt; &lt;a href=&quot;http://blog.co
 &lt;p&gt;Aprender JavaScript pode lhe abrir várias oportunidades e, além disso, nunca é
 demais possuir mais uma habilidade no seu inventário.&lt;/p&gt;
 </content>
-	</entry>
-	
-	<entry>
-		<title>Hello World</title>
-		<link href="https://maxroecker.github.io/blog/hello-world/"/>
-		<updated>2015-08-15T10:25:33Z</updated>
-		<id>https://maxroecker.github.io/blog/hello-world/</id>
-		<content type="html">&lt;p&gt;Era quarta-feira, dia 12 de agosto, quando estava conversando com meu grande
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://maxroecker.github.io/blog/hello-world/"/>
+    <updated>2015-08-15T10:25:33Z</updated>
+    <id>https://maxroecker.github.io/blog/hello-world/</id>
+    <content type="html">&lt;p&gt;Era quarta-feira, dia 12 de agosto, quando estava conversando com meu grande
 amigo João Luiz, entusiasmado com um &lt;em&gt;framework&lt;/em&gt; para &lt;em&gt;node.js&lt;/em&gt; que acabávamos
 de fazer funcionar e de como foi sofrido para reconfigurá-lo, pois nem eu ou ele
 lembramos de anotar os passos. E então surgiu a ideia de fazer anotações sobre o
@@ -4361,5 +4361,5 @@ ideia de um blog.&lt;/p&gt;
 blog, escrevendo sobre coisas que eu tenho mais interesse: computadores e web.
 Ainda tem muito o que melhorar por aqui, mas para um começo está bom.&lt;/p&gt;
 </content>
-	</entry>
+  </entry>
 </feed>
