@@ -4,7 +4,7 @@
 	<subtitle>Página e Blog de Max Naegeler Roecker</subtitle>
 	<link href="https://maxroecker.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://maxroecker.github.io/"/>
-	<updated>2023-12-21T19:49:59Z</updated>
+	<updated>2023-12-21T20:30:48Z</updated>
 	<id>https://maxroecker.github.io</id>
 	<author>
 		<name>Max Naegeler Roecker</name>
@@ -13,9 +13,9 @@
 	
 	<entry>
 		<title>Apresentando: CRUXHash</title>
-		<link href="https://maxroecker.github.io/blog/cruxhash"/>
+		<link href="https://maxroecker.github.io/blog/cruxhash/"/>
 		<updated>2021-05-14T23:33:49Z</updated>
-		<id>https://maxroecker.github.io/blog/cruxhash</id>
+		<id>https://maxroecker.github.io/blog/cruxhash/</id>
 		<content type="html">&lt;p&gt;&lt;em&gt;Hash&lt;/em&gt; é, provavelmente, um dos conceitos mais importantes que um programador
 deve conhecer. É por meio de &lt;em&gt;hashes&lt;/em&gt; que conseguimos criar as
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Hash_table&quot;&gt;tabelas &lt;em&gt;hash&lt;/em&gt;&lt;/a&gt;, &lt;a href=&quot;https://auth0.com/blog/hashing-passwords-one-way-road-to-security/&quot;&gt;armazenar senhas de
@@ -75,7 +75,7 @@ que sempre retorna um número de 32 bits.&lt;/p&gt;
 &lt;p&gt;Os resultados de uma função &lt;em&gt;hash&lt;/em&gt; são chamados de &lt;em&gt;hash codes&lt;/em&gt;, &lt;em&gt;digests&lt;/em&gt; ou
 simplesmente &lt;em&gt;hashes&lt;/em&gt;. Boas funções &lt;em&gt;hash&lt;/em&gt; são rápidas e puras, ou seja, a mesma
 entrada sempre irá retornar a mesma saída.&lt;/p&gt;
-&lt;h2 id=&quot;diferenciando-objetos&quot; tabindex=&quot;-1&quot;&gt;Diferenciando objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;diferenciando-objetos&quot; tabindex=&quot;-1&quot;&gt;Diferenciando objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Outro uso bastante comum é a possibilidade de diferenciar rapidamente objetos
 com múltiplas propriedades. Suponha que você queira comparar dois objetos por
 meio das propriedades que compõem cada um deles. Uma solução trivial seria
@@ -193,7 +193,7 @@ delas será diferente.&lt;/p&gt;
 partir das propriedades do objeto, temos imediatamente um valor diferente, sem
 precisar consultar as outras propriedades. No entanto, se as assinaturas forem
 iguais, isso significa que os objetos são iguais?&lt;/p&gt;
-&lt;h2 id=&quot;colisoes&quot; tabindex=&quot;-1&quot;&gt;Colisões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;colisoes&quot; tabindex=&quot;-1&quot;&gt;Colisões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como já vimos, uma função &lt;em&gt;hash&lt;/em&gt; mapeia um conjunto de tamanho arbitrário em um
 conjunto de tamanho fixo. Como você está mapeando um conjunto de dados
 possivelmente maior em um conjunto de dados fixo, pelo
@@ -230,7 +230,7 @@ objetos.&lt;/p&gt;
   formas: “pode estar no conjunto” ou “não está no conjunto“.
 &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;apresentando-cruxhash&quot; tabindex=&quot;-1&quot;&gt;Apresentando: CRUXHash &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;apresentando-cruxhash&quot; tabindex=&quot;-1&quot;&gt;Apresentando: CRUXHash &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Para facilitar a criação de &lt;em&gt;hashes&lt;/em&gt; de valores primitivos ou objetos em
 JavaScript, criei uma pequena biblioteca: a
 &lt;a href=&quot;https://github.com/MaxRoecker/cruxhash&quot;&gt;&lt;strong&gt;CRUXHash&lt;/strong&gt;&lt;/a&gt;. Para instalar, utilize o
@@ -351,7 +351,7 @@ ou seja, objetos que possuírem mesmas propriedades com mesmos valores, terão
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1418113148&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1418113148&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Finalizo por aqui a apresentação da CRUXHash. A biblioteca disponibiliza outras
 funções para usos em casos mais específicos. Por isso, recomendo que você veja
 no &lt;a href=&quot;https://github.com/MaxRoecker/cruxhash&quot;&gt;repositório oficial&lt;/a&gt; a documentação
@@ -359,7 +359,7 @@ da API disponível.&lt;/p&gt;
 &lt;p&gt;Criei essa biblioteca de acordo com minha necessidade em projetos pessoais e
 profissionais. Caso você queira adicionar algum comportamento, entre em contato
 comigo. PRs são sempre bem vindos!&lt;/p&gt;
-&lt;h2 id=&quot;agradecimentos&quot; tabindex=&quot;-1&quot;&gt;Agradecimentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;agradecimentos&quot; tabindex=&quot;-1&quot;&gt;Agradecimentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/cruxhash/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Agradeço meu amigo
 &lt;a href=&quot;https://www.linkedin.com/in/henrique-neves-da-silva-5a93a660/&quot;&gt;Henrique Neves&lt;/a&gt;
 pela revisão e pelas considerações importantes no texto!&lt;/p&gt;
@@ -368,9 +368,9 @@ pela revisão e pelas considerações importantes no texto!&lt;/p&gt;
 	
 	<entry>
 		<title>Web Components #2</title>
-		<link href="https://maxroecker.github.io/blog/web-components-2"/>
+		<link href="https://maxroecker.github.io/blog/web-components-2/"/>
 		<updated>2018-04-02T19:49:13Z</updated>
-		<id>https://maxroecker.github.io/blog/web-components-2</id>
+		<id>https://maxroecker.github.io/blog/web-components-2/</id>
 		<content type="html">&lt;p&gt;Como vimos &lt;a href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;na publicação anterior&lt;/a&gt;, o termo &lt;em&gt;web
 components&lt;/em&gt; se refere ao conjunto de APIs disponibilizadas na plataforma &lt;em&gt;web&lt;/em&gt;
 que permitem a criação de elementos personalizados que podem ser instanciados de
@@ -382,7 +382,7 @@ para os &lt;em&gt;web components&lt;/em&gt; e traz uma forma padronizada de cria
 reutilizáveis com nada mais que HTML, CSS e JavaScript. Sem a necessidade de
 utilizar uma bibliotecas ou &lt;em&gt;frameworks&lt;/em&gt;. Dessa forma, temos menos código, mais
 compatibilidade e mais reutilização.&lt;/p&gt;
-&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;Como já vimos&lt;/a&gt;, para definir um elemento personalizado
 basta você estender a classe &lt;code&gt;HTMLElement&lt;/code&gt; e associar ela à uma &lt;em&gt;tag&lt;/em&gt;,
 utilizando o método &lt;code&gt;define&lt;/code&gt; do global &lt;code&gt;customElements&lt;/code&gt;. Para exemplificar,
@@ -406,7 +406,7 @@ volta.&lt;/li&gt;
 declarou um elemento como &lt;code&gt;meu-elemento&lt;/code&gt;, você deve escrevê-lo como
 &lt;code&gt;&amp;lt;meu-elemento&amp;gt;&amp;lt;/meu-elemento&amp;gt;&lt;/code&gt;. Escrever &lt;code&gt;&amp;lt;meu-elemento /&amp;gt;&lt;/code&gt; não funciona.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&quot;definindo-a-api-do-elemento&quot; tabindex=&quot;-1&quot;&gt;Definindo a API do elemento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;definindo-a-api-do-elemento&quot; tabindex=&quot;-1&quot;&gt;Definindo a API do elemento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como utilizamos a &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;sintaxe &lt;code&gt;class&lt;/code&gt;&lt;/a&gt;
 para definir o construtor do elemento, já utilizamos o &lt;code&gt;extends&lt;/code&gt; para estender o
 comportamento do &lt;code&gt;HTMLElement&lt;/code&gt;. Estender o comportamento do &lt;code&gt;HTMLElement&lt;/code&gt;
@@ -434,7 +434,7 @@ seus valores em atributos no DOM por meio dos métodos &lt;code&gt;setAttribute&
   &lt;code&gt;children&lt;/code&gt; ou selecionar elementos com &lt;code&gt;querySelector&lt;/code&gt;.
 &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;definindo-o-comportamento-do-elemento&quot; tabindex=&quot;-1&quot;&gt;Definindo o comportamento do elemento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;definindo-o-comportamento-do-elemento&quot; tabindex=&quot;-1&quot;&gt;Definindo o comportamento do elemento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;Na publicação anterior&lt;/a&gt;, vimos que é possível
 adicionar conteúdo ao elemento manipulando o DOM. Também vimos que para garantir
 o encapsulamento do elemento, é importante utilizar um &lt;em&gt;shadow&lt;/em&gt; DOM. Vamos
@@ -468,7 +468,7 @@ e pode ter qualquer tipo de valor do JavaScript.&lt;/p&gt;
     propriedade.
   &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;reagindo-a-mudancas-nos-atributos&quot; tabindex=&quot;-1&quot;&gt;Reagindo a mudanças nos atributos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;reagindo-a-mudancas-nos-atributos&quot; tabindex=&quot;-1&quot;&gt;Reagindo a mudanças nos atributos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Para reagir a mudanças nos atributos precisamos definir quais atributos serão
 observados. Para isso, crie a propriedade estática &lt;code&gt;observedAttributes&lt;/code&gt;, que
 retorne o nome dos atributos que queira observar. Após isso, sobrescreva o
@@ -493,7 +493,7 @@ marcação no HTML funciona como o esperado e inicializa a propriedade com o val
     infinito.
   &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;estilizando-de-acordo-com-o-estado&quot; tabindex=&quot;-1&quot;&gt;Estilizando de acordo com o estado &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;estilizando-de-acordo-com-o-estado&quot; tabindex=&quot;-1&quot;&gt;Estilizando de acordo com o estado &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como também já vimos, podemos estilizar o elemento utilizando um &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;
 encapsulado pelo &lt;em&gt;shadow&lt;/em&gt; DOM. Suponha que você queira estilizar o texto do
 &lt;code&gt;span&lt;/code&gt; para negrito, bastaria mudar a marcação atribuída no &lt;em&gt;shadow&lt;/em&gt; DOM. No
@@ -521,7 +521,7 @@ continua valendo.&lt;/p&gt;
 &lt;p&gt;Veja também que “adicionamos” um delay na definição do elemento, e, enquanto ele
 não é definido, aplicou-se um estilo temporário com o uso da pseudo-classe
 &lt;code&gt;:defined&lt;/code&gt;. Caso não tenha visto, recarregue o resultado clicando no botão “↻”.&lt;/p&gt;
-&lt;h2 id=&quot;elementos-nao-definidos-e-desconhecidos&quot; tabindex=&quot;-1&quot;&gt;Elementos não definidos e desconhecidos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;elementos-nao-definidos-e-desconhecidos&quot; tabindex=&quot;-1&quot;&gt;Elementos não definidos e desconhecidos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O HTML é bastante flexível. Por exemplo, ao declarar uma &lt;em&gt;tag&lt;/em&gt; &lt;code&gt;&amp;lt;accordion&amp;gt;&lt;/code&gt; em
 um documento, o navegador vai aceitá-la sem problemas, mesmo que &lt;code&gt;&amp;lt;accordion&amp;gt;&lt;/code&gt;
 não faça parte do vocabulário. Esse comportamento é previsto pela &lt;a href=&quot;https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement&quot;&gt;própria
@@ -550,7 +550,7 @@ não for um nome de elemento personalizado válido.&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;customElements&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;whenDefined&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;wc-counter&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;&quot;wc-counter&quot; está pronto!&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Elementos personalizados são uma forma de definir novas &lt;em&gt;tags&lt;/em&gt; HTML e permitem a
 criação de componentes reutilizáveis quando combinado com outras tecnologias,
 como o &lt;em&gt;shadow&lt;/em&gt; DOM. Eles fornecem várias vantagens:&lt;/p&gt;
@@ -570,9 +570,9 @@ próxima!&lt;/p&gt;
 	
 	<entry>
 		<title>IDs são globais</title>
-		<link href="https://maxroecker.github.io/blog/ids-globais"/>
+		<link href="https://maxroecker.github.io/blog/ids-globais/"/>
 		<updated>2018-02-22T10:34:01Z</updated>
-		<id>https://maxroecker.github.io/blog/ids-globais</id>
+		<id>https://maxroecker.github.io/blog/ids-globais/</id>
 		<content type="html">&lt;p&gt;Você sabia que se você precisar acessar um elemento de um documento HTML marcado
 com um &lt;code&gt;id&lt;/code&gt;, basta você acessar a variável com o mesmo nome? Ou seja, se você
 tiver uma marcação assim:&lt;/p&gt;
@@ -624,9 +624,9 @@ ou
 	
 	<entry>
 		<title>Web Components #1</title>
-		<link href="https://maxroecker.github.io/blog/web-components-1"/>
+		<link href="https://maxroecker.github.io/blog/web-components-1/"/>
 		<updated>2018-01-30T01:00:55Z</updated>
-		<id>https://maxroecker.github.io/blog/web-components-1</id>
+		<id>https://maxroecker.github.io/blog/web-components-1/</id>
 		<content type="html">&lt;p&gt;Você já deve conhecer o HTML, certo? Uma ótima ferramenta para construir
 aplicações na &lt;em&gt;web&lt;/em&gt;. O HTML é declarativo, portável, bem suportado e fácil de
 trabalhar. Quando você está construindo um documento ou uma aplicação com HTML
@@ -671,7 +671,7 @@ principais especificações:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Antes de detalhar cada uma dessas especificações, vamos fazer um apanhado geral
 de como &lt;em&gt;web components&lt;/em&gt; trabalham e como você pode utilizá-los.&lt;/p&gt;
-&lt;h2 id=&quot;como-definir-e-instanciar-um-web-component&quot; tabindex=&quot;-1&quot;&gt;Como definir e instanciar um &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;como-definir-e-instanciar-um-web-component&quot; tabindex=&quot;-1&quot;&gt;Como definir e instanciar um &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Para criar um &lt;em&gt;web component&lt;/em&gt; basta você estender a classe
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement&quot;&gt;&lt;code&gt;HTMLElement&lt;/code&gt;&lt;/a&gt; e
 registrar uma tag associada a essa classe por meio do método &lt;code&gt;define&lt;/code&gt; do objeto
@@ -691,7 +691,7 @@ outro. Veja abaixo:&lt;/p&gt;
 &lt;p&gt;Você pode ver que, como com seu elemento personalizado presente na árvore DOM,
 nada é exibido no navegador. Isso acontece porque ainda não adicionamos conteúdo
 ao &lt;em&gt;web component&lt;/em&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;adicionando-conteudo-ao-web-component&quot; tabindex=&quot;-1&quot;&gt;Adicionando conteúdo ao &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;adicionando-conteudo-ao-web-component&quot; tabindex=&quot;-1&quot;&gt;Adicionando conteúdo ao &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Todo e qualquer comportamento do componente é dado pela a classe associada à
 &lt;em&gt;tag&lt;/em&gt;. No nosso caso, se queremos adicionar um conteúdo ao &lt;code&gt;hello-world&lt;/code&gt;,
 precisamos defini-lo na classe &lt;code&gt;HelloWorld&lt;/code&gt;. Como o próprio nome do componente
@@ -707,7 +707,7 @@ Para fazer isso, sobreescrevemos o método &lt;code&gt;connectedCallback&lt;/cod
     &lt;i&gt;web component&lt;/i&gt;, veja &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks&quot;&gt;aqui&lt;/a&gt;.
   &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;adicionando-estilos-ao-web-component&quot; tabindex=&quot;-1&quot;&gt;Adicionando estilos ao &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;adicionando-estilos-ao-web-component&quot; tabindex=&quot;-1&quot;&gt;Adicionando estilos ao &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Bom, agora que temos nosso componente, vamos estilizá-lo para que o &lt;code&gt;h1&lt;/code&gt; tenha
 uma cor azul. Podemos fazer isso com CSS utilizando o elemento &lt;code&gt;style&lt;/code&gt; e
 atribuímos ao &lt;code&gt;head&lt;/code&gt; do documento. Veja:&lt;/p&gt;
@@ -717,7 +717,7 @@ atribuímos ao &lt;code&gt;head&lt;/code&gt; do documento. Veja:&lt;/p&gt;
 Isso acontece porque o comportamento padrão do CSS é global. Uma folha de
 estilos afeta todos os elementos de um documento. No entanto, para solucionar
 este problema, temos em mãos a API &lt;strong&gt;&lt;em&gt;Shadow&lt;/em&gt; DOM&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;encapsulando-o-web-component&quot; tabindex=&quot;-1&quot;&gt;Encapsulando o &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;encapsulando-o-web-component&quot; tabindex=&quot;-1&quot;&gt;Encapsulando o &lt;em&gt;web component&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A &lt;em&gt;Shadow&lt;/em&gt; DOM é uma API que permite criar subárvores DOM encapsuladas da árvore
 DOM principal. Assim, qualquer marcação, estilo ou &lt;em&gt;script&lt;/em&gt; que seja definido no
 &lt;em&gt;shadow&lt;/em&gt; DOM só afeta o próprio &lt;em&gt;shadow&lt;/em&gt; DOM. Nós podemos fazer isso por meio
@@ -727,7 +727,7 @@ do método &lt;code&gt;attachShadow&lt;/code&gt;. Veja:&lt;/p&gt;
 &lt;p&gt;Se você ver o resultado, agora somente o &lt;code&gt;h1&lt;/code&gt; do &lt;em&gt;web component&lt;/em&gt; está estilizado
 e, graças ao &lt;em&gt;shadow&lt;/em&gt; DOM, não temos efeitos colaterais em outros elementos da
 árvore DOM.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/web-components-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O termo &lt;em&gt;web components&lt;/em&gt; define um conjunto de especificações de baixo nível
 que, quando utilizadas em conjunto, permitem criar verdadeiros componentes que
 podem ser reutilizados em uma aplicação sem a necessidade de convenção,
@@ -750,9 +750,9 @@ que ilustram um futuro promissor para a tecnologia.&lt;/p&gt;
 	
 	<entry>
 		<title>Captura e borbulhamento de eventos</title>
-		<link href="https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos"/>
+		<link href="https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/"/>
 		<updated>2018-01-14T02:02:00Z</updated>
-		<id>https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos</id>
+		<id>https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/</id>
 		<content type="html">&lt;p&gt;Um dos aspectos mais confusos quando estamos trabalhando com eventos são os
 estágios que um evento passa enquanto é propagado pela árvore DOM: a &lt;strong&gt;captura&lt;/strong&gt;
 e o &lt;strong&gt;borbulhamento&lt;/strong&gt;. Não é sempre que temos problemas, mas você pode ter uma
@@ -798,7 +798,7 @@ e você precisa abrir de novo pelo botão. Isso acontece porque o &lt;code&gt;&a
 ouve eventos de clique é descendente de &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, que também ouve eventos de
 clique. Ou seja, quando você clica no vídeo para iniciar a execução, ambos os
 ouvintes são executados e, por isso, o vídeo fecha.&lt;/p&gt;
-&lt;h2 id=&quot;captura-e-borbulhamento&quot; tabindex=&quot;-1&quot;&gt;Captura e borbulhamento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;captura-e-borbulhamento&quot; tabindex=&quot;-1&quot;&gt;Captura e borbulhamento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Quando um evento é disparado por um elemento que possui algum antecessor (no
 exemplo acima, &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; tem &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; como antecessor), os navegadores podem
 propagá-lo em dois estágios: a captura e o borbulhamento.&lt;/p&gt;
@@ -820,7 +820,7 @@ para o estágio de borbulhamento por padrão. Por isso, em nosso exemplo, o even
 de clique borbulha de &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; para o antecessor &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;. Assim, ele irá
 encontrar o ouvinte de clique em &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; e vai começar a rodar o vídeo. Logo
 em seguida, ele vai encontrar o ouvinte em &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; e vai ocultar o vídeo.&lt;/p&gt;
-&lt;h3 id=&quot;parando-a-propagacao-dos-eventos&quot; tabindex=&quot;-1&quot;&gt;Parando a propagação dos eventos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;parando-a-propagacao-dos-eventos&quot; tabindex=&quot;-1&quot;&gt;Parando a propagação dos eventos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;O comportamento do exemplo acima é bastante chato, mas pode ser consertado. O
 DOM, por meio da classe &lt;code&gt;Event&lt;/code&gt;, fornece o método &lt;code&gt;stopPropagation&lt;/code&gt; que pode ser
 chamado em um ouvinte quando queremos parar qualquer uma das propagações.&lt;/p&gt;
@@ -860,7 +860,7 @@ depois, seguido do estágio de borbulhamento.&lt;/p&gt;
     pelos navegadores atualmente.
   &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;delegacao-de-eventos&quot; tabindex=&quot;-1&quot;&gt;Delegação de eventos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;delegacao-de-eventos&quot; tabindex=&quot;-1&quot;&gt;Delegação de eventos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Imagine que você tem vários elementos &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; em uma lista &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;, como na
 marcação abaixo:&lt;/p&gt;
 &lt;pre class=&quot;language-html&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;list&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -896,7 +896,7 @@ list&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Com o código acima, as preocupações com a adição ou remoção de itens deixam de
 existir porque só temos um ouvinte para toda a lista.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/captura-e-borbulhamento-de-eventos/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Com o que vimos até agora, você já tem um bom fundamento sobre os diferentes
 estágios de propagação de eventos: a captura e o borbulhamento. Apesar de um
 deles raramente ser utilizado, é importante conhecer como o DOM funciona para
@@ -908,9 +908,9 @@ trabalha, e se você trabalha com &lt;em&gt;web&lt;/em&gt;, deve conhecer o DOM.
 	
 	<entry>
 		<title>O que é o DOM?</title>
-		<link href="https://maxroecker.github.io/blog/o-que-e-o-dom"/>
+		<link href="https://maxroecker.github.io/blog/o-que-e-o-dom/"/>
 		<updated>2016-08-05T22:15:22Z</updated>
-		<id>https://maxroecker.github.io/blog/o-que-e-o-dom</id>
+		<id>https://maxroecker.github.io/blog/o-que-e-o-dom/</id>
 		<content type="html">&lt;p&gt;O &lt;strong&gt;Modelo Objeto de Documento&lt;/strong&gt; (DOM, do inglês &lt;em lang=&quot;en&quot;&gt;Document Object
 Model&lt;/em&gt;) é uma estrutura de dados que representa a estrutura e o conteúdo de
 um documento &lt;em&gt;web&lt;/em&gt;. Técnicamente, o DOM é uma representação orientada a objetos
@@ -934,7 +934,7 @@ elementos descendentes que casam com o seletor dado.&lt;/p&gt;
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; paragraph &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; paragraphs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;paragraph&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;o-dom-e-o-javascript&quot; tabindex=&quot;-1&quot;&gt;O DOM e o JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;o-dom-e-o-javascript&quot; tabindex=&quot;-1&quot;&gt;O DOM e o JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;No exemplo anterior, e em quase todos os exemplos que você vai encontrar quando
 pesquisar e trabalhar com DOM, você utilizará o JavaScript. No entanto, é
 importante entender e separar o DOM e o JavaScript. DOM não é uma linguagem de
@@ -953,7 +953,7 @@ p_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;s
 
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; p &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; p_list&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;acessando-o-dom&quot; tabindex=&quot;-1&quot;&gt;Acessando o DOM &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;acessando-o-dom&quot; tabindex=&quot;-1&quot;&gt;Acessando o DOM &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nos navegadores não é necessário adicionar uma biblioteca para utilizar o DOM,
 qualquer &lt;code&gt;script&lt;/code&gt; JavaScript executado no ambiente dos navegadores tem acesso
 a ele. Veja um exemplo abaixo de um documento HTML que utiliza o DOM para
@@ -977,7 +977,7 @@ construir um cabeçalho com a frase “Olá Mundo!”.&lt;/p&gt;
 &lt;code&gt;addEventListener&lt;/code&gt; do &lt;code&gt;window&lt;/code&gt;; os método &lt;code&gt;createElement&lt;/code&gt; do &lt;code&gt;document&lt;/code&gt; ou o
 &lt;code&gt;appendChild&lt;/code&gt; do &lt;code&gt;header&lt;/code&gt;. Todos esses métodos são definidos pelo DOM e
 disponibilizados pelo navegador.&lt;/p&gt;
-&lt;h2 id=&quot;algumas-interfaces-fundamentais&quot; tabindex=&quot;-1&quot;&gt;Algumas interfaces fundamentais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;algumas-interfaces-fundamentais&quot; tabindex=&quot;-1&quot;&gt;Algumas interfaces fundamentais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como já dito anteriormente, o DOM é uma API orientada a objetos que representa
 um documento &lt;em&gt;web&lt;/em&gt;. Um documento HTML, por exemplo, é representado no DOM como
 um objeto que segue a interface
@@ -1012,7 +1012,7 @@ um evento e o método &lt;code&gt;addEventListener&lt;/code&gt; da interface &lt
     &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window&quot;&gt;&lt;code&gt;Window&lt;/code&gt;&lt;/a&gt;
   &lt;/p&gt;
 &lt;/aside&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/o-que-e-o-dom/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Você pode ver que quase todas as características de um documento HTML são
 representadas de alguma forma no DOM. Existem muitas classes e interfaces que
 contém diversos métodos e propriedades. É colossal o tamanho da especificação do
@@ -1028,9 +1028,9 @@ para a &lt;em&gt;web&lt;/em&gt;.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Orientado a Objetos #4</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4"/>
+		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/"/>
 		<updated>2016-04-30T17:23:39Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4</id>
+		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/</id>
 		<content type="html">&lt;p&gt;Hoje iremos voltar a ver sobre Construtores no contexto do JavaScript
 Orientado a Objetos, e as principais funcionalidades que a versão 2015 adicionou
 à linguagem.&lt;/p&gt;
@@ -1042,7 +1042,7 @@ e também ver o como criar objetos com
 &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;construtores&lt;/a&gt;
 e a alternativa à ele, as
 &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;fábricas&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Já vimos que construtores são feitos por meio de funções que recebem um contexto
 especial em &lt;code&gt;this&lt;/code&gt; e que são chamadas junto ao operador &lt;code&gt;new&lt;/code&gt;. Vimos também que
 construtores adicionam métodos ao protótipo dos objetos criados e, por isso, são
@@ -1060,7 +1060,7 @@ exemplo das publicações anteriores, temos, abaixo, o construtor &lt;code&gt;Pe
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Pedremildo&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Escavadeira&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getFullName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &#39;Pedremildo Escavadeira&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;classes-do-es2015&quot; tabindex=&quot;-1&quot;&gt;Classes do ES2015 &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;classes-do-es2015&quot; tabindex=&quot;-1&quot;&gt;Classes do ES2015 &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;No entanto, essa notação para escrever construtores é bastante diferente de
 outras linguagens de programação, o que sempre causou um pouco de receio em
 desenvolvedores. Com o advento do ECMA2015, o JavaScript adicionou outra forma
@@ -1095,7 +1095,7 @@ dentro do &lt;code&gt;constructor&lt;/code&gt;, e os métodos que antes eram adi
 do construtor agora são definidos no corpo da classe. Essa mudança sintática
 aproxima o JavaScript de outras linguagens e torna mais fácil para pessoas com
 outras experiências animem-se com ele.&lt;/p&gt;
-&lt;h2 id=&quot;heranca&quot; tabindex=&quot;-1&quot;&gt;Herança &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;heranca&quot; tabindex=&quot;-1&quot;&gt;Herança &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A herança, com as classes, possuem as mesmas vantagens e desvantagens da herança
 com construtores, mas possuem uma sintaxe mais simples utilizando a
 palavra-chave &lt;code&gt;extends&lt;/code&gt;. Vamos relembrar o exemplo da publicação anterior e
@@ -1124,7 +1124,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getFullName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &#39;Pedremildo Escavadeira&#39;&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getTax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;encapsulamento-e-polimorfismo&quot; tabindex=&quot;-1&quot;&gt;Encapsulamento e polimorfismo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;encapsulamento-e-polimorfismo&quot; tabindex=&quot;-1&quot;&gt;Encapsulamento e polimorfismo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como os objetos são estruturas de dados muito parecidos com uma
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Associative_array&quot;&gt;tabela &lt;em&gt;hash&lt;/em&gt;&lt;/a&gt;, todas as
 propriedades do objeto são acessíveis. As classes, até o ES2015, não
@@ -1134,7 +1134,7 @@ seja “protegida” do meio externo, fazemos isso por meio de uma notação pad
 normalmente prefixando o nome da propriedade com &lt;code&gt;_&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Já com relação ao polimorfismo, as mesmas regras dos construtores são aplicadas
 e é dado por meio do &lt;a href=&quot;https://pt.wikipedia.org/wiki/Duck_typing&quot;&gt;&lt;em lang=&quot;en&quot;&gt;duck typing&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;propriedades-e-metodos-estaticos&quot; tabindex=&quot;-1&quot;&gt;Propriedades e métodos estáticos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;propriedades-e-metodos-estaticos&quot; tabindex=&quot;-1&quot;&gt;Propriedades e métodos estáticos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nas classes, propriedades estáticas podem ser adicionadas com prefixando-a com
 a declaração &lt;code&gt;static&lt;/code&gt;. Quando uma propriedade ou método é prefixado com &lt;code&gt;static&lt;/code&gt;,
 o JavaScript adiciona esse essa propriedade ou método na própria classe e não
@@ -1166,7 +1166,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Testerson&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Trunk&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Person&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;count&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;garantias-de-instanciacao&quot; tabindex=&quot;-1&quot;&gt;Garantias de instanciação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;garantias-de-instanciacao&quot; tabindex=&quot;-1&quot;&gt;Garantias de instanciação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;É possível verificar se um objeto é uma instância de uma classe por meio do
 operador &lt;code&gt;instanceof&lt;/code&gt;. Veja abaixo:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Pedremildo&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Escavadeira&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -1188,7 +1188,7 @@ tente chamar uma classe como uma função sem o &lt;code&gt;new&lt;/code&gt;, o 
 dispara um erro.&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Pedremildo&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Escavadeira&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → erro!&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Testerson&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Trunk&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → sucesso&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Utilizar construtores traz várias vantagens que os construtores já possuem, como
 a herança e polimorfismo simplificados e o uso eficiente de memória por meio do
 compartilhamento de código via protótipos. Além disso, a utilização de classes
@@ -1217,9 +1217,9 @@ linguagem ou evoluções nas técnicas de desenvolvimento OO.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Orientado a Objetos #3</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3"/>
+		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/"/>
 		<updated>2016-04-27T05:16:01Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3</id>
+		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/</id>
 		<content type="html">&lt;p&gt;Hoje iremos compreender um pouco sobre as Fábricas no contexto do JavaScript
 Orientado a Objetos, um padrão de projeto alternativos aos construtores para a
 criação de objetos que possui muita similaridade com programação funcional.&lt;/p&gt;
@@ -1240,7 +1240,7 @@ Também é recomendado que você conheça o comportamento e características dos
 &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-intermediario-4/&quot;&gt;&lt;em&gt;closures&lt;/em&gt;&lt;/a&gt; em
 JavaScript. O texto hoje é um pouco longo porque achei importante unir os
 principais tópicos de cada padrão em uma só publicação.&lt;/p&gt;
-&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Já vimos, na publicação anterior, que construtores, em JavaScript, são funções
 que inicializam um objeto o qual a memória já foi alocada. Revisitando nosso
 exemplo do construtor &lt;code&gt;Person&lt;/code&gt;, visto abaixo, vemos que todas as propriedades
@@ -1298,7 +1298,7 @@ incorreto do &lt;code&gt;this&lt;/code&gt; é um dos
 &lt;a href=&quot;https://www.toptal.com/javascript/10-most-common-javascript-mistakes&quot;&gt;erros mais comuns&lt;/a&gt;
 entre desenvolvedores JavaScript em qualquer nível de experiência e é fonte de
 muitos &lt;em&gt;bugs&lt;/em&gt;. No entanto, há uma alternativa: as &lt;strong&gt;fábricas&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;fabricas&quot; tabindex=&quot;-1&quot;&gt;Fábricas &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;fabricas&quot; tabindex=&quot;-1&quot;&gt;Fábricas &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Fábricas são, como construtores, funções que inicializam objetos. No entanto,
 fábricas não só inicializam o objeto, como também são responsáveis por
 criar a área de memória associada à ele; diferente dos construtores, que passam
@@ -1338,7 +1338,7 @@ da fábrica e podem acessá-lo a qualquer momento.&lt;/p&gt;
 cópias e não são compartilhados. A cada vez que a fábrica &lt;code&gt;Person&lt;/code&gt; é chamada, ela
 cria um objeto e cópias dos métodos amarrados a esse objeto. Veja:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;heranca&quot; tabindex=&quot;-1&quot;&gt;Herança &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;heranca&quot; tabindex=&quot;-1&quot;&gt;Herança &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Fábricas também podem utilizar a herança. Vamos relembrar o exemplo da
 publicação anterior, criando uma fábrica &lt;code&gt;Employee&lt;/code&gt;, que estende &lt;code&gt;Person&lt;/code&gt; e
 adiciona a propriedade &lt;code&gt;salary&lt;/code&gt; e o método &lt;code&gt;getTax&lt;/code&gt;.&lt;/p&gt;
@@ -1364,7 +1364,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getFullName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &#39;Pedremildo Escavadeira&#39;&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → false&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getTax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;encapsulamento&quot; tabindex=&quot;-1&quot;&gt;Encapsulamento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;encapsulamento&quot; tabindex=&quot;-1&quot;&gt;Encapsulamento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Apesar dos objetos serem estruturas de dados muito parecidos com uma
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Associative_array&quot;&gt;tabela &lt;em&gt;hash&lt;/em&gt;&lt;/a&gt;, onde todas as
 propriedades do objeto são acessíveis. O conceito de encapsulamento, com
@@ -1385,7 +1385,7 @@ verdadeiro. Vamos refatorar o exemplo acima para adicionar uma propriedade
 &lt;p&gt;Veja que &lt;code&gt;rate&lt;/code&gt; é uma variável que está no &lt;code&gt;closure&lt;/code&gt; de &lt;code&gt;getTax&lt;/code&gt;. Não há outra
 forma de acessar &lt;code&gt;rate&lt;/code&gt; senão pelo método &lt;code&gt;getTax&lt;/code&gt;. Ou seja, &lt;code&gt;rate&lt;/code&gt; está
 encapsulada de qualquer efeito externo que não seja gerado pelo próprio objeto.&lt;/p&gt;
-&lt;h2 id=&quot;polimorfismo&quot; tabindex=&quot;-1&quot;&gt;Polimorfismo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;polimorfismo&quot; tabindex=&quot;-1&quot;&gt;Polimorfismo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Assim como em construtores, devido às características do JavaScript, o
 polimorfismo pode ser realizado sem muitos problemas, uma vez que funções são
 objetos, objetos são mutáveis e variáveis não possuem tipos definidos.
@@ -1407,7 +1407,7 @@ polimorfismo.&lt;/p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;https://maxroecker.github.io/img/illustrations/automata-duck.svg&quot; alt=&quot;Um automâto de pato com sistema alimentação similar ao trato digestivo&quot; title=&quot;Pato Mecânico de Jacques de Vaucanson, 1738&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;propriedades-e-metodos-estaticos&quot; tabindex=&quot;-1&quot;&gt;Propriedades e métodos estáticos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;propriedades-e-metodos-estaticos&quot; tabindex=&quot;-1&quot;&gt;Propriedades e métodos estáticos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;De forma similar aos construtores, propriedades e métodos estáticos podem ser
 criados atribuindo-os diretamente à fábrica. Relembrando o exemplo da publicação
 anterior, vamos criar uma propriedade estática na fábrica &lt;code&gt;Person&lt;/code&gt; para
@@ -1437,13 +1437,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Testerson&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Trunk&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Person&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;count&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;garantias-de-instanciacao&quot; tabindex=&quot;-1&quot;&gt;Garantias de instanciação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;garantias-de-instanciacao&quot; tabindex=&quot;-1&quot;&gt;Garantias de instanciação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como as fábricas não utilizam a cadeia de protótipos, não há como determinar se um
 objeto foi criado ou não por uma fábrica por meio do operador &lt;code&gt;instanceof&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;No entanto, também não temos a necessidade de verificar se uma função foi
 chamada da forma correta, uma vez que a própria fábrica detém o controle da
 criação do objeto.&lt;/p&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Utilizar fábricas traz várias vantagens alternativas e atacam os pontos onde
 construtores deixam a desejar:&lt;/p&gt;
 &lt;ul&gt;
@@ -1522,9 +1522,9 @@ isso é um assunto para a próxima publicação!&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Orientado a Objetos #2</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2"/>
+		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/"/>
 		<updated>2016-04-22T21:05:36Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2</id>
+		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/</id>
 		<content type="html">&lt;p&gt;Hoje iremos compreender um pouco sobre Construtores no contexto do JavaScript
 Orientado a Objetos, um padrão de projeto para a criação de objetos que possui
 muita similaridade com a orientação a objetos com classes.&lt;/p&gt;
@@ -1543,7 +1543,7 @@ Também é recomendado que você conheça o comportamento e características dos
 &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;funções&lt;/a&gt; em
 JavaScript. O texto hoje é um pouco longo porque achei importante unir os
 principais tópicos de cada padrão em uma só publicação.&lt;/p&gt;
-&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Na orientação a objetos, um &lt;strong&gt;construtor&lt;/strong&gt; é uma rotina utilizada para
 inicializar um objeto cuja a memória para ele já foi alocada. Em linguagens com
 orientação a objetos baseada em classes, como é o caso do Java e do C++, o
@@ -1581,7 +1581,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;surname&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Trunk&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getFullName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &#39;Pedremildo Escavadeira&#39;&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;construtores&quot; tabindex=&quot;-1&quot;&gt;Construtores &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;construtores&quot; tabindex=&quot;-1&quot;&gt;Construtores &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O exemplo anterior de um construtor está “bem comportado”, uma vez que estamos
 passando objetos “vazios” com o literal &lt;code&gt;{…}&lt;/code&gt;. Quando estamos falando de
 construtores, normalmente estamos falando de inicializar objetos recém-criados,
@@ -1627,7 +1627,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;Utilizar construtores com o operador &lt;code&gt;new&lt;/code&gt; e a cadeia de protótipos é
 considerado a técnica mais comum e recomendada de desenvolver código orientado a
 objetos em JavaScript, e é nela que iremos nos aprofundar nos próximos tópicos.&lt;/p&gt;
-&lt;h2 id=&quot;heranca&quot; tabindex=&quot;-1&quot;&gt;Herança &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;heranca&quot; tabindex=&quot;-1&quot;&gt;Herança &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Podemos alcançar a herança ao utilizar uma chamada ao construtor qual se quer
 herdar as características com o auxílio do método
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply&quot;&gt;&lt;code&gt;apply&lt;/code&gt;&lt;/a&gt;.
@@ -1666,7 +1666,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getFullName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &#39;Pedremildo Escavadeira&#39;&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getFullName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getTax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;encapsulamento&quot; tabindex=&quot;-1&quot;&gt;Encapsulamento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;encapsulamento&quot; tabindex=&quot;-1&quot;&gt;Encapsulamento &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como os objetos são estruturas de dados muito parecidos com uma
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Associative_array&quot;&gt;tabela &lt;em&gt;hash&lt;/em&gt;&lt;/a&gt;, todas as
 propriedades do objeto podem ser acessadas. O conceito de encapsulamento, com
@@ -1695,7 +1695,7 @@ outra propriedade do objeto, mas, por convenção, indica-se que ela não deve s
 manipulada fora do próprio objeto. Esse tipo de convenção não é único da
 linguagem JavaScript, outras linguagens dinâmicas, como o Python,
 &lt;a href=&quot;https://docs.python.org/3/tutorial/classes.html#private-variables&quot;&gt;adotam regras similares&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;polimorfismo&quot; tabindex=&quot;-1&quot;&gt;Polimorfismo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;polimorfismo&quot; tabindex=&quot;-1&quot;&gt;Polimorfismo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Em JavaScript o polimorfismo pode ser realizado sem muitos problemas, uma vez
 que funções são objetos, objetos são mutáveis e variáveis não possuem tipos
 definidos. Normalmente o polimorfismo se dá por meio do &lt;a href=&quot;https://pt.wikipedia.org/wiki/Duck_typing&quot;&gt;&lt;em lang=&quot;en&quot;&gt;duck
@@ -1717,7 +1717,7 @@ polimorfismo.&lt;/p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;https://maxroecker.github.io/img/illustrations/automata-duck.svg&quot; alt=&quot;Um automâto de pato com sistema alimentação similar ao trato digestivo&quot; title=&quot;Pato Mecânico de Jacques de Vaucanson, 1738&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;propriedades-e-metodos-estaticos&quot; tabindex=&quot;-1&quot;&gt;Propriedades e métodos estáticos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;propriedades-e-metodos-estaticos&quot; tabindex=&quot;-1&quot;&gt;Propriedades e métodos estáticos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Propriedades estáticas são atributos/métodos que pertencem ao construtor e não a
 cada um dos objetos construídos por ele. Propriedades estáticas dos construtores
 podem ser criadas atribuindo propriedades aos próprios construtores.&lt;/p&gt;
@@ -1745,7 +1745,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Testerson&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Trunk&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Person&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;count&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;garantias-de-instanciacao&quot; tabindex=&quot;-1&quot;&gt;Garantias de instanciação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;garantias-de-instanciacao&quot; tabindex=&quot;-1&quot;&gt;Garantias de instanciação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O JavaScript também permite verificar se um objeto é uma instância de um
 construtor por meio do operador &lt;code&gt;instanceof&lt;/code&gt;. Veja abaixo:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Employee&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Pedremildo&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Escavadeira&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -1782,7 +1782,7 @@ esperado, podemos adicionar o seguinte teste:&lt;/p&gt;
 &lt;p&gt;Assim, se caso alguém chame &lt;code&gt;Person&lt;/code&gt; sem o &lt;code&gt;new&lt;/code&gt;, teremos um erro.&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Pedremildo&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Escavadeira&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → erro!&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Testerson&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Trunk&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → sucesso&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Utilizar construtores traz várias vantagens que incluem:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Herança simplificada: basta chamar o construtor em outro e adequar a cadeia
@@ -1814,16 +1814,16 @@ publicação.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Orientado a Objetos #1</title>
-		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1"/>
+		<link href="https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/"/>
 		<updated>2016-04-15T08:49:56Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1</id>
+		<id>https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/</id>
 		<content type="html">&lt;p&gt;Hoje vamos iniciar uma nova série de publicações sobre a linguagem JavaScript
 com foco na programação orientada a objetos. Nessa série, espero que você
 compreenda conceitos importantes como o encapsulamento de dados, herança e
 polimorfismo em seu código. Vamos também entender mais a fundo a estrutura dos
 objetos e compreender o estilo de programação baseado em protótipos do
 JavaScript.&lt;/p&gt;
-&lt;h2 id=&quot;introducao-rapida-a-programacao-orientada-a-objetos&quot; tabindex=&quot;-1&quot;&gt;Introdução rápida à Programação Orientada a Objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;introducao-rapida-a-programacao-orientada-a-objetos&quot; tabindex=&quot;-1&quot;&gt;Introdução rápida à Programação Orientada a Objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;Programação Orientada a Objetos&lt;/a&gt;
 (POO) é um paradigma de programação que favorece o uso de &lt;strong&gt;objetos&lt;/strong&gt;, unidades
@@ -1875,7 +1875,7 @@ acostumados com outras linguagens.&lt;/p&gt;
 &lt;figure&gt;
   &lt;img alt=&quot;Um homem opera um veículo de uma roda sentado dentro da grande roda, protegido do mau tempo por um guarda-chuva fixado no dispositivo.&quot; title=&quot;J. O. Lose of Patterson, N. J. Veículo de uma Roda. N° 325,548.&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://maxroecker.github.io/img/-E-Ftz6x5P-800.svg&quot; width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;revisando-os-objetos-em-javascript&quot; tabindex=&quot;-1&quot;&gt;Revisando os Objetos em JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;revisando-os-objetos-em-javascript&quot; tabindex=&quot;-1&quot;&gt;Revisando os Objetos em JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A grande maioria das linguagens que utilizam Orientação a Objetos se baseiam em
 &lt;strong&gt;classes&lt;/strong&gt;. Uma classe é um “modelo” ou um “&lt;a href=&quot;https://pt.wikipedia.org/wiki/Blueprint&quot;&gt;&lt;em lang=&quot;en&quot;&gt;blueprint&lt;/em&gt;&lt;/a&gt;”
 para a criação de objetos. É responsabilidade da classe definir os atributos e a
@@ -1906,7 +1906,7 @@ objeto criado anteriormente dentro do método &lt;code&gt;getUsername&lt;/code&g
 &lt;p&gt;Entretanto, objetos literais do JavaScript não possuem o conceito de
 encapsulamento como pregado pela Orientação a Objeto. Todos os atributos são
 acessíveis e visíveis pelo lado de fora do objeto.&lt;/p&gt;
-&lt;h2 id=&quot;prototipos&quot; tabindex=&quot;-1&quot;&gt;Protótipos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;prototipos&quot; tabindex=&quot;-1&quot;&gt;Protótipos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://maxroecker.github.io/blog/javascript-intermediario-6/&quot;&gt;Como visto anteriormente&lt;/a&gt;,
 o JavaScript não possui Orientação a Objetos baseado em Classes (OOC). Na
 verdade, a linguagem implementa outro “estilo” de programação orientada a
@@ -1923,7 +1923,7 @@ sobre o que são protótipos de objetos, recomendo a leitura
 &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-intermediario-6/&quot;&gt;desse texto&lt;/a&gt; onde
 descrevo com mais detalhes o comportamento de protótipos e suas principais
 características.&lt;/p&gt;
-&lt;h2 id=&quot;orientacao-a-objetos-em-javascript&quot; tabindex=&quot;-1&quot;&gt;Orientação a Objetos em JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;orientacao-a-objetos-em-javascript&quot; tabindex=&quot;-1&quot;&gt;Orientação a Objetos em JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-orientado-a-objetos-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O JavaScript é uma linguagem muito flexível e permite que os desenvolvedores
 tenham liberdade para construir diversas soluções para problemas e objetivos que
 queiram alcançar. Quando estamos programando em um paradigma orientado a objetos
@@ -1944,9 +1944,9 @@ paradigma.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Intermediário #6</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-6"/>
+		<link href="https://maxroecker.github.io/blog/javascript-intermediario-6/"/>
 		<updated>2016-04-06T15:54:33Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-6</id>
+		<id>https://maxroecker.github.io/blog/javascript-intermediario-6/</id>
 		<content type="html">&lt;p&gt;No último texto da série, iremos abordar um dos conceitos que mais causam
 confusão em desenvolvedores que estão iniciando na linguagem, os &lt;strong&gt;protótipos&lt;/strong&gt;.
 No entanto, espero que ao fim dessa publicação, você compreenda que o mecanismo
@@ -1954,7 +1954,7 @@ de protótipos é simples, mas muito poderoso.&lt;/p&gt;
 &lt;aside&gt; &lt;p&gt; &lt;strong&gt;pro·tó·ti·po&lt;/strong&gt;: (1) Primeiro tipo criado, original;
 (2) Algo feito pela primeira vez e, muitas vezes, copiado ou imitado; (3)
 Nodelo, padrão, cânone. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;metodos-de-objetos&quot; tabindex=&quot;-1&quot;&gt;Métodos de objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;metodos-de-objetos&quot; tabindex=&quot;-1&quot;&gt;Métodos de objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Em JavaScript, objetos são estruturas de dados que agrupam duplas de chave-valor
 denominadas de propriedades. A chave de uma propriedade é um nome que aponta
 para um valor único. No entanto, um valor pode ser apontado por várias
@@ -2037,7 +2037,7 @@ para o &lt;code&gt;toString&lt;/code&gt; acima… Chega de mistérios! O que tem
 &lt;figure&gt;
   &lt;img src=&quot;https://maxroecker.github.io/img/illustrations/airship.svg&quot; alt=&quot;Protótipo de aeronave contendo balões preenchidos com vácuo.&quot; title=&quot;Aeronave imaginada pelo italiano Francesco Lana de Terzi (1631–1687)&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;prototipos-de-objetos&quot; tabindex=&quot;-1&quot;&gt;Protótipos de objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;prototipos-de-objetos&quot; tabindex=&quot;-1&quot;&gt;Protótipos de objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Todo objeto em JavaScript pode ter um protótipo. Um protótipo é, informalmente,
 um “objeto reserva” que contém propriedades e métodos e que podem ser acessadas
 a partir do objeto inicial. Assim, ao acessar uma propriedade que não existe no
@@ -2142,7 +2142,7 @@ lenta. Além disso, os efeitos colaterais que envolvem a mudança da cadeia de
 protótipos podem ser bastante imprevisíveis e fonte de bugs com difícil
 identificação. Por tudo isso, alterar o protótipo de um objeto é considerado uma
 má prática na maioria das vezes.&lt;/p&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A grande vantagem dos protótipos é que eles oferecem um considerável ganho de
 desempenho e se apresentam como uma forma eficiente de utilização da memória
 quando queremos distribuir código repetido para vários objetos. Afinal, quando
@@ -2163,13 +2163,13 @@ orientada a eventos.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Intermediário #5</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-5"/>
+		<link href="https://maxroecker.github.io/blog/javascript-intermediario-5/"/>
 		<updated>2016-04-04T14:22:21Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-5</id>
+		<id>https://maxroecker.github.io/blog/javascript-intermediario-5/</id>
 		<content type="html">&lt;p&gt;Hoje iremos abordar a IIFE, uma prática muito utilizada no JavaScript quando
 estamos desenvolvendo aplicações ou módulos na linguagem já que ela garante um
 código que não cause ou seja afetado por efeitos colaterais externos.&lt;/p&gt;
-&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;introducao&quot; tabindex=&quot;-1&quot;&gt;Introdução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Para entender a IIFE, precisamos relembrar o que são expressões funcionais e &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt; em JavaScript.&lt;/p&gt;
 &lt;p&gt;Funções são tratadas como qualquer outro valor em JavaScript, e, por isso, podem
 ser atribuídas em variáveis, passadas como parâmetro ou retornadas como
@@ -2191,7 +2191,7 @@ privado da função e nada mais tem acesso a esse estado exceto outras funções
 definidas no mesmo &lt;i lang=&quot;en&quot;&gt;closure&lt;/i&gt;.&lt;/p&gt;
 &lt;aside&gt; &lt;p&gt; Se você quiser entender melhor sobre o que são &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;, &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2/&quot;&gt;essa outra
 publicação&lt;/a&gt; do blog pode lhe ajudar. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;o-padrao-iife&quot; tabindex=&quot;-1&quot;&gt;O Padrão IIFE &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;o-padrao-iife&quot; tabindex=&quot;-1&quot;&gt;O Padrão IIFE &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Com os conceitos relembrados na introdução, podemos criar uma IIFE. &lt;strong&gt;IIFE é uma
 expressão funcional que é executada imediatamente após ser definida&lt;/strong&gt;.
 Normalmente, uma IIFE (do inglês, &lt;i lang=&quot;en&quot;&gt;Immediately-Invoked Function
@@ -2270,7 +2270,7 @@ final.&lt;/p&gt;
 &lt;aside&gt; &lt;p&gt; A IIFE também pode ser encontrado pelo nome de SEAF (do inglês, &lt;i lang=&quot;en&quot;&gt;Self-Executing Anonymous Function&lt;/i&gt;). No entanto, o termo IIFE, &lt;a href=&quot;http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife&quot;&gt;introduzido
 por Ben Alman&lt;/a&gt;, é considerado semanticamente mais adequado. Afinal, a prática
 não requer utilizar somente funções anônimas. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusoes&quot; tabindex=&quot;-1&quot;&gt;Conclusões &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A IIFE é uma prática muito utilizada para proteger o escopo global da poluição e
 conflito de nomes de variáveis. Além disso, permite aliviar um pouco a confusão
 de escopos de bloco/função dados pelo
@@ -2287,15 +2287,15 @@ ES2015. É sempre bom ter esse conhecimento no seu inventário.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Intermediário #4</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-4"/>
+		<link href="https://maxroecker.github.io/blog/javascript-intermediario-4/"/>
 		<updated>2016-01-16T18:34:26Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-4</id>
+		<id>https://maxroecker.github.io/blog/javascript-intermediario-4/</id>
 		<content type="html">&lt;p&gt;Hoje veremos uma característica bastante peculiar do JavaScript e que
 normalmente é causa de pequenos erros quanto estamos trabalhando com a
 linguagem: o hasteamento de variáveis, comumente chamado de &lt;i lang=&quot;en&quot;&gt;hoisting&lt;/i&gt;.&lt;/p&gt;
 &lt;aside&gt; &lt;p&gt; &lt;strong&gt;has·te·ar&lt;/strong&gt;: (1) Elevar ou prender ao topo de uma
 haste. (2) Altear, içar, levantar. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;hasteamento-de-variaveis&quot; tabindex=&quot;-1&quot;&gt;Hasteamento de variáveis &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;hasteamento-de-variaveis&quot; tabindex=&quot;-1&quot;&gt;Hasteamento de variáveis &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;No momento de execução de um código JavaScript, toda declaração de variável
 passam por um processo de hasteamento, isto é, a declaração da variável é
 elevada para o topo do escopo atribuído de forma automática. Esse processo é
@@ -2355,7 +2355,7 @@ utilizam &lt;code&gt;var&lt;/code&gt;. O mecanismo de hasteamento de variáveis 
 &lt;code&gt;const&lt;/code&gt; não permite a referência de uma variável ainda não declarada e irá
 lançar um erro do tipo
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError&quot;&gt;&lt;code&gt;ReferenceError&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Podemos resumir essa publicação como: o hasteamento de variáveis com &lt;code&gt;var&lt;/code&gt; eleva
 para o topo do código somente a declaração, mas não a definição; enquanto o
 hasteamento de funções eleva para o topo do código tanto a declaração quando a
@@ -2377,16 +2377,16 @@ surpresas indesejadas.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Intermediário #3</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-3"/>
+		<link href="https://maxroecker.github.io/blog/javascript-intermediario-3/"/>
 		<updated>2016-01-16T17:47:20Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-3</id>
+		<id>https://maxroecker.github.io/blog/javascript-intermediario-3/</id>
 		<content type="html">&lt;p&gt;Nesse texto, vamos compreender um pouco mais sobre um paradigma importante
 quando estamos programando em JavaScript e, além disso, entender uma das
 principais características que levaram ao sucesso da linguagem: o seu modelo de
 concorrência.&lt;/p&gt;
 &lt;aside&gt; &lt;p&gt; &lt;strong&gt;as·sin·cro·nis·mo&lt;/strong&gt;: 1. Qualidade ou estado de
 assíncrono; 2. Ausência de concorrência no tempo. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;assincronia-em-javascript&quot; tabindex=&quot;-1&quot;&gt;Assincronia em JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;assincronia-em-javascript&quot; tabindex=&quot;-1&quot;&gt;Assincronia em JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Programação assíncrona é um paradigma de programação onde o código pode não
 seguir o fluxo de execução “padrão”. Além disso, um código assíncrono pode
 tratar de interrupções externas ao programa, tais como a chegada de um evento,
@@ -2452,7 +2452,7 @@ publicação do blog&lt;/a&gt; pode lhe ajudar. &lt;/p&gt; &lt;/aside&gt;
 não é executada imediatamente? Bem, aqui estamos de frente com um dos efeitos do
 modelo de concorrência do JavaScript e que vamos entrar em detalhes a partir de
 agora.&lt;/p&gt;
-&lt;h2 id=&quot;programacao-orientada-a-eventos&quot; tabindex=&quot;-1&quot;&gt;Programação Orientada a Eventos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;programacao-orientada-a-eventos&quot; tabindex=&quot;-1&quot;&gt;Programação Orientada a Eventos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O JavaScript é uma linguagem que foi inicialmente desenvolvida para adicionar
 funcionalidades as páginas HTML do navegador Netscape. É uma linguagem
 multiparadigma que suporta programação
@@ -2481,7 +2481,7 @@ comportamento desse laço o qual vamos detalhar daqui em diante.&lt;/p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;https://maxroecker.github.io/img/illustrations/steam-engine.svg&quot; alt=&quot;Máquina de ciclos a vapor&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;o-event-loop-do-javascript&quot; tabindex=&quot;-1&quot;&gt;O &lt;i lang=&quot;en&quot;&gt;Event Loop&lt;/i&gt; do JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;o-event-loop-do-javascript&quot; tabindex=&quot;-1&quot;&gt;O &lt;i lang=&quot;en&quot;&gt;Event Loop&lt;/i&gt; do JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Toda máquina de execução JavaScript possui um &lt;i lang=&quot;en&quot;&gt;event loop&lt;/i&gt; único
 que captura os eventos disparados pelo usuário ou pelo ambiente onde a máquina
 está alocada. Se um evento capturado pelo &lt;i lang=&quot;en&quot;&gt;event loop&lt;/i&gt; possuir
@@ -2537,7 +2537,7 @@ muito tempo e, assim, nenhuma outra tarefa poderá ser iniciada. Se a fila de
 tarefas está bloqueada, os &lt;i lang=&quot;en&quot;&gt;callbacks&lt;/i&gt; dos eventos das ações do
 usuário podem não ser respondidos em tempo adequado e a GUI apresenta estar
 “travada”, por exemplo.&lt;/p&gt;
-&lt;h2 id=&quot;indo-alem&quot; tabindex=&quot;-1&quot;&gt;Indo além &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;indo-alem&quot; tabindex=&quot;-1&quot;&gt;Indo além &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Agora que você já entende o modelo de concorrência, alguns questionamentos podem
 estar perambulando pela sua cabeça:&lt;/p&gt;
 &lt;blockquote&gt; &lt;p&gt; Mas, quando fazemos uma requisição HTTP utilizando a API fetch,
@@ -2571,9 +2571,9 @@ nos navegadores.&lt;/li&gt;
 	
 	<entry>
 		<title>JavaScript Intermediário #2</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-2"/>
+		<link href="https://maxroecker.github.io/blog/javascript-intermediario-2/"/>
 		<updated>2016-01-13T18:42:06Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-2</id>
+		<id>https://maxroecker.github.io/blog/javascript-intermediario-2/</id>
 		<content type="html">&lt;p&gt;A série &lt;strong&gt;JavaScript Intermediário&lt;/strong&gt; busca passar, de maneira sólida e gradual,
 características fundamentais da linguagem. Neste capítulo, vamos voltar nossa
 atenção para um importante, esquecido e quase mitológico aspecto da linguagem:
@@ -2590,7 +2590,7 @@ utilização.&lt;/p&gt;
 &lt;p&gt;Contudo, antes de entender o que são &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;, precisamos dar
 um passo atrás e entender como as linguagens de programação são executadas e
 utilizam a memória do computador.&lt;/p&gt;
-&lt;h2 id=&quot;a-pilha-de-execucao&quot; tabindex=&quot;-1&quot;&gt;A pilha de execução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;a-pilha-de-execucao&quot; tabindex=&quot;-1&quot;&gt;A pilha de execução &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A grande maioria das linguagens de programação utiliza uma estrutura para
 registrar todas as subrotinas ativas de um programa.
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Stack-based_memory_allocation&quot;&gt;Essa estrutura normalmente é implementada como uma pilha&lt;/a&gt;.
@@ -2676,7 +2676,7 @@ execução foi finalizada. Onde foi parar &lt;code&gt;x&lt;/code&gt;?&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Bem, senhoras e senhores, aqui lhes apresento a &lt;i lang=&quot;en&quot;&gt;closure&lt;/i&gt;. Muito
 prazer!&lt;/p&gt;
-&lt;h2 id=&quot;closures&quot; tabindex=&quot;-1&quot;&gt;&lt;i lang=&quot;en&quot;&gt;Closures&lt;/i&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;closures&quot; tabindex=&quot;-1&quot;&gt;&lt;i lang=&quot;en&quot;&gt;Closures&lt;/i&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;i lang=&quot;en&quot;&gt;Closures&lt;/i&gt; nada mais são que funções que armazenam o contexto
 léxico interno para que possam ser utilizadas mesmo quando o quadro de contexto
 já não existe mais.&lt;/p&gt;
@@ -2707,7 +2707,7 @@ valor da multiplicação é retornado e exibido pelo console.&lt;/li&gt;
 &lt;figure&gt;
   &lt;img src=&quot;https://maxroecker.github.io/img/illustrations/lock.svg&quot; alt=&quot;Um símbolo enclausurado.&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;teoria-e-propriedades-das-closures&quot; tabindex=&quot;-1&quot;&gt;Teoria e propriedades das &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;teoria-e-propriedades-das-closures&quot; tabindex=&quot;-1&quot;&gt;Teoria e propriedades das &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Uma linguagem de programação não consegue implementar &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;
 se o seu modelo de memória apenas utiliza apenas a pilha para gerenciar a
 memória. Em tais linguagens, as variáveis locais são automaticamente desalocadas
@@ -2747,7 +2747,7 @@ ambas apontem para a mesma função. Vide o exemplo anterior, temos:&lt;/p&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 12&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;triple&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 12&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;double &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; triple&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Para que você utilize o potencial da linguagem JavaScript ao máximo, é
 fundamental compreender as &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;. É com elas que você
 consegue criar encapsulamento dos dados ou programar orientado a eventos de
@@ -2766,9 +2766,9 @@ Steele&lt;/a&gt; &lt;/footer&gt; &lt;/blockquote&gt;
 	
 	<entry>
 		<title>JavaScript Intermediário #1</title>
-		<link href="https://maxroecker.github.io/blog/javascript-intermediario-1"/>
+		<link href="https://maxroecker.github.io/blog/javascript-intermediario-1/"/>
 		<updated>2015-12-15T17:37:54Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-intermediario-1</id>
+		<id>https://maxroecker.github.io/blog/javascript-intermediario-1/</id>
 		<content type="html">&lt;p&gt;Nessa publicação, vamos focar em um dos aspectos que mais geram confusão entre
 os desenvolvedores que estão iniciando o aprendizado em JavaScript: o escopo
 léxico de variáveis. Mas, o que é escopo léxico de uma variável?&lt;/p&gt;
@@ -2788,7 +2788,7 @@ variável foi declarada.&lt;/p&gt;
 da palavra chave &lt;code&gt;var&lt;/code&gt;. O ECMAScript 2015 trouxe mais duas alternativas, o &lt;code&gt;let&lt;/code&gt;
 e o &lt;code&gt;const&lt;/code&gt;, que definem um escopo léxico diferente e também ditam a
 mutabilidade da variável declarada.&lt;/p&gt;
-&lt;h2 id=&quot;declaracao-de-variaveis-com-var&quot; tabindex=&quot;-1&quot;&gt;Declaração de variáveis com &lt;code&gt;var&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declaracao-de-variaveis-com-var&quot; tabindex=&quot;-1&quot;&gt;Declaração de variáveis com &lt;code&gt;var&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Declarações de variáveis com &lt;code&gt;var&lt;/code&gt; definem um &lt;strong&gt;escopo léxico de função&lt;/strong&gt;, ou
 seja, é a função quem define o local que uma variável é identificada por um
 nome. Essa abordagem é bastante peculiar e difere da maioria das linguagens,
@@ -2815,7 +2815,7 @@ redeclarada novamente dentro do laço, as alterações feitas no laço se manté
 mesmo após a conclusão. Já para a variável &lt;code&gt;x&lt;/code&gt; declarada fora da função
 &lt;code&gt;exemplo&lt;/code&gt;, o valor não é alterado. Podemos ver que o bloco não definiu o escopo
 da variável &lt;code&gt;x&lt;/code&gt;, mas o corpo da função sim.&lt;/p&gt;
-&lt;h2 id=&quot;declaracoes-de-variaveis-let&quot; tabindex=&quot;-1&quot;&gt;Declarações de variáveis &lt;code&gt;let&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declaracoes-de-variaveis-let&quot; tabindex=&quot;-1&quot;&gt;Declarações de variáveis &lt;code&gt;let&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A declaração de variável &lt;code&gt;let&lt;/code&gt; foi adicionada ao ECMAScript 2015 para permitir a
 declaração de variáveis tenham um escopo léxico de bloco, e, assim, ter um
 comportamento de escopo semelhante ao das linguagens C e Java. Veja o mesmo
@@ -2839,7 +2839,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → foobar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;A diferença de resultados se dá principalmente dentro da função, onde agora é o
 bloco que delimita o escopo léxico e não mais a função.&lt;/p&gt;
-&lt;h2 id=&quot;declaracoes-de-variaveis-const&quot; tabindex=&quot;-1&quot;&gt;Declarações de variáveis &lt;code&gt;const&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declaracoes-de-variaveis-const&quot; tabindex=&quot;-1&quot;&gt;Declarações de variáveis &lt;code&gt;const&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A declaração de variáveis utilizando &lt;code&gt;const&lt;/code&gt;, que também foi padronizada na
 ECMAScript 2015, declara uma variável com escopo de bloco, porém, com uma
 referência fixa. Ou seja, uma variável &lt;code&gt;const&lt;/code&gt; não pode ser atribuída novamente
@@ -2865,7 +2865,7 @@ y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&qu
 &lt;figure&gt;
   &lt;img src=&quot;https://maxroecker.github.io/img/illustrations/turtle.svg&quot; alt=&quot;Uma tartaruga.&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot;&gt;
 &lt;/figure&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-intermediario-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Como um bom programador, uma das coisas mais importantes que você pode aprender
 é sempre manter a simplicidade. Quando estamos falando sobre código, podemos
 simplificá-lo quando utilizamos apenas variável para um único conceito.&lt;/p&gt;
@@ -2889,9 +2889,9 @@ para possibilitar pensamentos os quais não existiriam se não fossem elas. &lt;
 	
 	<entry>
 		<title>JavaScript Básico #6</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-6"/>
+		<link href="https://maxroecker.github.io/blog/javascript-basico-6/"/>
 		<updated>2015-10-23T09:21:30Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-6</id>
+		<id>https://maxroecker.github.io/blog/javascript-basico-6/</id>
 		<content type="html">&lt;p&gt;Já vimos o funcionamento de
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;objetos&lt;/a&gt; e de
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;estruturas de controle&lt;/a&gt;
@@ -2912,7 +2912,7 @@ programação. No entanto, o modo como funções são tratadas em JavaScript pod
 estranha para a maioria dos desenvolvedores. Por isso, é importante ter um bom
 entendimento de como funções trabalham em JavaScript, para que você possa
 extrair o máximo da linguagem.&lt;/p&gt;
-&lt;h2 id=&quot;declarando-e-executando-uma-funcao&quot; tabindex=&quot;-1&quot;&gt;Declarando e executando uma função &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declarando-e-executando-uma-funcao&quot; tabindex=&quot;-1&quot;&gt;Declarando e executando uma função &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Uma função pode ser declarada com o auxílio da palavra-chave &lt;code&gt;function&lt;/code&gt; seguido
 de:&lt;/p&gt;
 &lt;ol&gt;
@@ -2985,7 +2985,7 @@ causa um erro. Ou seja, &lt;strong&gt;não é possível escrever um código como
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;O resultado é: &#39;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;resultado&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;aridade-de-funcoes-e-passagem-de-argumentos&quot; tabindex=&quot;-1&quot;&gt;Aridade de funções e passagem de argumentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;aridade-de-funcoes-e-passagem-de-argumentos&quot; tabindex=&quot;-1&quot;&gt;Aridade de funções e passagem de argumentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Diferente de muitas linguagens, o JavaScript não restringe a quantidade de
 argumentos que a chamada da função pode receber dada a aridade da função.
 Supondo o mesmo exemplo da função &lt;code&gt;quadrado&lt;/code&gt; acima, as chamadas abaixo são
@@ -3006,7 +3006,7 @@ função é o número de parâmetros que a função recebe. Uma função de um p
 é denominada unária; de dois parâmetros, binária; com três parâmetros, ternária;
 e assim por diante. Caso uma função não receba parâmetros, a função é denominada
 nulária. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;funcoes-como-valores-de-primeira-classe&quot; tabindex=&quot;-1&quot;&gt;Funções como valores de primeira-classe &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;funcoes-como-valores-de-primeira-classe&quot; tabindex=&quot;-1&quot;&gt;Funções como valores de primeira-classe &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Funções, em JavaScript, são
 &lt;a href=&quot;ttp://c2.com/cgi/wiki/?FirstClass&quot;&gt;valores de primeira classe&lt;/a&gt; e, por isso, são
 tratadas como qualquer outro valor na linguagem. Assim, funções podem ser
@@ -3034,7 +3034,7 @@ função é sempre instância de um objeto. Veja abaixo:&lt;/p&gt;
 true
 true
 quadrado&lt;/samp&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;expressoes-funcionais&quot; tabindex=&quot;-1&quot;&gt;Expressões funcionais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;expressoes-funcionais&quot; tabindex=&quot;-1&quot;&gt;Expressões funcionais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Em JavaScript, a declaração de uma função pode ser retornada como um valor, ou
 seja, como uma expressão funcional. Podemos atribuir a função &lt;code&gt;quadrado&lt;/code&gt; para
 uma variável &lt;code&gt;potencia2&lt;/code&gt; da seguinte forma:&lt;/p&gt;
@@ -3074,7 +3074,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;Funções anônimas são frequentemente utilizadas em JavaScript e permitem escrever
 um código coeso e expressivo. Em algumas referências, funções anônimas são
 chamadas apenas de &lt;em&gt;lambdas&lt;/em&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;funcoes-de-alta-ordem&quot; tabindex=&quot;-1&quot;&gt;Funções de alta ordem &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;funcoes-de-alta-ordem&quot; tabindex=&quot;-1&quot;&gt;Funções de alta ordem &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Por serem valores de primeira classe, as funções em JavaScript são
 &lt;a href=&quot;http://c2.com/cgi/wiki?HigherOrderFunction&quot;&gt;funções de alta ordem&lt;/a&gt;. Ou seja,
 podemos então passar funções como argumentos em outra função ou retornar funções
@@ -3103,7 +3103,7 @@ diferentes argumentos.&lt;/p&gt;
 principalmente quando desejamos codificar em um estilo mais próximo do paradigma
 funcional. Entender funções de alta ordem permite entender um dos conceitos mais
 fundamentais do JavaScript: &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao-e-agradecimentos&quot; tabindex=&quot;-1&quot;&gt;Conclusão e agradecimentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao-e-agradecimentos&quot; tabindex=&quot;-1&quot;&gt;Conclusão e agradecimentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-6/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nesse episódio aprendemos sobre funções, como declará-las e suas principais
 características. A palavra-chave &lt;code&gt;function&lt;/code&gt; pode ser utilizada tanto em uma
 declaração de função quanto em uma expressão funcional. É fundamental
@@ -3123,16 +3123,16 @@ orientado a objetos e funcional.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Básico #5</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-5"/>
+		<link href="https://maxroecker.github.io/blog/javascript-basico-5/"/>
 		<updated>2015-10-15T17:03:34Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-5</id>
+		<id>https://maxroecker.github.io/blog/javascript-basico-5/</id>
 		<content type="html">&lt;p&gt;Anteriormente, aprendemos como
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;controlar a execução do fluxo do código JavaScript através de declarações&lt;/a&gt;.
 Também vimos
 &lt;a href=&quot;https://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;como atribuir valores primitivos a variáveis e como manipulá-los no código&lt;/a&gt;.
 Entretanto, somente arranhamos a superfície das funcionalidades que a linguagem
 oferece. Nessa publicação, vamos entender melhor sobre os objetos.&lt;/p&gt;
-&lt;h2 id=&quot;propriedades&quot; tabindex=&quot;-1&quot;&gt;Propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;propriedades&quot; tabindex=&quot;-1&quot;&gt;Propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Todo valor em JavaScript — exceto o &lt;code&gt;null&lt;/code&gt; e o &lt;code&gt;undefined&lt;/code&gt; — possui propriedades
 que podem ser acessadas por uma chave por meio do operador &lt;code&gt;.&lt;/code&gt;. Propriedades são
 valores que recebem um nome no objeto. Veja o exemplo abaixo:&lt;/p&gt;
@@ -3146,7 +3146,7 @@ caracteres que essa string possui, ou seja, o comprimento da cadeia. Já a
 propriedade &lt;code&gt;toFixed&lt;/code&gt; é uma referência de uma função. Em JavaScript, funções são
 tratadas como valores e, por isso, podem ser atribuídas em proprieades. É comum
 chamar funções atribuídas em propriedades como &lt;strong&gt;métodos&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;objetos&quot; tabindex=&quot;-1&quot;&gt;Objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;objetos&quot; tabindex=&quot;-1&quot;&gt;Objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Além de valores do tipo primitivo, o JavaScript possui também valores do tipo
 &lt;strong&gt;Objeto&lt;/strong&gt;. Objetos são valores que permitem o agrupamento de outros valores
 identificados por meio de uma chave. Em sua essência, objetos são
@@ -3160,7 +3160,7 @@ uma string única que apontam para outros valores.&lt;/p&gt;
     chave é única no objeto e aponta para somente um valor.
   &lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;h3 id=&quot;declarando-objetos&quot; tabindex=&quot;-1&quot;&gt;Declarando objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;declarando-objetos&quot; tabindex=&quot;-1&quot;&gt;Declarando objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Em JavaScript, os objetos normalmente são declarados através do literal objeto
 &lt;code&gt;{…}&lt;/code&gt;, que contém os pares de chave-valor do objeto são separadas por vírgulas.
 Desde o ECMAScript 2015,
@@ -3171,7 +3171,7 @@ nomes para variáveis.&lt;/p&gt;
   &lt;span class=&quot;token literal-property property&quot;&gt;nome&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Corruíra&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token literal-property property&quot;&gt;nomeCientifico&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Troglodytes musculus&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;acessando-as-propriedades&quot; tabindex=&quot;-1&quot;&gt;Acessando as propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;acessando-as-propriedades&quot; tabindex=&quot;-1&quot;&gt;Acessando as propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Como qualquer outro valor, você pode acessar as propriedades de um objeto com o
 operador &lt;code&gt;.&lt;/code&gt;. Veja a continuação do exemplo anterior:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nome&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Corruíra&lt;/span&gt;
@@ -3205,7 +3205,7 @@ passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nome&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Tico-tico&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;nome&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Zonotrichia capensis&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;nome cientifico&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Saltator similis&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;adicionando-propriedades&quot; tabindex=&quot;-1&quot;&gt;Adicionando propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;adicionando-propriedades&quot; tabindex=&quot;-1&quot;&gt;Adicionando propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Por serem arranjos associativos, os objetos permite a inserção de propriedades
 após a declaração. Assim, podemos reescrever o exemplo anterior da seguinte
 forma:&lt;/p&gt;
@@ -3215,7 +3215,7 @@ passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span cl
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;nome&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Sabiá-laranjeira&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;nome cientifico&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Turdus rufiventris&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;verificando-a-existencia-de-uma-propriedade&quot; tabindex=&quot;-1&quot;&gt;Verificando a existência de uma propriedade &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;verificando-a-existencia-de-uma-propriedade&quot; tabindex=&quot;-1&quot;&gt;Verificando a existência de uma propriedade &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Quando acessamos uma propriedade que não existe no objeto, recebemos como
 resultado &lt;code&gt;undefined&lt;/code&gt;. Agora, se uma propriedade existe seu valor é &lt;code&gt;undefined&lt;/code&gt;,
 acessá-la também resulta em &lt;code&gt;undefined&lt;/code&gt;. Verificar se o valor de uma propriedade
@@ -3232,14 +3232,14 @@ passaro&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cor &lt;spa
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;chave &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; passaro&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;chave&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Amarelo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;removendo-propriedades&quot; tabindex=&quot;-1&quot;&gt;Removendo propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;removendo-propriedades&quot; tabindex=&quot;-1&quot;&gt;Removendo propriedades &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;O operador &lt;code&gt;delete&lt;/code&gt; remove a propriedade do objeto.&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;cor&#39;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; passaro&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;delete&lt;/span&gt; passaro&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cor&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;cor&#39;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; passaro&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;iterando-sobre-as-propriedades-com-for-in&quot; tabindex=&quot;-1&quot;&gt;Iterando sobre as propriedades com &lt;code&gt;for…in&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;iterando-sobre-as-propriedades-com-for-in&quot; tabindex=&quot;-1&quot;&gt;Iterando sobre as propriedades com &lt;code&gt;for…in&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;É possível também iterar em todas as chaves de um objeto por meio da declaração
 &lt;code&gt;for…in&lt;/code&gt;. A cada iteração, uma das chaves é visitada pelo laço. A declaração
 &lt;code&gt;for…in&lt;/code&gt; itera sobre as propriedades enumeráveis de um objeto em uma ordem
@@ -3264,7 +3264,7 @@ uma ordem diferente.&lt;/p&gt;
   Propriedade nome - Tipo: string
 &lt;/samp&gt;
 &lt;/pre&gt;
-&lt;h2 id=&quot;diferencas-entre-valores-primitivos-e-objetos&quot; tabindex=&quot;-1&quot;&gt;Diferenças entre valores primitivos e objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;diferencas-entre-valores-primitivos-e-objetos&quot; tabindex=&quot;-1&quot;&gt;Diferenças entre valores primitivos e objetos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;No JavaScript, objetos e valores primitivos são categorizados da seguinte forma:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Valores primitivos são valores do tipo booleano, número, string ou os valores
@@ -3273,7 +3273,7 @@ uma ordem diferente.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;A grande diferença entre os valores primitivos e objetos é o modo como eles são
 comparados e a mutabilidade de seus conteúdos.&lt;/p&gt;
-&lt;h3 id=&quot;comparacao&quot; tabindex=&quot;-1&quot;&gt;Comparação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;comparacao&quot; tabindex=&quot;-1&quot;&gt;Comparação &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Os valores primitivos são comparados através do seu “conteúdo”, ou seja, se dois
 valores primitivos tem o mesmo conteúdo, eles são iguais.&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; tres &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -3292,7 +3292,7 @@ obj1 &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; obj1&lt;span c
 obj1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; obj2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Atribuímos a referência de obj2 em obj1&lt;/span&gt;
 
 obj1 &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; obj2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;mutabilidade&quot; tabindex=&quot;-1&quot;&gt;Mutabilidade &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;mutabilidade&quot; tabindex=&quot;-1&quot;&gt;Mutabilidade &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Valores primitivos são considerados &lt;strong&gt;imutáveis&lt;/strong&gt;, ou seja, é impossível mudar
 uma propriedade ou o seu valor para esses tipos de dados. Toda vez que você os
 manipula, na verdade você gera novos valores a partir dos antigos, mesmo que
@@ -3323,7 +3323,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 ave&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nome &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;Patativa-do-campo&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;passaro&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nome&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Patativa-do-campo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-5/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Objetos fornecem modos de agrupar vários valores em um só &amp;quot;conjunto&amp;quot;. É uma das
 estruturas de dados mais básicas do JavaScript. Quase todo elemento dentro da
 linguagem é um objeto.&lt;/p&gt;
@@ -3341,9 +3341,9 @@ desenvolvendo coisas umas sobre as outras, como um muro de pequenas pedras. &lt;
 	
 	<entry>
 		<title>JavaScript Básico #4</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-4"/>
+		<link href="https://maxroecker.github.io/blog/javascript-basico-4/"/>
 		<updated>2015-09-15T16:25:51Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-4</id>
+		<id>https://maxroecker.github.io/blog/javascript-basico-4/</id>
 		<content type="html">&lt;p&gt;No &lt;a href=&quot;http://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;artigo anterior&lt;/a&gt;
 vimos como criar variáveis e atribuir valores à elas. Também foi mostrado alguns
 atalhos de atribuição e formas de modificar os valores das variáveis. Nesse
@@ -3357,7 +3357,7 @@ situações. Salvar os códigos em arquivos JavaScript e executá-los no Node.js
 uma boa opção. Para executar, por exemplo, um arquivo chamado &lt;code&gt;example.js&lt;/code&gt; no
 Node, você pode acessar o diretório do arquivo no terminal e digitar:&lt;/p&gt;
 &lt;pre&gt;&lt;kbd&gt;node example.js&lt;/kbd&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;expressoes-e-declaracoes&quot; tabindex=&quot;-1&quot;&gt;Expressões e Declarações &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;expressoes-e-declaracoes&quot; tabindex=&quot;-1&quot;&gt;Expressões e Declarações &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Expressões&lt;/strong&gt; são declarações de código que produzem um valor. Como visto
 anteriormente, nós utilizamos expressões a todo momento no JavaScript: uma
 atribuição é uma expressão, uma comparação é uma expressão, uma operação
@@ -3371,7 +3371,7 @@ de controle de fluxo.&lt;/p&gt;
 código. O JavaScript possui um conjunto compacto de declarações que podem ser
 combinadas para adicionar complexidade o seu código. Expressões também são
 declarações, mas possuem a diferença de que sempre retornam um valor.&lt;/p&gt;
-&lt;h2 id=&quot;declaracao-de-bloco&quot; tabindex=&quot;-1&quot;&gt;Declaração de bloco &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declaracao-de-bloco&quot; tabindex=&quot;-1&quot;&gt;Declaração de bloco &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Uma das declarações mais básicas da linguagem é a de definição de bloco,
 utilizada para agrupar um conjunto de outras declarações. Todo bloco é
 delimitado por um par de chaves &lt;code&gt;{…}&lt;/code&gt;.&lt;/p&gt;
@@ -3396,10 +3396,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;A variável &lt;code&gt;a&lt;/code&gt; não é oculta pela segunda declaração de uma variável com mesmo
 nome. Ambas as declarações são a mesma variável. Por isso, após a saída do
 bloco, o valor alterado dentro do bloco é mantido.&lt;/p&gt;
-&lt;h2 id=&quot;declaracoes-condicionais&quot; tabindex=&quot;-1&quot;&gt;Declarações condicionais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declaracoes-condicionais&quot; tabindex=&quot;-1&quot;&gt;Declarações condicionais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Uma declaração condicional é uma declaração de controle de fluxo que executa ou
 não um trecho de código dependendo de uma condição booleana a ser avaliada.&lt;/p&gt;
-&lt;h3 id=&quot;condicional-unica-if-else&quot; tabindex=&quot;-1&quot;&gt;Condicional única &lt;code&gt;if … else&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;condicional-unica-if-else&quot; tabindex=&quot;-1&quot;&gt;Condicional única &lt;code&gt;if … else&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;A declaração &lt;code&gt;if&lt;/code&gt; tem o comportamento de executar a próxima declaração ou bloco
 de declarações, se a condição avaliada seja &lt;code&gt;true&lt;/code&gt;. Um &lt;code&gt;if&lt;/code&gt; pode ser pareado com
 um &lt;code&gt;else&lt;/code&gt; e assim executar a declaração que o sucede se o valor da condição for
@@ -3419,7 +3419,7 @@ vez. Veja o exemplo:&lt;/p&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Condição 3 e 4 são falsas&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;falsy-e-truthy&quot; tabindex=&quot;-1&quot;&gt;&lt;em&gt;Falsy&lt;/em&gt; e &lt;em&gt;Truthy&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;falsy-e-truthy&quot; tabindex=&quot;-1&quot;&gt;&lt;em&gt;Falsy&lt;/em&gt; e &lt;em&gt;Truthy&lt;/em&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Nas declarações condicionais, a condição sempre avaliada a expressão em &lt;code&gt;true&lt;/code&gt;
 ou &lt;code&gt;false&lt;/code&gt;. No entanto, mesmo que a expressão não seja do tipo booleano, o
 JavaScript, em sua coersão de tipos, trata alguns valores especiais e os avalia
@@ -3439,7 +3439,7 @@ exemplo abaixo:&lt;/p&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;p&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;A condição é falsa, pois p é do tipo boolean&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;o&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;A condição é verdadeira pois c é um objeto.&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;condicional-multipla-switch-case&quot; tabindex=&quot;-1&quot;&gt;Condicional múltipla &lt;code&gt;switch … case&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;condicional-multipla-switch-case&quot; tabindex=&quot;-1&quot;&gt;Condicional múltipla &lt;code&gt;switch … case&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;O &lt;code&gt;switch&lt;/code&gt; é uma declaração condicional poderosa e complexa que permite que o
 desenvolvedor escreva uma expressão de condição combine uma expressão com um
 valor enumerado. Se houver combinação, o &lt;code&gt;switch&lt;/code&gt; é ativado e executa as
@@ -3534,12 +3534,12 @@ Hoje o céu está nublado&lt;/samp&gt;&lt;/pre&gt;
 necessariamente ser assim. O efeito colateral de colocar o &lt;code&gt;default&lt;/code&gt; antes do
 final é que, por ele ativar o mecanismo de &lt;i lang=&quot;en&quot;&gt;fall-through&lt;/i&gt;,
 qualquer declaração abaixo também será executada, o que é raramente desejado.&lt;/p&gt;
-&lt;h2 id=&quot;declaracoes-de-laco&quot; tabindex=&quot;-1&quot;&gt;Declarações de laço &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;declaracoes-de-laco&quot; tabindex=&quot;-1&quot;&gt;Declarações de laço &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Declarações de laço são utilizadas para executar código repetido. Há três
 principais declarações de laço em JavaScript: &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;, e &lt;code&gt;do … while&lt;/code&gt;.
 Também é possível dar rótulos para esses laços e localizá-los através de um nome
 com as declarações &lt;code&gt;label&lt;/code&gt;, &lt;code&gt;break&lt;/code&gt; e &lt;code&gt;continue&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;laco-condicional-simples-while&quot; tabindex=&quot;-1&quot;&gt;Laço condicional simples &lt;code&gt;while&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;laco-condicional-simples-while&quot; tabindex=&quot;-1&quot;&gt;Laço condicional simples &lt;code&gt;while&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;A declaração &lt;code&gt;while&lt;/code&gt;, a mais simples das declarações de laço, executa a próxima
 declaração enquanto o valor da expressão avaliada for &lt;code&gt;true&lt;/code&gt;. Se a expressão for
 &lt;code&gt;false&lt;/code&gt;, o laço para de ser executado e o fluxo segue para a próxima declaração
@@ -3556,7 +3556,7 @@ basta colocar a condição como &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resultado&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 1024&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;laco-condicional-simples-do-while&quot; tabindex=&quot;-1&quot;&gt;Laço condicional simples &lt;code&gt;do…while&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;laco-condicional-simples-do-while&quot; tabindex=&quot;-1&quot;&gt;Laço condicional simples &lt;code&gt;do…while&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;A declaração &lt;code&gt;do…while&lt;/code&gt; tem um comportamento parecido com o &lt;code&gt;while&lt;/code&gt;: executa uma
 enquanto uma condição booleana é &lt;code&gt;true&lt;/code&gt;. A diferença entre o &lt;code&gt;while&lt;/code&gt; e o
 &lt;code&gt;do…while&lt;/code&gt; é a ordem de avaliação da expre ssão da condição em relação a
@@ -3575,7 +3575,7 @@ também podem ser feitos bastando colocar a condição como &lt;code&gt;true&lt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;expoente &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resultado&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 1024&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;lacos-completos-com-for&quot; tabindex=&quot;-1&quot;&gt;Laços completos com &lt;code&gt;for&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;lacos-completos-com-for&quot; tabindex=&quot;-1&quot;&gt;Laços completos com &lt;code&gt;for&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Um laço &lt;code&gt;for&lt;/code&gt; também repete a próxima declaração até que a condição dada
 avaliada como &lt;code&gt;false&lt;/code&gt;. Porém, junto com a condição, ela carrega outras duas
 declarações: a &lt;strong&gt;inicialização&lt;/strong&gt; e o &lt;strong&gt;passo&lt;/strong&gt;. Um &lt;code&gt;for&lt;/code&gt;, ao ser executado, faz
@@ -3600,16 +3600,16 @@ também para criar laços infinitos.&lt;/p&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resultado&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 1024&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Veja que a variável &lt;strong&gt;expoente&lt;/strong&gt; foi declarada na inicialização do laço, e o seu
 passo é dado de 1 em 1.&lt;/p&gt;
-&lt;h3 id=&quot;declaracoes-de-rotulo-e-quebra-de-fluxo&quot; tabindex=&quot;-1&quot;&gt;Declarações de rótulo e quebra de fluxo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;declaracoes-de-rotulo-e-quebra-de-fluxo&quot; tabindex=&quot;-1&quot;&gt;Declarações de rótulo e quebra de fluxo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;O JavaScript permite a criação de rótulos que identificam uma declaração.
 Qualquer declaração pode ser rotulada, porém esse recurso é mais utilizada em
 laços aninhados. Dessa forma, você pode interromper a execução de laços
 aninhados específicos de forma declarativa.&lt;/p&gt;
-&lt;h4 id=&quot;declaracoes-de-rotulo&quot; tabindex=&quot;-1&quot;&gt;Declarações de rótulo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;declaracoes-de-rotulo&quot; tabindex=&quot;-1&quot;&gt;Declarações de rótulo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Declaração de rotulação que marca uma posição em seu código. O rótulo segue as
 mesmas regras que nomes dados para variáveis. Dada pela sintaxe:&lt;/p&gt;
 &lt;pre class=&quot;language-text&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[rótulo]: [declaração]&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;quebra-de-fluxo-com-break&quot; tabindex=&quot;-1&quot;&gt;Quebra de fluxo com &lt;code&gt;break&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;quebra-de-fluxo-com-break&quot; tabindex=&quot;-1&quot;&gt;Quebra de fluxo com &lt;code&gt;break&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como já vimos no exemplo do &lt;code&gt;switch&lt;/code&gt;, a declaração &lt;code&gt;break&lt;/code&gt; sem um rótulo
 interrompe a execução da declaração atual. Em caso de laços, a declaração
 &lt;code&gt;break&lt;/code&gt; faz que o laço atual pare de ser executado imediatamente e continue a
@@ -3618,7 +3618,7 @@ acompanhado de um &lt;code&gt;label&lt;/code&gt;, assim quando execução é int
 partir da primeira declaração após o rótulo. Sua sintaxe é simples:&lt;/p&gt;
 &lt;pre class=&quot;language-text&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;break
 break [rótulo]&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;quebra-de-fluxo-com-continue&quot; tabindex=&quot;-1&quot;&gt;Quebra de fluxo com &lt;code&gt;continue&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;quebra-de-fluxo-com-continue&quot; tabindex=&quot;-1&quot;&gt;Quebra de fluxo com &lt;code&gt;continue&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;A declaração &lt;code&gt;continue&lt;/code&gt; também quebra o fluxo de execução, mas só pode ser
 utilizado em laços. Enquanto o &lt;code&gt;break&lt;/code&gt; para a execução do laço, o &lt;code&gt;continue&lt;/code&gt;
 quebra a atual iteração do laço e inicia uma nova. Ou seja, faz com que a
@@ -3643,7 +3643,7 @@ mostrados.&lt;/p&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-4/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Declarações são os blocos de construção da linguagem. Utilizar declarações em
 sequência dá ao seu código novas maneiras de ser executado, permitindo
 interferir no fluxo com que as instruções são executadas de acordo com as
@@ -3655,9 +3655,9 @@ declarações.&lt;/p&gt;
 	
 	<entry>
 		<title>Introdução ao Node.js</title>
-		<link href="https://maxroecker.github.io/blog/introducao-ao-nodejs"/>
+		<link href="https://maxroecker.github.io/blog/introducao-ao-nodejs/"/>
 		<updated>2015-09-14T15:45:25Z</updated>
-		<id>https://maxroecker.github.io/blog/introducao-ao-nodejs</id>
+		<id>https://maxroecker.github.io/blog/introducao-ao-nodejs/</id>
 		<content type="html">&lt;p&gt;O &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;, popularmente conhecido apenas como Node, é um
 ambiente de execução JavaScript que não acompanha um navegador. O Node utiliza o
 &lt;a href=&quot;https://developers.google.com/v8/&quot;&gt;V8&lt;/a&gt; como motor de execução, o mesmo
@@ -3697,7 +3697,7 @@ compartilham de um modelo de concorrência similar, como é o caso do
 especificação
 &lt;a href=&quot;http://www.javabeat.net/asynchronous-servlet-servlet-3-0/&quot;&gt;Servlets 3.0&lt;/a&gt; para a
 linguagem Java.&lt;/p&gt;
-&lt;h2 id=&quot;instalando-o-node-js&quot; tabindex=&quot;-1&quot;&gt;Instalando o Node.js &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/introducao-ao-nodejs&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;instalando-o-node-js&quot; tabindex=&quot;-1&quot;&gt;Instalando o Node.js &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/introducao-ao-nodejs/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Vamos instalar o Node através do &lt;a href=&quot;https://github.com/creationix/nvm&quot;&gt;NVM&lt;/a&gt;. No
 terminal, digite:&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -3717,7 +3717,7 @@ commando a seguir:&lt;/p&gt;
 &lt;a href=&quot;https://github.com/nvm-sh/nvm&quot;&gt;página do GitHub do projeto&lt;/a&gt;. Para verificar a
 instalação do Node, digite o comando abaixo.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;um-pequeno-exemplo&quot; tabindex=&quot;-1&quot;&gt;Um pequeno exemplo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/introducao-ao-nodejs&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;um-pequeno-exemplo&quot; tabindex=&quot;-1&quot;&gt;Um pequeno exemplo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/introducao-ao-nodejs/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Para exemplificar a facilidade em criar servidores HTTP com o Node, vamos fazer
 um em alguns minutos? Vamos criar um web server que responde &amp;quot;Hello World&amp;quot; em
 formato texto simples para qualquer requisição. Exemplo tirado da
@@ -3738,7 +3738,7 @@ com o Node, no terminal, da seguinte forma:&lt;/p&gt;
 &lt;p&gt;Você deve receber como saída a mensagem &amp;quot;&lt;samp&gt;Servidor rodando em
 http://127.0.0.1:1337/&lt;/samp&gt;&amp;quot;. Com o seu navegador, digite na barra de
 endereços o endereço &lt;code&gt;http://127.0.0.1:1337/&lt;/code&gt; e veja a sua mensagem.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/introducao-ao-nodejs&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/introducao-ao-nodejs/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;O Node resolveu muitos problemas que as novas aplicações web e mobile
 demandavam, mas não é uma bala de prata que serve para qualquer aplicação.
 Certos problemas requerem soluções difernetes e o Node pode não funcionar muito
@@ -3748,9 +3748,9 @@ bem. Ainda assim, é uma ótima ferramenta para ter em seu inventário.&lt;/p&gt
 	
 	<entry>
 		<title>JavaScript Básico #3</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-3"/>
+		<link href="https://maxroecker.github.io/blog/javascript-basico-3/"/>
 		<updated>2015-09-09T17:00:03Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-3</id>
+		<id>https://maxroecker.github.io/blog/javascript-basico-3/</id>
 		<content type="html">&lt;p&gt;No
 &lt;a href=&quot;https://maxroecker.github.io/posts/2015-09-01-javascript-basico-2/&quot;&gt;artigo anterior&lt;/a&gt;
 vemos como manipular basicamente os valores de tipo primitivo da linguagem,
@@ -3764,7 +3764,7 @@ valores por meio do uso de &lt;strong&gt;variáveis&lt;/strong&gt;.&lt;/p&gt;
 assumir um valor de um conjunto de valores; (2) Em computação, espaço reservado
 na memória de um computador, capaz de armazenar um determinado tipo de dado que
 pode alterar-se durante a execução do programa. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;variaveis&quot; tabindex=&quot;-1&quot;&gt;Variáveis &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;variaveis&quot; tabindex=&quot;-1&quot;&gt;Variáveis &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Todo valor do JavaScript precisa ser armazenado em um local na memória do
 computador, para identificarmos tal local utilizamos as &lt;strong&gt;variáveis&lt;/strong&gt;. Em uma
 definição bem simples, variáveis são nomes para os locais onde os valores são
@@ -3807,7 +3807,7 @@ string&lt;/a&gt;. Interpolação de string é uma técnica que substitui símbol
 especiais na string por valores passados. Cada símbolo indica uma formatação
 especial. No exemplo, o símbolo &lt;code&gt;%s&lt;/code&gt; indica que o valor é uma string,
 enquanto o &lt;code&gt;%d&lt;/code&gt; indica que o valor é um número. &lt;/p&gt; &lt;/aside&gt;
-&lt;h2 id=&quot;atalhos-de-atribuicao&quot; tabindex=&quot;-1&quot;&gt;Atalhos de atribuição &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;atalhos-de-atribuicao&quot; tabindex=&quot;-1&quot;&gt;Atalhos de atribuição &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Muitas vezes a mesma variável fornece e recebe o valor para uma expressão — como
 é o caso da variável &lt;code&gt;temperatura&lt;/code&gt; do exemplo anterior — e por isso há alguns
 atalhos para o operador de atribuição que diminuem a quantidade de escrita de
@@ -3859,7 +3859,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Temperatura 1: %d°&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; t1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Temperatura 1: 23°&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Temperatura 2: %d°&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; t2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → Temperatura 2: 10°&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;atribuicao-condicional&quot; tabindex=&quot;-1&quot;&gt;Atribuição condicional &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;atribuicao-condicional&quot; tabindex=&quot;-1&quot;&gt;Atribuição condicional &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;É possível atribuir valores para varáveis de forma condicional utilizando o
 operador ternário &lt;code&gt;?&lt;/code&gt;. O operador ternário possui uma sintaxe similar a:&lt;/p&gt;
 &lt;pre class=&quot;language-text&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[condição] ? [valor caso verdadeiro] : [valor caso falso]&lt;/code&gt;&lt;/pre&gt;
@@ -3873,7 +3873,7 @@ atribuíremos &lt;code&gt;&#39;ímpar&#39;&lt;/code&gt;. Um código para esse pe
 &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; resultado &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;par&#39;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;ímpar&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;resultado&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Teste o código acima com outros valores para a variável &lt;code&gt;n&lt;/code&gt; e veja os resultados.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-3/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Variáveis são o principal meio de acesso à memória que, quando utilizadas juntas
 com valores, forma o fundamento da execução de qualquer código e da
 representação dos dados de um algoritmo. No próximo artigo veremos as
@@ -3885,9 +3885,9 @@ em JavaScript.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Básico #2</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-2"/>
+		<link href="https://maxroecker.github.io/blog/javascript-basico-2/"/>
 		<updated>2015-09-01T22:29:00Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-2</id>
+		<id>https://maxroecker.github.io/blog/javascript-basico-2/</id>
 		<content type="html">&lt;p&gt;&lt;strong&gt;Valores&lt;/strong&gt; são os elementos mais simples dentro de uma linguagem: são
 expressões que não podem ser reduzidas a nenhuma outra — ou seja, estão em sua
 forma normal. Por exemplo: 2 é um valor, ele é auto-contido e não há como
@@ -3907,7 +3907,7 @@ primitivo. Valores primitivos representam os dados simples e podem ter os tipos:
 &lt;/ul&gt;
 &lt;p&gt;Existem outros tipos primitivos mais avançados, mas para uma introdução à
 linguagem, esses três são suficientes.&lt;/p&gt;
-&lt;h2 id=&quot;numero&quot; tabindex=&quot;-1&quot;&gt;Número &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;numero&quot; tabindex=&quot;-1&quot;&gt;Número &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Valores do tipo número são, surpreendentemente, valores numéricos. O JavaScript
 armazena qualquer número como um
 &lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_754&quot;&gt;ponto flutuante de precisão dupla&lt;/a&gt;. Ou
@@ -3953,7 +3953,7 @@ como:&lt;/p&gt;
 &lt;span class=&quot;token number&quot;&gt;0b101010&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 42&lt;/span&gt;
 &lt;span class=&quot;token number&quot;&gt;052&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 42&lt;/span&gt;
 &lt;span class=&quot;token number&quot;&gt;0x2a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → 42&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;operacoes-matematicas&quot; tabindex=&quot;-1&quot;&gt;Operações matemáticas &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;operacoes-matematicas&quot; tabindex=&quot;-1&quot;&gt;Operações matemáticas &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;As quatro operações aritméticas básicas: &lt;strong&gt;adição&lt;/strong&gt;, &lt;strong&gt;subtração&lt;/strong&gt;,
 &lt;strong&gt;multiplicação&lt;/strong&gt; e &lt;strong&gt;divisão&lt;/strong&gt;; são dadas no JavaScript pelos símbolos &lt;code&gt;+&lt;/code&gt;,
 &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt; e &lt;code&gt;/&lt;/code&gt;, respectivamente. Esses símbolos são chamados de operadores, e
@@ -3969,7 +3969,7 @@ console.&lt;/p&gt;
 &lt;p&gt;Como esperado, a multiplicação e a divisão tem prioridade, seguindo a
 &lt;a href=&quot;https://pt.wikipedia.org/wiki/Ordem_de_opera%C3%A7%C3%B5es&quot;&gt;ordem de precedência&lt;/a&gt;.
 Caso você precise da ordem explicita, você deve utilizar os parênteses.&lt;/p&gt;
-&lt;h3 id=&quot;valores-numericos-especiais&quot; tabindex=&quot;-1&quot;&gt;Valores numéricos especiais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;valores-numericos-especiais&quot; tabindex=&quot;-1&quot;&gt;Valores numéricos especiais &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Há três valores numéricos em JavaScript que não se comportam como números
 comuns. Os primeiros são os que representam os infinitos positivo e negativo —
 representados na linguagem como &lt;code&gt;Infinity&lt;/code&gt; e &lt;code&gt;-Infinity&lt;/code&gt; — que apesar de não
@@ -3982,7 +3982,7 @@ indefinidas ou mal-formadas resultam em &lt;code&gt;NaN&lt;/code&gt;, veja algun
 &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;Infinity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → NaN&lt;/span&gt;
 &lt;span class=&quot;token number&quot;&gt;Infinity&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;Infinity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → NaN&lt;/span&gt;
 &lt;span class=&quot;token string&quot;&gt;&#39;a&#39;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → NaN&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;strings&quot; tabindex=&quot;-1&quot;&gt;Strings &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;strings&quot; tabindex=&quot;-1&quot;&gt;Strings &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Strings&lt;/strong&gt; são cadeia de caracteres utilizadas para representar texto escrito.
 Sua representação em JavaScript é dada pelo conteúdo dentro de um par de aspas
 duplas (&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;) ou aspas simples (&lt;code&gt;&#39;&#39;&lt;/code&gt;). Por exemplo:&lt;/p&gt;
@@ -4010,7 +4010,7 @@ linha&lt;/em&gt;&amp;quot; em uma string no JavaScript, é necessário escrevê-
 &lt;p&gt;Strings não podem ser adicionadas, divididas, multiplicas ou subtraídas. Mas
 podem ser concatenadas com o operador &lt;code&gt;+&lt;/code&gt;. Por exemplo, a expressão
 &lt;code&gt;&#39;ja&#39; + &#39;va&#39; + &#39;script&#39;&lt;/code&gt; produz o resultado &lt;code&gt;&#39;javascript&#39;&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;booleanos&quot; tabindex=&quot;-1&quot;&gt;Booleanos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;booleanos&quot; tabindex=&quot;-1&quot;&gt;Booleanos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Muitas vezes precisamos de dados tão simples que indiquem somente uma decisão:
 &amp;quot;sim&amp;quot; e &amp;quot;não&amp;quot;, &amp;quot;ligado&amp;quot; e &amp;quot;desligado&amp;quot;, &amp;quot;ativo&amp;quot; e &amp;quot;inativo&amp;quot;, entre outros.
 Valores booleanos indicam exatamente isso e são representados por &lt;code&gt;true&lt;/code&gt; ou
@@ -4019,7 +4019,7 @@ Valores booleanos indicam exatamente isso e são representados por &lt;code&gt;t
 nos campos de lógica matemática e álgebra abstrata. Apesar de serem simples, são
 essenciais quando estamos lidando com estruturas de controle ou de laço dentro
 da linguagem.&lt;/p&gt;
-&lt;h3 id=&quot;operacoes-booleanas&quot; tabindex=&quot;-1&quot;&gt;Operações booleanas &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;operacoes-booleanas&quot; tabindex=&quot;-1&quot;&gt;Operações booleanas &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Valores booleanos podem ser operados através dos operadores lógicos
 &lt;a href=&quot;https://pt.wikipedia.org/wiki/Conjun%C3%A7%C3%A3o_l%C3%B3gica&quot;&gt;e&lt;/a&gt;,
 &lt;a href=&quot;https://pt.wikipedia.org/wiki/Disjun%C3%A7%C3%A3o_l%C3%B3gica&quot;&gt;ou&lt;/a&gt; e
@@ -4032,7 +4032,7 @@ unário, ou seja, ele inverte o próximo valor booleano informado. Exemplos:&lt;
 &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → false&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → false&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;comparacoes&quot; tabindex=&quot;-1&quot;&gt;Comparações &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;comparacoes&quot; tabindex=&quot;-1&quot;&gt;Comparações &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;A maior parte dos valores primitivos em JavaScript possui uma
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Total_order&quot;&gt;ordenação total&lt;/a&gt;. Ou seja, possuem a
 ideia de que um valor é &amp;quot;maior que outro&amp;quot; ou &amp;quot;precede&amp;quot; outro. Para avaliar essa
@@ -4062,7 +4062,7 @@ a ele mesmo, mas com o &lt;code&gt;NaN&lt;/code&gt; isso não acontece. Em JavaS
 sempre retorna &lt;code&gt;false&lt;/code&gt;. A justificativa é que normalmente &lt;code&gt;NaN&lt;/code&gt; indica uma
 computação aritmética indefinida e isso não significa que ela seja igual a outra
 computação inválida.&lt;/p&gt;
-&lt;h2 id=&quot;valores-indefinidos&quot; tabindex=&quot;-1&quot;&gt;Valores indefinidos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;valores-indefinidos&quot; tabindex=&quot;-1&quot;&gt;Valores indefinidos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Há dois valores especiais, &lt;code&gt;null&lt;/code&gt; e &lt;code&gt;undefined&lt;/code&gt;, que são utilizados para indicar
 a falta de um valor próprio — são valores que indicam que não há informação.
 Muitas operações que não resultam em um valor válido produzem o valor
@@ -4080,7 +4080,7 @@ próximo valor dado à ela. Por exemplo:&lt;/p&gt;
 &lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &quot;boolean&quot;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &quot;object&quot;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// → &quot;undefined&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-2/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Esse artigo ficou um pouco longo, mas acho importante ter esse entendimento
 inicial de valores e operações básicas para compreensão do JavaScript. Para os
 próximos artigos, trataremos de assuntos como variáveis, atribuições e de suas
@@ -4090,9 +4090,9 @@ especialidades.&lt;/p&gt;
 	
 	<entry>
 		<title>JavaScript Básico #1</title>
-		<link href="https://maxroecker.github.io/blog/javascript-basico-1"/>
+		<link href="https://maxroecker.github.io/blog/javascript-basico-1/"/>
 		<updated>2015-08-25T09:15:25Z</updated>
-		<id>https://maxroecker.github.io/blog/javascript-basico-1</id>
+		<id>https://maxroecker.github.io/blog/javascript-basico-1/</id>
 		<content type="html">&lt;p&gt;O &lt;strong&gt;JavaScript&lt;/strong&gt; é uma linguagem de programação criada em 1995 com o objetivo de
 adicionar dinamicidade aos documentos HTML no navegador Netscape. O JavaScript,
 junto com o HTML e o CSS, constituem os três pilares tecnológicos da &lt;em&gt;web&lt;/em&gt;. O
@@ -4118,7 +4118,7 @@ programação desenvolvida para um ambiente de execução específico. &lt;/p&gt
 linguagem que habita também o lado do servidor. Por exemplo, a engine
 &lt;a href=&quot;https://developers.google.com/v8/&quot;&gt;V8&lt;/a&gt; é utilizada no navegador Google Chrome,
 mas é utilizado também pelo &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;voltando-para-1995&quot; tabindex=&quot;-1&quot;&gt;Voltando para 1995 &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;voltando-para-1995&quot; tabindex=&quot;-1&quot;&gt;Voltando para 1995 &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A Netscape contrata Brendan Eich para liderar o desenvolvimento de uma nova
 linguagem de programação que permitiria que o novíssimo suporte do Navegador à
 linguagem Java se tornasse mais acessível. Eich decide que uma linguagem de
@@ -4182,7 +4182,7 @@ capacidade do ECMAScript. E, em 2015, a sexta versão da linguagem é lançada c
 muitas novas funcionalidades, tornando-se definitivamente uma linguagem madura.
 Atualmente o JavaScript é considerado uma implementação da ECMAScript, assim
 como o ActionScript e o JScript.&lt;/p&gt;
-&lt;h2 id=&quot;serie-sobre-javascript&quot; tabindex=&quot;-1&quot;&gt;Série sobre JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;serie-sobre-javascript&quot; tabindex=&quot;-1&quot;&gt;Série sobre JavaScript &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Pretendo iniciar essa série de artigos sobre JavaScript para compartilhar um
 pouco do conhecimento que adquiri nos últimos anos, pois acredito que somente
 aprende-se uma coisa de verdade quando você ensina-se ela. Sei que há muito
@@ -4231,23 +4231,23 @@ tudo aperte &lt;kbd class=&quot;key&quot;&gt;Enter&lt;/kbd&gt;.&lt;/p&gt;
 &lt;span class=&quot;token function&quot;&gt;fac&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Viu que valores na tela? Você notou algum padrão? Compreendeu o que a função
 faz? 😄&lt;/p&gt;
-&lt;h3 id=&quot;livros&quot; tabindex=&quot;-1&quot;&gt;Livros &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;livros&quot; tabindex=&quot;-1&quot;&gt;Livros &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://jsforcats.com/&quot;&gt;JavaScript for Cats&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://eloquentjavascript.net/&quot;&gt;Eloquent JavaScript&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;links&quot; tabindex=&quot;-1&quot;&gt;Links &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;links&quot; tabindex=&quot;-1&quot;&gt;Links &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/learn-javascript-b631a4af11f2&quot;&gt;Learn JavaScript Essentials&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jstherightway.org/&quot;&gt;JavaScript: The Right Way&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://javascriptissexy.com/how-to-learn-javascript-properly/&quot;&gt;How to Learn JavaScript Properly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;videos&quot; tabindex=&quot;-1&quot;&gt;Vídeos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;videos&quot; tabindex=&quot;-1&quot;&gt;Vídeos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLQCmSnNFVYnT1-oeDOSBnt164802rkegc&quot;&gt;Desvendando a linguagem JavaScript&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.codeschool.com/courses/javascript-road-trip-part-1&quot;&gt;Code School: JavaScript Road Trip Part 1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;agradecimentos&quot; tabindex=&quot;-1&quot;&gt;Agradecimentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;agradecimentos&quot; tabindex=&quot;-1&quot;&gt;Agradecimentos &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/javascript-basico-1/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Agradeço a &lt;a href=&quot;https://www.linkedin.com/in/suzanicristina/&quot;&gt;Suzani Cristina&lt;/a&gt; pela
 revisão do texto e de algumas informações da história da linguagem. Obrigado!&lt;/p&gt;
 </content>
@@ -4255,9 +4255,9 @@ revisão do texto e de algumas informações da história da linguagem. Obrigado
 	
 	<entry>
 		<title>Porque você deveria aprender JavaScript</title>
-		<link href="https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript"/>
+		<link href="https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/"/>
 		<updated>2015-08-21T00:50:01Z</updated>
-		<id>https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript</id>
+		<id>https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/</id>
 		<content type="html">&lt;p&gt;A web se tornou a plataforma padrão de desenvolvimento nos últimos anos. Isso é
 evidenciado pelo tanto de &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;ferramentas&lt;/a&gt;,
 &lt;a href=&quot;http://www.i-programmer.info/news/167-javascript/5418-javascript-to-be-the-default-langauge-for-gnome.html&quot;&gt;ambientes gráficos&lt;/a&gt;,
@@ -4274,7 +4274,7 @@ sistemas embarcados.&lt;/p&gt;
 foi considerada uma linguagem brinquedo, que tinha somente a função de criar
 alguns efeitos na interface do usuário ou adicionar alguma interação. Hoje essa
 situação mudou.&lt;/p&gt;
-&lt;h2 id=&quot;a-aurora-de-um-novo-tempo&quot; tabindex=&quot;-1&quot;&gt;A aurora de um novo tempo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;a-aurora-de-um-novo-tempo&quot; tabindex=&quot;-1&quot;&gt;A aurora de um novo tempo &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Em meados de 2004, o Google lança o Gmail. O serviço de e-mail ganhou destaque
 por garantir espaço quase ilimitado gratuitamente. Além disso, sua interface
 tinha uma característica interessante: partes da interface eram carregadas
@@ -4302,15 +4302,15 @@ exigiam grandes quantidades de respostas em tempo real. Dois anos mais tarde, em
 2011, foi lançado o &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;, gerenciador de pacotes e de
 bibliotecas para o Node, causando uma explosão em sua popularidade. Atualmente,
 &lt;a href=&quot;http://www.modulecounts.com/&quot;&gt;o NPM é o repositório de pacotes com maior quantidade de módulos disponíveis&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;vantagens&quot; tabindex=&quot;-1&quot;&gt;Vantagens &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;performance&quot; tabindex=&quot;-1&quot;&gt;Performance &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&quot;vantagens&quot; tabindex=&quot;-1&quot;&gt;Vantagens &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;performance&quot; tabindex=&quot;-1&quot;&gt;Performance &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Nos navegadores e ambientes modernos, a maioria dos códigos JavaScript é
 executado de
 &lt;a href=&quot;https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/&quot;&gt;forma bastante otimizada&lt;/a&gt;.
 Apesar de ser uma linguagem de &lt;i lang=&quot;en&quot;&gt;script&lt;/i&gt;, e, por isso, utilizar
 uma máquina virtual em tempo de execução, o JavaScript possui um desempenho
 ótimo para o desenvolvimento de aplicações.&lt;/p&gt;
-&lt;h4 id=&quot;multiparadigma&quot; tabindex=&quot;-1&quot;&gt;Multiparadigma &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;multiparadigma&quot; tabindex=&quot;-1&quot;&gt;Multiparadigma &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;O JavaScript é uma linguagem multiparadigma, o que aumenta a flexibilidade do
 desenvolvimento. Caso você queira trabalhar com orientação à objetos, a
 linguagem possui um modelo de herança baseada em protótipo. É possível também
@@ -4322,7 +4322,7 @@ de alta ordem e &lt;i lang=&quot;en&quot;&gt;closures&lt;/i&gt;. Alguns métodos
 linguagens funcionais estão presentes no JavaScript, tais como &lt;span lang=&quot;en&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map&quot;&gt;&lt;code&gt;Array#map&lt;/code&gt;&lt;/a&gt;&lt;/span&gt;,
 &lt;span lang=&quot;en&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter&quot;&gt;&lt;code&gt;Array#filter&lt;/code&gt;&lt;/a&gt;&lt;/span&gt;
 e &lt;span lang=&quot;en&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce&quot;&gt;&lt;code&gt;Array#reduce&lt;/code&gt;&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
-&lt;h4 id=&quot;reusabilidade&quot; tabindex=&quot;-1&quot;&gt;Reusabilidade &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;reusabilidade&quot; tabindex=&quot;-1&quot;&gt;Reusabilidade &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Código escrito em JavaScript é portável e facilmente reusável em outros locais.
 A linguagem segue um princípio forte de retrocompatibilidade, então é bem
 possível você pegar um código de dez anos atrás e executá-lo com sucesso em
@@ -4331,7 +4331,7 @@ qualquer máquina virtual recente.&lt;/p&gt;
 servidores &lt;em&gt;web&lt;/em&gt; permite um ganho de produtividade imenso. Outro destaque da
 linguagem é a facilidade e disponibilidade de utilizar códigos de terceiros com
 a utilização do NPM.&lt;/p&gt;
-&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusao&quot; tabindex=&quot;-1&quot;&gt;Conclusão &lt;a class=&quot;header-anchor&quot; href=&quot;https://maxroecker.github.io/blog/porque-voce-deveria-aprender-javascript/&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Hoje, a &lt;strong&gt;Lei de Atwood&lt;/strong&gt; nunca pareceu ser tão verdadeira. O JavaScript tem
 dominado todas as áreas de desenvolvimento de aplicações, desde
 &lt;a href=&quot;https://developers.facebook.com/docs/javascript&quot;&gt;aplicativos sociais&lt;/a&gt;,
@@ -4348,9 +4348,9 @@ demais possuir mais uma habilidade no seu inventário.&lt;/p&gt;
 	
 	<entry>
 		<title>Hello World</title>
-		<link href="https://maxroecker.github.io/blog/hello-world"/>
+		<link href="https://maxroecker.github.io/blog/hello-world/"/>
 		<updated>2015-08-15T10:25:33Z</updated>
-		<id>https://maxroecker.github.io/blog/hello-world</id>
+		<id>https://maxroecker.github.io/blog/hello-world/</id>
 		<content type="html">&lt;p&gt;Era quarta-feira, dia 12 de agosto, quando estava conversando com meu grande
 amigo João Luiz, entusiasmado com um &lt;em&gt;framework&lt;/em&gt; para &lt;em&gt;node.js&lt;/em&gt; que acabávamos
 de fazer funcionar e de como foi sofrido para reconfigurá-lo, pois nem eu ou ele
