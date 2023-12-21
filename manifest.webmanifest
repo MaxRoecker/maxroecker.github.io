@@ -1,0 +1,26 @@
+{
+  "name": "Max N. Roecker",
+  "short_name": "Max N. Roecker",
+  "description": "Página e Blog de Max Naegeler Roecker",
+  "display": "standalone",
+  "start_url": ".",
+  "theme_color": "#333333",
+  "background_color": "#f5f5f5",
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

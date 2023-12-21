@@ -1,0 +1,11 @@
+{
+  "extends": "/projects/base.json",
+  "files": {
+    "index.html": {
+      "contentType": "text/html"
+    },
+    "hello-world.js": {
+      "contentType": "text/javascript"
+    }
+  }
+}
