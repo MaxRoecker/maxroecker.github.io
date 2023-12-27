@@ -1,7 +1,7 @@
 {% extends './base.njk' %}
 
 {% block styles %}
-  <link rel="stylesheet" href="/{{ styles['src/assets/styles/highlight.css'] }}">
+  <link rel="stylesheet" href="/{{ styles['src/assets/styles/prism.css'] }}">
 {% endblock %}
 
 {% block meta %}
@@ -125,9 +125,8 @@
     </section>
 
     <footer class="personal personal--small">
-      <div class="avatar avatar--small">
-        <div class="avatar-photo"></div>
-      </div>
+      <object data="/illustrations/avatar.svg" type="image/svg+xml" width="1000" height="700" class="avatar"></object>
+
       <h2 class="personal__name personal__name--small">Max Naegeler Roecker</h2>
       <p class="personal__bio personal__bio--small">Mestre em Ciência da Computação & Desenvolvedor de Software</p>
       <ul class="personal__links personal__links--small">

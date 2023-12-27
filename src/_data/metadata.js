@@ -24,7 +24,7 @@ module.exports = {
       sizes: '48x48',
     },
     svg: {
-      href: '/img/logo-minor.svg',
+      href: '/img/favicon.svg',
     },
     apple: {
       href: '/img/apple-touch-icon.png',
@@ -43,8 +43,8 @@ module.exports = {
     ],
   },
   theme: {
-    color: '#333333',
-    background: '#f5f5f5',
+    color: '#100f0f',
+    background: '#fffcf0',
   },
   buildTime: new Date(),
 };

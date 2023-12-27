@@ -28,8 +28,9 @@ async function main(args) {
   if (args[0] === 'styles') {
     const entryPoints = [
       './src/assets/styles/reset.css',
+      './src/assets/styles/theme.css',
       './src/assets/styles/index.css',
-      './src/assets/styles/highlight.css',
+      './src/assets/styles/prism.css',
       './src/assets/styles/playground.css',
     ];
     const entries = await build(entryPoints, './_site/css');
@@ -41,7 +42,10 @@ async function main(args) {
   }
 
   if (args[0] === 'scripts') {
-    const entryPoints = ['./src/assets/scripts/playground.js'];
+    const entryPoints = [
+      './src/assets/scripts/playground.js',
+      './src/assets/scripts/darkmode.js',
+    ];
     const entries = await build(entryPoints, './_site/js');
     const data = JSON.stringify(entries, null, 2);
     fs.writeFileSync('./src/_data/scripts.json', data, {

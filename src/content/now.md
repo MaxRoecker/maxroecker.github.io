@@ -17,11 +17,13 @@ estou desenvolvendo e trabalhando no presente momento.
   de compartilhar e persistir informação e conhecimento por meio do blog.
 
 <figure>
-  <img
-    src="/img/symbol-2.svg"
-    alt="Jovem mulher em pé sobre uma tartaruga"
-    title="Subrepunt prospera fata"
-    decoding="async"
-    loading="lazy"
-  />
+  <object
+    data="/illustrations/prospera.svg"
+    type="image/svg+xml"
+    width="1200"
+    height="1000">
+  </object>
+  <figcaption class="center">
+    <em lang="la">Subrepunt prospera fata</em>
+  <figcaption>
 </figure>

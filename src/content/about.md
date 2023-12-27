@@ -20,11 +20,13 @@ alcançar a felicidade.
 Para mais informações profissionais, [veja meu currículo aqui](/cv).
 
 <figure>
-  <img
-    src="/img/symbol-1.svg"
-    alt="Águia Coroada"
-    title="Si vis pacem, para bellum"
-    decoding="async"
-    loading="lazy"
-  />
+  <object
+    data="/illustrations/si-vis-pacem.svg"
+    type="image/svg+xml"
+    width="1200"
+    height="900">
+  </object>
+  <figcaption class="center">
+    <em lang="la">Si vis pacem, para bellum</em>
+  <figcaption>
 </figure>

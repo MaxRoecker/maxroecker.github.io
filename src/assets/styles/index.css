@@ -1,34 +1,21 @@
-:root,
 body {
-  --background-primary: #f5f5f5;
-  --foreground-primary: #333;
-  --foreground-secondary: #666;
-  --foreground-accent: #ddd;
-  --font-default: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  --font-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
-    'DejaVu Sans Mono', monospace;
-
   min-height: 100vh;
-  background: var(--background-primary);
-  color: var(--foreground-primary);
+  background: var(--bg-1);
+  color: var(--tx-1);
   font-size: var(--font-size, 16px);
   font-family: var(--font-default);
   font-weight: normal;
   text-rendering: geometricPrecision;
 }
 
-.roecker {
-  background: blue;
-}
-
 ::-moz-selection {
-  background-color: var(--foreground-primary);
-  color: var(--background-primary);
+  background-color: var(--tx-1);
+  color: var(--bg-1);
 }
 
 ::selection {
-  background-color: var(--foreground-primary);
-  color: var(--background-primary);
+  background-color: var(--tx-1);
+  color: var(--bg-1);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -76,7 +63,7 @@ main aside {
   margin: 1em 0 1em 2.2222222em;
   padding: 0.125em 0 0.125em 2.2222222em;
   border-left-style: solid;
-  border-left-color: var(--foreground-accent);
+  border-left-color: var(--tx-3);
   border-left-width: 0.25em;
   font-size: 0.9090909091em;
   line-height: 1.5;
@@ -146,7 +133,7 @@ blockquote::before {
   left: 0;
   font-size: 4em;
   font-weight: bold;
-  color: var(--foreground-accent);
+  color: var(--tx-3);
   content: '“';
 }
 figure {
@@ -156,10 +143,14 @@ figure {
   margin: 2em 0;
 }
 figure > img,
-figure > picture > img {
+figure > object,
+figure > picture > img,
+figure > picture > object {
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   min-width: 100%;
   object-fit: contain;
 }
@@ -171,17 +162,15 @@ figure > figcaption {
   hyphens: auto;
   font-size: 1rem;
 }
-figure > .katex {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
+figure > figcaption.center {
+  text-align: center;
 }
 a:link,
 a:visited {
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
   text-decoration-style: solid;
   text-decoration-line: 0.0625rem;
-  text-decoration-color: var(--foreground-accent);
+  text-decoration-color: var(--tx-3);
   transition-property: color, text-decoration;
   transition-duration: 256ms;
   transition-timing-function: ease-out;
@@ -189,23 +178,23 @@ a:visited {
 }
 a:hover,
 a:focus {
-  color: var(--foreground-primary);
-  text-decoration-color: var(--foreground-primary);
+  color: var(--tx-1);
+  text-decoration-color: var(--tx-1);
 }
 code {
   border-radius: 0.25em;
   padding: 0.25em 0.375em 0.25em 0.375em;
-  background-color: var(--foreground-accent);
+  background-color: var(--bg-2);
   white-space: nowrap;
   font-family: var(--font-code);
   font-size: 0.75em;
-  color: var(--foreground-primary);
+  color: var(--tx-1);
 }
 pre {
   padding: 1rem;
   border-radius: 0rem;
   overflow: auto;
-  background-color: var(--foreground-accent);
+  background-color: var(--bg-2);
   font-size: 0.875rem;
   line-height: 1.25;
   white-space: pre;
@@ -220,7 +209,7 @@ pre > kbd {
   border-style: none;
   background-color: transparent;
   padding: 0;
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
   line-height: 1.25;
   white-space: pre;
   word-spacing: normal;
@@ -233,18 +222,18 @@ kbd {
 kbd.key {
   font-size: 0.7em;
   padding: 0.25em 0.375em 0.125em 0.375em;
-  border-color: var(--foreground-accent);
+  border-color: var(--tx-3);
   border-width: 0.0625rem;
   border-style: solid;
   border-radius: 0.25em;
   font-family: var(--font-code);
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
   white-space: nowrap;
 }
 samp {
   font-family: var(--font-code);
   font-size: 0.8em;
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
 }
 table {
   margin: 0 auto;
@@ -279,7 +268,7 @@ table th {
   line-height: 1;
   font-size: 2.25em;
   font-weight: normal;
-  color: var(--foreground-primary);
+  color: var(--tx-1);
 }
 .header__sitename a {
   display: flex;
@@ -287,7 +276,7 @@ table th {
 }
 .header__sitename svg {
   width: 100%;
-  fill: var(--foreground-primary);
+  fill: var(--tx-1);
   transition: fill 0.256s ease-out 0s;
 }
 @media (min-width: 740px) {
@@ -296,7 +285,7 @@ table th {
   }
 }
 .header__sitename svg:hover {
-  fill: var(--foreground-secondary);
+  fill: var(--tx-2);
 }
 @media (min-width: 740px) {
   .header__sitename {
@@ -305,8 +294,9 @@ table th {
 }
 .header__nav {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
+  gap: 1em;
 }
 .horizontal-nav {
   display: flex;
@@ -320,11 +310,29 @@ table th {
 .horizontal-nav__item {
   display: block;
   margin-left: 1em;
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
   text-decoration: none;
 }
 .horizontal-nav__item:hover {
-  color: var(--foreground-primary);
+  color: var(--tx-1);
+}
+.theme-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  border: none;
+  border-radius: 0.125em;
+  background-color: transparent;
+  padding: 0;
+  color: var(--tx-1);
+  font-size: 1.25em;
+  cursor: pointer;
+}
+.theme-button:hover {
+  background-color: var(--tx-3);
 }
 .footer {
   height: 8em;
@@ -333,7 +341,7 @@ table th {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  border-top: solid 0.0625rem var(--foreground-accent);
+  border-top: solid 0.0625rem var(--tx-3);
   font-size: 0.875em;
   text-align: center;
 }
@@ -411,49 +419,21 @@ table th {
   margin: 0;
   line-height: 1;
 }
+
 .avatar {
   display: block;
-  position: relative;
-  height: 12.5rem;
-  background-image: url('/img/ornament-1.svg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  transition: filter 0.512s ease-out 0s;
-  filter: grayscale(1);
-}
-.avatar:hover {
-  filter: grayscale(0.125) brightness(1.1);
-}
-.avatar > .avatar-photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  background-image: url('/img/author.png');
-  background-repeat: no-repeat;
-  background-position: calc(50%) calc(50% - 0.0625rem);
-  background-size: 5.125rem;
+  margin: 0 auto;
+  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: 18.75rem;
 }
 @media (min-width: 740px) {
   .avatar {
-    height: 18.75rem;
-  }
-  .avatar > .avatar-photo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    background-image: url('/img/author.png');
-    background-repeat: no-repeat;
-    background-position: calc(50%) calc(50% - 0.125rem);
-    background-size: 7.75rem;
+    height: 21.875rem;
   }
 }
+
 .blog-entry {
   padding: 1em 0;
 }
@@ -465,17 +445,17 @@ table th {
   margin: 0.5em 0;
   padding: 0.5em 0;
   font-weight: normal;
-  border-top-color: var(--foreground-accent);
+  border-top-color: var(--tx-3);
   border-top-style: double;
   border-top-width: 0.375rem;
-  border-bottom-color: var(--foreground-accent);
+  border-bottom-color: var(--tx-3);
   border-bottom-style: double;
   border-bottom-width: 0.375rem;
   font-variant: small-caps;
-  color: var(--foreground-primary);
+  color: var(--tx-1);
 }
 .blog-title__subtitle {
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
 }
 .blog-heading {
   margin: 1.5em 0.5em;
@@ -604,7 +584,7 @@ table th {
 .entry-date__date {
   display: block;
   flex-grow: 1;
-  color: var(--foreground-secondary);
+  color: var(--tx-2);
 }
 .entry-date__weekday {
   display: block;
@@ -675,11 +655,11 @@ table th {
   text-decoration: none;
 }
 .nav-icon:hover {
-  background-color: var(--foreground-accent);
+  background-color: var(--tx-3);
   text-decoration: none;
 }
 .nav-icon.nav-icon--disabled {
-  color: var(--foreground-accent);
+  color: var(--tx-3);
 }
 .nav-icon.nav-icon--disabled:hover {
   background-color: transparent;

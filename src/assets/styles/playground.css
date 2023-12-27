@@ -1,37 +1,42 @@
 playground-ide {
   font-size: 1rem;
   text-indent: 0;
+  color: var(--tx-1);
 
-  --playground-code-font-family: ui-monospace, 'Cascadia Code',
-    'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --playground-tab-bar-background: var(--bg-2);
+  --playground-tab-bar-foreground-color: var(--tx-1);
+  --playground-preview-toolbar-background: var(--bg-2);
+  --playground-preview-toolbar-foreground-color: var(--tx-1);
+  --playground-highlight-color: var(--tx-1);
+  --playground-border: solid 1px var(--bd-1);
+
+  --playground-code-font-family: var(--font-code);
   --playground-code-font-size: 0.875rem;
   --playground-code-line-height: 1.5;
-  --playground-highlight-color: #333;
-
-  --playground-code-background: rgb(46, 52, 64);
-  --playground-code-default-color: rgb(216, 222, 233);
-  --playground-code-cursor-color: rgb(248, 248, 240);
-  --playground-code-selection-background: rgb(67, 76, 94);
-  --playground-code-gutter-background: rgb(46, 52, 64);
+  --playground-code-background: var(--bg-1);
+  --playground-code-cursor-color: var(--tx-1);
+  --playground-code-default-color: var(--tx-1);
+  --playground-code-selection-background: var(--bg-2);
+  --playground-code-gutter-background: var(--bg-1);
   --playground-code-gutter-border-right: 0px;
-  --playground-code-linenumber-color: rgb(76, 86, 106);
-  --playground-code-atom-color: rgb(180, 142, 173);
-  --playground-code-attribute-color: rgb(143, 188, 187);
-  --playground-code-builtin-color: rgb(129, 161, 193);
-  --playground-code-comment-color: rgb(76, 86, 106);
-  --playground-code-def-color: rgb(143, 188, 187);
-  --playground-code-keyword-color: rgb(129, 161, 193);
-  --playground-code-meta-color: rgb(216, 222, 233);
-  --playground-code-number-color: rgb(180, 142, 173);
-  --playground-code-operator-color: rgb(216, 222, 233);
-  --playground-code-qualifier-color: rgb(216, 222, 233);
-  --playground-code-string-color: rgb(163, 190, 140);
-  --playground-code-string-2-color: rgb(216, 222, 233);
-  --playground-code-tag-color: rgb(191, 97, 106);
-  --playground-code-type-color: rgb(216, 222, 233);
-  --playground-code-variable-color: rgb(216, 222, 233);
-  --playground-code-variable-2-color: rgb(216, 222, 233);
-  --playground-code-variable-3-color: rgb(216, 222, 233);
-  --playground-code-callee-color: rgb(216, 222, 233);
-  --playground-code-property-color: rgb(143, 188, 187);
+  --playground-code-linenumber-color: var(--tx-3);
+  --playground-code-atom-color: var(--pu-1);
+  --playground-code-attribute-color: var(--cy-1);
+  --playground-code-builtin-color: var(--or-1);
+  --playground-code-comment-color: var(--tx-3);
+  --playground-code-def-color: var(--or-1);
+  --playground-code-keyword-color: var(--gr-1);
+  --playground-code-meta-color: var(--tx-3);
+  --playground-code-number-color: var(--pu-1);
+  --playground-code-operator-color: var(--tx-2);
+  --playground-code-qualifier-color: var(--gr-1);
+  --playground-code-string-color: var(--cy-1);
+  --playground-code-string-2-color: var(--bl-1);
+  --playground-code-tag-color: var(--gr-1);
+  --playground-code-type-color: var(--or-1);
+  --playground-code-variable-color: var(--bl-1);
+  --playground-code-variable-2-color: var(--ye-1);
+  --playground-code-variable-3-color: var(--tx-3);
+  --playground-code-callee-color: var(--tx-3);
+  --playground-code-property-color: var(--bl-1);
 }

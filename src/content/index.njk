@@ -5,9 +5,7 @@ layout: layouts/base.njk
 {% block main %}
 <main id="main" class="home">
   <div class="personal">
-    <div class="avatar">
-      <div class="avatar-photo"></div>
-    </div>
+    <object data="/illustrations/avatar.svg" type="image/svg+xml" width="1000" height="700" class="avatar"></object>
     <h2 class="personal__name">{{ metadata.author.name }}</h2>
     <p class="personal__bio">{{ metadata.author.description }}</p>
     <ul class="personal__links">

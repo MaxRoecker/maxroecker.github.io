@@ -20,6 +20,7 @@
     <link rel="manifest" href="/manifest.webmanifest">
 
     <link rel="stylesheet" href="/{{ styles['src/assets/styles/reset.css'] }}">
+    <link rel="stylesheet" href="/{{ styles['src/assets/styles/theme.css'] }}">
     <link rel="stylesheet" href="/{{ styles['src/assets/styles/index.css'] }}">
     {% block styles %}{% endblock %}   
 
@@ -99,6 +100,7 @@
         }
       </script>
     {% endblock %}
+    <script defer src="/{{ scripts['src/assets/scripts/darkmode.js'] }}"></script>
   </head>
   <body>
     <a href="#main" class="visually-hidden">Pular para o conteúdo</a>
@@ -120,6 +122,10 @@
               </li>
             {%- endfor %}
           </ul>
+          <button class="theme-button" title="Modo claro/escuro" aria-label="Modo claro/escuro" id="theme-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" class="dark-hidden"><path fill="currentColor" d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0Zm8 24a64 64 0 1 0 64 64a64.07 64.07 0 0 0-64-64Zm-69.66 5.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32ZM192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72Zm5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8Zm80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" class="light-hidden"><path fill="currentColor" d="M240 96a8 8 0 0 1-8 8h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1 0-16h16V72a8 8 0 0 1 16 0v16h16a8 8 0 0 1 8 8Zm-96-40h8v8a8 8 0 0 0 16 0v-8h8a8 8 0 0 0 0-16h-8v-8a8 8 0 0 0-16 0v8h-8a8 8 0 0 0 0 16Zm65.14 94.33A88.07 88.07 0 0 1 105.67 46.86a8 8 0 0 0-10.6-9.06A96 96 0 1 0 218.2 160.93a8 8 0 0 0-9.06-10.6Z"/></svg>
+          </button>
         </nav>
       </header>
       
