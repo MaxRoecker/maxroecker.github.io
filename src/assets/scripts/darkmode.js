@@ -43,14 +43,6 @@ function getStoredTheme() {
   return null;
 }
 
-const channel = new BroadcastChannel('theme-channel');
-
-channel.addEventListener('message', (event) => {
-  const theme = event.data;
-  if (!isTheme(theme)) return;
-  window.document.documentElement.classList.toggle('dark');
-});
-
 const button = window.document.getElementById('theme-button');
 if (button != null) {
   button.addEventListener('click', () => {
@@ -58,7 +50,6 @@ if (button != null) {
     const theme = getNext(stored);
     window.document.documentElement.classList.toggle('dark');
     window.localStorage.setItem('theme', theme);
-    channel.postMessage(theme);
   });
 }
 

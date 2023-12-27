@@ -20,12 +20,7 @@ alcançar a felicidade.
 Para mais informações profissionais, [veja meu currículo aqui](/cv).
 
 <figure>
-  <object
-    data="/illustrations/si-vis-pacem.svg"
-    type="image/svg+xml"
-    width="1200"
-    height="900">
-  </object>
+  {% include "illustrations/si-vis-pacem.njk" %}
   <figcaption class="center">
     <em lang="la">Si vis pacem, para bellum</em>
   <figcaption>

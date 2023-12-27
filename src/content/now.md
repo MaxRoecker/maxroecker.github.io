@@ -17,12 +17,7 @@ estou desenvolvendo e trabalhando no presente momento.
   de compartilhar e persistir informação e conhecimento por meio do blog.
 
 <figure>
-  <object
-    data="/illustrations/prospera.svg"
-    type="image/svg+xml"
-    width="1200"
-    height="1000">
-  </object>
+  {% include "illustrations/prospera.njk" %}
   <figcaption class="center">
     <em lang="la">Subrepunt prospera fata</em>
   <figcaption>

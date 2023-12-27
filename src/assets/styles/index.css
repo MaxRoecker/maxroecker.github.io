@@ -176,10 +176,18 @@ a:visited {
   transition-timing-function: ease-out;
   transition-delay: 0ms;
 }
-a:hover,
+a:hover {
+  color: var(--tx-1);
+}
 a:focus {
   color: var(--tx-1);
   text-decoration-color: var(--tx-1);
+  outline: solid 2px transparent;
+  outline-offset: 2px;
+}
+a:focus-visible {
+  outline: solid 2px var(--bd-3);
+  outline-offset: 2px;
 }
 code {
   border-radius: 0.25em;
@@ -331,8 +339,15 @@ table th {
   font-size: 1.25em;
   cursor: pointer;
 }
+.theme-button:focus-visible {
+  outline: solid 2px var(--bd-3);
+  outline-offset: 2px;
+}
 .theme-button:hover {
-  background-color: var(--tx-3);
+  background-color: var(--bd-2);
+}
+.theme-button:active {
+  background-color: var(--bd-3);
 }
 .footer {
   height: 8em;
@@ -428,6 +443,15 @@ table th {
   max-width: 100%;
   height: 18.75rem;
 }
+.avatar image {
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: filter 0.512s ease-out 0s;
+}
+.avatar image:hover {
+  filter: grayscale(0.125) brightness(1.1);
+}
+
 @media (min-width: 740px) {
   .avatar {
     height: 21.875rem;
