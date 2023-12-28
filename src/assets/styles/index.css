@@ -450,12 +450,12 @@ table th {
   height: 18.75rem;
 }
 .avatar image {
-  cursor: pointer;
-  filter: grayscale(1);
+  cursor: crosshair;
+  filter: grayscale(1) brightness(1.25) contrast(1.125);
   transition: filter 0.512s ease-out 0s;
 }
 .avatar image:hover {
-  filter: grayscale(0.125) brightness(1.1);
+  filter: grayscale(0.125) brightness(1.25) contrast(0.875);
 }
 
 @media (min-width: 740px) {
