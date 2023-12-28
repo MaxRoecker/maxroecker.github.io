@@ -32,6 +32,8 @@ async function main(args) {
       './src/assets/styles/index.css',
       './src/assets/styles/prism.css',
       './src/assets/styles/playground.css',
+      './src/assets/styles/cv-print.css',
+      './src/assets/styles/cv.css',
     ];
     const entries = await build(entryPoints, './_site/css');
     const data = JSON.stringify(entries, null, 2);
@@ -45,6 +47,7 @@ async function main(args) {
     const entryPoints = [
       './src/assets/scripts/playground.js',
       './src/assets/scripts/darkmode.js',
+      './src/assets/scripts/cv.js',
     ];
     const entries = await build(entryPoints, './_site/js');
     const data = JSON.stringify(entries, null, 2);

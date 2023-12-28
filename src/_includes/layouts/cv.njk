@@ -1,0 +1,75 @@
+{% if title and subtitle %}
+  {% set completetitle = title + ": " + subtitle + " - " + metadata.name %}
+{% elif title %}
+  {% set completetitle = title + " - " + metadata.name %}
+{% else %}
+  {% set completetitle = metadata.name %}
+{% endif %}
+<!doctype html>
+<html lang="{{ language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ completetitle }}</title>
+    <link rel="canonical" href="{{ metadata.rootURI }}{{ page.url }}">
+    <link rel="icon" href="{{ metadata.icons.ico.href }}" sizes="{{ metadata.icons.ico.sizes }}"/>
+    <link rel="icon" href="{{ metadata.icons.svg.href }}" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="{{ metadata.icons.apple.href }}"/>
+    
+    <link rel="stylesheet" media="all" href="/{{ styles['src/assets/styles/reset.css'] }}">
+    <link rel="stylesheet" media="all" href="/{{ styles['src/assets/styles/theme.css'] }}">
+    <link rel="stylesheet" media="all" href="/{{ styles['src/assets/styles/cv.css'] }}">
+    <link rel="stylesheet" media="print" href="/{{ styles['src/assets/styles/cv-print.css'] }}">
+    {% block styles %}{% endblock %}
+
+    <meta name="referrer" content="origin"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="generator" content="{{ elevPenty.generator }}">
+    {% if metadata.theme.color %}
+      <meta name="theme-color" content="{{ metadata.theme.color }}">
+    {% endif %}
+    {% if metadata.googleOwnership %}
+      {% for ownership in metadata.googleOwnership %}
+        <meta name="google-site-verification" content="{{ ownership }}"/>
+      {% endfor %}
+    {% endif %}
+  
+    {% block meta %}
+      <meta name="description" content="{{ heading }}"/>
+      <meta name="author" content="{{ metadata.author.name }}"/>
+      <meta name="generator" content="11ty 0.10.0"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:image" content="{{ metadata.rootURI }}{{ metadata.images.og }}"/>
+      <meta property="og:image:alt" content="{{ metadata.description }}"/>
+      <meta property="og:site_name" content="{{ metadata.name }}"/>
+      <meta property="og:title" content="{{ completetitle }}"/>
+      <meta property="og:description" content="{{ heading }}"/>
+      <meta property="og:url" content="{{ metadata.rootURI }}{{ page.url }}"/>
+      <meta property="og:locale" content="{{ language }}"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+      {% if metadata.twitter %}
+      <meta name="twitter:creator" content="@{{ metadata.twitter }}"/>
+      {% endif %}
+      <meta name="twitter:image:src" content="{{ metadata.rootURI }}{{ metadata.images.image }}"/>
+      <meta name="twitter:title" content="{{ completetitle }}"/>
+      <meta name="twitter:description" content="{{ heading }}"/>
+      <meta name="twitter:url" content="{{ metadata.rootURI }}{{ page.url }}"/>
+    {% endblock %}
+
+    <script defer src="/{{ scripts['src/assets/scripts/cv.js'] }}"></script>
+    {% block scripts %}{% endblock %}
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 67.47 67.47">
+          <path fill="currentColor" d="M0 0h67.47v67.47H0zm20.92 34.94v-.25l.02-.09v-.18l-.01-.1v-.09l-.01-.08v-.1l-.03-.1v-.09l-.03-.1-.03-.08-.02-.1-.04-.08-.03-.08-.04-.08-.04-.09-.07-.07-.06-.07-.05-.07-.04-.04-.04-.02-.03-.03-.05-.03-.04-.02-.04-.03-.05-.02-.05-.02-.05-.01-.04-.02-.05-.02-.06-.02h-.06l-.06-.02-.06-.01-.06-.02h-.06l-.07-.01h-.15c-.94 0-1.7.79-1.54 1.56v.77l.84 9.24-7.64-5.55c-.54-.3-.64-.4-1.07-.4-.83 0-1.62.83-1.62 1.66 0 .94.6 1.2 1.2 1.5l8.47 4.05-8.22 3.98c-.96.48-1.45.73-1.45 1.63 0 .87.79 1.66 1.62 1.66.43 0 .53 0 2.03-1.14l6.68-4.83-.9 10.03c0 1.25 1.07 1.54 1.56 1.54.7 0 1.6-.43 1.6-1.54l-.9-10.03 7.63 5.56c.55.28.65.41 1.08.41.83 0 1.6-.85 1.6-1.66 0-.9-.53-1.2-1.24-1.55-3.58-1.8-3.7-1.8-8.41-4.01l8.22-4c.96-.47 1.44-.7 1.44-1.6 0-.9-.78-1.67-1.6-1.67-.44 0-.54 0-2.04 1.14l-6.68 4.82zm14.34-23.59l.01-.08v-.17l.01-.08v-.38l-.02-.08v-.1l-.02-.09-.01-.1-.03-.1-.02-.07-.03-.1-.03-.08-.04-.09-.03-.08-.05-.08-.06-.08-.06-.07-.06-.07-.04-.03-.03-.02-.04-.04-.05-.02-.03-.03-.05-.03-.05-.02-.05-.03-.04-.01-.05-.02-.05-.01-.06-.03-.06-.02h-.06l-.06-.02-.06-.01h-.06l-.07-.02h-.14c-.95 0-1.71.8-1.55 1.56v.78l.84 9.23-7.63-5.55c-.54-.3-.65-.4-1.08-.4-.83 0-1.62.83-1.62 1.66 0 .94.6 1.2 1.2 1.5l8.47 4.05-8.22 3.99c-.95.48-1.45.73-1.45 1.62 0 .88.8 1.67 1.62 1.67.43 0 .54 0 2.03-1.15l6.68-4.82-.9 10.02c0 1.25 1.07 1.55 1.56 1.55.7 0 1.6-.43 1.6-1.55l-.9-10.02 7.63 5.55c.55.29.66.42 1.09.42.82 0 1.6-.85 1.6-1.67 0-.9-.54-1.2-1.24-1.55-3.58-1.8-3.71-1.8-8.42-4.01l8.23-4c.95-.46 1.43-.7 1.43-1.6 0-.9-.78-1.66-1.6-1.66-.43 0-.54 0-2.04 1.13l-6.67 4.82zM49.6 34.94l.01-.09v-.16l.02-.09v-.18l-.02-.1v-.27l-.03-.1-.01-.09-.03-.1-.02-.08-.02-.1-.04-.08-.04-.08-.03-.08-.05-.09-.06-.07-.06-.07-.06-.07-.03-.04-.04-.02-.04-.03-.04-.03-.04-.02-.05-.03-.05-.02-.04-.02-.05-.01-.05-.02-.05-.02-.06-.02h-.06l-.06-.02-.05-.01-.06-.02h-.06l-.08-.01h-.14c-.95 0-1.71.79-1.54 1.56v.77l.83 9.24-7.63-5.55c-.54-.3-.65-.4-1.08-.4-.82 0-1.61.83-1.61 1.66 0 .94.6 1.2 1.2 1.5l8.47 4.05-8.23 3.98c-.95.48-1.44.73-1.44 1.63 0 .87.79 1.66 1.61 1.66.43 0 .54 0 2.04-1.14l6.67-4.83-.9 10.03c0 1.25 1.07 1.54 1.56 1.54.7 0 1.6-.43 1.6-1.54l-.9-10.03 7.63 5.56c.55.28.66.41 1.09.41.83 0 1.6-.85 1.6-1.66 0-.9-.54-1.2-1.24-1.55-3.58-1.8-3.71-1.8-8.41-4.01l8.22-4c.96-.47 1.43-.7 1.43-1.6 0-.9-.77-1.67-1.6-1.67-.43 0-.54 0-2.03 1.14l-6.68 4.82z" />
+        </svg>
+        <h1 class="head1">Max Naegeler Roecker</h1>
+      </header>
+      {% block main %}
+        {{ content | safe }}
+      {% endblock main %}
+    </main>
+  </body>
+</html>
