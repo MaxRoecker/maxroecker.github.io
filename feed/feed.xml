@@ -4,7 +4,7 @@
   <subtitle>Página e Blog de Max Naegeler Roecker</subtitle>
   <link href="https://maxroecker.github.io/feed/feed.xml" rel="self"/>
   <link href="https://maxroecker.github.io/"/>
-  <updated>2023-12-28T18:52:46Z</updated>
+  <updated>2023-12-28T21:39:39Z</updated>
   <id>https://maxroecker.github.io</id>
   <author>
     <name>Max Naegeler Roecker</name>
@@ -3154,7 +3154,54 @@ identificados por meio de uma chave. Em sua essência, objetos são
 também chamados de mapas, tabelas de símbolos ou dicionários — onde cada chave é
 uma string única que apontam para outros valores.&lt;/p&gt;
 &lt;figure&gt;
-  &lt;img alt=&quot;Um objeto com propriedades apontando para seus respectivos valores.&quot; title=&quot;undefined&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://maxroecker.github.io/img/NYB-5mFFrQ-475.svg&quot; width=&quot;475&quot; height=&quot;250&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 475 250&quot;&gt;
+  &lt;defs&gt;
+    &lt;marker id=&quot;a&quot; orient=&quot;auto&quot; overflow=&quot;visible&quot; refX=&quot;0&quot; refY=&quot;0&quot;&gt;
+      &lt;path fill=&quot;var(--tx-2)&quot; fill-rule=&quot;evenodd&quot; stroke=&quot;var(--tx-2)&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;.38&quot; d=&quot;M-5.23-2.42 1.32-.01-5.23 2.4a4.1 4.1 0 0 0 0-4.82z&quot;&gt;&lt;/path&gt;
+    &lt;/marker&gt;
+    &lt;marker id=&quot;b&quot; orient=&quot;auto&quot; overflow=&quot;visible&quot; refX=&quot;0&quot; refY=&quot;0&quot;&gt;
+      &lt;path fill=&quot;var(--tx-3)&quot; fill-rule=&quot;evenodd&quot; stroke=&quot;var(--tx-3)&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;.38&quot; d=&quot;M-5.23-2.42 1.32-.01-5.23 2.4a4.1 4.1 0 0 0 0-4.82z&quot;&gt;&lt;/path&gt;
+    &lt;/marker&gt;
+    &lt;marker id=&quot;c&quot; orient=&quot;auto&quot; overflow=&quot;visible&quot; refX=&quot;0&quot; refY=&quot;0&quot;&gt;
+      &lt;path fill=&quot;var(--tx-1)&quot; fill-rule=&quot;evenodd&quot; stroke=&quot;var(--tx-1)&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;.38&quot; d=&quot;M-5.23-2.42 1.32-.01-5.23 2.4a4.1 4.1 0 0 0 0-4.82z&quot;&gt;&lt;/path&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+  &lt;rect width=&quot;475&quot; height=&quot;250&quot; fill=&quot;none&quot; rx=&quot;0&quot; ry=&quot;0&quot;&gt;&lt;/rect&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; d=&quot;M211 26.01v198H33v-198Z&quot;&gt;&lt;/path&gt;
+  &lt;text x=&quot;183.16&quot; y=&quot;-120.81&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;16&quot; transform=&quot;rotate(90)&quot;&gt;
+    ...
+  &lt;/text&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--bd-2)&quot; d=&quot;M162 38.11h38v38h-38zm-118 0h118v38H44z&quot;&gt;&lt;/path&gt;
+  &lt;circle cx=&quot;181&quot; cy=&quot;57.1&quot; r=&quot;6.69&quot; fill=&quot;var(--tx-2)&quot;&gt;&lt;/circle&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--tx-2)&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#a)&quot; d=&quot;M179.76 57.81s28.04-4.11 41.16 0c22.3 7 27.59 41.26 48.87 50.34 15.44 6.58 50.13 0 50.13 0&quot;&gt;&lt;/path&gt;
+  &lt;rect width=&quot;120.02&quot; height=&quot;35&quot; x=&quot;323.03&quot; y=&quot;89.63&quot; fill=&quot;var(--tx-2)&quot;&gt;&lt;/rect&gt;
+  &lt;text x=&quot;55&quot; y=&quot;60.78&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;12&quot;&gt;
+    propriedade#1
+  &lt;/text&gt;
+  &lt;text x=&quot;355.24&quot; y=&quot;112.12&quot; fill=&quot;var(--bg-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;13&quot;&gt;
+    valor#1
+  &lt;/text&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--bd-2)&quot; d=&quot;M162 88.11h38v38h-38zm-118 0h118v38H44z&quot;&gt;&lt;/path&gt;
+  &lt;circle cx=&quot;181&quot; cy=&quot;107.1&quot; r=&quot;6.69&quot; fill=&quot;var(--tx-3)&quot;&gt;&lt;/circle&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--tx-3)&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#b)&quot; d=&quot;M183.28 107.48s30.42-14.78 57.5-5 47.44 35.3 47.44 35.3&quot;&gt;&lt;/path&gt;
+  &lt;rect width=&quot;120.02&quot; height=&quot;35&quot; x=&quot;262.89&quot; y=&quot;140.32&quot; fill=&quot;var(--tx-3)&quot;&gt;&lt;/rect&gt;
+  &lt;text x=&quot;55&quot; y=&quot;110.78&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;12&quot;&gt;
+    propriedade#2
+  &lt;/text&gt;
+  &lt;text x=&quot;295.1&quot; y=&quot;162.81&quot; fill=&quot;var(--bg-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;13&quot;&gt;
+    valor#2
+  &lt;/text&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--bd-2)&quot; d=&quot;M162 138.11h38v38h-38zm-118 0h118v38H44z&quot;&gt;&lt;/path&gt;
+  &lt;text x=&quot;55&quot; y=&quot;160.78&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;12&quot;&gt;
+    propriedade#3
+  &lt;/text&gt;
+  &lt;circle cx=&quot;181&quot; cy=&quot;157.1&quot; r=&quot;6.69&quot; fill=&quot;var(--tx-1)&quot;&gt;&lt;/circle&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--tx-1)&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#c)&quot; d=&quot;M180.07 156.05s34.75-3.83 62.85-23.57c28.1-19.74 43.82-57.26 43.82-57.26&quot;&gt;&lt;/path&gt;
+  &lt;rect width=&quot;120.02&quot; height=&quot;35&quot; x=&quot;259.36&quot; y=&quot;37.79&quot; fill=&quot;var(--tx-1)&quot;&gt;&lt;/rect&gt;
+  &lt;text x=&quot;291.57&quot; y=&quot;60.28&quot; fill=&quot;var(--bg-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;13&quot;&gt;
+    valor#3
+  &lt;/text&gt;
+&lt;/svg&gt;
   &lt;figcaption&gt;
     Em JavaScript, um objeto é um conjunto de vários pares de chave-valor. Cada
     chave é única no objeto e aponta para somente um valor.
