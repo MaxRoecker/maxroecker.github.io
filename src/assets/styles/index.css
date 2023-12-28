@@ -434,6 +434,12 @@ table th {
   margin: 0;
   line-height: 1;
 }
+.personal__links a {
+  color: var(--tx-1);
+}
+.personal__links a:hover {
+  color: var(--tx-2);
+}
 
 .avatar {
   display: block;
