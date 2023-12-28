@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 475 250">
+  <defs>
+    <marker id="a" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--tx-2)" fill-rule="evenodd" stroke="var(--tx-2)" stroke-linejoin="round" stroke-width=".38" d="M-5.23-2.42 1.32-.01-5.23 2.4a4.1 4.1 0 0 0 0-4.82z" />
+    </marker>
+    <marker id="b" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--tx-3)" fill-rule="evenodd" stroke="var(--tx-3)" stroke-linejoin="round" stroke-width=".38" d="M-5.23-2.42 1.32-.01-5.23 2.4a4.1 4.1 0 0 0 0-4.82z" />
+    </marker>
+    <marker id="c" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--tx-1)" fill-rule="evenodd" stroke="var(--tx-1)" stroke-linejoin="round" stroke-width=".38" d="M-5.23-2.42 1.32-.01-5.23 2.4a4.1 4.1 0 0 0 0-4.82z" />
+    </marker>
+  </defs>
+  <rect width="475" height="250" fill="none" rx="0" ry="0" />
+
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" d="M211 26.01v198H33v-198Z" />
+  <text x="183.16" y="-120.81" fill="var(--tx-1)" font-family="var(--font-code)" font-size="16" transform="rotate(90)">
+    ...
+  </text>
+
+  <path fill="none" stroke="var(--bd-2)" d="M162 38.11h38v38h-38zm-118 0h118v38H44z" />
+  <circle cx="181" cy="57.1" r="6.69" fill="var(--tx-2)" />
+  <path fill="none" stroke="var(--tx-2)" stroke-width="2" marker-end="url(#a)" d="M179.76 57.81s28.04-4.11 41.16 0c22.3 7 27.59 41.26 48.87 50.34 15.44 6.58 50.13 0 50.13 0" />
+  <rect width="120.02" height="35" x="323.03" y="89.63" fill="var(--tx-2)" />
+  <text x="55" y="60.78" fill="var(--tx-1)" font-family="var(--font-code)" font-size="12">
+    propriedade#1
+  </text>
+  <text x="355.24" y="112.12" fill="var(--bg-1)" font-family="var(--font-code)" font-size="13">
+    valor#1
+  </text>
+
+  <path fill="none" stroke="var(--bd-2)" d="M162 88.11h38v38h-38zm-118 0h118v38H44z" />
+  <circle cx="181" cy="107.1" r="6.69" fill="var(--tx-3)" />
+  <path fill="none" stroke="var(--tx-3)" stroke-width="2" marker-end="url(#b)" d="M183.28 107.48s30.42-14.78 57.5-5 47.44 35.3 47.44 35.3" />
+  <rect width="120.02" height="35" x="262.89" y="140.32" fill="var(--tx-3)" />
+  <text x="55" y="110.78" fill="var(--tx-1)" font-family="var(--font-code)" font-size="12">
+    propriedade#2
+  </text>
+  <text x="295.1" y="162.81" fill="var(--bg-1)" font-family="var(--font-code)" font-size="13">
+    valor#2
+  </text>
+
+  <path fill="none" stroke="var(--bd-2)" d="M162 138.11h38v38h-38zm-118 0h118v38H44z" />
+  <text x="55" y="160.78" fill="var(--tx-1)" font-family="var(--font-code)" font-size="12">
+    propriedade#3
+  </text>
+  <circle cx="181" cy="157.1" r="6.69" fill="var(--tx-1)" />
+  <path fill="none" stroke="var(--tx-1)" stroke-width="2" marker-end="url(#c)" d="M180.07 156.05s34.75-3.83 62.85-23.57c28.1-19.74 43.82-57.26 43.82-57.26" />
+  <rect width="120.02" height="35" x="259.36" y="37.79" fill="var(--tx-1)" />
+  <text x="291.57" y="60.28" fill="var(--bg-1)" font-family="var(--font-code)" font-size="13">
+    valor#3
+  </text>
+</svg>

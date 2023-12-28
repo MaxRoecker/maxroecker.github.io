@@ -45,11 +45,7 @@ também chamados de mapas, tabelas de símbolos ou dicionários — onde cada ch
 uma string única que apontam para outros valores.
 
 <figure>
-  {% img {
-    src: "./object.svg",
-    alt: "Um objeto com propriedades apontando para seus respectivos valores.",
-    formats: ['svg']
-  }%}
+  {% include "diagrams/object-properties-pt-BR.svg" %}
   <figcaption>
     Em JavaScript, um objeto é um conjunto de vários pares de chave-valor. Cada
     chave é única no objeto e aponta para somente um valor.
