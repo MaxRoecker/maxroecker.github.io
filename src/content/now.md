@@ -17,7 +17,7 @@ estou desenvolvendo e trabalhando no presente momento.
   de compartilhar e persistir informação e conhecimento por meio do blog.
 
 <figure>
-  {% include "illustrations/prospera.njk" %}
+  {% include "illustrations/prospera.svg" %}
   <figcaption class="center">
     <em lang="la">Subrepunt prospera fata</em>
   <figcaption>
