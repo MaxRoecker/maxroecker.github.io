@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/{{ styles['src/assets/styles/reset.css'] }}">
     <link rel="stylesheet" href="/{{ styles['src/assets/styles/theme.css'] }}">
     <link rel="stylesheet" href="/{{ styles['src/assets/styles/index.css'] }}">
-    {% block styles %}{% endblock %}   
+    {% block styles %}{% endblock %}
 
     <meta name="referrer" content="origin"/>
     <meta name="robots" content="index, follow"/>
@@ -100,7 +100,9 @@
         }
       </script>
     {% endblock %}
+
     <script defer src="/{{ scripts['src/assets/scripts/darkmode.js'] }}"></script>
+    {% block scripts %}{% endblock %}
   </head>
   <body>
     <a href="#main" class="visually-hidden">Pular para o conteúdo</a>
@@ -164,6 +166,5 @@
         </p>
       </footer>
     </div>
-    {% block scripts %}{% endblock %}
   </body>
 </html>
