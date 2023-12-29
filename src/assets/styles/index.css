@@ -40,6 +40,7 @@ main h4,
 main h5,
 main h6 {
   margin: 2.5em 0 1em 0;
+  line-height: 1;
   font-weight: normal;
   font-variant: small-caps;
   text-align: center;
@@ -463,6 +464,13 @@ table th {
   .avatar {
     height: 21.875rem;
   }
+}
+
+.header-anchor {
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 .blog-entry {
