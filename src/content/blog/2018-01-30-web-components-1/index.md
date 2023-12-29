@@ -37,13 +37,8 @@ de você poder “estender” o HTML e poder criar elementos personalizados para
 sua necessidade, encapsulando estilo, comportamento e marcação em uma só
 “entidade”?
 
-<figure>
-  <img
-    src="/img/illustrations/lock.svg"
-    alt="Um leão heráldico."
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 80%">
+  {% include 'illustrations/heraldic-lion.svg' %}
 </figure>
 
 Os [_web components_](https://en.wikipedia.org/wiki/Web_Components) são a

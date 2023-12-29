@@ -128,13 +128,8 @@ y = { name: 'foobar' }; // Erro!
 Caso você deseje construir um objeto imutável, é necessário utilizar o
 [`Object.freeze`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 
-<figure>
-  <img
-    src="/img/illustrations/turtle.svg"
-    alt="Uma tartaruga."
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 70%;">
+  {% include 'illustrations/turtle.svg' %}
 </figure>
 
 ## Conclusão

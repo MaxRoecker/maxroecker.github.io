@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850">
+  <rect width="239.41" height="48.49" x="99.4" y="304.06" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="218.22" y="338.51" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 257.11h189.4v44.95H124.4Z" />
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 212.16h189.4v44.95H124.4Z" />
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 167.2h189.4v44.96H124.4Z" />
+  <text x="219.58" y="289.78" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    AVG
+  </text>
+  <text x="219.54" y="244.83" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 4
+  </text>
+  <text x="219.58" y="199.88" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 5
+  </text>
+  <text x="219.58" y="385" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    1
+  </text>
+
+  <rect width="239.41" height="48.49" x="430.3" y="304.06" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="549.11" y="338.51" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 257.11h189.4v44.95H455.3Z" />
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 212.16h189.4v44.95H455.3Z" />
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 167.2h189.4v44.96H455.3Z" />
+  <text x="550.47" y="289.78" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    AVG
+  </text>
+  <text x="550.44" y="244.83" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 4
+  </text>
+  <text x="550.47" y="199.88" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 5
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M455.3 122.26h189.4v44.95H455.3Z" />
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M455.3 77.3h189.4v44.96H455.3Z" />
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M455.3 32.35h189.4v44.96H455.3Z" />
+  <text x="550.47" y="154.93" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    ADD
+  </text>
+  <text x="550.44" y="109.97" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 4
+  </text>
+  <text x="550.47" y="65.02" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 5
+  </text>
+  <text x="550.47" y="381.79" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    2
+  </text>
+
+
+  <rect width="239.41" height="48.49" x="761.19" y="304.06" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="880" y="338.51" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M786.19 257.11h189.4v44.95H786.2Z" />
+  <text x="881.36" y="289.78" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    AVG
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M786.19 212.16h189.4v44.95H786.2Z" />
+  <text x="881.33" y="244.83" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 4
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M786.19 167.2h189.4v44.96H786.2Z" />
+  <text x="881.36" y="199.88" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 5
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M786.19 122.26h189.4v44.95H786.2Z" />
+  <text x="881.36" y="154.93" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    SUM = 9
+  </text>
+  <text x="881.82" y="381.79" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    3
+  </text>
+
+  <rect width="239.41" height="48.49" x="99.4" y="737.41" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="218.22" y="771.86" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 690.46h189.4v44.95H124.4Z" />
+  <text x="219.58" y="723.13" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    AVG
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 645.5h189.4v44.96H124.4Z" />
+  <text x="219.54" y="678.17" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 4
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 600.55h189.4v44.96H124.4Z" />
+  <text x="219.58" y="633.22" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 5
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M124.4 555.6h189.4v44.95H124.4Z" />
+  <text x="219.58" y="588.27" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    SUM = 9
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M124.4 510.65h189.4v44.95H124.4Z" />
+  <text x="219.58" y="543.32" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    DIV
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M124.4 465.7h189.4v44.95H124.4Z" />
+  <text x="219.54" y="498.37" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 9
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M124.4 420.75h189.4v44.95H124.4Z" />
+  <text x="219.58" y="453.42" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 2
+  </text>
+  <text x="219.58" y="815.13" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    4
+  </text>
+
+  <rect width="239.41" height="48.49" x="430.3" y="737.41" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="549.11" y="771.86" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 690.46h189.4v44.95H455.3Z" />
+  <text x="550.47" y="723.13" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    AVG
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 645.5h189.4v44.96H455.3Z" />
+  <text x="550.44" y="678.17" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 4
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 600.55h189.4v44.96H455.3Z" />
+  <text x="550.47" y="633.22" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 5
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 555.6h189.4v44.95H455.3Z" />
+  <text x="550.47" y="588.27" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    SUM = 9
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M455.3 510.65h189.4v44.95H455.3Z" />
+  <text x="550.47" y="543.32" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    ~ = 4.5
+  </text>
+  <text x="550.47" y="815.13" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    5
+  </text>
+
+  <rect width="239.41" height="48.49" x="764.26" y="737.41" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="883.07" y="771.86" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M789.26 689.66h189.4v44.95h-189.4z" />
+  <text x="884.43" y="723.13" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    ~ = 4.5
+  </text>
+  <text x="884.43" y="824.34" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    6
+  </text>
+</svg>

@@ -128,14 +128,8 @@ Mas que método é esse? Essa saída não condiz com a implementação que fizem
 para o `toString` acima… Chega de mistérios! O que temos aqui é um efeito dos
 **protótipos** em plena ação.
 
-<figure>
-  <img
-    src="/img/illustrations/airship.svg"
-    alt="Protótipo de aeronave contendo balões preenchidos com vácuo."
-    title="Aeronave imaginada pelo italiano Francesco Lana de Terzi (1631–1687)"
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 60%">
+  {% include 'illustrations/airship.svg' %}
 </figure>
 
 ## Protótipos de objetos

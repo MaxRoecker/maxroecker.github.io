@@ -252,14 +252,11 @@ em Java ou classes abstratas em C++ — e por isso fica a cargo do codificador
 utilizar a mesmo protocolo nos objetos em que deve-se estabelecer um
 polimorfismo.
 
-<figure>
-  <img
-    src="/img/illustrations/automata-duck.svg"
-    alt="Um automâto de pato com sistema alimentação similar ao trato digestivo"
-    title="Pato Mecânico de Jacques de Vaucanson, 1738"
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 60%">
+  {% include 'illustrations/automata-duck.svg' %}
+  <figcaption class="center">
+    Pato Mecânico de Jacques de Vaucanson, 1738
+  </figcaption>
 </figure>
 
 ## Propriedades e métodos estáticos

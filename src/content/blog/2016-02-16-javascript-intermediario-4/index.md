@@ -107,13 +107,8 @@ para o topo do código somente a declaração, mas não a definição; enquanto 
 hasteamento de funções eleva para o topo do código tanto a declaração quando a
 definição.
 
-<figure>
-  <img
-    src="/img/illustrations/hoisting.svg"
-    alt="Mecanismo para elevar água."
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 70%">
+  {% include 'illustrations/hoisting.svg' %}
 </figure>
 
 Ainda assim, pelos exemplos anteriores, o comportamento de hastear as

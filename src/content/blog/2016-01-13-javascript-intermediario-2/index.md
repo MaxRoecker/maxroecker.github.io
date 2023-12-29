@@ -73,11 +73,7 @@ A execução do código acima fará com que a pilha de execução tenha, de form
 simplificada, os estados dado pela figura abaixo.
 
 <figure>
-  {% img {
-    src: "./stack1.svg",
-    alt: "Sequência do empilhamento dos quadros da execução do código acima.",
-    formats: ['svg']
-  }%}
+  {% include 'diagrams/call-stack-1-pt-BR.svg' %}
 </figure>
 
 1. Temos a chamada da função `avg` que empilha seu respectivo quadro contendo os
@@ -113,11 +109,7 @@ A execução desse código terá, de forma simplificada, os seguintes estados da
 pilha:
 
 <figure>
-  {% img {
-    src: "./stack2.svg",
-    alt: "Sequência do empilhamento dos quadros da execução do código acima.",
-    formats: ['svg']
-  }%}
+  {% include 'diagrams/call-stack-2-pt-BR.svg' %}
 </figure>
 
 1. Temos a chamada da função `mul` que empilha seu respectivo quadro contendo o
@@ -155,11 +147,7 @@ Dessa forma, vamos redesenhar o nosso esquema simplificado do estado da pilha de
 execução contemplando também o <i lang="en">heap</i>:
 
 <figure>
-  {% img {
-    src: "./stack3.svg",
-    alt: "Sequência do empilhamento dos quadros da execução do código acima.",
-    formats: ['svg']
-  }%}
+  {% include 'diagrams/call-stack-3-pt-BR.svg' %}
 </figure>
 
 1. Temos a chamada da função `mul` que empilha seu respectivo quadro contendo o
@@ -173,13 +161,8 @@ execução contemplando também o <i lang="en">heap</i>:
    parâmetro `x = 2` do contexto salvo e multiplica pelo parâmetro `y = 2`. O
    valor da multiplicação é retornado e exibido pelo console.
 
-<figure>
-  <img
-    src="/img/illustrations/lock.svg"
-    alt="Um símbolo enclausurado."
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 70%">
+  {% include 'illustrations/heraldic-lion.svg' %}
 </figure>
 
 ## Teoria e propriedades das <i lang="en">closures</i>

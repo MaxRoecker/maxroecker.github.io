@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850">
+  <defs>
+    <marker id="a" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--tx-2)" fill-rule="evenodd" stroke="var(--tx-2)" stroke-width="1" d="m5 2-6-2 6-2v4z" />
+    </marker>
+    <marker id="b" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--tx-2)" fill-rule="evenodd" stroke="var(--tx-2)" stroke-width="1" d="m5 2-6-2 6-2v4z" />
+    </marker>
+    <marker id="c" orient="auto" overflow="visible" refX="0" refY="0">
+      <path fill="var(--tx-2)" fill-rule="evenodd" stroke="var(--tx-2)" stroke-width="1" d="m5 2-6-2 6-2v4z" />
+    </marker>
+  </defs>
+
+  <rect width="239.4" height="48.5" x="89" y="45" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="209" y="79" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    HEAP
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M114 212h189v45H114Z" />
+  <text x="209" y="245" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 2
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M114 257h189v45H114Z" />
+  <text x="209" y="290" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    MUL
+  </text>
+  <rect width="239.4" height="48.5" x="89" y="304" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="209" y="339" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <text x="209" y="382" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    1
+  </text>
+
+
+  <rect width="239.4" height="48.5" x="420" y="45" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="540" y="79" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    HEAP
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M444 95h190v45H444Z" />
+  <text x="540" y="128" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 2
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M444 257h190v45H444Z" />
+  <text x="540" y="290" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    DOUBLE = #
+  </text>
+  <rect width="239.4" height="48.5" x="420" y="304" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="540" y="339" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="none" stroke="var(--tx-2)" stroke-dasharray="4 4" stroke-width="2" marker-start="url(#b)" d="M635 117c42 46 79 100 0 163" />
+  <text x="540" y="382" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    2
+  </text>
+
+
+  <rect width="239.4" height="48.5" x="750" y="46" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="871" y="80" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    HEAP
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M775 96h190v45H775Z" />
+  <text x="871" y="129" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 2
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M775 165h190v45H775Z" />
+  <text x="871" y="198" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    Y = 2
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M775 210h190v45H775Z" />
+  <text x="871" y="243" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    ~
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M775 257h190v45H775Z" />
+  <text x="871" y="290" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    DOUBLE = #
+  </text>
+  <rect width="239.4" height="48.5" x="750" y="304" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="871" y="339" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="none" stroke="var(--tx-2)" stroke-dasharray="4 4" stroke-width="2" marker-start="url(#c)" d="M965 117c42 46 79 100 0 163" />
+  <text x="871" y="382" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    3
+  </text>
+
+  <rect width="239.4" height="48.5" x="420" y="479" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="540" y="514" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    HEAP
+  </text>
+  <path fill="var(--bd-1)" stroke="var(--bd-2)" stroke-width="2" d="M444 530h190v45H444Z" />
+  <text x="540" y="562" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    X = 2
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M444 645h190v45H444Z" />
+  <text x="540" y="676" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    ~ = 4
+  </text>
+  <path fill="var(--bd-2)" stroke="var(--bd-3)" stroke-width="2" d="M444 690h190v45H444Z" />
+  <text x="540" y="723" fill="var(--tx-1)" font-family="var(--font-code)" font-size="26" text-anchor="middle">
+    DOUBLE = #
+  </text>
+  <rect width="239.4" height="48.5" x="420" y="737" fill="var(--tx-1)" stroke="var(--tx-1)" stroke-width="2" />
+  <text x="540" y="772" fill="var(--bg-1)" font-family="var(--font-code)" font-size="28" text-anchor="middle">
+    PILHA
+  </text>
+  <path fill="none" stroke="var(--tx-2)" stroke-dasharray="4 4" stroke-width="2" marker-start="url(#a)" d="M634 550c42 46 79 100 0 163" />
+  <text x="540" y="815" fill="var(--tx-1)" font-family="var(--font-default)" font-size="40" text-anchor="middle">
+    4
+  </text>
+</svg>

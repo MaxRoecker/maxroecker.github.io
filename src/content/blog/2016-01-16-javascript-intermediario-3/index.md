@@ -132,13 +132,8 @@ de <i lang="en">event loop</i> — que aguarda os eventos acontecerem para chama
 funções que foram designadas à responder um evento específico. E é o
 comportamento desse laço o qual vamos detalhar daqui em diante.
 
-<figure>
-  <img
-    src="/img/illustrations/steam-engine.svg"
-    alt="Máquina de ciclos a vapor"
-    decoding="async"
-    loading="lazy"
-  />
+<figure style="max-width: 60%">
+  {% include 'illustrations/steam-engine.svg' %}
 </figure>
 
 ## O <i lang="en">Event Loop</i> do JavaScript

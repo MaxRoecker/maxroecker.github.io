@@ -70,13 +70,12 @@ está incluso nesse grupo, no entanto, possui algumas peculiaridades que em um
 primeiro momento podem ser estranhas para a grande maioria dos desenvolvedores
 acostumados com outras linguagens.
 
-<figure>
-  {% img {
-    src: "./object-1.svg",
-    alt: "Um homem opera um veículo de uma roda sentado dentro da grande roda, protegido do mau tempo por um guarda-chuva fixado no dispositivo.",
-    title: "J. O. Lose of Patterson, N. J. Veículo de uma Roda. N° 325,548.",
-    formats: ['svg']
-  }%}
+<figure style="max-width: 75%">
+  {% include 'illustrations/one-wheel-vehicle.svg' %}
+  <figcaption>
+    J. O. Lose of Patterson, N. J. ‶Veículo de uma roda″. N° 325,548. Patenteado
+    em  1 de Setembro de 1885. <cite><a href="https://openlibrary.org/books/OL23292185M/Cycling_art_energy_and_locomotion">Cycling art, energy and locomotion.</a></cite>
+  </figcaption>
 </figure>
 
 ## Revisando os Objetos em JavaScript
