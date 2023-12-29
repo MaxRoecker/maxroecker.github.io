@@ -4,7 +4,7 @@
   <subtitle>Página e Blog de Max Naegeler Roecker</subtitle>
   <link href="https://maxroecker.github.io/feed/feed.xml" rel="self"/>
   <link href="https://maxroecker.github.io/"/>
-  <updated>2023-12-29T05:04:25Z</updated>
+  <updated>2023-12-29T18:07:06Z</updated>
   <id>https://maxroecker.github.io</id>
   <author>
     <name>Max Naegeler Roecker</name>
@@ -813,10 +813,10 @@ elemento que foi efetivamente clicado tem um ouvinte para o evento e, em caso
 afirmativo, executa o código associado; então ele vai para antecessor mais
 próximo e faz a mesma coisa, e assim por diante até chegar no antecessor mais
 distante, o &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Você pode ver os dois fluxos sumarizados na imagem abaixo:&lt;/p&gt;
-&lt;figure&gt;  
-  &lt;img alt=&quot;Diagrama representado a captura e o borbulhamento de eventos no DOM&quot; title=&quot;undefined&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://maxroecker.github.io/img/3yTE12NbwG-800.svg&quot; width=&quot;800&quot; height=&quot;400&quot;&gt;
-&lt;/figure&gt;
+&lt;p&gt;Simplificando: no estágio de captura, os ouvintes de eventos são executados
+do antecessor mais distante para o mais próximo. Já no estágio de borbulhamento,
+os ouvintes de eventos são executados do antecessor mais próximo ao mais
+distante.&lt;/p&gt;
 &lt;p&gt;Nas versões atuais do DOM, todos os ouvintes de eventos são registrados somente
 para o estágio de borbulhamento por padrão. Por isso, em nosso exemplo, o evento
 de clique borbulha de &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; para o antecessor &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;. Assim, ele irá
@@ -2081,7 +2081,77 @@ excluímos o método &lt;code&gt;toString&lt;/code&gt; de &lt;code&gt;person&lt;
 novamente, o JavaScript vai encontrá-la no &lt;code&gt;Object.prototype&lt;/code&gt; por meio da cadeia
 de protótipos.&lt;/p&gt;
 &lt;figure&gt;  
-  &lt;img alt=&quot;Ilustração do objeto person e do protótipo Object.prototype&quot; title=&quot;undefined&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://maxroecker.github.io/img/6XuHkqp03p-800.svg&quot; width=&quot;800&quot; height=&quot;450&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; viewBox=&quot;0 0 800 450&quot;&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;bg-1-to-transparent&quot; gradientTransform=&quot;rotate(90)&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;var(--bg-1)&quot;&gt;&lt;/stop&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;var(--bg-1)&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;bg-2-to-transparent&quot; gradientTransform=&quot;rotate(90)&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;var(--bg-2)&quot;&gt;&lt;/stop&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;var(--bg-2)&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;bd-2-to-transparent&quot; gradientTransform=&quot;rotate(90)&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;var(--bd-2)&quot;&gt;&lt;/stop&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;var(--bd-2)&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;
+    &lt;/linearGradient&gt;
+    &lt;marker id=&quot;arrow&quot; orient=&quot;auto&quot; overflow=&quot;visible&quot;&gt;
+      &lt;path fill=&quot;var(--tx-2)&quot; d=&quot;m-5-2 6 2-6 2v-4z&quot;&gt;&lt;/path&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M39 76h174v44H39zm0 43h174v44H39zm0 44h174v44H39zm0 44h174v44H39z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M412 317h174v44H412z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-1)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M214 76h174v44H214zm0 43h174v44H214zm0 44h174v44H214zm0 44h174v44H214z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-1)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M586 317h175v44H586z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;url(#bg-2-to-transparent)&quot; stroke=&quot;url(#bd-2-to-transparent)&quot; stroke-width=&quot;3&quot; d=&quot;M412 361h174v44H412z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;url(#bg-1-to-transparent)&quot; stroke=&quot;url(#bd-2-to-transparent)&quot; stroke-width=&quot;3&quot; d=&quot;M586 361h175v44H586z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;var(--tx-2)&quot; stroke-dasharray=&quot;3 3&quot; stroke-width=&quot;3&quot; marker-end=&quot;url(#arrow)&quot; d=&quot;M388 164s143-15 89 152&quot;&gt;&lt;/path&gt;
+  &lt;text x=&quot;388&quot; y=&quot;57&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;end&quot;&gt;
+    person
+  &lt;/text&gt;
+  &lt;text x=&quot;761&quot; y=&quot;301&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;end&quot;&gt;
+    Object.prototype
+  &lt;/text&gt;
+  &lt;text x=&quot;56&quot; y=&quot;106&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    firstName
+  &lt;/text&gt;
+  &lt;text x=&quot;56&quot; y=&quot;150&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    lastName
+  &lt;/text&gt;
+  &lt;text x=&quot;56&quot; y=&quot;194&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    getFullName
+  &lt;/text&gt;
+  &lt;text x=&quot;56&quot; y=&quot;237&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    toString
+  &lt;/text&gt;
+  &lt;text x=&quot;230&quot; y=&quot;106&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    &amp;quot;Pedro&amp;quot;
+  &lt;/text&gt;
+  &lt;text x=&quot;230&quot; y=&quot;150&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    &amp;quot;Pipoca&amp;quot;
+  &lt;/text&gt;
+  &lt;text x=&quot;230&quot; y=&quot;194&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    function…
+  &lt;/text&gt;
+  &lt;text x=&quot;230&quot; y=&quot;237&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    function…
+  &lt;/text&gt;
+  &lt;text x=&quot;428&quot; y=&quot;347&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    toString
+  &lt;/text&gt;
+  &lt;text x=&quot;494&quot; y=&quot;398&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    ⋮
+  &lt;/text&gt;
+  &lt;text x=&quot;603&quot; y=&quot;347&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    function…
+  &lt;/text&gt;
+  &lt;text x=&quot;669&quot; y=&quot;398&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    ⋮
+  &lt;/text&gt;
+  &lt;text x=&quot;489&quot; y=&quot;188&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot;&gt;
+    protótipo
+  &lt;/text&gt;
+&lt;/svg&gt;
 &lt;/figure&gt;
 &lt;p&gt;A implementação do &lt;code&gt;toString&lt;/code&gt; no &lt;code&gt;Object.prototype&lt;/code&gt; é totalmente independente da
 implementação que fizemos em &lt;code&gt;person&lt;/code&gt; e isso explica a divergência na saída que
@@ -2139,7 +2209,101 @@ ser utilizada por qualquer objeto que tenha &lt;code&gt;pointPrototype&lt;/code&
 Isso permite uma reutilização de código bastante poderosa. A figura abaixo
 apresenta uma ilustração do protótipo compartilhado:&lt;/p&gt;
 &lt;figure&gt;  
-  &lt;img alt=&quot;Ilustração de objetos compartilhando um mesmo protótipo.&quot; title=&quot;undefined&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://maxroecker.github.io/img/ObN4dpWhOT-800.svg&quot; width=&quot;800&quot; height=&quot;500&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; viewBox=&quot;0 0 800 500&quot;&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;bg-1-to-transparent&quot; gradientTransform=&quot;rotate(90)&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;var(--bg-1)&quot;&gt;&lt;/stop&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;var(--bg-1)&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;bg-2-to-transparent&quot; gradientTransform=&quot;rotate(90)&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;var(--bg-2)&quot;&gt;&lt;/stop&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;var(--bg-2)&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;bd-2-to-transparent&quot; gradientTransform=&quot;rotate(90)&quot;&gt;
+      &lt;stop offset=&quot;0&quot; stop-color=&quot;var(--bd-2)&quot;&gt;&lt;/stop&gt;
+      &lt;stop offset=&quot;1&quot; stop-color=&quot;var(--bd-2)&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;
+    &lt;/linearGradient&gt;
+    &lt;marker id=&quot;arrow&quot; orient=&quot;auto&quot; overflow=&quot;visible&quot;&gt;
+      &lt;path fill=&quot;var(--tx-2)&quot; d=&quot;m-5-2 6 2-6 2v-4z&quot;&gt;&lt;/path&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M94 65h58v41H94Z M94 106h58v41H94Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M552 59h59v41h-59Z M552 100h59v42h-59Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M206 234h210v41H206Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-2)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M217 390h165v42H217Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-1)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M152 65h84v41h-84zm0 41h84v41h-84z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-1)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M611 59h84v41h-84zm0 41h84v42h-84z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-1)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M416 234h166v41H416Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;var(--bg-1)&quot; stroke=&quot;var(--bd-2)&quot; stroke-width=&quot;3&quot; d=&quot;M382 390h166v42H382Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;url(#bg-2-to-transparent)&quot; stroke=&quot;url(#bd-2-to-transparent)&quot; stroke-width=&quot;3&quot; d=&quot;M217 432h165v41H217Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;url(#bg-1-to-transparent)&quot; stroke=&quot;url(#bd-2-to-transparent)&quot; stroke-width=&quot;3&quot; d=&quot;M382 432h166v41H382Z&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;#666&quot; stroke-dasharray=&quot;3 3&quot; stroke-width=&quot;3&quot; marker-end=&quot;url(#arrow)&quot; d=&quot;M152 147s-24 66 51 112&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;#666&quot; stroke-dasharray=&quot;3 3&quot; stroke-width=&quot;3&quot; marker-end=&quot;url(#arrow)&quot; d=&quot;M638 143s24 65-51 112&quot;&gt;&lt;/path&gt;
+  &lt;path fill=&quot;none&quot; stroke=&quot;#666&quot; stroke-dasharray=&quot;3 3&quot; stroke-width=&quot;3&quot; marker-end=&quot;url(#arrow)&quot; d=&quot;M320 275s-97 47-49 113&quot;&gt;&lt;/path&gt;
+  &lt;text x=&quot;238&quot; y=&quot;49&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;end&quot;&gt;
+    origin
+  &lt;/text&gt;
+  &lt;text x=&quot;698&quot; y=&quot;44&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;end&quot;&gt;
+    point
+  &lt;/text&gt;
+  &lt;text x=&quot;582&quot; y=&quot;218&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;end&quot;&gt;
+    pointPrototype
+  &lt;/text&gt;
+  &lt;text x=&quot;547&quot; y=&quot;375&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;end&quot;&gt;
+    Object.prototype
+  &lt;/text&gt;
+  &lt;text x=&quot;109&quot; y=&quot;93&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    x
+  &lt;/text&gt;
+  &lt;text x=&quot;109&quot; y=&quot;134&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    y
+  &lt;/text&gt;
+  &lt;text x=&quot;167&quot; y=&quot;93&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    0
+  &lt;/text&gt;
+  &lt;text x=&quot;167&quot; y=&quot;134&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    0
+  &lt;/text&gt;
+  &lt;text x=&quot;567&quot; y=&quot;87&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    x
+  &lt;/text&gt;
+  &lt;text x=&quot;567&quot; y=&quot;128&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    y
+  &lt;/text&gt;
+  &lt;text x=&quot;626&quot; y=&quot;87&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    3
+  &lt;/text&gt;
+  &lt;text x=&quot;626&quot; y=&quot;128&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    4
+  &lt;/text&gt;
+  &lt;text x=&quot;215&quot; y=&quot;261&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    getDistanceFrom
+  &lt;/text&gt;
+  &lt;text x=&quot;432&quot; y=&quot;262&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    function…
+  &lt;/text&gt;
+  &lt;text x=&quot;233&quot; y=&quot;419&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    toString
+  &lt;/text&gt;
+  &lt;text x=&quot;295&quot; y=&quot;466&quot; fill=&quot;var(--tx-1)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    ⋮
+  &lt;/text&gt;
+  &lt;text x=&quot;398&quot; y=&quot;419&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    function…
+  &lt;/text&gt;
+  &lt;text x=&quot;460&quot; y=&quot;466&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot; text-anchor=&quot;start&quot;&gt;
+    ⋮
+  &lt;/text&gt;
+  &lt;text x=&quot;23&quot; y=&quot;196&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot;&gt;
+    protótipo
+  &lt;/text&gt;
+  &lt;text x=&quot;667&quot; y=&quot;198&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot;&gt;
+    protótipo
+  &lt;/text&gt;
+  &lt;text x=&quot;144&quot; y=&quot;343&quot; fill=&quot;var(--tx-2)&quot; font-family=&quot;var(--font-code)&quot; font-size=&quot;20&quot;&gt;
+    protótipo
+  &lt;/text&gt;
+&lt;/svg&gt;
 &lt;/figure&gt;
 &lt;p&gt;Você também pode criar objetos que não tenham protótipos passando &lt;code&gt;null&lt;/code&gt; para o
 primeiro parâmetro do &lt;code&gt;Object.create&lt;/code&gt;. No entanto, algumas funcionalidades
