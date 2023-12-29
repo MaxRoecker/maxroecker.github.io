@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg-1-to-transparent" gradientTransform="rotate(90)">
+      <stop offset="0" stop-color="var(--bg-1)" />
+      <stop offset="1" stop-color="var(--bg-1)" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bg-2-to-transparent" gradientTransform="rotate(90)">
+      <stop offset="0" stop-color="var(--bg-2)" />
+      <stop offset="1" stop-color="var(--bg-2)" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bd-2-to-transparent" gradientTransform="rotate(90)">
+      <stop offset="0" stop-color="var(--bd-2)" />
+      <stop offset="1" stop-color="var(--bd-2)" stop-opacity="0" />
+    </linearGradient>
+    <marker id="arrow" orient="auto" overflow="visible">
+      <path fill="var(--tx-2)" d="m-5-2 6 2-6 2v-4z" />
+    </marker>
+  </defs>
+
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" stroke-width="3" d="M39 76h174v44H39zm0 43h174v44H39zm0 44h174v44H39zm0 44h174v44H39z" />
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" stroke-width="3" d="M412 317h174v44H412z" />
+  <path fill="var(--bg-1)" stroke="var(--bd-2)" stroke-width="3" d="M214 76h174v44H214zm0 43h174v44H214zm0 44h174v44H214zm0 44h174v44H214z" />
+  <path fill="var(--bg-1)" stroke="var(--bd-2)" stroke-width="3" d="M586 317h175v44H586z" />
+  <path fill="url(#bg-2-to-transparent)" stroke="url(#bd-2-to-transparent)" stroke-width="3" d="M412 361h174v44H412z" />
+  <path fill="url(#bg-1-to-transparent)" stroke="url(#bd-2-to-transparent)" stroke-width="3" d="M586 361h175v44H586z" />
+
+  <path fill="none" stroke="var(--tx-2)" stroke-dasharray="3 3" stroke-width="3" marker-end="url(#arrow)" d="M388 164s143-15 89 152" />
+
+  <text x="388" y="57" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="end">
+    person
+  </text>
+  <text x="761" y="301" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="end">
+    Object.prototype
+  </text>
+
+  <text x="56" y="106" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    firstName
+  </text>
+  <text x="56" y="150" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    lastName
+  </text>
+  <text x="56" y="194" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    getFullName
+  </text>
+  <text x="56" y="237" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    toString
+  </text>
+
+  <text x="230" y="106" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    &quot;Pedro&quot;
+  </text>
+  <text x="230" y="150" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    &quot;Pipoca&quot;
+  </text>
+  <text x="230" y="194" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    function…
+  </text>
+  <text x="230" y="237" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    function…
+  </text>
+
+
+  <text x="428" y="347" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    toString
+  </text>
+  <text x="494" y="398" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    ⋮
+  </text>
+
+  <text x="603" y="347" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    function…
+  </text>
+  <text x="669" y="398" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    ⋮
+  </text>
+
+  <text x="489" y="188" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20">
+    protótipo
+  </text>
+</svg>

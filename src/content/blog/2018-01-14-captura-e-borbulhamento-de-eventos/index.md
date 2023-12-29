@@ -88,15 +88,10 @@ afirmativo, executa o código associado; então ele vai para antecessor mais
 próximo e faz a mesma coisa, e assim por diante até chegar no antecessor mais
 distante, o `<html>`.
 
-Você pode ver os dois fluxos sumarizados na imagem abaixo:
-
-<figure>  
-  {% img {
-    src: "./capture-bubbling.svg",
-    alt: "Diagrama representado a captura e o borbulhamento de eventos no DOM",
-    formats: ['svg']
-  }%}
-</figure>
+Simplificando: no estágio de captura, os ouvintes de eventos são executados
+do antecessor mais distante para o mais próximo. Já no estágio de borbulhamento,
+os ouvintes de eventos são executados do antecessor mais próximo ao mais
+distante.
 
 Nas versões atuais do DOM, todos os ouvintes de eventos são registrados somente
 para o estágio de borbulhamento por padrão. Por isso, em nosso exemplo, o evento

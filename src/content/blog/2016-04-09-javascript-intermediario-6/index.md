@@ -163,11 +163,7 @@ novamente, o JavaScript vai encontrá-la no `Object.prototype` por meio da cadei
 de protótipos.
 
 <figure>  
-  {% img {
-    src: "./prototype-1.svg",
-    alt: "Ilustração do objeto person e do protótipo Object.prototype",
-    formats: ['svg']
-  }%}
+  {% include 'diagrams/prototype-1-pt-BR.svg' %}
 </figure>
 
 A implementação do `toString` no `Object.prototype` é totalmente independente da
@@ -240,11 +236,7 @@ Isso permite uma reutilização de código bastante poderosa. A figura abaixo
 apresenta uma ilustração do protótipo compartilhado:
 
 <figure>  
-  {% img {
-    src: "./prototype-2.svg",
-    alt: "Ilustração de objetos compartilhando um mesmo protótipo.",
-    formats: ['svg']
-  }%}
+  {% include 'diagrams/prototype-2-pt-BR.svg' %}
 </figure>
 
 Você também pode criar objetos que não tenham protótipos passando `null` para o

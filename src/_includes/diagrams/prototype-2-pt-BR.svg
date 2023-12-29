@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg-1-to-transparent" gradientTransform="rotate(90)">
+      <stop offset="0" stop-color="var(--bg-1)" />
+      <stop offset="1" stop-color="var(--bg-1)" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bg-2-to-transparent" gradientTransform="rotate(90)">
+      <stop offset="0" stop-color="var(--bg-2)" />
+      <stop offset="1" stop-color="var(--bg-2)" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bd-2-to-transparent" gradientTransform="rotate(90)">
+      <stop offset="0" stop-color="var(--bd-2)" />
+      <stop offset="1" stop-color="var(--bd-2)" stop-opacity="0" />
+    </linearGradient>
+    <marker id="arrow" orient="auto" overflow="visible">
+      <path fill="var(--tx-2)" d="m-5-2 6 2-6 2v-4z" />
+    </marker>
+  </defs>
+
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" stroke-width="3" d="M94 65h58v41H94Z M94 106h58v41H94Z" />
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" stroke-width="3" d="M552 59h59v41h-59Z M552 100h59v42h-59Z" />
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" stroke-width="3" d="M206 234h210v41H206Z" />
+  <path fill="var(--bg-2)" stroke="var(--bd-2)" stroke-width="3" d="M217 390h165v42H217Z" />
+
+  <path fill="var(--bg-1)" stroke="var(--bd-2)" stroke-width="3" d="M152 65h84v41h-84zm0 41h84v41h-84z" />
+  <path fill="var(--bg-1)" stroke="var(--bd-2)" stroke-width="3" d="M611 59h84v41h-84zm0 41h84v42h-84z" />
+  <path fill="var(--bg-1)" stroke="var(--bd-2)" stroke-width="3" d="M416 234h166v41H416Z" />
+  <path fill="var(--bg-1)" stroke="var(--bd-2)" stroke-width="3" d="M382 390h166v42H382Z" />
+
+  <path fill="url(#bg-2-to-transparent)" stroke="url(#bd-2-to-transparent)" stroke-width="3" d="M217 432h165v41H217Z" />
+  <path fill="url(#bg-1-to-transparent)" stroke="url(#bd-2-to-transparent)" stroke-width="3" d="M382 432h166v41H382Z" />
+
+  <path fill="none" stroke="#666" stroke-dasharray="3 3" stroke-width="3" marker-end="url(#arrow)" d="M152 147s-24 66 51 112" />
+  <path fill="none" stroke="#666" stroke-dasharray="3 3" stroke-width="3" marker-end="url(#arrow)" d="M638 143s24 65-51 112" />
+  <path fill="none" stroke="#666" stroke-dasharray="3 3" stroke-width="3" marker-end="url(#arrow)" d="M320 275s-97 47-49 113" />
+
+  <text x="238" y="49" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="end">
+    origin
+  </text>
+  <text x="698" y="44" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="end">
+    point
+  </text>
+  <text x="582" y="218" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="end">
+    pointPrototype
+  </text>
+  <text x="547" y="375" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="end">
+    Object.prototype
+  </text>
+
+  <text x="109" y="93" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    x
+  </text>
+  <text x="109" y="134" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    y
+  </text>
+  <text x="167" y="93" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    0
+  </text>
+  <text x="167" y="134" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    0
+  </text>
+
+  <text x="567" y="87" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    x
+  </text>
+  <text x="567" y="128" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    y
+  </text>
+  <text x="626" y="87" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    3
+  </text>
+  <text x="626" y="128" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    4
+  </text>
+
+  <text x="215" y="261" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    getDistanceFrom
+  </text>
+  <text x="432" y="262" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    function…
+  </text>
+
+  <text x="233" y="419" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    toString
+  </text>
+  <text x="295" y="466" fill="var(--tx-1)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    ⋮
+  </text>
+  <text x="398" y="419" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    function…
+  </text>
+  <text x="460" y="466" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20" text-anchor="start">
+    ⋮
+  </text>
+
+
+  <text x="23" y="196" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20">
+    protótipo
+  </text>
+  <text x="667" y="198" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20">
+    protótipo
+  </text>
+  <text x="144" y="343" fill="var(--tx-2)" font-family="var(--font-code)" font-size="20">
+    protótipo
+  </text>
+
+</svg>
