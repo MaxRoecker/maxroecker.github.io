@@ -31,3 +31,12 @@ table {
 .fixed-button {
   display: none;
 }
+
+.paragraph a:any-link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.languages {
+  display: none;
+}

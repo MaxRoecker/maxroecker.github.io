@@ -120,12 +120,25 @@ body {
   text-align: center;
 }
 
+.hdivider {
+  margin: 2rem 0;
+  border: solid 1px var(--base-0);
+}
+
 .paragraph {
   margin: 0.5em 0;
   font-size: 0.9375rem;
   font-weight: 300;
   line-height: 1.15;
   hyphens: auto;
+}
+
+.paragraph a:any-link {
+  color: currentColor;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--base-150);
+  text-decoration-thickness: 1px;
 }
 
 .achievements {
@@ -181,9 +194,17 @@ body {
   text-decoration: none;
 }
 
+.cover-letter {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-family: var(--font-default);
+  line-height: 1.25;
+}
+
 .languages {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   flex-grow: 1;
   flex-shrink: 0;
@@ -191,7 +212,6 @@ body {
   align-items: stretch;
   justify-content: space-evenly;
   width: 50%;
-  height: 50vh;
   margin: 0 auto;
 }
 
